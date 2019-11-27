@@ -1,22 +1,13 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export { Button } from "./components/Button"
+export { Accordion, AccordionGroup } from "./components/Accordion"
+export {
+    blue,
+    green,
+    gray,
+    white,
+    black,
+    orange,
+    pink,
+    purple,
+    yellow
+} from "./colors"

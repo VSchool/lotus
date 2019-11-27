@@ -1,13 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 
-import ExampleComponent from '@vschool/lotus'
+import { Button, Accordion, AccordionGroup } from "@vschool/lotus"
 
 export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div>
+                <Button>Hello world!!!</Button>
+                <AccordionGroup>
+                    <Accordion title="Test Title #1">
+                        <p>
+                            Here is the answer to the question. It's really
+                            important you know this information
+                        </p>
+                    </Accordion>
+                    <Accordion title="Test Title #2">
+                        <p>
+                            Here is the answer to the question. It's really
+                            important you know this information
+                        </p>
+                    </Accordion>
+                </AccordionGroup>
+            </div>
+        )
+    }
 }
