@@ -13,7 +13,7 @@ const Container = styled.div`
     } */
 `
 
-const Question = styled.div`
+const Title = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,20 +35,20 @@ const Body = styled.div`
 export default ({ title, children, ...rest }) => {
     const [open, setOpen] = useState(false)
     const [height, setHeight] = useState("0px")
-    const answerContent = useRef(null)
+    const accordionContent = useRef(null)
 
     const toggleAccordion = () => {
         setOpen(!open)
-        setHeight(open ? "0px" : `${answerContent.current.scrollHeight}px`)
+        setHeight(open ? "0px" : `${accordionContent.current.scrollHeight}px`)
     }
 
     return (
         <Container onClick={toggleAccordion} {...rest}>
-            <Question>
+            <Title>
                 <H5 open={open}>{title}</H5>
                 <Arrow open={open} />
-            </Question>
-            <Body ref={answerContent} style={{ maxHeight: height }}>
+            </Title>
+            <Body ref={accordionContent} style={{ maxHeight: height }}>
                 {children}
             </Body>
         </Container>
