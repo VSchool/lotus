@@ -1,36 +1,62 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import { determineButtonColors } from "./utils"
 
 const StyledButton = styled.button`
-    background-color: ${props => props.backgroundColor};
-    text-transform: ${props => props.uppercase && "uppercase"};
+    /* Generic Styles */
+    border-width: 2px;
+    border-style: solid;
     border-width: 2px;
     padding: 10px;
+    font-family: "aktiv-grotesk-extended";
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 18px;
+    text-align: center;
+    margin: 10px auto;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 
-    &:focus {
-        outline: 0;
+    /* Color styles (including inverse) */
+    ${props => {
+        const { color, backgroundColor, borderColor } = determineButtonColors(props)
+        return css`
+            color: ${color};
+            background-color: ${backgroundColor};
+            border-color: ${borderColor};
+        `
+    }}
+
+    /* Uppercase */
+    text-transform: ${props => props.uppercase && "uppercase"};
+
+    :hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 0 rgba(100, 100, 100, 0.5);
     }
 
-    &:hover {
-        cursor: pointer;
+    :active {
+        transform: translate(4px, 4px);
+        box-shadow: inset 1px 1px #eee9;
+        border-top: 1px solid #eee9;
+        border-left: 1px solid #eee9;
     }
 `
 
-function Button({ children, uppercase }) {
-    return <StyledButton uppercase={uppercase}>{children}</StyledButton>
+StyledButton.propTypes = {
+    color: PropTypes.oneOf(["gray", "black", "blue", "purple", "green", "yellow", "orange"]),
+    size: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
+    uppercase: PropTypes.bool,
+    inverse: PropTypes.bool
 }
 
-// Button.propTypes = {
-//     backgroundColor: PropTypes.string,
-//     size: PropTypes.oneOf(["sm", "m", "l", "xl"]),
-//     uppercase: PropTypes.bool
-// }
+StyledButton.defaultProps = {
+    color: "gray",
+    size: "md",
+    uppercase: false,
+    inverse: false
+}
 
-// Button.defaultProps = {
-//     backgroundColor: gray.darker,
-//     // size: ???,
-//     uppercase: false
-// }
-
-export default Button
+export default StyledButton
