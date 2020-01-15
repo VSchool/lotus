@@ -5,7 +5,7 @@ import styled from "styled-components"
 export default () => (
     <Fragment>
         <Button buttonStyle="primary-dark" buttonSize="sm" uppercase>
-            Hello world!
+            Hello world blah blah blah!
         </Button>
         <br />
         <Button buttonStyle="primary-light" buttonSize="md">

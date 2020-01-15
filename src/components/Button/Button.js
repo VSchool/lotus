@@ -9,7 +9,7 @@ const StyledButton = styled.button`
     border-width: 2px;
     border-style: solid;
     border-width: 2px;
-    padding: 10px;
+    /* padding: 10px; */
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -18,9 +18,10 @@ const StyledButton = styled.button`
     margin: 10px auto;
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    padding: .75em 1.25em;
     
     /* See if Logan wants the transition or not */
-    transition: transform .1s ease-in-out ,box-shadow .1s ease-in-out;
+    transition: transform .05s ease-in-out ,box-shadow .05s ease-in-out;
 
     /* Color styles */
     ${props => {
@@ -33,12 +34,12 @@ const StyledButton = styled.button`
     }}
 
     /* Sizes */
-    ${props => {
+    /* ${props => {
         const { height } = determineButtonSize(props)
         return css`
             height: ${height};
         `
-    }}
+    }} */
 
     /* Uppercase */
     text-transform: ${props => props.uppercase && "uppercase"};
