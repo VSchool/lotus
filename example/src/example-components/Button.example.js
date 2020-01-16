@@ -17,7 +17,6 @@ export default () => (
                 Hello world!
             </Button>
         </div>
-        <br />
         <div style={{ backgroundColor: "#642C6E" }}>
             <Button buttonStyle="secondary-light" buttonSize="xl">
                 Hello world!

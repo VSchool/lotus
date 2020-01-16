@@ -9,16 +9,15 @@ const StyledButton = styled.button`
     border-width: 2px;
     border-style: solid;
     border-width: 2px;
-    /* padding: 10px; */
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 18px;
     text-align: center;
-    margin: 10px auto;
+    margin: 0;
+    padding: .75em 1.25em;
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    padding: .75em 1.25em;
     
     /* See if Logan wants the transition or not */
     transition: transform .05s ease-in-out ,box-shadow .05s ease-in-out;
