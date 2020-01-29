@@ -8,14 +8,11 @@ const StyledButton = styled.button`
     /* Generic Styles */
     border-width: 2px;
     border-style: solid;
-    border-width: 2px;
-    font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 18px;
     text-align: center;
     margin: 0;
-    padding: .75em 1.25em;
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
     
@@ -33,12 +30,16 @@ const StyledButton = styled.button`
     }}
 
     /* Sizes */
-    /* ${props => {
-        const { height } = determineButtonSize(props)
+    ${props => {
+        const { height, fontSize, minWidth, lineHeight, letterSpacing } = determineButtonSize(props)
         return css`
             height: ${height};
+            font-size: ${fontSize};
+            min-width: ${minWidth};
+            line-height: ${lineHeight};
+            letter-spacing: ${letterSpacing};
         `
-    }} */
+    }}
 
     /* Uppercase */
     text-transform: ${props => props.uppercase && "uppercase"};

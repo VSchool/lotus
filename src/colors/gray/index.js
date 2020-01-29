@@ -10,3 +10,5 @@ export const gray = {
     darker: "#514F4B",
     darkest: black
 }
+
+export const grey = gray

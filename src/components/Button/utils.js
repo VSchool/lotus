@@ -30,21 +30,37 @@ export function determineButtonColors(props) {
 }
 
 export function determineButtonSize(props) {
-    let height
+    let height, fontSize, minWidth, lineHeight, letterSpacing
     switch (props.buttonSize) {
         case "sm":
             height = "32px"
+            fontSize = "12px"
+            lineHeight = "16px"
+            letterSpacing = "0.85px"
+            minWidth = "176px"
             break
         case "md":
             height = "40px"
+            fontSize = "12px"
+            lineHeight = "16px"
+            letterSpacing = "0.85px"
+            minWidth = "176px"
             break
         case "lg":
         default:
             height = "48px"
+            fontSize = "14px"
+            lineHeight = "20px"
+            letterSpacing = "1px"
+            minWidth = "232px"
             break
         case "xl":
             height = "56px"
+            fontSize = "16px"
+            lineHeight = "24px"
+            letterSpacing = "1.15px"
+            minWidth = "232px"
             break
     }
-    return { height }
+    return { height, fontSize, minWidth, lineHeight, letterSpacing }
 }

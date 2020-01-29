@@ -1,0 +1,35 @@
+.button-container {
+    margin-bottom: 100px;
+}
+
+.button-container div {
+    margin: 20px;
+    padding: 20px;
+}
+
+.button-container h1 {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.secondary-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #642c6e;
+}
+
+.secondary-dark {
+    background-color: #f6e8f9;
+}
+
+.secondary-light {
+    background-color: #642c6e;
+}

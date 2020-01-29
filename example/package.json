@@ -9,8 +9,7 @@
         "prop-types": "^15.6.2",
         "react": "file:../node_modules/react",
         "react-dom": "file:../node_modules/react-dom",
-        "react-scripts": "^1.1.4",
-        "styled-components": "file:../node_modules/styled-components"
+        "react-scripts": "^1.1.4"
     },
     "scripts": {
         "start": "react-scripts start",
