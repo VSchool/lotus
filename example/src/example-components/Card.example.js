@@ -4,7 +4,7 @@ import { Card } from '@vschool/lotus'
 export default () => {
     return (
         <Fragment>
-            <h1>Cards</h1>
+            <h1>Card - All</h1>
             <Card />
         </Fragment>
     )
