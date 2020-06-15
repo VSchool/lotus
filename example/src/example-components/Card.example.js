@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+
 import { Card } from '@vschool/lotus'
 
 export default () => {
     return (
-       <div>
+        <Fragment>
+            <br/>
+            <h1>Cards</h1>
             <Card />
-       </div> 
+        </Fragment>
     )
 }

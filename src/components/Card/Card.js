@@ -5,19 +5,18 @@ function Card() {
 
     const CardContainer = styled.div`
         width: 500px;
-        height: 500px;
-        border: 1px solid dodgerblue;
+        height: 200px;
+        background-color: dodgerblue;
     `
 
-    const CardHeadlineText = styled.h1`
-        color: red;
-        border: 1px solid black;
+    const CardTitle = styled.h2`
+        color: white;
     `
 
     return (
-        <div>
-            <CardHeadlineText>A Card</CardHeadlineText>
-        </div>
+        <CardContainer>
+            <CardTitle>Title</CardTitle>
+        </CardContainer>
     )
 }
 
