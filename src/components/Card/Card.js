@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+// import PropTypes from 'prop-types'
+
 
 import { StatusChip } from '../StatusChip'
+import { decideCardStatus } from './utils'
 
-function Card() {
+function Card({status, err}) {
 
     const CardContainer = styled.div`
         position: relative;
         width: 354px;
         height: 152px;
-        background: #FFFFFF;
+        // background: #FFFFFF;
         border: 1px solid #D8D4CF;
         box-sizing: border-box;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
@@ -39,7 +42,7 @@ function Card() {
         top: 24px;
         left: 0;
         padding: 0px 24px 0px 24px;
-        background: white;
+        // background: white;
     `
 
     const CardTitle = styled.h5`
@@ -102,13 +105,14 @@ function Card() {
         background: none;
     `
 
+    const { headlineText, backgroundColor } = decideCardStatus(status)
     return (
         <CardContainer>
             <StatusIndicatorContainer>
                 <StatusIndicator />
             </StatusIndicatorContainer>
-            <CardSectionContainer>
-                <CardTitle>{`Initial Application`}</CardTitle>
+            <CardSectionContainer backgroundColor={backgroundColor}>
+                <CardTitle>{headlineText}</CardTitle>
             </CardSectionContainer>
             <StatusChipContainer>
                 <StatusChip status={`not-started`} />
@@ -120,6 +124,11 @@ function Card() {
         </CardContainer>
     )
 }
+
+// Card.propTypes = {
+//     status: PropTypes.string.isRequired,
+//     err: PropTypes.string
+//   }
 
 export default Card
 

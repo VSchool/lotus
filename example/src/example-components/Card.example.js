@@ -13,7 +13,7 @@ export default () => {
     
 
     return (
-        <CardExampleContainer>
+        <CardExampleContainer status={'up-next'}>
             <h1>Cards</h1>
             <Card />
         </CardExampleContainer>
