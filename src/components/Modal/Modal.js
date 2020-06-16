@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { Button } from '../Button'
+
 const ModalContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -18,7 +20,7 @@ const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0px;
-    position: static;
+    position: absolute;
     width: 672px;
     height: 320px;
     left: 88px;
@@ -27,65 +29,31 @@ const ContentContainer = styled.div`
     order: 0;
     align-self: center;
     margin: 0px 10px;
-    border: 1px solid red;
-`
+    box-sizing: border-box;
 
-const ContentList = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    position: static;
-    width: 672px;
-    height: 224px;
-    right: 0px;
-    top: 0px;
-    flex: none;
-    order: 0;
-    align-self: center;
-    margin: 0px 40px;
-    border: 1px solid dodgerblue;
-`
-
-const ContentListContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    position: static;
-    width: 583px;
-    height: 124px;
-    left: 0px;
-    top: 0px;
-    flex: none;
-    order: 0;
-    align-self: flex-start;
-    margin: 0px 16px;
-    border: 1px solid green;
+    /* border: 1px solid red; */
 `
 
 const ModalTitle = styled.h3`
-    position: static;
-    width: 583px;
-    height: 76px;
-    left: 0px;
-    top: 0px;
-    font-family: Aktiv Grotesk;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 38px;
-    color: #21201F;
-    flex: none;
-    order: 0;
-    align-self: center;
-    margin: 0px 24px;
+width: 583px;
+height: 76px;
+/* border: 1px solid lightcoral; */
+font-family: Aktiv Grotesk;
+font-style: normal;
+font-weight: 900;
+font-size: 32px;
+line-height: 38px;
+color: #21201F;
+/* flex: none;
+order: 0;
+align-self: center; */
+margin: 0px 0px 12px 0px;
+box-sizing: border-box;
 `
 
 const ModalSubtitle = styled.p`
-    position: static;
     width: 583px;
     height: 24px;
-    left: 0px;
-    top: 100px;
     font-family: Aktiv Grotesk Ex;
     font-style: normal;
     font-weight: bold;
@@ -94,112 +62,60 @@ const ModalSubtitle = styled.p`
     letter-spacing: 0.25px;
     text-transform: uppercase;
     color: #456AE2;
-    flex: none;
-    order: 1;
-    align-self: flex-start;
-    margin: 0px 24px;
+    margin: 12px 0px 8px 0px;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
 `
 
 const ModalBody = styled.p`
-    position: static;
     width: 672px;
     height: 84px;
-    left: 0px;
-    top: 140px;
     font-family: Aktiv Grotesk;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
     color: #514F4B;
-    flex: none;
+    /* flex: none;
     order: 1;
-    align-self: center;
-    margin: 0px 16px;
+    align-self: center; */
+    margin: 8px 0px 20px 0px;
+    box-sizing: border-box;
+    /* border: 1px solid orange; */
 `
 
-const ContentRow = styled.div`
+const ButtonContainer = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 0px;
-    position: static;
+    /* position: static; */
     width: 510px;
     height: 56px;
-    right: 0px;
-    top: 264px;
-    flex: none;
-    order: 1;
+    /* right: 0px;
+    top: 264px; */
+    /* flex: none;
+    order: 1; */
     align-self: flex-end;
-    margin: 0px 40px;
-    border: 1px solid pink;
-`
+    margin: 20px 0px 0px 0px;
 
-const OutlineButton = styled.button`
-    display: flex;
-    flex-direction: row;
-    padding: 16px 44px;
-    position: static;
-    width: 189px;
-    height: 56px;
-    right: 321px;
-    top: 0px;
-    background: #FBF9F7;
-    border: 2px solid #21201F;
     box-sizing: border-box;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
-    flex: none;
-    order: 0;
-    align-self: center;
-    margin: 24px 0px;
+    /* border: 1px solid lightblue; */
+    @media (max-width: 768px) {
+    flex-direction: column;
 `
-
-const DefaultButton = styled.button`
-    display: flex;
-    flex-direction: row;
-    padding: 20px 44px;
-    position: static;
-    width: 297px;
-    height: 56px;
-    right: 0px;
-    top: 0px;
-    background: #514F4B;
-    border: 2px solid #21201F;
-    box-sizing: border-box;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
-    flex: none;
-    order: 1;
-    align-self: center;
-    font-family: Aktiv Grotesk Ex;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    /* display: flex; */
-    align-items: center;
-    text-align: center;
-    letter-spacing: 1px;
-
-    color: #FFFFFF;
-    margin: 24px 0px;
-`
-
-
 
 function Modal() {
     return (
         <ModalContainer>
             <ContentContainer>
-                <ContentList>
-                    <ContentListContainer>
-                        <ModalTitle>Are you planning on applying for any V School Scholarships? </ModalTitle>
-                        <ModalSubtitle>Complete the  Scholarship Application</ModalSubtitle>
-                        <ModalBody>If you are interested in applying for scholarships, make sure to apply. Then we tell them how many people are usually rewarded with something.</ModalBody>
-                    </ContentListContainer>
-                </ContentList>
-                <ContentRow>
-                    <OutlineButton>No, Thanks</OutlineButton>
-                    <DefaultButton>Apply for Scholarships</DefaultButton>
-                </ContentRow>
+                <ModalTitle>Are you planning on applying for any V School Scholarships? </ModalTitle>
+                <ModalSubtitle>Complete the  Scholarship Application</ModalSubtitle>
+                <ModalBody>If you are interested in applying for scholarships, make sure to apply. Then we tell them how many people are usually rewarded with something.</ModalBody>
+                <ButtonContainer>
+                    <Button buttonStyle='primary-light' buttonSize='lg'>No, Thanks</Button>
+                    <Button buttonStyle="primary-dark" buttonSize="lg">Apply for Scholarships</Button>
+                </ButtonContainer>
             </ContentContainer>
         </ModalContainer>
     )
