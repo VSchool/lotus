@@ -6,6 +6,7 @@ import { Button } from '../Button'
 const ModalContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 64px 88px;
     position: relative;
     width: 848px;
@@ -14,22 +15,27 @@ const ModalContainer = styled.div`
     border: 2px solid #D8D4CF;
     box-sizing: border-box;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+    @media (max-width: 768px) {
+        padding: 0px;
+        max-width: 376px;
+        border: 4px solid black;
+    }
 `
 
 const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0px;
-    position: absolute;
     width: 672px;
     height: 320px;
-    left: 88px;
-    top: 64px;
-    flex: none;
-    order: 0;
-    align-self: center;
     margin: 0px 10px;
     box-sizing: border-box;
+    @media (max-width: 768px) {
+        max-width: 328px;
+        height: 472px;
+        /* margin: 0px 0px; */
+        border: 4px solid pink;
+    }
 
     /* border: 1px solid red; */
 `
@@ -50,6 +56,15 @@ order: 0;
 align-self: center; */
 margin: 0px 0px 12px 0px;
 box-sizing: border-box;
+@media (max-width: 768px) {
+    max-width: 100%;
+    height: 88px;
+    border: 1px solid green;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
 `
 
 const ModalSubtitle = styled.p`
@@ -67,6 +82,21 @@ const ModalSubtitle = styled.p`
     color: #456AE2;
     margin: 12px 0px 8px 0px;
     box-sizing: border-box;
+
+    @media (max-width: 768px) {
+    max-width: 100%;
+    height: 40px;
+    border: 1px solid lightblue;
+    /* font-family: Aktiv Grotesk Ex; */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+letter-spacing: 0.25px;
+text-transform: uppercase;
+}
     /* border: 1px solid green; */
 `
 
@@ -75,7 +105,6 @@ const ModalBody = styled.p`
     height: 84px;
     /* font-family: Aktiv Grotesk; */
     font-family: "aktiv-grotesk";
-
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -86,6 +115,16 @@ const ModalBody = styled.p`
     align-self: center; */
     margin: 8px 0px 20px 0px;
     box-sizing: border-box;
+
+    @media (max-width: 768px) {
+    max-width: 328px;
+    height: 144px;
+    border: 1px solid gold;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    }
     /* border: 1px solid orange; */
 `
 
@@ -108,6 +147,18 @@ const ButtonContainer = styled.div`
     /* border: 1px solid lightblue; */
     /* @media (max-width: 768px) {
     flex-direction: column; */
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    height: 144px;
+    border: 1px solid gold;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    }
+    /* border: 1px solid black; */
 `
 
 function Modal() {
