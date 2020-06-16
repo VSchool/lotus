@@ -3,6 +3,46 @@ import styled from 'styled-components'
 
 function StatusMessage({status, err}) {
 
+    const IndicatorContainer = styled.div`
+        // box-sizing: border-box;
+        // position: absolute;
+        width: 56px;
+        height: 100%;
+        // left: 0px;
+        // top: 0%;
+        // bottom: 0%;
+
+    `
+
+    const IndicatorWrapper = styled.div`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        
+        background: #456AE2;
+        
+        border: 1px solid #456AE2;
+        box-sizing: border-box;
+    `
+
+    const IndicatorText = styled.h4`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 29px;
+        height: 29px;
+        
+        font-family: Benton Sans;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 29px;
+        
+        color: #FFFFFF;
+    `
+
     const StatusMessageContainer = styled.div`
         position: relative;
         width: 1024px;
@@ -18,7 +58,7 @@ function StatusMessage({status, err}) {
     const StatusMessageText = styled.p`
         margin: 0px;
         position: absolute;
-        width: 928px;
+        max-width: 928px;
         height: 24px;
         left: 72px;
         top: calc(50% - 24px/2);
@@ -34,9 +74,17 @@ function StatusMessage({status, err}) {
         border: 1px solid lightcoral;
     `
 
+
+    
+
     return (
         <StatusMessageContainer>
-            {/* <StatusMessageText>Status message</StatusMessageText> */}
+            <IndicatorContainer>
+                <IndicatorWrapper>
+                    <IndicatorText>:)</IndicatorText>
+                </IndicatorWrapper>
+            </IndicatorContainer>
+            <StatusMessageText>Welcome to your V School Application. Get started by completing the tasks below!</StatusMessageText>
         </StatusMessageContainer>
     )
 }
