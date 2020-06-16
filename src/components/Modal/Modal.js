@@ -38,7 +38,8 @@ const ModalTitle = styled.h3`
 width: 583px;
 height: 76px;
 /* border: 1px solid lightcoral; */
-font-family: Aktiv Grotesk;
+font-family: "aktiv-grotesk";
+/* font-family: Aktiv Grotesk; */
 font-style: normal;
 font-weight: 900;
 font-size: 32px;
@@ -54,7 +55,9 @@ box-sizing: border-box;
 const ModalSubtitle = styled.p`
     width: 583px;
     height: 24px;
-    font-family: Aktiv Grotesk Ex;
+    /* font-family: Aktiv Grotesk Ex; */
+    font-family: "aktiv-grotesk-extended";
+
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -70,7 +73,9 @@ const ModalSubtitle = styled.p`
 const ModalBody = styled.p`
     width: 672px;
     height: 84px;
-    font-family: Aktiv Grotesk;
+    /* font-family: Aktiv Grotesk; */
+    font-family: "aktiv-grotesk";
+
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -101,8 +106,8 @@ const ButtonContainer = styled.div`
 
     box-sizing: border-box;
     /* border: 1px solid lightblue; */
-    @media (max-width: 768px) {
-    flex-direction: column;
+    /* @media (max-width: 768px) {
+    flex-direction: column; */
 `
 
 function Modal() {
