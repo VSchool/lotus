@@ -3,6 +3,7 @@ export { Accordion, AccordionGroup } from "./components/Accordion"
 export { StatusChip } from "./components/StatusChip"
 export { StatusMessage } from './components/StatusMessage'
 export { Modal } from './components/Modal'
+export { Header } from './components/Header'
 export {
     blue,
     green,
