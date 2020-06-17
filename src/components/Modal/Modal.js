@@ -18,14 +18,14 @@ const ModalContainer = styled.div`
     @media (max-width: 768px) {
         padding: 0px;
         max-width: 376px;
-        border: 4px solid black;
+        /* border: 4px solid black; */
     }
 `
 
 const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 0px 0px 0px 0px;
     width: 672px;
     height: 320px;
     margin: 0px 10px;
@@ -33,33 +33,26 @@ const ContentContainer = styled.div`
     @media (max-width: 768px) {
         max-width: 328px;
         height: 472px;
-        /* margin: 0px 0px; */
-        border: 4px solid pink;
+        /* border: 4px solid pink; */
     }
-
-    /* border: 1px solid red; */
 `
 
 const ModalTitle = styled.h3`
 width: 583px;
 height: 76px;
-/* border: 1px solid lightcoral; */
 font-family: "aktiv-grotesk";
-/* font-family: Aktiv Grotesk; */
 font-style: normal;
 font-weight: 900;
 font-size: 32px;
 line-height: 38px;
 color: #21201F;
-/* flex: none;
-order: 0;
-align-self: center; */
 margin: 0px 0px 12px 0px;
 box-sizing: border-box;
 @media (max-width: 768px) {
+    margin: 32px 0px 12px 0px;
     max-width: 100%;
     height: 88px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -70,9 +63,7 @@ box-sizing: border-box;
 const ModalSubtitle = styled.p`
     width: 583px;
     height: 24px;
-    /* font-family: Aktiv Grotesk Ex; */
     font-family: "aktiv-grotesk-extended";
-
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -82,50 +73,41 @@ const ModalSubtitle = styled.p`
     color: #456AE2;
     margin: 12px 0px 8px 0px;
     box-sizing: border-box;
-
     @media (max-width: 768px) {
-    max-width: 100%;
-    height: 40px;
-    border: 1px solid lightblue;
-    /* font-family: Aktiv Grotesk Ex; */
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-
-letter-spacing: 0.25px;
-text-transform: uppercase;
+        margin: 12px 0px 8px 0px;
+        max-width: 100%;
+        height: 40px;
+        /* border: 1px solid lightblue; */
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
 }
-    /* border: 1px solid green; */
 `
 
 const ModalBody = styled.p`
     width: 672px;
     height: 84px;
-    /* font-family: Aktiv Grotesk; */
     font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
     color: #514F4B;
-    /* flex: none;
-    order: 1;
-    align-self: center; */
     margin: 8px 0px 20px 0px;
     box-sizing: border-box;
-
     @media (max-width: 768px) {
-    max-width: 328px;
-    height: 144px;
-    border: 1px solid gold;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
+        margin: 8px 0px 20px 0px;
+        max-width: 328px;
+        height: 144px;
+        /* border: 1px solid gold; */
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
     }
-    /* border: 1px solid orange; */
 `
 
 const ButtonContainer = styled.div`
@@ -133,32 +115,24 @@ const ButtonContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 0px;
-    /* position: static; */
     width: 510px;
     height: 56px;
-    /* right: 0px;
-    top: 264px; */
-    /* flex: none;
-    order: 1; */
     align-self: flex-end;
     margin: 20px 0px 0px 0px;
-
     box-sizing: border-box;
     /* border: 1px solid lightblue; */
-    /* @media (max-width: 768px) {
-    flex-direction: column; */
-
     @media (max-width: 768px) {
-    flex-direction: column;
-    width: 100%;
-    height: 144px;
-    border: 1px solid gold;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
+        margin: 20px 0px 0px 0px;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 144px;
+        /* border: 1px solid gold; */
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
     }
-    /* border: 1px solid black; */
 `
 
 function Modal() {
