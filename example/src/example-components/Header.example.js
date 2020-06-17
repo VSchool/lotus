@@ -6,7 +6,8 @@ export default () => {
         <Fragment>
             <br></br>
             <h1>Headers</h1>
-            <Header />
+            <Header status={'default-header'} />
+            <Header status={'close-header'} />
         </Fragment>
     )
 }

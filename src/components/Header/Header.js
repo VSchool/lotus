@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+
+
+import { getHeaderType } from './utils'
 
 import backArrow from '../../assets/icons/arrow-back.svg'
 import vschoolLogo from '../../assets/icons/vschoolLogo.svg'
 import accountCircle from '../../assets/icons/account-circle24px.svg'
+import clearX from '../../assets/icons/clear24px.svg'
 
 const HeaderContainer = styled.div`
     /* position: relative; */
@@ -68,7 +73,9 @@ const AccountContainer = styled.div`
     /* border: 1px solid gold; */
 `
 
-function Header() {
+function Header({status, err}) {
+    const { src } = getHeaderType(status)
+    console.log(src)
     return (
         <HeaderContainer>
             <BackContainer>
@@ -79,10 +86,15 @@ function Header() {
                 <img src={vschoolLogo} />
             </LogoContainer>
             <AccountContainer>
-                <img src={accountCircle} />
+                <img src={src.accountCircle} alt='placeholder image' />
             </AccountContainer>
         </HeaderContainer>
     )
 }
+
+Header.propTypes = {
+    status: PropTypes.string.isRequired,
+    err: PropTypes.string
+  }
 
 export default Header
