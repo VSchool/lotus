@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { StatusChip } from '../StatusChip'
+import { findCardStatus } from './utils'
 
 import { black, gray } from '../../colors/gray'
 import { blue } from '../../colors/blue'
@@ -8,8 +10,7 @@ import { blue } from '../../colors/blue'
 
 const CardContainer = styled.div`
     position: relative;
-    max-width: 352px;
-    padding: 0px 0px 0px 0px;
+    width: 352px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
 `
 
@@ -17,10 +18,11 @@ const CardWrapper = styled.div`
     background: #FFFFFF;
     width: 100%;
     padding: 24px 24px 24px 24px;
-    border: 1px solid ${gray.base};
     box-sizing: border-box;
-    /* GOING TO NEED TO CHANGE THE BORDER-TOP SIZE DYNAMICALLY */
-    border-top: 4px solid ${gray.base};
+    border-top: ${props => props.borderTop};
+    border-right: ${props => props.borderRight};
+    border-bottom: ${props => props.borderBottom};
+    border-left: ${props => props.borderLeft};
 `
 
 const CardTitle = styled.h5`
@@ -54,7 +56,6 @@ const CardMessage = styled.p`
     font-size: 10px;
     line-height: 24px;
     color: ${black};
-    /* border: 1px solid green; */
 `
 
 const TextButton = styled.button`
@@ -71,13 +72,15 @@ const TextButton = styled.button`
 `
 
 function Card({ status, err}) {
+    const {  cardStatus, titleText, messageText, topBorder, rightBorder, bottomBorder, leftBorder } = findCardStatus(status)
+    console.log(topBorder, rightBorder, bottomBorder, leftBorder)
     return (
         <CardContainer>
-            <CardWrapper>
-                <CardTitle>Initial Application</CardTitle>
-                <StatusChip status={"not-started"} />
+            <CardWrapper borderTop={topBorder} borderRight={rightBorder} borderBottom={bottomBorder} borderLeft={leftBorder}>
+                <CardTitle>{titleText}</CardTitle>
+                <StatusChip status={cardStatus} />
                     <BottomWrapper>
-                        <CardMessage>Messaging about what needs to be completed</CardMessage>
+                        <CardMessage>{messageText}</CardMessage>
                         <TextButton>Start</TextButton>
                     </BottomWrapper>
             </CardWrapper>
