@@ -3,7 +3,7 @@ import { pink } from '../../colors/pink'
 import { yellow } from '../../colors/yellow'
 import { green } from '../../colors/green'
 
-export function findCardStatus(status, err) {
+export function findCardStatus(status) {
     switch (status) {
         case 'not-started':
             return {

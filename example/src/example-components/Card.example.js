@@ -1,40 +1,21 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 import { Card } from '@vschool/lotus'
-
-const RowOneContainer = styled.div`
-    width: 100%;
-    height: 200px;
-    display: flex; 
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0px 0px 0px 0px;
-`
-
-const RowTwoContainer = styled.div`
-    width: 100%;
-    display: flex; 
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0px 0px 0px 0px;
-`
 
 export default () => {
     return (
         <Fragment>
             <br></br>
             <h1>Card</h1>
-            <RowOneContainer>
-                <Card status={"not-started"} />
-                <Card status={"up-next"} />
-                <Card status={"in-progress"} />
-            </RowOneContainer>
-
-            <RowTwoContainer>
-                <Card status={"completed"} />
+            <p>Media query currently at 768px. More documentation to come.</p>
                 <Card status={"default"} />
-            </RowTwoContainer>
+                <br></br>
+                <Card status={"not-started"} />
+                <br></br>
+                <Card status={"up-next"} />
+                <br></br>
+                <Card status={"in-progress"} />
+                <br></br>
+                <Card status={"completed"} />
         </Fragment>
-
     )
 }
