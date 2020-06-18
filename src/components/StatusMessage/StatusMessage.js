@@ -12,8 +12,8 @@ const StatusMessageContainer = styled.div`
     display: flex;
     align-content: center;
     background: #E3E8FA;
-    background: ${props => props.backgroundColor}
-    border: ${props => props.border}
+    background: ${props => props.backgroundColor};
+    border: ${props => props.border};
     box-sizing: border-box;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
 `
@@ -30,8 +30,8 @@ const IndicatorWrapper = styled.div`
     width: 100%;
     height: 100%;
 
-    background: ${props => props.backgroundColor} 
-    // border: ${props => props.border}
+    background: ${props => props.backgroundColor}; 
+    /* // border: ${props => props.border} */
     box-sizing: border-box;
 `
 

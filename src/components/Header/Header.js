@@ -75,7 +75,7 @@ const AccountContainer = styled.div`
 
 function Header({status, err}) {
     const { src } = getHeaderType(status)
-    console.log(src)
+    // console.log(src)
     return (
         <HeaderContainer>
             <BackContainer>

@@ -5,12 +5,19 @@ import { decideChipStatus } from "./utils"
 import { black } from "../../colors/gray"
 
 const StatusChipContainer = styled.div`
+    margin: 8px 0px 8px 0px;
     padding: 4px 12px;
     border-radius: 4px;
     /* props are given as a callback function whenever needed */
     background-color: ${props => props.backgroundColor};
     border: ${props => props.border};
     display: inline-block;
+    @media (max-width: 768px) {
+        margin: 8px 0px 8px 0px;
+
+        /* padding: 16px 16px 16px 16px; */
+        /* border: 2px solid blue; */
+    }
 `
 
 const ChipText = styled.h6`

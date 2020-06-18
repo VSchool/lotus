@@ -4,6 +4,7 @@ export { StatusChip } from "./components/StatusChip"
 export { StatusMessage } from './components/StatusMessage'
 export { Modal } from './components/Modal'
 export { Header } from './components/Header'
+export { Card } from './components/Card'
 export {
     blue,
     green,
