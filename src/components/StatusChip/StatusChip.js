@@ -5,6 +5,7 @@ import { decideChipStatus } from "./utils"
 import { black } from "../../colors/gray"
 
 const StatusChipContainer = styled.div`
+    margin: 8px 0px 16px 0px;
     padding: 4px 12px;
     border-radius: 4px;
     /* props are given as a callback function whenever needed */
