@@ -3,8 +3,8 @@ import ButtonExample from "./example-components/Button.example"
 import AccordionExample from "./example-components/Accordion.example"
 import StatusChip from "./example-components/StatusChip.example"
 import StatusMessageExample from './example-components/StatusMessage.example'
-import Header from './example-components/Header.example'
 import CardExample from './example-components/Card.example'
+import ModalExample from './example-components/Modal.example'
 import "./index.css"
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
             <StatusChip />
             <CardExample />
             <StatusMessageExample />
-            <Header />
+            <ModalExample />
         </div>
     )
 }
