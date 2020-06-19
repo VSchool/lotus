@@ -17,6 +17,12 @@ const ModalContainer = styled.div`
     border: 2px solid ${gray.base};
     box-sizing: border-box;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+
+    @media (max-width: 768px) {
+        /* max-width: 376px; */
+        padding: 32px 24px 32px 24px;
+
+    }
 `
 
 const ContentContainer = styled.div`
@@ -25,6 +31,10 @@ const ContentContainer = styled.div`
     width: 672px;
     height: 320px;
     margin: 0px 0px 0px 0px;
+
+    @media (max-width: 768px) {
+        border: 2px solid pink;
+    }
 `
 
 const ModalHeadline = styled.h3`
@@ -36,6 +46,17 @@ const ModalHeadline = styled.h3`
     line-height: 40px;
     color: ${black};
     margin: 0px 0px 0px 0px;
+    @media (max-width: 768px) {
+        /* max-width: 376px; */
+        /* padding: 32px 24px 32px 24px; */
+
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        border: 1px solid red;
+    }
+
+    
 `
 
 const ModalSubtitle = styled.h4`
@@ -49,6 +70,17 @@ const ModalSubtitle = styled.h4`
     text-transform: uppercase;
     color: ${blue.base};
     margin: 24px 0px 0px 0px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        /* MAY NEED TO CHANGE LINE HEIGHT BACK TO 20PX */
+        line-height: 24px;
+        /* or 143% */
+
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+        border: 1px solid blue;
+    }
 `
 
 const ModalBody = styled.p`
@@ -60,6 +92,10 @@ const ModalBody = styled.p`
     line-height: 24px;
     color: ${gray.darker};
     margin: 16px 0px 0px 0px;
+
+    @media (max-width: 768px) {
+        border: 1px solid green;
+    }
 `
 
 const ButtonRow = styled.div`
@@ -69,6 +105,10 @@ const ButtonRow = styled.div`
     width: 510px;
     align-self: flex-end;
     margin: 40px 0px 0px 0px;
+
+    @media (max-width: 768px) {
+        border: 1px solid orange;
+    }
 `
 
 const DeclineButton = styled(Button)`
