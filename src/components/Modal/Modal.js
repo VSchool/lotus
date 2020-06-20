@@ -11,31 +11,24 @@ import { blue } from '../../colors/blue'
 const ModalContainer = styled.div`
     padding: 64px 88px;
     position: relative;
-    width: 848px;
-    height: 448px;
+    max-width: 848px;
     background: #FBF9F7;
     border: 2px solid ${gray.base};
     box-sizing: border-box;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
 
     @media (max-width: 768px) {
-        /* max-width: 376px; */
+        max-width: 376px;
         padding: 32px 24px 32px 24px;
-
     }
 `
 
 const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 672px;
-    height: 320px;
+    max-width: 672px;
     margin: 0px 0px 0px 0px;
-
-    @media (max-width: 768px) {
-        border: 2px solid pink;
-    }
-`
+` 
 
 const ModalHeadline = styled.h3`
     max-width: 584px;
@@ -46,21 +39,17 @@ const ModalHeadline = styled.h3`
     line-height: 40px;
     color: ${black};
     margin: 0px 0px 0px 0px;
-    @media (max-width: 768px) {
-        /* max-width: 376px; */
-        /* padding: 32px 24px 32px 24px; */
 
+    @media (max-width: 768px) {
+        margin: 0px 0px 12px 0px;
         font-weight: bold;
         font-size: 24px;
         line-height: 32px;
-        border: 1px solid red;
     }
-
-    
 `
 
 const ModalSubtitle = styled.h4`
-    width: 584px;
+    max-width: 584px;
     font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
@@ -73,13 +62,8 @@ const ModalSubtitle = styled.h4`
 
     @media (max-width: 768px) {
         font-size: 14px;
-        /* MAY NEED TO CHANGE LINE HEIGHT BACK TO 20PX */
-        line-height: 24px;
-        /* or 143% */
-
-        letter-spacing: 0.25px;
-        text-transform: uppercase;
-        border: 1px solid blue;
+        line-height: 20px;
+        margin: 12px 0px 8px 0px;
     }
 `
 
@@ -94,7 +78,7 @@ const ModalBody = styled.p`
     margin: 16px 0px 0px 0px;
 
     @media (max-width: 768px) {
-        border: 1px solid green;
+        margin: 8px 0px 20px 0px;
     }
 `
 
@@ -102,12 +86,13 @@ const ButtonRow = styled.div`
     display: flex;
     flex-direction: row;
     padding: 0px;
-    width: 510px;
+    max-width: 510px;
     align-self: flex-end;
     margin: 40px 0px 0px 0px;
 
     @media (max-width: 768px) {
-        border: 1px solid orange;
+        flex-direction: column;
+        margin: 20px 0px 0px 0px;
     }
 `
 
@@ -117,12 +102,24 @@ const DeclineButton = styled(Button)`
     margin: 0px 12px 0px 0px;
     color: ${black};
     background: ${white};
+
+    @media (max-width: 768px) {
+        min-width: 320px;
+        height: 48px;
+        margin: 0px 0px 12px 0px;
+    }
 `
 
 const ApplyButton = styled(Button)`
     width: 296px;
     height: 56px;
     margin: 0px 0px 0px 12px;
+
+    @media (max-width: 768px) {
+        min-width: 320px;
+        height: 48px;
+        margin: 24px 0px 0px 0px;
+    }
 `
 
 function Modal() {
