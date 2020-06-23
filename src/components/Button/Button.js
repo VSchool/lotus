@@ -83,7 +83,8 @@ StyledButton.propTypes = {
         "secondary-dark",
         "secondary-light"
     ]),
-    size: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
+    // ADDED XTRASM SIZE FOR HEADER BUTTON
+    size: PropTypes.oneOf(["xtrasm", "sm", "md", "lg", "xl"]),
     uppercase: PropTypes.bool,
     inverse: PropTypes.bool
 }
