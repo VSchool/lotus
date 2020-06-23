@@ -8,6 +8,7 @@ import ModalExample from './example-components/Modal.example'
 import FooterExample from './example-components/Footer.example'
 import HeaderExample from './example-components/Header.example'
 import ProfileExample from './example-components/Profile.example'
+import TitlebarExample from './example-components/Titlebar.example'
 import "./index.css"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <FooterExample />
             <HeaderExample />
             <ProfileExample />
+            <TitlebarExample />
         </div>
     )
 }
