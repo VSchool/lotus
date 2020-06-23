@@ -6,6 +6,7 @@ import StatusMessageExample from './example-components/StatusMessage.example'
 import CardExample from './example-components/Card.example'
 import ModalExample from './example-components/Modal.example'
 import FooterExample from './example-components/Footer.example'
+import HeaderExample from './example-components/Header.example'
 import "./index.css"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <StatusMessageExample />
             <ModalExample />
             <FooterExample />
+            <HeaderExample />
         </div>
     )
 }
