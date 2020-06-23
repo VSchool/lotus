@@ -3,13 +3,14 @@ import styled from 'styled-components'
 
 import { Button } from '../Button'
 import vSchoolLogo from '../../assets/vs-logo.svg'
+import { black, gray, white } from '../../colors/gray'
 
 const FooterContainer = styled.div`
     position: relative;
     width: 416px;
     height: 64px;
     display: flex;
-    background: #21201F;
+    background: ${black};
 
     @media (min-width: 768px) {
         min-width: 100%;
@@ -39,7 +40,7 @@ const HeaderP = styled.p`
     font-size: 14px;
     line-height: 18px;
     text-align: right;
-    color: #D8D4CF;
+    color: ${gray.base};
 
     @media (min-width: 768px) {
         margin: 0px 0px 0px 0px;
@@ -51,7 +52,7 @@ const HeaderP = styled.p`
         font-size: 20px;
         line-height: 28px;
         text-align: right;
-        color: #FFFFFF;
+        color: ${white};
     }
 `
 
@@ -72,7 +73,7 @@ const HeaderButton = styled(Button)`
     height: 32px;
     margin: 16px 18px 16px 16px;
     background: #21201F;
-    border: 1px solid #FBF9F7;
+    border: 1px solid ${gray.lighter};
     box-sizing: border-box;
     box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
 
@@ -83,7 +84,7 @@ const HeaderButton = styled(Button)`
         right: 3.42%;
         min-width: 176px;
         height: 56px;
-        border: 2px solid #FBF9F7;
+        border: 2px solid ${gray.lighter};
         box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.2);
     }
 `
