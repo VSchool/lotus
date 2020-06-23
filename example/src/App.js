@@ -7,6 +7,7 @@ import CardExample from './example-components/Card.example'
 import ModalExample from './example-components/Modal.example'
 import FooterExample from './example-components/Footer.example'
 import HeaderExample from './example-components/Header.example'
+import ProfileExample from './example-components/Profile.example'
 import "./index.css"
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <ModalExample />
             <FooterExample />
             <HeaderExample />
+            <ProfileExample />
         </div>
     )
 }
