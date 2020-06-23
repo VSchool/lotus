@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import headerLogo from '../../assets/vs-header-logo.svg'
 import backArrow from '../../assets/icons/arrow-back.svg'
 import accountCircle from '../../assets/icons/account-circle24px.svg'
+import { gray } from '../../colors/gray'
 
 const HeaderContainer = styled.div`
     position: relative;
@@ -11,7 +12,7 @@ const HeaderContainer = styled.div`
     height: 80px;
     display: flex;
     align-items: center;
-    background: #FBF9F7;
+    background: ${gray.lighter};
     box-shadow: 0px 4px 16px rgba(33, 32, 31, 0.1);
 
     @media (min-width: 768px) {
@@ -40,7 +41,7 @@ const ArrowContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Fill color should be #514F4B; */
+    /* Fill color should be ${gray.darker}; */
     box-sizing: border-box;
 `
 
@@ -52,7 +53,7 @@ const BackText = styled.p`
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    color: #514F4B;
+    color: ${gray.darker};
 
     @media (min-width: 768px) {
         display: inline;
@@ -77,7 +78,7 @@ const AccountCircleContainer = styled.div`
     position: absolute;
     right: 18px;
     margin: 0px 0px 0px 52px;
-    /* Fill color should be #514F4B; */
+    /* Fill color should be #{gray.darker}; */
 
     @media (min-width: 768px) {
         /* position: absolute; */
