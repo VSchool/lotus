@@ -7,6 +7,8 @@ export default () => {
             <br></br>
             <h1>Profile</h1>
             <Profile />
+            <br></br>
+            <br></br>
         </Fragment>
     )
 }
