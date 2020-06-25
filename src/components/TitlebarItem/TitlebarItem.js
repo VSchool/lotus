@@ -30,7 +30,9 @@ const ItemTitle = styled.p`
     line-height: 12px;
     letter-spacing: 0.25px;
     text-transform: uppercase;
-    color: ${gray.base};
+    color: ${props => props.color};
+    /* color: ${gray.base}; */
+    opacity: ${props => props.opacity};
     box-sizing: border-box;
     /* border: 1px dotted blue; */
 `
@@ -46,7 +48,8 @@ const BottomWrapper = styled.div`
 const CircleCheckContainer = styled.div`
     width: 16px;
     height: 16px;
-    display: ${props => props.setCircleDisplay};
+    display: ${props => props.display};
+    /* display: inline-block; */
     margin-right: 4px;
     /* border: 1px dotted red; */
 `
@@ -62,23 +65,31 @@ const ItemSubtitle = styled.p`
     line-height: 13px;
     letter-spacing: 1px;
     text-transform: capitalize;
-    color: ${gray.lighter};
-    opacity: 0.8;
+    color: ${props => props.color};
+    /* color: ${gray.lighter}; */
+    opacity: ${props => props.opacity};
+    /* opacity: 0.8; */
     /* border: 1px solid red; */
     box-sizing: border-box;
 `
 
-function TitlebarItem({status, err}) {
-    const { border, opacity, titleText, subtitleText, setCircleDisplay } = itemStatus(status)
-    console.log(setCircleDisplay)
+function TitlebarItem({status, title, subtitle}) {
+    const { background,
+            border, 
+            opacity, 
+            checkmarkDisplay,
+            subtitleColor,
+            titleColor,
+             } = itemStatus(status)
+    console.log(title, subtitle)
     return (
         <ItemContainer border={border} opacity={opacity}>
-            <ItemTitle>{titleText}</ItemTitle>
+            <ItemTitle color={titleColor} opacity={opacity}>{title}</ItemTitle>
             <BottomWrapper>
-                <CircleCheckContainer display={setCircleDisplay}>
+                <CircleCheckContainer display={checkmarkDisplay}>
                     <img src={circleCheck} alt='Step completed.'  />
                 </CircleCheckContainer>
-                <ItemSubtitle>{subtitleText}</ItemSubtitle>
+                <ItemSubtitle color={subtitleColor} opacity={opacity}>{subtitle}</ItemSubtitle>
             </BottomWrapper>
         </ItemContainer>
     )

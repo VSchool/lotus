@@ -6,13 +6,13 @@ export default () => {
         <Fragment>
             <br></br>
             <h1>Titlebar Item</h1>
-            <TitlebarItem status={'active'} />
+            <TitlebarItem status={'active'}  title={'Step 1'} subtitle={'Background'} />
             <br></br>
-            <TitlebarItem status={'inactive'} />
+            <TitlebarItem status={'inactive'}  title={'Step 2'} subtitle={'Application'}   />
             <br></br>
-            <TitlebarItem status={'locked'} />
+            <TitlebarItem status={'locked'}  title={'Step 3'} subtitle={'Enrollment'}  />
             <br></br>
-            <TitlebarItem status={'nostatus'} />
+            {/* <TitlebarItem status={'nostatus'} /> */}
             <br></br>
 
         </Fragment>

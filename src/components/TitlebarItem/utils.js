@@ -1,44 +1,41 @@
 import { black, gray } from '../../colors/gray'
 import { green } from '../../colors/green'
 
-export function itemStatus(status) {
-    switch (status) {
+export function itemStatus(itemStatus) {
+    switch (itemStatus) {
         case 'active':
             return {
+                // background: black,
                 border: `4px solid ${green.lighter}`,
                 opacity: '1.0',
-                titleText: 'Step 1',
-                subtitleText: 'Background',
-                setCircleDisplay: 'none',
+                titleColor: gray.base,
+                subtitleColor: gray.lighter,
+                checkmarkDisplay: 'none',
             }
         case 'inactive':
             return {
                 border: 'none',
-                opacity: '0.8',
-                titleText: 'Step 2',
-                subtitleText: 'Application',
-                setCircleDisplay: 'inline-block',
-
-
+                opacity: '1.0',
+                titleColor: gray.base,
+                subtitleColor: gray.lighter,
+                checkmarkDisplay: 'inline-block',
             }
         case 'locked':
             return {
                 border: 'none',
                 opacity: '0.67',
-                titleText: 'Step 3',
-                subtitleText: 'Enrollment',
-                setCircleDisplay: 'none',
-
-
+                titleColor: gray.base,
+                subtitleColor: gray.lighter,
+                checkmarkDisplay: 'none',
             }
 
         default:
             return {
-                border: `4px solid red`,
+                border: 'none',
                 opacity: '0.3',
-                titleText: 'Default',
-                subtitleText: 'Default',
-                setCircleDisplay: 'inline-block',
+                titleColor: gray.base,
+                subtitleColor: gray.lighter,
+                checkmarkDisplay: 'none',
 
             }
     }
