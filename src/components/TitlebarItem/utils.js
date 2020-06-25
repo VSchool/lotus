@@ -5,7 +5,6 @@ export function itemStatus(itemStatus) {
     switch (itemStatus) {
         case 'active':
             return {
-                // background: black,
                 border: `4px solid ${green.lighter}`,
                 opacity: '1.0',
                 titleColor: gray.base,
@@ -31,12 +30,11 @@ export function itemStatus(itemStatus) {
 
         default:
             return {
-                border: 'none',
-                opacity: '0.3',
-                titleColor: gray.base,
-                subtitleColor: gray.lighter,
-                checkmarkDisplay: 'none',
-
+                border: 'red',
+                opacity: '1.0',
+                titleColor: 'lightcoral',
+                subtitleColor: 'dodgerblue',
+                checkmarkDisplay: 'inline-block',
             }
     }
 }

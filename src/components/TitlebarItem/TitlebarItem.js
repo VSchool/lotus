@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { itemStatus } from './utils'
-import { black, gray } from '../../colors/gray'
+import { black } from '../../colors/gray'
 import circleCheck from '../../assets/icons/circleCheck.svg'
 
 const ItemContainer = styled.div`
@@ -21,7 +21,6 @@ const ItemContainer = styled.div`
     @media (min-width: 768px) {
         min-width: 400px;
         padding: 0px 128px 0px 88px;
-
     }
 `
 
@@ -39,7 +38,6 @@ const ItemTitle = styled.p`
     color: ${props => props.color};
     opacity: ${props => props.opacity};
     box-sizing: border-box;
-    /* border: 1px dotted lightblue; */
 
     @media (max-width: 768px) {
         max-width: 184px;
@@ -50,12 +48,10 @@ const BottomWrapper = styled.div`
     max-width: 100%;
     display: flexbox;
     align-items: center;
-    /* border: 1px solid orange; */
     box-sizing: border-box;
 
     @media (min-width: 768px) {
         max-width: 184px;
-
     }
 `
 
@@ -65,8 +61,6 @@ const CircleCheckContainer = styled.div`
     display: ${props => props.display};
     margin-right: 4px;
     box-sizing: border-box;
-
-    /* border: 1px dotted red; */
 `
 
 const ItemSubtitle = styled.p`
@@ -82,17 +76,16 @@ const ItemSubtitle = styled.p`
     text-transform: capitalize;
     color: ${props => props.color};
     opacity: ${props => props.opacity};
-    /* border: 1px solid red; */
     box-sizing: border-box;
 
     @media (min-width: 768px) {
         font-size: 14px;
         line-height: 16px;
     }
-    
 `
 
 function TitlebarItem({status, title, subtitle}) {
+
     const { background,
             border, 
             opacity, 
@@ -100,13 +93,13 @@ function TitlebarItem({status, title, subtitle}) {
             subtitleColor,
             titleColor,
              } = itemStatus(status)
-    console.log(title, subtitle)
+
     return (
         <ItemContainer border={border} opacity={opacity}>
             <ItemTitle color={titleColor} opacity={opacity}>{title}</ItemTitle>
             <BottomWrapper>
                 <CircleCheckContainer display={checkmarkDisplay}>
-                    <img src={circleCheck} alt='Step completed.'  />
+                    <img src={circleCheck} alt='step completed.'  />
                 </CircleCheckContainer>
                 <ItemSubtitle color={subtitleColor} opacity={opacity}>{subtitle}</ItemSubtitle>
             </BottomWrapper>
