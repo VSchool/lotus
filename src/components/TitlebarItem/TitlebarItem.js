@@ -7,8 +7,8 @@ import circleCheck from '../../assets/icons/circleCheck.svg'
 
 const ItemContainer = styled.div`
     position: relative;
-    max-width: 138px;
-    height: 48px;
+    width: 138px;
+    min-height: 48px;
     background: ${black};
     opacity: ${props => props.opacity};
     border: ${props => props.border};
@@ -96,6 +96,7 @@ function TitlebarItem({status, title, subtitle}) {
 
     return (
         <ItemContainer border={border} opacity={opacity}>
+            {/* Add in another div to add in the Divider divs */}
             <ItemTitle color={titleColor} opacity={opacity}>{title}</ItemTitle>
             <BottomWrapper>
                 <CircleCheckContainer display={checkmarkDisplay}>
