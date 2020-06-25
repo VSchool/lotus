@@ -1,4 +1,4 @@
-import { black, gray } from '../../colors/gray'
+import { gray } from '../../colors/gray'
 import { green } from '../../colors/green'
 
 export function itemStatus(itemStatus) {

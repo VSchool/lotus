@@ -17,11 +17,17 @@ const ItemContainer = styled.div`
     justify-content: center;
     padding: 0px 20px 0px 18px;
     box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        min-width: 400px;
+        padding: 0px 128px 0px 88px;
+
+    }
 `
 
 const ItemTitle = styled.p`
     margin: 0px 0px 2px 0px;
-    width: 100px;
+    max-width: 181px;
     height: 12px;
     font-family: 'aktiv-grotesk-extended';
     font-style: normal;
@@ -31,33 +37,42 @@ const ItemTitle = styled.p`
     letter-spacing: 0.25px;
     text-transform: uppercase;
     color: ${props => props.color};
-    /* color: ${gray.base}; */
     opacity: ${props => props.opacity};
     box-sizing: border-box;
-    /* border: 1px dotted blue; */
+    /* border: 1px dotted lightblue; */
+
+    @media (max-width: 768px) {
+        max-width: 184px;
+    }
 `
 
 const BottomWrapper = styled.div`
-    width: 100%;
+    max-width: 100%;
     display: flexbox;
     align-items: center;
     /* border: 1px solid orange; */
     box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        max-width: 184px;
+
+    }
 `
 
 const CircleCheckContainer = styled.div`
     width: 16px;
     height: 16px;
     display: ${props => props.display};
-    /* display: inline-block; */
     margin-right: 4px;
+    box-sizing: border-box;
+
     /* border: 1px dotted red; */
 `
 
 const ItemSubtitle = styled.p`
     margin: 0px 0px 0px 0px;
     max-width: 100%;
-    height: 13px;
+    height: 16px;
     font-family: 'aktiv-grotesk-extended';
     font-style: normal;
     font-weight: bold;
@@ -66,11 +81,15 @@ const ItemSubtitle = styled.p`
     letter-spacing: 1px;
     text-transform: capitalize;
     color: ${props => props.color};
-    /* color: ${gray.lighter}; */
     opacity: ${props => props.opacity};
-    /* opacity: 0.8; */
     /* border: 1px solid red; */
     box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
 `
 
 function TitlebarItem({status, title, subtitle}) {
