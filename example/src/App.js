@@ -9,6 +9,7 @@ import FooterExample from './example-components/Footer.example'
 import HeaderExample from './example-components/Header.example'
 import ProfileExample from './example-components/Profile.example'
 import TitlebarItemExample from './example-components/TitleBarItem.example'
+import TitlebarExample from './example-components/Titlebar.example'
 import "./index.css"
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <HeaderExample />
             <ProfileExample />
             <TitlebarItemExample />
+            <TitlebarExample />
         </div>
     )
 }

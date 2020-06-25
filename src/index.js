@@ -8,6 +8,7 @@ export { Footer } from './components/Footer'
 export { Header } from './components/Header'
 export { Profile } from './components/Profile'
 export { TitlebarItem } from './components/TitlebarItem'
+export { Titlebar } from './components/Titlebar'
 export {
     blue,
     green,
