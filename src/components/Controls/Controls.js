@@ -11,7 +11,6 @@ const ControlsContainer = styled.div`
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    /* border: 1px solid lightcoral; */
 `   
 
 const CheckboxLabel = styled.p`
@@ -25,7 +24,6 @@ const CheckboxLabel = styled.p`
     line-height: 24px;
     color: ${gray.darker};
     box-sizing: border-box;
-    /* border: 1px solid dodgerblue; */
 `
 
 const TermsLink = styled.a`
@@ -34,10 +32,10 @@ const TermsLink = styled.a`
     text-decoration: underline;
 `
 
-function Controls() {
+function Controls({disabledStatus}) {
     return (
         <ControlsContainer>
-            <input type='checkbox' />
+            <input type='checkbox' disabled={disabledStatus} />
             <CheckboxLabel>I agree <TermsLink>Terms & Conditions</TermsLink></CheckboxLabel>
         </ControlsContainer>
     )
