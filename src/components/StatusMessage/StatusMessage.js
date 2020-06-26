@@ -12,7 +12,11 @@ const StatusMesssageContainer = styled.div`
     height: 128px;
     display: flex;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
-    /* border: 1px solid lightcoral; */
+
+    @media (min-width: 768px) {
+        min-width: 1200px;
+        max-height: 56px;
+    }
 `
 
 const IndicatorContainer = styled.div`
@@ -22,11 +26,17 @@ const IndicatorContainer = styled.div`
     background: ${props => props.background};
     border: ${props => props.border};
     box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        height: 56px;
+        padding: 13px 19px 14px 19px;
+    }
 `
 
 const IndicagtorText = styled.p`
     margin: 0px;
     display: flex;
+    justify-content: center;
     width: 18px;
     height: 29px;
     font-family: 'benton-sans';
@@ -36,8 +46,6 @@ const IndicagtorText = styled.p`
     line-height: 29px;
     text-align: center;
     color: ${white};
-    /* border: 1px dotted white; */
-
 `
 
 const ContentContainer = styled.div`
@@ -49,6 +57,10 @@ const ContentContainer = styled.div`
     padding: 0px 24px 0px 16px;
     border-left: none;
     box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        min-width: 100%;
+    }
 `
 
 const ContentText = styled.p`
@@ -58,7 +70,6 @@ const ContentText = styled.p`
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    /* border: 1px dotted red; */
     color: ${black};
 `
 
