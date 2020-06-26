@@ -122,14 +122,15 @@ const ApplyButton = styled(Button)`
     }
 `
 
-function Modal() {
+function Modal({title, subtitle, body}) {
+    console.log(title, subtitle, body)
     return (
         <div>
             <ModalContainer>
                 <ContentContainer>
-                    <ModalHeadline>Are you planning on applying for any V School Scholarships?</ModalHeadline>
-                    <ModalSubtitle>Complete the  Scholarship Application</ModalSubtitle>
-                    <ModalBody>If you are interested in applying for scholarships, make sure to apply. Then we tell them how many people are usually rewarded with something.</ModalBody>
+                    <ModalHeadline>{title}</ModalHeadline>
+                    <ModalSubtitle>{subtitle}</ModalSubtitle>
+                    <ModalBody>{body}</ModalBody>
                     <ButtonRow>
                         <DeclineButton>No, Thanks</DeclineButton>
                         <ApplyButton>Apply for Scholarships</ApplyButton>
