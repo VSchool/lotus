@@ -1,5 +1,6 @@
 export { Button } from "./components/Button"
 export { Accordion, AccordionGroup } from "./components/Accordion"
+export { Controls } from './components/Controls'
 export { StatusChip } from "./components/StatusChip"
 export { Card } from './components/Card'
 export { StatusMessage } from './components/StatusMessage'
