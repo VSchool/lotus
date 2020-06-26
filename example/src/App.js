@@ -2,8 +2,8 @@ import React from "react"
 import ButtonExample from "./example-components/Button.example"
 import AccordionExample from "./example-components/Accordion.example"
 import StatusChip from "./example-components/StatusChip.example"
-import StatusMessageExample from './example-components/StatusMessage.example'
 import CardExample from './example-components/Card.example'
+import StatusMessageExample from './example-components/StatusMessage.example'
 import ModalExample from './example-components/Modal.example'
 import FooterExample from './example-components/Footer.example'
 import HeaderExample from './example-components/Header.example'

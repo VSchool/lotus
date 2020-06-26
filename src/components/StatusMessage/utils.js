@@ -4,52 +4,50 @@ import { yellow } from '../../colors/yellow'
 import { pink } from '../../colors/pink'
 
 
-export function statusMessageStatus(status, err) {
+export function setStatus(status, message) {
     switch (status) {
-        case "neutral":
+        case 'neutral':
             return {
-                containerBackground: blue.lightest,
-                containerBorder: `2px solid ${blue.light}`,
-                indicatorBackground: blue.base,
+                indicatorText: ':)',
+                indicatorColor: blue.base,
                 indicatorBorder: `1px solid ${blue.base}`,
-                indicatorText: ":)",
-                messageText: "Welcome to your V School Application. Get started by completing the tasks below!",
+                contentBackground: blue.lightest,
+                contentBorder: `2px solid ${blue.light}`,
+                message: message,
             }
-        case "success":
+        case 'success':
             return {
-                containerBackground: green.lightest,
-                containerBorder: `2px solid ${green.light}`,
-                indicatorBackground: green.base,
+                indicatorText: ':)',
+                indicatorColor: green.base,
                 indicatorBorder: `1px solid ${green.base}`,
-                indicatorText: ":)",
-                messageText: "Congrats! You’ve successfully subscribed to our newsletter."
+                contentBackground: green.lightest,
+                contentBorder: `2px solid ${green.light}`,
+
             }
-        case "warning":
+        case 'warning':
             return {
-                containerBackground: yellow.lightest,
-                containerBorder: `2px solid ${yellow.light}`,
-                indicatorBackground: yellow.base,
+                indicatorText: '!',
+                indicatorColor: yellow.base,
                 indicatorBorder: `1px solid ${yellow.base}`,
-                indicatorText: "!",
-                messageText: "Your “Portfolio” project is due in 7 days."
+                contentBackground: yellow.lightest,
+                contentBorder: `2px solid ${yellow.light}`,
+
             }
-        case "fail":
+        case 'fail':
             return {
-                containerBackground: pink.lightest,
-                containerBorder: `2px solid ${pink.light}`,
-                indicatorBackground: pink.base,
+                indicatorText: '!',
+                indicatorColor: pink.base,
                 indicatorBorder: `1px solid ${pink.base}`,
-                indicatorText: "!",
-                messageText: "Your “Portfolio” project is due in 7 days."
+                contentBackground: pink.lightest,
+                contentBorder: `2px solid ${pink.light}`,
+
             }
-        default: 
+        default:
             return {
-                containerBackground: pink.darker,
-                containerBorder: `2px solid ${pink.darker}`,
-                indicatorBackground: yellow.base,
-                indicatorBorder: `1px solid ${green.base}`,
-                indicatorText: "!",
-                messageText: "DEFAULT CASE"
+                indicatorColor: 'purple',
+                indicatorBorder: `1px solid ${blue.darker}`,
+                contentBackground: blue.lightest,
+                contentBorder: `2px solid ${blue.light}`,
             }
     }
 }
