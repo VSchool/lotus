@@ -1,6 +1,7 @@
 import React from "react"
 import ButtonExample from "./example-components/Button.example"
 import AccordionExample from "./example-components/Accordion.example"
+import ControlsExample from './example-components/Controls.example'
 import StatusChip from "./example-components/StatusChip.example"
 import CardExample from './example-components/Card.example'
 import StatusMessageExample from './example-components/StatusMessage.example'
@@ -17,6 +18,7 @@ function App() {
         <div>
             <ButtonExample />
             <AccordionExample />
+            <ControlsExample />
             <StatusChip />
             <CardExample />
             <StatusMessageExample />
