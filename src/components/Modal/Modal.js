@@ -123,7 +123,6 @@ const ApplyButton = styled(Button)`
 `
 
 function Modal({title, subtitle, body}) {
-    console.log(title, subtitle, body)
     return (
         <div>
             <ModalContainer>

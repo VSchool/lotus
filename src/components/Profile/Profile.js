@@ -59,25 +59,24 @@ const TextButton = styled.button`
     background: none;
 `
 
-function Profile() {
+function Profile({userName, userEmail, userPhone, userCourse, userTime}) {
     return (
         <ProfileContainer>
             <MyInfoContainer>
                 <ContentHeader>My Info</ContentHeader>
-                <ContentParagraph>Namey Namersson</ContentParagraph>
-                <ContentParagraph>emailaddress@woah.com</ContentParagraph>
-                <ContentParagraph>###-###-####</ContentParagraph>
+                <ContentParagraph>{userName}</ContentParagraph>
+                <ContentParagraph>{userEmail}</ContentParagraph>
+                <ContentParagraph>{userPhone}</ContentParagraph>
             </MyInfoContainer>
             <MyInfoContainer>
                 <ContentHeader>Selected Course</ContentHeader>
-                <ContentParagraph>Full-Stack Javascript</ContentParagraph>
+                <ContentParagraph>{userCourse}</ContentParagraph>
             </MyInfoContainer>
             <MyInfoContainer>
                 <ContentHeader>Time Commitment</ContentHeader>
-                <ContentParagraph>Full - Time</ContentParagraph>
+                <ContentParagraph>{userTime}</ContentParagraph>
                 <TextButton>Log Out</TextButton>
             </MyInfoContainer>
-
         </ProfileContainer>
     )
 }
