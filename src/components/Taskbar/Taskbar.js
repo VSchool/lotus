@@ -15,6 +15,10 @@ const TaskbarContainer = styled.div`
     background: ${black};
     border: 4px solid ${green.lighter};
     box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        max-width: 1200px;
+    }
 `
 
 const TitleText = styled.p`
@@ -27,7 +31,12 @@ const TitleText = styled.p`
     letter-spacing: 0.25px;
     text-transform: uppercase;
     color: ${gray.base};
-    /* border: 1px solid lightcoral; */
+
+    @media (min-width: 768px) {
+        max-width: 300px;
+        margin: 0px 18px 0px 88px;
+
+    }
 `
 
 const TaskText = styled.p`
@@ -40,7 +49,12 @@ const TaskText = styled.p`
     letter-spacing: 1px;
     text-transform: capitalize;
     color: ${gray.lighter};
-    /* border: 1px solid lightblue; */
+
+    @media (min-width: 768px) {
+        max-width: 300px;
+        margin: 0px 18px 0px 88px;
+
+    }
 `
 
 function Taskbar({title, task}) {

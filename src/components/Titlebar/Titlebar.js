@@ -10,11 +10,12 @@ const TitlebarContainer = styled.div`
     display: flex;
 
     @media (min-width: 768px) {
-        min-width: 1200px;
+        max-width: 100%;
     }
 `
 
 function Titlebar({stepOne, stepTwo, stepThree}) {
+    // console.log(stepOne)
     
     return (
         <TitlebarContainer>
