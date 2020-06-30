@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { StatusChip } from "@vschool/lotus"
+import PropsTable from '../components/PropsTable'
 
 export default () => {
     return (
@@ -19,6 +20,7 @@ export default () => {
             <StatusChip status={"up-next"} />
             <h2>Error Message - status: "err"; err: {`"<error message>"`}</h2>
             <StatusChip status={"err"} err={"I am a custom error message"} />
+            <PropsTable />
         </Fragment>
     )
 }
