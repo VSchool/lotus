@@ -1,3 +1,9 @@
+/* added margin by stedman */
+
+body {
+    margin: 0px;
+}
+
 .button-container {
     margin-bottom: 100px;
 }
