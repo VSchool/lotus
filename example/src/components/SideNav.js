@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const SideNavContainer = styled.div`
-    width: 240px;
+    min-width: 240px;
     /* height: 100%; */
     background: #C4C4C4;
 `

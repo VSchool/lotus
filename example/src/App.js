@@ -18,6 +18,10 @@ import Main from './components/Main'
 import "./index.css"
 
 const AppContainer = styled.div`
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    border: 1px solid black;
     display: flex;
 `
 
