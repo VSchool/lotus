@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const SideNavContainer = styled.div`
     width: 240px;
-    height: 1024px;
+    /* height: 100%; */
     background: #C4C4C4;
 `
 
