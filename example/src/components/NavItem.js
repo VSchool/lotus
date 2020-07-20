@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const NavItemContainer = styled.div`
+    margin: 8px 0px 8px 0px;
     box-sizing: border-box;
 `
 
@@ -16,6 +17,7 @@ const ComponentName = styled.p`
 `
 
 const ItemWrapper = styled.div`
+    margin: 4px 0px 4px 0px;
     height: 32px;
     display: flex;
     align-items: center;
@@ -48,7 +50,7 @@ export default function NavItem(props) {
 
     const [isItemOpen, setIsItemOpen] = useState('none')
 
-    const openListItem = () => {
+    const openListItem = (props) => {
         if (isItemOpen ===  'none') {
             setIsItemOpen('block')
         } else if (isItemOpen ===  'block') {
@@ -58,7 +60,7 @@ export default function NavItem(props) {
 
     return (
         <NavItemContainer>
-            <ComponentName onClick={openListItem}>Component Name</ComponentName>
+            <ComponentName onClick={openListItem}>{props.name}</ComponentName>
             <SubItemsContiner display={isItemOpen}>
                 <ItemWrapper>
                     <SubItemHighlightBar />
