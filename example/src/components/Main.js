@@ -33,8 +33,21 @@ const IntroductionText = styled.p`
 
 const LineBreak = styled.div`
     /* width: 80%; */
+    margin: 16px 0px 24px 0px;
     height: 2px;
     background: #D1C8C8;
+`
+
+const BodyText = styled.p`
+    margin: 0px 0px 0px 0px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    opacity: .65;
+    /* border: 1px dotted gray; */
 `
 
 export default function Main() {
@@ -43,6 +56,8 @@ export default function Main() {
             <WelcomeText>Welcome</WelcomeText>
             <IntroductionText>Introduction</IntroductionText>
             <LineBreak />
+            <BodyText>The following references will provide guidance on how V School components are used.</BodyText>
+
             <Card />
         </MainContainer>
     )
