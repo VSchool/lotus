@@ -1,10 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const NavItemContainer = styled.div`
     box-sizing: border-box;
-
-    border: 1px solid blue;
 `
 
 const ComponentName = styled.p`
@@ -15,19 +13,17 @@ const ComponentName = styled.p`
     font-size: 20px;
     line-height: 23px;
     color: #000000;
-    /* border: 1px dotted gray; */
 `
 
 const ItemWrapper = styled.div`
     height: 32px;
     display: flex;
     align-items: center;
-    /* border: 1px solid dodgerblue; */
 `
 
 const SubItemsContiner = styled.div`
+    display: ${props => props.display};
     padding: 0px 0px 0px 16px;
-    /* border: 1px solid lightcoral; */
 `
 
 const SubItemHighlightBar = styled.div`
@@ -46,14 +42,24 @@ const SubItemName = styled.p`
     line-height: 24px;
     display: flex;
     color: #000000;
-    /* border: 1px dotted gray; */
 `
 
-export default function NavItem() {
+export default function NavItem(props) {
+
+    const [isItemOpen, setIsItemOpen] = useState('none')
+
+    const openListItem = () => {
+        if (isItemOpen ===  'none') {
+            setIsItemOpen('block')
+        } else if (isItemOpen ===  'block') {
+            setIsItemOpen('none')
+        }
+    }
+
     return (
         <NavItemContainer>
-            <ComponentName>Component Name</ComponentName>
-            <SubItemsContiner>
+            <ComponentName onClick={openListItem}>Component Name</ComponentName>
+            <SubItemsContiner display={isItemOpen}>
                 <ItemWrapper>
                     <SubItemHighlightBar />
                     <SubItemName>Overview</SubItemName>
