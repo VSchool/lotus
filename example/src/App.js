@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from 'styled-components'
 import SideNav from './components/SideNav'
 import Main from './components/Main'
+
 // import ButtonExample from "./example-components/Button.example"
 // import AccordionExample from "./example-components/Accordion.example"
 // import ControlsExample from './example-components/Controls.example'
@@ -26,10 +27,15 @@ const AppContainer = styled.div`
 `
 
 function App() {
+
+    const [appState, setAppState] = useState({displayComponent: 'none'})
+
+    // console.log(appState)
+
     return (
         <AppContainer>
-            <SideNav />
-            <Main />
+                <SideNav />
+                <Main />
             {/* <ButtonExample />
             <AccordionExample />
             <ControlsExample />

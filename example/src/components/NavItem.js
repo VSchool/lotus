@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
+
 const NavItemContainer = styled.div`
     margin: 8px 0px 8px 0px;
     box-sizing: border-box;
@@ -48,9 +49,11 @@ const SubItemName = styled.p`
 
 export default function NavItem(props) {
 
+
+
     const [isItemOpen, setIsItemOpen] = useState('none')
 
-    const openListItem = (props) => {
+    const openListItem = () => {
         if (isItemOpen ===  'none') {
             setIsItemOpen('block')
         } else if (isItemOpen ===  'block') {
@@ -59,8 +62,8 @@ export default function NavItem(props) {
     }
 
     return (
-        <NavItemContainer>
-            <ComponentName onClick={openListItem}>{props.name}</ComponentName>
+        <NavItemContainer onClick={openListItem} >
+            <ComponentName>{props.name}</ComponentName>
             <SubItemsContiner display={isItemOpen}>
                 <ItemWrapper>
                     <SubItemHighlightBar />

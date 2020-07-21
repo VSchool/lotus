@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import NavItem from './NavItem'
-
 import logo from '../assets/images/VschoolLogo.png'
 
 const SideNavContainer = styled.div`
@@ -47,6 +46,8 @@ const ComponentList = styled.div`
 `
 
 export default function SideNav() {
+
+
     return (
         <SideNavContainer>
             <NavLogoContainer><img src={logo} alt={'V School logo'} /></NavLogoContainer>
@@ -57,7 +58,7 @@ export default function SideNav() {
                 <NavItem name={'Button'} />
                 <NavItem name={'Card'} />
                 <NavItem name={'Modal'} />
-                <NavItem name={'Other'} />
+                <NavItem name={'Status Message'} />
             </ComponentList>
         </SideNavContainer>
     )

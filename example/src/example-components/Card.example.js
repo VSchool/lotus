@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Table from '../components/Table'
-import { Card } from '@vschool/lotus'
 
 const CardExampleContainer = styled.div`
 
@@ -32,10 +30,8 @@ const OverviewText = styled.p`
 export default () => {
     return (
         <CardExampleContainer>
-            <ComopnentName>Card</ComopnentName>
+            <ComopnentName>Bloop</ComopnentName>
             <OverviewText>This component is used for whatever it is used for.</OverviewText>
-            <Table />
-            <Card status={'in-progress'} />
         </CardExampleContainer>
         
     )

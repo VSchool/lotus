@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Card from '../example-components/Card.example'
 
 const MainContainer = styled.div`
     width: 100%;
@@ -58,7 +57,6 @@ export default function Main() {
             <LineBreak />
             <BodyText>The following references will provide guidance on how V School components are used.</BodyText>
 
-            <Card />
         </MainContainer>
     )
 }
