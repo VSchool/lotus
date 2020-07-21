@@ -60,7 +60,7 @@ export default function Main() {
 
     
     
-    console.log(compName)
+    // console.log(name)
 
     // console.log('From Main.js:', name)
 
@@ -72,8 +72,8 @@ export default function Main() {
             <BodyText>The following references will provide guidance on how V School components are used.</BodyText>
             <HeaderText>{compName}</HeaderText>
             <BodyText>{description}</BodyText>
-            <Table>
-                
+            <Table component={compName}>
+
             </Table>
         </MainContainer>
     )

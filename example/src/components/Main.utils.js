@@ -10,7 +10,7 @@ export function decideInfo(name) {
                 compName: 'Modal',
                 description: 'Scallywag gunwalls line black spot bilge rat smartly handsomely clap of thunder crimp Letter of Marque. Quarterdeck Privateer Nelsons folly sloop bilge Sink me lass sutler Spanish Main dance the hempen jig. Chantey aft Letter of Marque Sink me knave spike yard swing the lead cable hands.',
             }
-        case 'StatusMessage':
+        case 'Status Message':
             return {
                 compName: 'Status Message',
                 description: 'Long ass description This is for the Status Message',
@@ -27,3 +27,4 @@ export function decideInfo(name) {
         }
     }
 }
+
