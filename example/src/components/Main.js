@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
-
+import { ComponentDisplayContext } from '../providers/Store'
+import { decideInfo} from './Main.utils'
+import Table from './Table'
 
 const MainContainer = styled.div`
     width: 100%;
@@ -20,7 +22,7 @@ const WelcomeText = styled.p`
     box-sizing: border-box;
 `
 
-const IntroductionText = styled.p`
+const HeaderText = styled.p`
     margin: 0px 0px 0px 0px;
     font-family: 'aktiv-grotesk';
     font-style: normal;
@@ -50,13 +52,29 @@ const BodyText = styled.p`
 `
 
 export default function Main() {
+
+    const [componentDisplay] = useContext(ComponentDisplayContext)
+    let name = componentDisplay.componentDisplay
+    let newObj = decideInfo(name)
+    const { compName, description } = newObj
+
+    
+    
+    console.log(compName)
+
+    // console.log('From Main.js:', name)
+
     return (
         <MainContainer>
             <WelcomeText>Welcome</WelcomeText>
-            <IntroductionText>Introduction</IntroductionText>
+            <HeaderText>Introduction</HeaderText>
             <LineBreak />
             <BodyText>The following references will provide guidance on how V School components are used.</BodyText>
-
+            <HeaderText>{compName}</HeaderText>
+            <BodyText>{description}</BodyText>
+            <Table>
+                
+            </Table>
         </MainContainer>
     )
 }

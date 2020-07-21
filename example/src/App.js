@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from 'styled-components'
 import SideNav from './components/SideNav'
 import Main from './components/Main'
@@ -28,7 +28,7 @@ const AppContainer = styled.div`
 
 function App() {
 
-    const [appState, setAppState] = useState({displayComponent: 'none'})
+    // const [appState, setAppState] = useState({displayComponent: 'none'})
 
     // console.log(appState)
 

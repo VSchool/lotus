@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import NavItem from './NavItem'
+import { ComponentDisplayContext } from '../providers/Store'
 import logo from '../assets/images/VschoolLogo.png'
 
 const SideNavContainer = styled.div`
@@ -45,8 +45,32 @@ const ComponentList = styled.div`
     box-sizing: border-box;
 `
 
+const ComponentName = styled.button`
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    text-align: left;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    border: none;
+    background: none;
+    outline: none;
+`
+
+
+
 export default function SideNav() {
 
+    const [,setComponentDisplay] = useContext(ComponentDisplayContext)
+    // console.log(componentDisplay)
+
+    const handleClick = (e) => {
+        setComponentDisplay({componentDisplay: e.target.value})
+    }
 
     return (
         <SideNavContainer>
@@ -55,10 +79,10 @@ export default function SideNav() {
             <IntroductionText>Introduction</IntroductionText>
             <ComponentList>
                 <WelcomeText>Reference</WelcomeText>
-                <NavItem name={'Button'} />
-                <NavItem name={'Card'} />
-                <NavItem name={'Modal'} />
-                <NavItem name={'Status Message'} />
+                <ComponentName value={'Header'} onClick={handleClick}>Header</ComponentName>
+                <ComponentName value={'Modal'} onClick={handleClick}>Modal</ComponentName>
+                <ComponentName value={'StatusMessage'} onClick={handleClick}>Status Message</ComponentName>
+                <ComponentName value={'Card'} onClick={handleClick}>Card</ComponentName>
             </ComponentList>
         </SideNavContainer>
     )

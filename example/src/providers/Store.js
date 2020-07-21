@@ -4,7 +4,9 @@ export const ComponentDisplayContext = React.createContext()
 
 export default function Store({ children }) {
 
-    const [componentDisplay, setComponentDisplay] =  useState({componentDisplay: 'none'})
+    const [componentDisplay, setComponentDisplay] =  useState({
+        componentDisplay: 'Header'
+    })
     // console.log(componentDisplay)
     return (
         <ComponentDisplayContext.Provider value={[componentDisplay, setComponentDisplay]}>

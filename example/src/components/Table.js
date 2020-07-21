@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const TableContainer = styled.div`
-    /* border: 1px solid green; */
+    border: 1px solid green;
 `
 
 const PropTable = styled.table`
@@ -12,9 +12,22 @@ const PropTable = styled.table`
     /* border: 1px solid gold; */
 `
 
-const TableRow = styled.div`
+const TBody = styled.tbody`
+    border: 1px dotted gray;
+`
+
+const TableRow = styled.tr`
     height: 24px;
     border: 1px dotted gray;
+`
+
+const TableHead = styled.th`
+
+    border: 1px dotted lightcoral;
+`
+
+const TableData = styled.td`
+    border: 1px dotted blue;
 `
 
 
@@ -22,9 +35,15 @@ export default function Table() {
     return (
         <TableContainer>
             <PropTable>
-                <TableRow>
-
-                </TableRow>
+                <TBody>
+                    <TableRow>
+                        <TableHead>prop</TableHead>
+                        <TableHead>description</TableHead>
+                    </TableRow>
+                    <TableRow>
+                        <TableData>'success'</TableData>
+                    </TableRow>
+                </TBody>
             </PropTable>
         </TableContainer>
     )
