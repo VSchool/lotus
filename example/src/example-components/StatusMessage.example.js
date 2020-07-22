@@ -43,7 +43,7 @@ export default () => {
             <StatusMessage status={'success'} message={successMessage} />
             <PropDesc>'warning'</PropDesc>
             <StatusMessage status={'warning'} message={warningMessage} />
-            <PropDesc>'faile'</PropDesc>
+            <PropDesc>'fail'</PropDesc>
             <StatusMessage status={'fail'} message={failMessage} />
         </StatusMessageContainer>
     )
