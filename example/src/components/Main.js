@@ -13,7 +13,7 @@ import FooterExample from '../example-components/Footer.example'
 import ProfileExample from '../example-components/Profile.example'
 import StatusChipExample from '../example-components/StatusChip.example'
 import TaskbarExample from '../example-components/Taskbar.example'
-import TitlebarItemExample from '../example-components/TitlebarItem.example'
+import TitlebarItemExample from '../example-components/TitleBarItem.example'
 import TitlebarExample from '../example-components/Titlebar.example'
 
 const MainContainer = styled.div`

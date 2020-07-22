@@ -19,7 +19,7 @@ const ItemContainer = styled.div`
     box-sizing: border-box;
 
     @media (min-width: 768px) {
-        min-width: 400px;
+        width: 400px;
         padding: 0px 128px 0px 88px;
     }
 `
