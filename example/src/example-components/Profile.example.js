@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Profile } from '@vschool/lotus'
 
 const ProfileExampleContainer = styled.div`
-    border: 1px solid lightcoral;
+    /* border: 1px solid lightcoral; */
 `
 
 const SectionName = styled.p`

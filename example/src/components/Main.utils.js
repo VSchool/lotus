@@ -1,5 +1,3 @@
-
-
 export function decideInfo(name) {
     switch (name) {
         case 'Header':
