@@ -11,8 +11,8 @@ export default () => {
     return (
         <Fragment>
             <br></br>
-            <h1>Status Message</h1>
-            <p>Media query currently at 768px. More documentation to come.</p>
+            {/* <h1>Status Message</h1>
+            <p>Media query currently at 768px. More documentation to come.</p> */}
             <StatusMessage status={'neutral'} message={neutralMessage} />
             <br></br>
             <StatusMessage status={'success'} message={successMessage} />

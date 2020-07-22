@@ -66,7 +66,6 @@ const ComponentName = styled.button`
 export default function SideNav() {
 
     const [,setComponentDisplay] = useContext(ComponentDisplayContext)
-    // console.log(componentDisplay)
 
     const handleClick = (e) => {
         setComponentDisplay({componentDisplay: e.target.value})

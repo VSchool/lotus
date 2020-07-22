@@ -7,7 +7,7 @@ export default function Store({ children }) {
     const [componentDisplay, setComponentDisplay] =  useState({
         componentDisplay: 'Header'
     })
-    // console.log(componentDisplay)
+
     return (
         <ComponentDisplayContext.Provider value={[componentDisplay, setComponentDisplay]}>
             {children}

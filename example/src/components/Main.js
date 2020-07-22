@@ -1,7 +1,11 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { ComponentDisplayContext } from '../providers/Store'
-import { decideInfo} from './Main.utils'
+import { decideInfo } from './Main.utils'
+import StatusMessageExample from '../example-components/StatusMessage.example'
+import HeaderExample from '../example-components/Header.example'
+import CardExample from '../example-components/Card.example'
+import ModalExample from '../example-components/Modal.example'
 import Table from './Table'
 
 const MainContainer = styled.div`
@@ -39,8 +43,9 @@ const LineBreak = styled.div`
     background: #D1C8C8;
 `
 
-const BodyText = styled.p`
-    margin: 0px 0px 0px 0px;
+const IntroBody = styled.p`
+    margin: 0px 0px 16px 0px;
+    height: 100px;
     font-family: 'aktiv-grotesk';
     font-style: normal;
     font-weight: normal;
@@ -51,6 +56,30 @@ const BodyText = styled.p`
     /* border: 1px dotted gray; */
 `
 
+const ComponentName = styled.p`
+    margin: 0px 0px 16px 0px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    /* border: 1px solid orange; */
+`
+
+const BodyText = styled.p`
+    margin: 0px 0px 24px 0px;
+    height: 50px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    opacity: .65;
+    /* border: 1px solid green; */
+`
+
 export default function Main() {
 
     const [componentDisplay] = useContext(ComponentDisplayContext)
@@ -58,23 +87,33 @@ export default function Main() {
     let newObj = decideInfo(name)
     const { compName, description } = newObj
 
-    
-    
-    // console.log(name)
-
-    // console.log('From Main.js:', name)
+    function displayComponent(displayComponentName) {
+        switch (displayComponentName) {
+            case 'Header':
+                return <HeaderExample />
+            case 'Modal':
+                return <ModalExample />
+            case 'Status Message':
+                return <StatusMessageExample />
+            case 'Card':
+                return <CardExample />
+            default:
+                return 'Default Case'
+        }
+    }
+    let rando = displayComponent(name)
 
     return (
         <MainContainer>
             <WelcomeText>Welcome</WelcomeText>
             <HeaderText>Introduction</HeaderText>
             <LineBreak />
-            <BodyText>The following references will provide guidance on how V School components are used.</BodyText>
-            <HeaderText>{compName}</HeaderText>
+            <IntroBody>The following references will provide guidance on how V School components are used.</IntroBody>
+            <ComponentName>{compName}</ComponentName>
             <BodyText>{description}</BodyText>
-            <Table component={compName}>
-
-            </Table>
+            <Table component={compName} />
+            <LineBreak />
+            {rando}
         </MainContainer>
     )
 }
