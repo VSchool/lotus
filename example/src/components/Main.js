@@ -13,7 +13,8 @@ import FooterExample from '../example-components/Footer.example'
 import ProfileExample from '../example-components/Profile.example'
 import StatusChipExample from '../example-components/StatusChip.example'
 import TaskbarExample from '../example-components/Taskbar.example'
-import TitlebarExample from '../example-components/TitlebarItem.example'
+import TitlebarItemExample from '../example-components/TitlebarItem.example'
+import TitlebarExample from '../example-components/Titlebar.example'
 
 const MainContainer = styled.div`
     width: 100%;
@@ -115,6 +116,8 @@ export default function Main() {
             case 'Taskbar':
                 return <TaskbarExample />
             case 'TitlebarItem':
+                return <TitlebarItemExample />
+            case 'Titlebar':
                 return <TitlebarExample />
             default:
                 return 'Default Case'

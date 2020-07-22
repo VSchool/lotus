@@ -88,6 +88,7 @@ export default function SideNav() {
                 <ComponentName value={'StatusChip'} onClick={handleClick}>Status Chip</ComponentName>
                 <ComponentName value={'Taskbar'} onClick={handleClick}>Taskbar</ComponentName>
                 <ComponentName value={'TitlebarItem'} onClick={handleClick}>Titlebar Item</ComponentName>
+                <ComponentName value={'Titlebar'} onClick={handleClick}>Titlebar</ComponentName>
 
             </ComponentList>
         </SideNavContainer>

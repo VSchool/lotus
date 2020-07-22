@@ -205,6 +205,28 @@ export function decideInfo(name) {
                     }
                 ]
             }
+        case 'Titlebar':
+            return {
+                compName: 'Titlebar',
+                description: 'Long form description for the Titlebar component.',
+                availableProps: [
+                    {
+                        propName: `'stepOne'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for stepOne.'
+                    },
+                    {
+                        propName: `'stepTwo'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for stepOne.'
+                    },
+                    {
+                        propName: `'stepThree'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for stepTwo.'
+                    }
+                ]
+            }
         
         default: 
             return {
