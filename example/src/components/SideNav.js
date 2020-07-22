@@ -46,7 +46,7 @@ const ComponentList = styled.div`
 `
 
 const ComponentName = styled.button`
-    margin: 0px;
+    margin: 4px 0px 4px 0px;
     padding: 0px;
     width: 100%;
     text-align: left;
@@ -59,6 +59,7 @@ const ComponentName = styled.button`
     border: none;
     background: none;
     outline: none;
+    /* border: 1px solid red; */
 `
 
 
