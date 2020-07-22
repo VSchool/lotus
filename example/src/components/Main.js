@@ -13,7 +13,7 @@ import FooterExample from '../example-components/Footer.example'
 import ProfileExample from '../example-components/Profile.example'
 import StatusChipExample from '../example-components/StatusChip.example'
 import TaskbarExample from '../example-components/Taskbar.example'
-import TitlebarItemExample from '../example-components/TitlebarItem.example'
+import TitlebarItemExample from '../example-components/TitleBarItem.example'
 import TitlebarExample from '../example-components/Titlebar.example'
 
 const MainContainer = styled.div`
@@ -53,7 +53,7 @@ const LineBreak = styled.div`
 
 const IntroBody = styled.p`
     margin: 0px 0px 16px 0px;
-    height: 100px;
+    /* height: 100px; */
     font-family: 'aktiv-grotesk';
     font-style: normal;
     font-weight: normal;
