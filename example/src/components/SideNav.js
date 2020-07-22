@@ -83,6 +83,7 @@ export default function SideNav() {
                 <ComponentName value={'Modal'} onClick={handleClick}>Modal</ComponentName>
                 <ComponentName value={'Status Message'} onClick={handleClick}>Status Message</ComponentName>
                 <ComponentName value={'Header'} onClick={handleClick}>Header</ComponentName>
+                <ComponentName value={'Footer'} onClick={handleClick}>Footer</ComponentName>
 
             </ComponentList>
         </SideNavContainer>

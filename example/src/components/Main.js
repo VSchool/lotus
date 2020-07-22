@@ -9,6 +9,7 @@ import ControlsExample from '../example-components/Controls.example'
 import ModalExample from '../example-components/Modal.example'
 import StatusMessageExample from '../example-components/StatusMessage.example'
 import HeaderExample from '../example-components/Header.example'
+import FooterExample from '../example-components/Footer.example'
 
 const MainContainer = styled.div`
     width: 100%;
@@ -101,6 +102,8 @@ export default function Main() {
                 return <CardExample />
             case 'Controls':
                 return <ControlsExample />
+            case 'Footer':
+                return <FooterExample />
             default:
                 return 'Default Case'
         }

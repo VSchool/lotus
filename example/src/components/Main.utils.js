@@ -96,6 +96,12 @@ export function decideInfo(name) {
                     }
                 ]
             }
+        case 'Footer':
+            return {
+                compName: 'Footer',
+                description: 'Long form description for the Footer component.',
+                availableProps: []
+            }
         default: 
         return {
             compName: 'Default Case',
