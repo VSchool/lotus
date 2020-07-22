@@ -53,7 +53,7 @@ const LineBreak = styled.div`
 
 const IntroBody = styled.p`
     margin: 0px 0px 16px 0px;
-    height: 100px;
+    /* height: 100px; */
     font-family: 'aktiv-grotesk';
     font-style: normal;
     font-weight: normal;

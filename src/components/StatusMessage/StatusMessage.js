@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 import { setStatus } from './utils'
 import { blue } from '../../colors/blue'
@@ -93,9 +93,9 @@ function StatusMessage({status, message}) {
     )
 }
 
-StatusMessage.propTypes = {
-    status: PropTypes.string.isRequired,
-    message: PropTypes.string
-  }
+// StatusMessage.propTypes = {
+//     status: PropTypes.string.isRequired,
+//     message: PropTypes.string
+//   }
 
 export default StatusMessage
