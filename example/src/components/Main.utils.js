@@ -134,6 +134,43 @@ export function decideInfo(name) {
                     }
                 ]
             }
+        case 'StatusChip':
+            return {
+                compName: 'StatusChip',
+                description: 'Long form description for the StatusChip component.',
+                availableProps: [
+                    {
+                        propName: `'not-started'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for not-started.'
+                    },
+                    {
+                        propName: `'up-next'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for up-next.'
+                    },
+                    {
+                        propName: `'in-progress'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for in-progress.'
+                    },
+                    {
+                        propName: `'completed'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for completed.'
+                    },
+                    {
+                        propName: `'up-next'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for up-next.'
+                    },
+                    {
+                        propName: `'err'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for err.'
+                    }
+                ]
+            }
         default: 
         return {
             compName: 'Default Case',

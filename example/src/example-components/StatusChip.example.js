@@ -1,26 +1,49 @@
-import React, { Fragment } from "react"
+import React from "react"
+import styled from 'styled-components'
 import { StatusChip } from "@vschool/lotus"
-import PropsTable from '../components/PropsTable'
+
+const StatusChipContainer = styled.div`
+    /* border: 1px solid lightcoral; */
+`
+
+const SectionName = styled.p`
+    margin: 0px 0px 24px 0px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+`
+
+const PropDesc = styled.p`
+    margin: 16px 0px 8px 0px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+`
 
 export default () => {
     return (
-        <Fragment>
-            <br></br>
-            <h1>Status Chips</h1>
-            <h3>Props:</h3>
-            <p>- status = string/enum</p>
-            <p>- err = "string"</p>
-            <h2>In Progress - status: "in-progress"</h2>
+        <StatusChipContainer>
+            <SectionName>Examples</SectionName>
+            <PropDesc>'in-progress'</PropDesc>
             <StatusChip status={"in-progress"} />
-            <h2>Not Started - status: "not-started"</h2>
+            <PropDesc>'not-started'</PropDesc>
             <StatusChip status={"not-started"} />
-            <h2>Completed - status: "completed"</h2>
+            <PropDesc>'completed'</PropDesc>
             <StatusChip status={"completed"} />
-            <h2>Up Next - status: "up next"</h2>
+            <PropDesc>'up-next'</PropDesc>
             <StatusChip status={"up-next"} />
-            <h2>Error Message - status: "err"; err: {`"<error message>"`}</h2>
+            <PropDesc>'err'</PropDesc>
             <StatusChip status={"err"} err={"I am a custom error message"} />
-            <PropsTable />
-        </Fragment>
+        </StatusChipContainer>
     )
 }
+
+
+

@@ -85,6 +85,8 @@ export default function SideNav() {
                 <ComponentName value={'Header'} onClick={handleClick}>Header</ComponentName>
                 <ComponentName value={'Footer'} onClick={handleClick}>Footer</ComponentName>
                 <ComponentName value={'Profile'} onClick={handleClick}>Profile</ComponentName>
+                <ComponentName value={'StatusChip'} onClick={handleClick}>Status Chip</ComponentName>
+
             </ComponentList>
         </SideNavContainer>
     )
