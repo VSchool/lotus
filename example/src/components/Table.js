@@ -27,7 +27,7 @@ const TableRow = styled.div`
     display: flex;
 
     p:nth-child(1) {
-        min-width: 104px;
+        min-width: 112px;
     }
 
     p:nth-child(2) {

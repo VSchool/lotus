@@ -84,6 +84,18 @@ export function decideInfo(name) {
                     }
                 ]
             }
+        case 'Controls':
+            return {
+                compName: 'Controls',
+                description: 'Long form description for the Controls component.',
+                availableProps: [
+                    {
+                        propName: `'disabled-status'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for not-started.'
+                    }
+                ]
+            }
         default: 
         return {
             compName: 'Default Case',

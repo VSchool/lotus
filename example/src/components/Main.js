@@ -2,11 +2,13 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { ComponentDisplayContext } from '../providers/Store'
 import { decideInfo } from './Main.utils'
+import Table from './Table'
+
+import CardExample from '../example-components/Card.example'
+import ControlsExample from '../example-components/Controls.example'
+import ModalExample from '../example-components/Modal.example'
 import StatusMessageExample from '../example-components/StatusMessage.example'
 import HeaderExample from '../example-components/Header.example'
-import CardExample from '../example-components/Card.example'
-import ModalExample from '../example-components/Modal.example'
-import Table from './Table'
 
 const MainContainer = styled.div`
     width: 100%;
@@ -97,6 +99,8 @@ export default function Main() {
                 return <StatusMessageExample />
             case 'Card':
                 return <CardExample />
+            case 'Controls':
+                return <ControlsExample />
             default:
                 return 'Default Case'
         }
