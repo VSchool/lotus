@@ -188,6 +188,24 @@ export function decideInfo(name) {
                     }
                 ]
             }
+        case 'TitlebarItem':
+            return {
+                compName: 'TitlebarItem',
+                description: 'Long form description for the TitlebarItem component.',
+                availableProps: [
+                    {
+                        propName: `'title'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for title.'
+                    },
+                    {
+                        propName: `'task'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for task.'
+                    }
+                ]
+            }
+        
         default: 
             return {
             compName: 'Default Case',

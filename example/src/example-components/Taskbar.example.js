@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Taskbar } from '@vschool/lotus'
 
 const TaskbarExampleContainer = styled.div`
-    border: 1px solid lightcoral;
+    /* border: 1px solid lightcoral; */
 `
 
 const SectionName = styled.p`
