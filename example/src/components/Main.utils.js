@@ -171,8 +171,25 @@ export function decideInfo(name) {
                     }
                 ]
             }
+        case 'Taskbar':
+            return {
+                compName: 'Taskbar',
+                description: 'Long form description for the Taskbar component.',
+                availableProps: [
+                    {
+                        propName: `'title'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for title.'
+                    },
+                    {
+                        propName: `'task'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for task.'
+                    }
+                ]
+            }
         default: 
-        return {
+            return {
             compName: 'Default Case',
             description: 'Nothing to report.'
         }

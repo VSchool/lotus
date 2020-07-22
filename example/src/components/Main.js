@@ -12,6 +12,7 @@ import HeaderExample from '../example-components/Header.example'
 import FooterExample from '../example-components/Footer.example'
 import ProfileExample from '../example-components/Profile.example'
 import StatusChipExample from '../example-components/StatusChip.example'
+import TaskbarExample from '../example-components/Taskbar.example'
 
 const MainContainer = styled.div`
     width: 100%;
@@ -110,6 +111,8 @@ export default function Main() {
                 return <ProfileExample />
             case 'StatusChip':
                 return <StatusChipExample />
+            case 'Taskbar':
+                return <TaskbarExample />
             default:
                 return 'Default Case'
         }
@@ -130,13 +133,3 @@ export default function Main() {
         </MainContainer>
     )
 }
-
-{/* <h2>In Progress - status: "in-progress"</h2>
-
-<h2>Not Started - status: "not-started"</h2>
-
-<h2>Completed - status: "completed"</h2>
-
-<h2>Up Next - status: "up next"</h2>
-
-<h2>Error Message - status: "err"; err: {`"<error message>"`}</h2> */}
