@@ -5,7 +5,7 @@ export const ComponentDisplayContext = React.createContext()
 export default function Store({ children }) {
 
     const [componentDisplay, setComponentDisplay] =  useState({
-        componentDisplay: 'Modal'
+        componentDisplay: 'Status Message'
     })
 
     return (
