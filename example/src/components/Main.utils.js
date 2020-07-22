@@ -102,6 +102,38 @@ export function decideInfo(name) {
                 description: 'Long form description for the Footer component.',
                 availableProps: []
             }
+        case 'Profile':
+            return {
+                compName: 'Profile',
+                description: 'Long form description for the Profile component.',
+                availableProps: [
+                    {
+                        propName: `'userName'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for userName.'
+                    },
+                    {
+                        propName: `'userEmail'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for userEmail.'
+                    },
+                    {
+                        propName: `'userPhone'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for userPhone.'
+                    },
+                    {
+                        propName: `'userCourse'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for userCourse.'
+                    },
+                    {
+                        propName: `'userTime'`,
+                        propType: 'string',
+                        propDescription: 'Some sort of descrtiption for userTime.'
+                    }
+                ]
+            }
         default: 
         return {
             compName: 'Default Case',
