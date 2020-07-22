@@ -1,101 +1,94 @@
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
-
 import { setStatus } from './utils'
-import { blue } from '../../colors/blue'
-import { black, white } from '../../colors/gray'
+// import PropTypes from 'prop-types'
 
-const StatusMesssageContainer = styled.div`
+// import { setStatus } from './utils'
+// import { blue } from '../../colors/blue'
+// import { black, white } from '../../colors/gray'
+
+const StatusMessageContainer = styled.div`
     position: relative;
     width: 378px;
     height: 128px;
     display: flex;
+    align-items: center;
+    background: #E3E8FA;
+    border: 2px solid #859FEB;
+    /* box-sizing: border-box; */
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
-
-    @media (min-width: 768px) {
-        min-width: 1200px;
-        max-height: 56px;
-    }
+    /* border: 1px solid lightcoral; */
+    /* @media (min-width: 768px) {
+        max-width: 1024px;
+        height: 56px;
+    } */
 `
 
 const IndicatorContainer = styled.div`
     min-width: 56px;
     height: 100%;
-    padding: 49px 19px 50px 19px;
-    background: ${props => props.background};
-    border: ${props => props.border};
-    box-sizing: border-box;
-
-    @media (min-width: 768px) {
-        height: 56px;
-        padding: 13px 19px 14px 19px;
-    }
-`
-
-const IndicagtorText = styled.p`
-    margin: 0px;
     display: flex;
     justify-content: center;
-    width: 18px;
-    height: 29px;
+    align-items: center;
+    background: #456AE2;
+    /* blue/primary */
+
+    border: 1px solid #456AE2;
+    /* box-sizing: border-box; */
+    /* border: 1px dotted gray; */
+`
+
+const Indicator = styled.p`
+    margin: 0px;
     font-family: 'benton-sans';
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
+    /* identical to box height */
+
     text-align: center;
-    color: ${white};
+    color: #FFFFFF;
 `
 
-const ContentContainer = styled.div`
-    background: ${props => props.background};
-    border: ${props => props.border};
-    display: flex;
-    align-items: center;
-    /* Used Flex instead of padding for top and bottom */
-    padding: 0px 24px 0px 16px;
-    border-left: none;
+const MessageContainer = styled.div`
+    width: 100%;
+    min-height: 100%;
+    padding: 16px 16px 16px 16px;
     box-sizing: border-box;
-
-    @media (min-width: 768px) {
-        min-width: 100%;
-    }
+    /* border: 1px solid lightcoral; */
 `
 
-const ContentText = styled.p`
-    margin: 0px 0px 0px 0px;
+const Message = styled.p`
+    margin: 0px;
     font-family: 'aktiv-grotesk';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: ${black};
+    color: #21201F;
+    border: 1px solid green;
 `
 
-function StatusMessage({status, message}) {
-    
-    const { indicatorColor, 
-            indicatorBorder, 
-            contentBackground, 
-            contentBorder, 
-            indicatorText } = setStatus(status)
+
+export default function StatusMessage() {
+
+    // console.log(setStatus('success'))
 
     return (
-        <StatusMesssageContainer>
-            <IndicatorContainer background={indicatorColor} border={indicatorBorder}>
-                <IndicagtorText>{indicatorText}</IndicagtorText>
+        <StatusMessageContainer>
+            <IndicatorContainer>
+                <Indicator>{':)'}</Indicator>
             </IndicatorContainer>
-            <ContentContainer background={contentBackground} border={contentBorder}>
-                <ContentText>{message}</ContentText>
-            </ContentContainer>
-        </StatusMesssageContainer>
+            <MessageContainer>
+                <Message>Welcome to your V School Application. Get started by completing your Background Information</Message>
+            </MessageContainer>
+        </StatusMessageContainer>
     )
 }
 
-StatusMessage.propTypes = {
-    status: PropTypes.string.isRequired,
-    message: PropTypes.string
-  }
+// StatusMessage.propTypes = {
+//     status: PropTypes.string.isRequired,
+//     message: PropTypes.string
+//   }
 
-export default StatusMessage
