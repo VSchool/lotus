@@ -79,8 +79,8 @@ export default function SideNav() {
             <IntroductionText>Introduction</IntroductionText>
             <ComponentList>
                 <WelcomeText>Reference</WelcomeText>
-                <ComponentName value={'Card'} onClick={handleClick}>Card</ComponentName>
                 <ComponentName value={'Controls'} onClick={handleClick}>Controls</ComponentName>
+                <ComponentName value={'Card'} onClick={handleClick}>Card</ComponentName>
                 <ComponentName value={'Modal'} onClick={handleClick}>Modal</ComponentName>
                 <ComponentName value={'Status Message'} onClick={handleClick}>Status Message</ComponentName>
                 <ComponentName value={'Header'} onClick={handleClick}>Header</ComponentName>
