@@ -1,5 +1,5 @@
 import React from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 import { StatusChip } from "@vschool/lotus"
 
 const StatusChipContainer = styled.div`
@@ -8,7 +8,7 @@ const StatusChipContainer = styled.div`
 
 const SectionName = styled.p`
     margin: 0px 0px 24px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -18,7 +18,7 @@ const SectionName = styled.p`
 
 const PropDesc = styled.p`
     margin: 16px 0px 8px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -44,6 +44,3 @@ export default () => {
         </StatusChipContainer>
     )
 }
-
-
-

@@ -1,20 +1,20 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import { ComponentDisplayContext } from '../providers/Store'
-import { decideInfo } from './Main.utils'
-import Table from './Table'
+import React, { useContext } from "react"
+import styled from "styled-components"
+import { ComponentDisplayContext } from "../providers/Store"
+import { decideInfo } from "./Main.utils"
+import Table from "./Table"
 
-import CardExample from '../example-components/Card.example'
-import ControlsExample from '../example-components/Controls.example'
-import ModalExample from '../example-components/Modal.example'
-import StatusMessageExample from '../example-components/StatusMessage.example'
-import HeaderExample from '../example-components/Header.example'
-import FooterExample from '../example-components/Footer.example'
-import ProfileExample from '../example-components/Profile.example'
-import StatusChipExample from '../example-components/StatusChip.example'
-import TaskbarExample from '../example-components/Taskbar.example'
-import TitlebarItemExample from '../example-components/TitleBarItem.example'
-import TitlebarExample from '../example-components/Titlebar.example'
+import CardExample from "../example-components/Card.example"
+import ControlsExample from "../example-components/Controls.example"
+import ModalExample from "../example-components/Modal.example"
+import StatusMessageExample from "../example-components/StatusMessage.example"
+import HeaderExample from "../example-components/Header.example"
+import FooterExample from "../example-components/Footer.example"
+import ProfileExample from "../example-components/Profile.example"
+import StatusChipExample from "../example-components/StatusChip.example"
+import TaskbarExample from "../example-components/Taskbar.example"
+import TitlebarItemExample from "../example-components/TitleBarItem.example"
+import TitlebarExample from "../example-components/Titlebar.example"
 
 const MainContainer = styled.div`
     width: 100%;
@@ -25,7 +25,7 @@ const MainContainer = styled.div`
 
 const WelcomeText = styled.p`
     margin: 0px 0px 16px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -36,7 +36,7 @@ const WelcomeText = styled.p`
 
 const HeaderText = styled.p`
     margin: 0px 0px 0px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -48,25 +48,25 @@ const LineBreak = styled.div`
     /* width: 80%; */
     margin: 16px 0px 24px 0px;
     height: 2px;
-    background: #D1C8C8;
+    background: #d1c8c8;
 `
 
 const IntroBody = styled.p`
     margin: 0px 0px 16px 0px;
     /* height: 100px; */
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     color: #000000;
-    opacity: .65;
+    opacity: 0.65;
     /* border: 1px dotted gray; */
 `
 
 const ComponentName = styled.p`
     margin: 0px 0px 16px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -78,18 +78,17 @@ const ComponentName = styled.p`
 const BodyText = styled.p`
     margin: 0px 0px 24px 0px;
     height: 50px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     color: #000000;
-    opacity: .65;
+    opacity: 0.65;
     /* border: 1px solid green; */
 `
 
 export default function Main() {
-
     const [componentDisplay] = useContext(ComponentDisplayContext)
     let name = componentDisplay.componentDisplay
     let newObj = decideInfo(name)
@@ -97,30 +96,30 @@ export default function Main() {
 
     function displayComponent(displayComponentName) {
         switch (displayComponentName) {
-            case 'Header':
+            case "Header":
                 return <HeaderExample />
-            case 'Modal':
+            case "Modal":
                 return <ModalExample />
-            case 'Status Message':
+            case "Status Message":
                 return <StatusMessageExample />
-            case 'Card':
+            case "Card":
                 return <CardExample />
-            case 'Controls':
+            case "Controls":
                 return <ControlsExample />
-            case 'Footer':
+            case "Footer":
                 return <FooterExample />
-            case 'Profile':
+            case "Profile":
                 return <ProfileExample />
-            case 'StatusChip':
+            case "StatusChip":
                 return <StatusChipExample />
-            case 'Taskbar':
+            case "Taskbar":
                 return <TaskbarExample />
-            case 'TitlebarItem':
+            case "TitlebarItem":
                 return <TitlebarItemExample />
-            case 'Titlebar':
+            case "Titlebar":
                 return <TitlebarExample />
             default:
-                return 'Default Case'
+                return "Default Case"
         }
     }
     let rando = displayComponent(name)
@@ -130,7 +129,9 @@ export default function Main() {
             <WelcomeText>Welcome</WelcomeText>
             <HeaderText>Introduction</HeaderText>
             <LineBreak />
-            <IntroBody>The following references will provide guidance on how V School components are used.</IntroBody>
+            <IntroBody>
+                The following references will provide guidance on how V School components are used.
+            </IntroBody>
             <ComponentName>{compName}</ComponentName>
             <BodyText>{description}</BodyText>
             <Table component={compName} />

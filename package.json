@@ -18,9 +18,10 @@
         "build": "rollup -c",
         "start": "rollup -c -w",
         "prepare": "npm run build",
-        "predeploy": "cd example && npm install && npm run build",
+        "predeploy": "cd example && npm install && npm run pretty && npm run build",
         "deploy": "gh-pages -d example/build",
-        "update-patch": "npm version patch && npm publish"
+        "update-patch": "npm version patch && npm publish",
+        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
     },
     "peerDependencies": {
         "prop-types": "^15.5.4",

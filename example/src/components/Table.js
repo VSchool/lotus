@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { decideInfo } from './Main.utils'
+import React from "react"
+import styled from "styled-components"
+import { decideInfo } from "./Main.utils"
 
 const TableContainer = styled.div`
     width: 100%;
@@ -11,12 +11,12 @@ const Caption = styled.p`
     margin: 0px 0px 0px 0px;
     padding: 8px 0px;
     width: 100%;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-size: 24px;
     line-height: 32px;
     text-align: center;
-    background: #514F4B;
-    color: #FBF9F7;
+    background: #514f4b;
+    color: #fbf9f7;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     box-sizing: border-box;
@@ -37,16 +37,14 @@ const TableRow = styled.div`
     p:nth-child(3) {
         width: 100%;
     }
-
-    
 `
 
 const TableHeader = styled.p`
     margin: 0px 0px 0px 0px;
     padding: 8px 0px 8px 8px;
     text-transform: uppercase;
-    background: #D8D4CF;
-    color: #514F4B;;
+    background: #d8d4cf;
+    color: #514f4b;
     /* border: 1px dotted green; */
 `
 
@@ -54,9 +52,7 @@ const TableData = styled.p`
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 8px;
     /* border: 1px dotted green; */
-
 `
-
 
 export default function Table(props) {
     let componentDetails = decideInfo(props.component)

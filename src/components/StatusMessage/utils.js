@@ -1,53 +1,49 @@
-import { blue } from '../../colors/blue'
-import { green } from '../../colors/green'
-import { yellow } from '../../colors/yellow'
-import { pink } from '../../colors/pink'
-
+import { blue } from "../../colors/blue"
+import { green } from "../../colors/green"
+import { yellow } from "../../colors/yellow"
+import { pink } from "../../colors/pink"
 
 export function setStatus(status, message) {
     switch (status) {
-        case 'neutral':
+        case "neutral":
             return {
-                indicatorText: ':)',
+                indicatorText: ":)",
                 indicatorColor: blue.base,
                 indicatorBorder: `1px solid ${blue.base}`,
                 contentBackground: blue.lightest,
                 contentBorder: `2px solid ${blue.light}`,
-                message: message,
+                message: message
             }
-        case 'success':
+        case "success":
             return {
-                indicatorText: ':)',
+                indicatorText: ":)",
                 indicatorColor: green.base,
                 indicatorBorder: `1px solid ${green.base}`,
                 contentBackground: green.lightest,
-                contentBorder: `2px solid ${green.light}`,
-
+                contentBorder: `2px solid ${green.light}`
             }
-        case 'warning':
+        case "warning":
             return {
-                indicatorText: '!',
+                indicatorText: "!",
                 indicatorColor: yellow.base,
                 indicatorBorder: `1px solid ${yellow.base}`,
                 contentBackground: yellow.lightest,
-                contentBorder: `2px solid ${yellow.light}`,
-
+                contentBorder: `2px solid ${yellow.light}`
             }
-        case 'fail':
+        case "fail":
             return {
-                indicatorText: '!',
+                indicatorText: "!",
                 indicatorColor: pink.base,
                 indicatorBorder: `1px solid ${pink.base}`,
                 contentBackground: pink.lightest,
-                contentBorder: `2px solid ${pink.light}`,
-
+                contentBorder: `2px solid ${pink.light}`
             }
         default:
             return {
-                indicatorColor: 'purple',
+                indicatorColor: "purple",
                 indicatorBorder: `1px solid ${blue.darker}`,
                 contentBackground: blue.lightest,
-                contentBorder: `2px solid ${blue.light}`,
+                contentBorder: `2px solid ${blue.light}`
             }
     }
 }

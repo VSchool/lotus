@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 import { decideChipStatus } from "./utils"
 import { black } from "../../colors/gray"
 
@@ -42,8 +42,8 @@ function StatusChip({ status, err }) {
 }
 
 StatusChip.propTypes = {
-  status: PropTypes.string.isRequired,
-  err: PropTypes.string
+    status: PropTypes.string.isRequired,
+    err: PropTypes.string
 }
 
 export default StatusChip

@@ -1,1 +1,1 @@
-export { default as TitlebarItem } from './TitlebarItem'
+export { default as TitlebarItem } from "./TitlebarItem"

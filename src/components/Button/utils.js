@@ -33,8 +33,8 @@ export function determineButtonSize(props) {
     let height, fontSize, minWidth, lineHeight, letterSpacing
     switch (props.buttonSize) {
         // ADDED XTRASM SIZE FOR HEADER BUTTON
-        case 'xtrasm':
-            height = '32px'
+        case "xtrasm":
+            height = "32px"
             fontSize = "12px"
             lineHeight = "16px"
             letterSpacing = "0.85px"
