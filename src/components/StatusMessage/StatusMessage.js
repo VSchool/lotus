@@ -15,10 +15,10 @@ const StatusMessageContainer = styled.div`
     border: ${props => props.border};
     /* box-sizing: border-box; */
 
-    /* @media (min-width: 768px) {
-        max-width: 1024px;
+    @media (min-width: 768px) {
+        width: 100%;
         height: 56px;
-    } */
+    }
 `
 
 const IndicatorContainer = styled.div`
@@ -28,7 +28,7 @@ const IndicatorContainer = styled.div`
     align-items: center;
     background: ${props => props.background};
     border: ${props => props.border};
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 `
 
 const Indicator = styled.p`
@@ -45,18 +45,24 @@ const Indicator = styled.p`
 
 const MessageWrapper = styled.div`
     width: 100%;
-    min-height: 100%;
+    /* min-height: 100%; */
     padding: 16px 16px 16px 16px;
     background: ${props => props.background};
     /* background: none; */
     display: flex;
     align-items: center;
     /* border: 1px solid lightcoral; */
+
+    @media (min-width: 768px) {
+        /* background: blue; */
+        
+        /* height: 100%; */
+    }
 `
 
 const Message = styled.p`
     margin: 0px;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     font-family: 'aktiv-grotesk';
     font-style: normal;
@@ -71,6 +77,11 @@ const Message = styled.p`
         color: ${blue.base};
         text-decoration: underline;
     }
+
+    @media (min-width: 768px) {
+        /* background: green; */
+        /* height: 56px; */
+    }
 `
 
 export default function StatusMessage(props) {
@@ -83,7 +94,7 @@ export default function StatusMessage(props) {
                 <Indicator>{indicatorText}</Indicator>
             </IndicatorContainer>
             <MessageWrapper  background={contentBackground}>
-                <Message borderColor={contentBackground}>Welcome to your V School Application. Get started by completing your <span>Background Information</span></Message>
+                <Message borderColor={contentBackground}>{messageContent}</Message>
             </MessageWrapper>
         </StatusMessageContainer>
     )

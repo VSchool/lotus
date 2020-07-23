@@ -23,26 +23,26 @@ const MainContainer = styled.div`
     /* background: #f6e8f9; */
 `
 
-// const WelcomeText = styled.p`
-//     margin: 0px 0px 16px 0px;
-//     font-family: 'aktiv-grotesk';
-//     font-style: normal;
-//     font-weight: 300;
-//     font-size: 16px;
-//     line-height: 19px;
-//     color: rgba(0, 0, 0, 0.6);
-//     box-sizing: border-box;
-// `
+const WelcomeText = styled.p`
+    margin: 0px 0px 16px 0px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+`
 
-// const HeaderText = styled.p`
-//     margin: 0px 0px 0px 0px;
-//     font-family: 'aktiv-grotesk';
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 20px;
-//     line-height: 24px;
-//     color: #000000;
-// `
+const HeaderText = styled.p`
+    margin: 0px 0px 0px 0px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+`
 
 const LineBreak = styled.div`
     /* width: 80%; */
@@ -51,29 +51,29 @@ const LineBreak = styled.div`
     background: #D1C8C8;
 `
 
-// const IntroBody = styled.p`
-//     margin: 0px 0px 16px 0px;
-//     /* height: 100px; */
-//     font-family: 'aktiv-grotesk';
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 14px;
-//     line-height: 16px;
-//     color: #000000;
-//     opacity: .65;
-//     /* border: 1px dotted gray; */
-// `
+const IntroBody = styled.p`
+    margin: 0px 0px 16px 0px;
+    /* height: 100px; */
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    opacity: .65;
+    /* border: 1px dotted gray; */
+`
 
-// const ComponentName = styled.p`
-//     margin: 0px 0px 16px 0px;
-//     font-family: 'aktiv-grotesk';
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 20px;
-//     line-height: 24px;
-//     color: #000000;
-//     /* border: 1px solid orange; */
-// `
+const ComponentName = styled.p`
+    margin: 0px 0px 16px 0px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    /* border: 1px solid orange; */
+`
 
 const BodyText = styled.p`
     margin: 0px 0px 24px 0px;
@@ -127,13 +127,13 @@ export default function Main() {
 
     return (
         <MainContainer>
-            {/* <WelcomeText>Welcome</WelcomeText>
+            <WelcomeText>Welcome</WelcomeText>
             <HeaderText>Introduction</HeaderText>
             <LineBreak />
             <IntroBody>The following references will provide guidance on how V School components are used.</IntroBody>
             <ComponentName>{compName}</ComponentName>
             <BodyText>{description}</BodyText>
-            <Table component={compName} /> */}
+            <Table component={compName} />
             <LineBreak />
             {rando}
         </MainContainer>
