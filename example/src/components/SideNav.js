@@ -65,7 +65,6 @@ const ComponentName = styled.button`
 export default function SideNav() {
     const [, setComponentDisplay] = useContext(ComponentDisplayContext)
 
-    const [,setComponentDisplay] = useContext(ComponentDisplayContext)
 
     const handleClick = (e) => {
         
@@ -93,7 +92,6 @@ export default function SideNav() {
                 <ComponentName value={'TitlebarItem'} onClick={handleClick}>Titlebar Item</ComponentName>
                 <ComponentName value={'Titlebar'} onClick={handleClick}>Titlebar</ComponentName>
                 <ComponentName value={'Button'} onClick={handleClick}>Button</ComponentName>
-
             </ComponentList>
         </SideNavContainer>
     )
