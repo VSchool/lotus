@@ -4,17 +4,18 @@ import { ComponentDisplayContext } from "../providers/Store"
 import { decideInfo } from "./Main.utils"
 import Table from "./Table"
 
-import CardExample from "../example-components/Card.example"
-import ControlsExample from "../example-components/Controls.example"
-import ModalExample from "../example-components/Modal.example"
-import StatusMessageExample from "../example-components/StatusMessage.example"
-import HeaderExample from "../example-components/Header.example"
-import FooterExample from "../example-components/Footer.example"
-import ProfileExample from "../example-components/Profile.example"
-import StatusChipExample from "../example-components/StatusChip.example"
-import TaskbarExample from "../example-components/Taskbar.example"
-import TitlebarItemExample from "../example-components/TitleBarItem.example"
-import TitlebarExample from "../example-components/Titlebar.example"
+import ButtonExample from '../example-components/Button.example'
+import CardExample from '../example-components/Card.example'
+import ControlsExample from '../example-components/Controls.example'
+import ModalExample from '../example-components/Modal.example'
+import StatusMessageExample from '../example-components/StatusMessage.example'
+import HeaderExample from '../example-components/Header.example'
+import FooterExample from '../example-components/Footer.example'
+import ProfileExample from '../example-components/Profile.example'
+import StatusChipExample from '../example-components/StatusChip.example'
+import TaskbarExample from '../example-components/Taskbar.example'
+import TitlebarItemExample from '../example-components/TitleBarItem.example'
+import TitlebarExample from '../example-components/Titlebar.example'
 
 const MainContainer = styled.div`
     width: 100%;
@@ -93,6 +94,7 @@ export default function Main() {
     let name = componentDisplay.componentDisplay
     let newObj = decideInfo(name)
     const { compName, description } = newObj
+    console.log(compName, description)
 
     function displayComponent(displayComponentName) {
         switch (displayComponentName) {
@@ -118,6 +120,8 @@ export default function Main() {
                 return <TitlebarItemExample />
             case "Titlebar":
                 return <TitlebarExample />
+            case 'Button':
+                return <ButtonExample />
             default:
                 return "Default Case"
         }

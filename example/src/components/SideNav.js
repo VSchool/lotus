@@ -65,8 +65,10 @@ const ComponentName = styled.button`
 export default function SideNav() {
     const [, setComponentDisplay] = useContext(ComponentDisplayContext)
 
-    const handleClick = e => {
-        setComponentDisplay({ componentDisplay: e.target.value })
+
+    const handleClick = (e) => {
+        
+        setComponentDisplay({componentDisplay: e.target.value})
     }
 
     return (
@@ -78,39 +80,18 @@ export default function SideNav() {
             <IntroductionText>Introduction</IntroductionText>
             <ComponentList>
                 <WelcomeText>Reference</WelcomeText>
-                <ComponentName value={"Controls"} onClick={handleClick}>
-                    Controls
-                </ComponentName>
-                <ComponentName value={"Card"} onClick={handleClick}>
-                    Card
-                </ComponentName>
-                <ComponentName value={"Modal"} onClick={handleClick}>
-                    Modal
-                </ComponentName>
-                <ComponentName value={"Status Message"} onClick={handleClick}>
-                    Status Message
-                </ComponentName>
-                <ComponentName value={"Header"} onClick={handleClick}>
-                    Header
-                </ComponentName>
-                <ComponentName value={"Footer"} onClick={handleClick}>
-                    Footer
-                </ComponentName>
-                <ComponentName value={"Profile"} onClick={handleClick}>
-                    Profile
-                </ComponentName>
-                <ComponentName value={"StatusChip"} onClick={handleClick}>
-                    Status Chip
-                </ComponentName>
-                <ComponentName value={"Taskbar"} onClick={handleClick}>
-                    Taskbar
-                </ComponentName>
-                <ComponentName value={"TitlebarItem"} onClick={handleClick}>
-                    Titlebar Item
-                </ComponentName>
-                <ComponentName value={"Titlebar"} onClick={handleClick}>
-                    Titlebar
-                </ComponentName>
+                <ComponentName value={'Controls'} onClick={handleClick}>Controls</ComponentName>
+                <ComponentName value={'Card'} onClick={handleClick}>Card</ComponentName>
+                <ComponentName value={'Modal'} onClick={handleClick}>Modal</ComponentName>
+                <ComponentName value={'Status Message'} onClick={handleClick}>Status Message</ComponentName>
+                <ComponentName value={'Header'} onClick={handleClick}>Header</ComponentName>
+                <ComponentName value={'Footer'} onClick={handleClick}>Footer</ComponentName>
+                <ComponentName value={'Profile'} onClick={handleClick}>Profile</ComponentName>
+                <ComponentName value={'StatusChip'} onClick={handleClick}>Status Chip</ComponentName>
+                <ComponentName value={'Taskbar'} onClick={handleClick}>Taskbar</ComponentName>
+                <ComponentName value={'TitlebarItem'} onClick={handleClick}>Titlebar Item</ComponentName>
+                <ComponentName value={'Titlebar'} onClick={handleClick}>Titlebar</ComponentName>
+                <ComponentName value={'Button'} onClick={handleClick}>Button</ComponentName>
             </ComponentList>
         </SideNavContainer>
     )

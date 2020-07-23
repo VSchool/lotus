@@ -10,6 +10,7 @@ export function determineButtonColors(props) {
             color = colors.white
             break
         case "primary-light":
+            // SAME AS SECONDARY DARK?
             borderColor = colors.black
             backgroundColor = colors.gray.lighter
             color = colors.black

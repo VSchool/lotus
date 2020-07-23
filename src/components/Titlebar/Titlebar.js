@@ -10,7 +10,7 @@ const TitlebarContainer = styled.div`
     display: flex;
 
     @media (min-width: 768px) {
-        min-width: 100%;
+        max-width: 100%;
     }
 `
 
