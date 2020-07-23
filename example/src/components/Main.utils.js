@@ -1,227 +1,227 @@
 export function decideInfo(name) {
     switch (name) {
-        case 'Header':
+        case "Header":
             return {
-                compName: 'Header',
-                description: 'Long form description for the Header component.',
+                compName: "Header",
+                description: "Long form description for the Header component.",
                 availableProps: []
             }
-        case 'Modal':
+        case "Modal":
             return {
-                compName: 'Modal',
-                description: 'Long form description for the Modal component.',
+                compName: "Modal",
+                description: "Long form description for the Modal component.",
                 availableProps: [
                     {
                         propName: `'title'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for title.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for title."
                     },
                     {
                         propName: `'subtitle'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for subtitle.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for subtitle."
                     },
                     {
                         propName: `'body'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for body.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for body."
                     }
                 ]
             }
-        case 'Status Message':
+        case "Status Message":
             return {
-                compName: 'Status Message',
-                description: 'Long form description for the Status Message component.',
+                compName: "Status Message",
+                description: "Long form description for the Status Message component.",
                 availableProps: [
                     {
                         propName: `'neutral'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for neutral.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for neutral."
                     },
                     {
                         propName: `'success'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for success.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for success."
                     },
                     {
                         propName: `'warning'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for warning.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for warning."
                     },
                     {
                         propName: `'fail'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for fail.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for fail."
                     }
                 ]
             }
-        case 'Card':
+        case "Card":
             return {
-                compName: 'Card',
-                description: 'Long form description for the Card component.',
+                compName: "Card",
+                description: "Long form description for the Card component.",
                 availableProps: [
                     {
                         propName: `'not-started'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for not-started.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for not-started."
                     },
                     {
                         propName: `'up-next'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for up-next.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for up-next."
                     },
                     {
                         propName: `'in-progress'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for in-progress.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for in-progress."
                     },
                     {
                         propName: `'completed'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for completed.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for completed."
                     }
                 ]
             }
-        case 'Controls':
+        case "Controls":
             return {
-                compName: 'Controls',
-                description: 'Long form description for the Controls component.',
+                compName: "Controls",
+                description: "Long form description for the Controls component.",
                 availableProps: [
                     {
                         propName: `'disabled-status'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for not-started.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for not-started."
                     }
                 ]
             }
-        case 'Footer':
+        case "Footer":
             return {
-                compName: 'Footer',
-                description: 'Long form description for the Footer component.',
+                compName: "Footer",
+                description: "Long form description for the Footer component.",
                 availableProps: []
             }
-        case 'Profile':
+        case "Profile":
             return {
-                compName: 'Profile',
-                description: 'Long form description for the Profile component.',
+                compName: "Profile",
+                description: "Long form description for the Profile component.",
                 availableProps: [
                     {
                         propName: `'userName'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for userName.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for userName."
                     },
                     {
                         propName: `'userEmail'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for userEmail.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for userEmail."
                     },
                     {
                         propName: `'userPhone'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for userPhone.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for userPhone."
                     },
                     {
                         propName: `'userCourse'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for userCourse.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for userCourse."
                     },
                     {
                         propName: `'userTime'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for userTime.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for userTime."
                     }
                 ]
             }
-        case 'StatusChip':
+        case "StatusChip":
             return {
-                compName: 'StatusChip',
-                description: 'Long form description for the StatusChip component.',
+                compName: "StatusChip",
+                description: "Long form description for the StatusChip component.",
                 availableProps: [
                     {
                         propName: `'not-started'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for not-started.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for not-started."
                     },
                     {
                         propName: `'up-next'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for up-next.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for up-next."
                     },
                     {
                         propName: `'in-progress'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for in-progress.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for in-progress."
                     },
                     {
                         propName: `'completed'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for completed.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for completed."
                     },
                     {
                         propName: `'up-next'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for up-next.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for up-next."
                     },
                     {
                         propName: `'err'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for err.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for err."
                     }
                 ]
             }
-        case 'Taskbar':
+        case "Taskbar":
             return {
-                compName: 'Taskbar',
-                description: 'Long form description for the Taskbar component.',
+                compName: "Taskbar",
+                description: "Long form description for the Taskbar component.",
                 availableProps: [
                     {
                         propName: `'title'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for title.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for title."
                     },
                     {
                         propName: `'task'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for task.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for task."
                     }
                 ]
             }
-        case 'TitlebarItem':
+        case "TitlebarItem":
             return {
-                compName: 'TitlebarItem',
-                description: 'Long form description for the TitlebarItem component.',
+                compName: "TitlebarItem",
+                description: "Long form description for the TitlebarItem component.",
                 availableProps: [
                     {
                         propName: `'title'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for title.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for title."
                     },
                     {
                         propName: `'task'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for task.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for task."
                     }
                 ]
             }
-        case 'Titlebar':
+        case "Titlebar":
             return {
-                compName: 'Titlebar',
-                description: 'Long form description for the Titlebar component.',
+                compName: "Titlebar",
+                description: "Long form description for the Titlebar component.",
                 availableProps: [
                     {
                         propName: `'stepOne'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for stepOne.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for stepOne."
                     },
                     {
                         propName: `'stepTwo'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for stepOne.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for stepOne."
                     },
                     {
                         propName: `'stepThree'`,
-                        propType: 'string',
-                        propDescription: 'Some sort of descrtiption for stepTwo.'
+                        propType: "string",
+                        propDescription: "Some sort of descrtiption for stepTwo."
                     }
                 ]
             }
@@ -244,9 +244,8 @@ export function decideInfo(name) {
             }
         default: 
             return {
-            compName: 'Default Case',
-            description: 'Nothing to report.'
-        }
+                compName: "Default Case",
+                description: "Nothing to report."
+            }
     }
 }
-

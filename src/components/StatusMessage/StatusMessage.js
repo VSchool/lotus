@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { setStatus } from './utils'
+import React from "react"
+import styled from "styled-components"
+import { setStatus } from "./utils"
 // import PropTypes from 'prop-types'
 
 import { blue } from '../../colors/blue'
@@ -40,7 +40,7 @@ const Indicator = styled.p`
     font-size: 24px;
     line-height: 29px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 `
 
 const MessageWrapper = styled.div`
@@ -104,4 +104,3 @@ export default function StatusMessage(props) {
 //     status: PropTypes.string.isRequired,
 //     message: PropTypes.string
 //   }
-

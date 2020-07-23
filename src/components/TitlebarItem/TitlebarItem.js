@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { itemStatus } from './utils'
-import { black } from '../../colors/gray'
-import circleCheck from '../../assets/icons/circleCheck.svg'
+import { itemStatus } from "./utils"
+import { black } from "../../colors/gray"
+import circleCheck from "../../assets/icons/circleCheck.svg"
 
 const ItemContainer = styled.div`
     position: relative;
@@ -28,7 +28,7 @@ const ItemTitle = styled.p`
     margin: 0px 0px 2px 0px;
     max-width: 181px;
     height: 12px;
-    font-family: 'aktiv-grotesk-extended';
+    font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
@@ -67,7 +67,7 @@ const ItemSubtitle = styled.p`
     margin: 0px 0px 0px 0px;
     max-width: 100%;
     height: 16px;
-    font-family: 'aktiv-grotesk-extended';
+    font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
@@ -84,25 +84,24 @@ const ItemSubtitle = styled.p`
     }
 `
 
-function TitlebarItem({status, title, subtitle}) {
-
-    const { background,
-            border, 
-            opacity, 
-            checkmarkDisplay,
-            subtitleColor,
-            titleColor,
-             } = itemStatus(status)
+function TitlebarItem({ status, title, subtitle }) {
+    const { background, border, opacity, checkmarkDisplay, subtitleColor, titleColor } = itemStatus(
+        status
+    )
 
     return (
         <ItemContainer border={border} opacity={opacity}>
             {/* Add in another div to add in the Divider divs */}
-            <ItemTitle color={titleColor} opacity={opacity}>{title}</ItemTitle>
+            <ItemTitle color={titleColor} opacity={opacity}>
+                {title}
+            </ItemTitle>
             <BottomWrapper>
                 <CircleCheckContainer display={checkmarkDisplay}>
-                    <img src={circleCheck} alt='step completed.'  />
+                    <img src={circleCheck} alt="step completed." />
                 </CircleCheckContainer>
-                <ItemSubtitle color={subtitleColor} opacity={opacity}>{subtitle}</ItemSubtitle>
+                <ItemSubtitle color={subtitleColor} opacity={opacity}>
+                    {subtitle}
+                </ItemSubtitle>
             </BottomWrapper>
         </ItemContainer>
     )

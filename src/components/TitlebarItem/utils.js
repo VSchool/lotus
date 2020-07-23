@@ -1,40 +1,40 @@
-import { gray } from '../../colors/gray'
-import { green } from '../../colors/green'
+import { gray } from "../../colors/gray"
+import { green } from "../../colors/green"
 
 export function itemStatus(itemStatus) {
     switch (itemStatus) {
-        case 'active':
+        case "active":
             return {
                 border: `4px solid ${green.lighter}`,
-                opacity: '1.0',
+                opacity: "1.0",
                 titleColor: gray.base,
                 subtitleColor: gray.lighter,
-                checkmarkDisplay: 'none',
+                checkmarkDisplay: "none"
             }
-        case 'inactive':
+        case "inactive":
             return {
-                border: 'none',
-                opacity: '1.0',
+                border: "none",
+                opacity: "1.0",
                 titleColor: gray.base,
                 subtitleColor: gray.lighter,
-                checkmarkDisplay: 'inline-block',
+                checkmarkDisplay: "inline-block"
             }
-        case 'locked':
+        case "locked":
             return {
-                border: 'none',
-                opacity: '0.67',
+                border: "none",
+                opacity: "0.67",
                 titleColor: gray.base,
                 subtitleColor: gray.lighter,
-                checkmarkDisplay: 'none',
+                checkmarkDisplay: "none"
             }
 
         default:
             return {
-                border: 'red',
-                opacity: '1.0',
-                titleColor: 'lightcoral',
-                subtitleColor: 'dodgerblue',
-                checkmarkDisplay: 'inline-block',
+                border: "red",
+                opacity: "1.0",
+                titleColor: "lightcoral",
+                subtitleColor: "dodgerblue",
+                checkmarkDisplay: "inline-block"
             }
     }
 }

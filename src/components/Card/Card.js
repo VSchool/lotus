@@ -1,18 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { StatusChip } from '../StatusChip'
-import { findCardStatus } from './utils'
+import { StatusChip } from "../StatusChip"
+import { findCardStatus } from "./utils"
 
-import { black, gray, white } from '../../colors/gray'
-import { blue } from '../../colors/blue'
-
+import { black, gray, white } from "../../colors/gray"
+import { blue } from "../../colors/blue"
 
 const CardContainer = styled.div`
     position: relative;
     width: 352px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
-    
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
+        0px 2px 4px rgba(0, 0, 0, 0.14);
+
     @media (max-width: 768px) {
         max-width: 184px;
     }
@@ -27,7 +27,7 @@ const CardWrapper = styled.div`
     border-right: ${props => props.borderRight};
     border-bottom: ${props => props.borderBottom};
     border-left: ${props => props.borderLeft};
-    
+
     @media (max-width: 768px) {
         padding: 16px 16px 16px 16px;
     }
@@ -41,7 +41,7 @@ const CardTitle = styled.h5`
     font-size: 20px;
     line-height: 24px;
     color: ${black};
-    
+
     @media (max-width: 768px) {
         margin: 0px 0px 8px 0px;
         font-size: 16px;
@@ -57,7 +57,7 @@ const BottomWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
+
     @media (max-width: 768px) {
         margin: 8px 0px 0px 0px;
         flex-direction: column;
@@ -93,7 +93,7 @@ const TextButton = styled.button`
     color: ${blue.base};
     border: none;
     background: none;
-    
+
     @media (max-width: 768px) {
         margin: 8px 0px 0px 0px;
         line-height: 16px;
@@ -101,16 +101,29 @@ const TextButton = styled.button`
 `
 
 function Card({ status }) {
-    const {  cardStatus, titleText, messageText, topBorder, rightBorder, bottomBorder, leftBorder } = findCardStatus(status)
+    const {
+        cardStatus,
+        titleText,
+        messageText,
+        topBorder,
+        rightBorder,
+        bottomBorder,
+        leftBorder
+    } = findCardStatus(status)
     return (
         <CardContainer>
-            <CardWrapper borderTop={topBorder} borderRight={rightBorder} borderBottom={bottomBorder} borderLeft={leftBorder}>
+            <CardWrapper
+                borderTop={topBorder}
+                borderRight={rightBorder}
+                borderBottom={bottomBorder}
+                borderLeft={leftBorder}
+            >
                 <CardTitle>{titleText}</CardTitle>
                 <StatusChip status={cardStatus} />
-                    <BottomWrapper>
-                        <CardMessage>{messageText}</CardMessage>
-                        <TextButton>Start</TextButton>
-                    </BottomWrapper>
+                <BottomWrapper>
+                    <CardMessage>{messageText}</CardMessage>
+                    <TextButton>Start</TextButton>
+                </BottomWrapper>
             </CardWrapper>
         </CardContainer>
     )

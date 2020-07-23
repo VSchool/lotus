@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Taskbar } from '@vschool/lotus'
+import React from "react"
+import styled from "styled-components"
+import { Taskbar } from "@vschool/lotus"
 
 const TaskbarExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
@@ -8,7 +8,7 @@ const TaskbarExampleContainer = styled.div`
 
 const SectionName = styled.p`
     margin: 0px 0px 24px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -18,7 +18,7 @@ const SectionName = styled.p`
 
 const PropDesc = styled.p`
     margin: 16px 0px 8px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -27,8 +27,8 @@ const PropDesc = styled.p`
     box-sizing: border-box;
 `
 
-const newTask = 'FSJS - Aptitude Test'
-const newTitle = 'Required'
+const newTask = "FSJS - Aptitude Test"
+const newTitle = "Required"
 
 export default () => {
     return (

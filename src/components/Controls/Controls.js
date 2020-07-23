@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { blue } from '../../colors/blue'
-import { gray } from '../../colors/gray'
+import { blue } from "../../colors/blue"
+import { gray } from "../../colors/gray"
 
 const ControlsContainer = styled.div`
     position: relative;
@@ -11,13 +11,13 @@ const ControlsContainer = styled.div`
     display: flex;
     align-items: center;
     box-sizing: border-box;
-`   
+`
 
 const CheckboxLabel = styled.p`
     margin: 0px 0px 0px 12px;
     width: 100%;
     height: 24px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -32,12 +32,14 @@ const TermsLink = styled.a`
     text-decoration: underline;
 `
 
-function Controls({disabledStatus}) {
+function Controls({ disabledStatus }) {
     // console.log(props)
     return (
         <ControlsContainer>
-            <input type='checkbox' disabled={disabledStatus} />
-            <CheckboxLabel>I agree <TermsLink>Terms & Conditions</TermsLink></CheckboxLabel>
+            <input type="checkbox" disabled={disabledStatus} />
+            <CheckboxLabel>
+                I agree <TermsLink>Terms & Conditions</TermsLink>
+            </CheckboxLabel>
         </ControlsContainer>
     )
 }
