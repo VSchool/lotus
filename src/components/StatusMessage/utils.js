@@ -13,7 +13,7 @@ export function setStatus(status, message) {
                 indicatorBorder: `1px solid ${blue.base}`,
                 contentBackground: blue.lightest,
                 contentBorder: `2px solid ${blue.light}`,
-                message: message,
+                messageContent: message,
             }
         case 'success':
             return {
@@ -22,7 +22,7 @@ export function setStatus(status, message) {
                 indicatorBorder: `1px solid ${green.base}`,
                 contentBackground: green.lightest,
                 contentBorder: `2px solid ${green.light}`,
-
+                messageContent: message
             }
         case 'warning':
             return {
@@ -31,7 +31,7 @@ export function setStatus(status, message) {
                 indicatorBorder: `1px solid ${yellow.base}`,
                 contentBackground: yellow.lightest,
                 contentBorder: `2px solid ${yellow.light}`,
-
+                messageContent: message
             }
         case 'fail':
             return {
@@ -40,7 +40,7 @@ export function setStatus(status, message) {
                 indicatorBorder: `1px solid ${pink.base}`,
                 contentBackground: pink.lightest,
                 contentBorder: `2px solid ${pink.light}`,
-
+                messageContent: message
             }
         default:
             return {
@@ -48,6 +48,7 @@ export function setStatus(status, message) {
                 indicatorBorder: `1px solid ${blue.darker}`,
                 contentBackground: blue.lightest,
                 contentBorder: `2px solid ${blue.light}`,
+                messageContent: message
             }
     }
 }
