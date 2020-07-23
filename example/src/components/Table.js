@@ -55,6 +55,7 @@ const TableData = styled.p`
 `
 
 export default function Table(props) {
+    // console.log(props)
     let componentDetails = decideInfo(props.component)
     const { availableProps } = componentDetails
 

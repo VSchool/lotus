@@ -3,88 +3,99 @@ import styled from "styled-components"
 import { setStatus } from "./utils"
 // import PropTypes from 'prop-types'
 
-// import { setStatus } from './utils'
-// import { blue } from '../../colors/blue'
+import { blue } from '../../colors/blue'
 // import { black, white } from '../../colors/gray'
 
 const StatusMessageContainer = styled.div`
     position: relative;
     width: 378px;
-    height: 128px;
+    /* min-height: 128px; */
     display: flex;
-    align-items: center;
-    background: #e3e8fa;
-    border: 2px solid #859feb;
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+    border: ${props => props.border};
     /* box-sizing: border-box; */
-    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
-        0px 12px 17px rgba(0, 0, 0, 0.14);
-    /* border: 1px solid lightcoral; */
-    /* @media (min-width: 768px) {
-        max-width: 1024px;
+
+    @media (min-width: 768px) {
+        width: 100%;
         height: 56px;
-    } */
+    }
 `
 
 const IndicatorContainer = styled.div`
     min-width: 56px;
-    height: 100%;
+    min-height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: #456ae2;
-    /* blue/primary */
-
-    border: 1px solid #456ae2;
-    /* box-sizing: border-box; */
-    /* border: 1px dotted gray; */
+    background: ${props => props.background};
+    border: ${props => props.border};
+    box-sizing: border-box;
 `
 
 const Indicator = styled.p`
     margin: 0px;
-    font-family: "benton-sans";
+    width: 100%;
+    font-family: 'benton-sans';
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
-    /* identical to box height */
-
     text-align: center;
     color: #ffffff;
 `
 
-const MessageContainer = styled.div`
+const MessageWrapper = styled.div`
     width: 100%;
-    min-height: 100%;
+    /* min-height: 100%; */
     padding: 16px 16px 16px 16px;
-    box-sizing: border-box;
+    background: ${props => props.background};
+    /* background: none; */
+    display: flex;
+    align-items: center;
     /* border: 1px solid lightcoral; */
+
+    @media (min-width: 768px) {
+        /* background: blue; */
+        
+        /* height: 100%; */
+    }
 `
 
 const Message = styled.p`
     margin: 0px;
-    font-family: "aktiv-grotesk";
+    /* height: 100%; */
+    width: 100%;
+    font-family: 'aktiv-grotesk';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #21201f;
-    border: 1px solid green;
+    color: #21201F;
+    border: 1px solid ${props => props.borderColor};
+    box-sizing: border-box;
+
+    & > span {
+        color: ${blue.base};
+        text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+        /* background: green; */
+        /* height: 56px; */
+    }
 `
 
-export default function StatusMessage() {
-    // console.log(setStatus('success'))
-
+export default function StatusMessage(props) {
+    const { status, message } = props
+    const { indicatorText, indicatorColor, indicatorBorder, contentBackground, contentBorder, messageContent } = setStatus(status, message)
+    
     return (
-        <StatusMessageContainer>
-            <IndicatorContainer>
-                <Indicator>{":)"}</Indicator>
+        <StatusMessageContainer border={contentBorder}>
+            <IndicatorContainer background={indicatorColor} border={indicatorBorder}>
+                <Indicator>{indicatorText}</Indicator>
             </IndicatorContainer>
-            <MessageContainer>
-                <Message>
-                    Welcome to your V School Application. Get started by completing your Background
-                    Information
-                </Message>
-            </MessageContainer>
+            <MessageWrapper  background={contentBackground}>
+                <Message borderColor={contentBackground}>{messageContent}</Message>
+            </MessageWrapper>
         </StatusMessageContainer>
     )
 }
