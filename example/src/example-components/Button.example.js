@@ -79,33 +79,6 @@ export default () => (
                 <Button buttonStyle="primary-light" buttonSize="sm">Button</Button>
             </TypeSection>
         </Section>
-        {/* <Section>
-            <SectionName>'buttonStyle' = 'secondary-dark'</SectionName>
-            <TypeSection>
-                <TypeName>'buttonSize' = 'xl'</TypeName>
-                <Button buttonStyle="secondary-light" buttonSize="xl">Button</Button>
-                <TypeName>'buttonSize' = 'lg'</TypeName>
-                <Button buttonStyle="secondary-light" buttonSize="lg">Button</Button>
-                <TypeName>'buttonSize' = 'md'</TypeName>
-                <Button buttonStyle="secondary-light" buttonSize="md">Button</Button>
-                <TypeName>'buttonSize' = 'sm'</TypeName>
-                <Button buttonStyle="secondary-light" buttonSize="sm">Button</Button>
-            </TypeSection>
-        </Section> */}
-        {/* <Section>
-            <SectionName>'buttonStyle' = 'secondary-light'</SectionName>
-            <TypeSection>
-                <TypeName>'buttonSize' = 'xl'</TypeName>
-                <Button buttonStyle="secondary-light" buttonSize="xl">Button</Button>
-                <TypeName>'buttonSize' = 'lg'</TypeName>
-                <Button buttonStyle="secondary-light" buttonSize="lg">Button</Button>
-                <TypeName>'buttonSize' = 'md'</TypeName>
-                <Button buttonStyle="secondary-light" buttonSize="md">Button</Button>
-                <TypeName>'buttonSize' = 'sm'</TypeName>
-                <Button buttonStyle="secondary-light" buttonSize="sm">Button</Button>
-            </TypeSection>
-        </Section> */}
-
     </ButtonExampleContainer>
     
 )
