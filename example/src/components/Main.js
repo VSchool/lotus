@@ -4,6 +4,7 @@ import { ComponentDisplayContext } from '../providers/Store'
 import { decideInfo } from './Main.utils'
 import Table from './Table'
 
+import ButtonExample from '../example-components/Button.example'
 import CardExample from '../example-components/Card.example'
 import ControlsExample from '../example-components/Controls.example'
 import ModalExample from '../example-components/Modal.example'
@@ -94,6 +95,7 @@ export default function Main() {
     let name = componentDisplay.componentDisplay
     let newObj = decideInfo(name)
     const { compName, description } = newObj
+    console.log(compName, description)
 
     function displayComponent(displayComponentName) {
         switch (displayComponentName) {
@@ -119,6 +121,8 @@ export default function Main() {
                 return <TitlebarItemExample />
             case 'Titlebar':
                 return <TitlebarExample />
+            case 'Button':
+                return <ButtonExample />
             default:
                 return 'Default Case'
         }
