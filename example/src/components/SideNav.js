@@ -69,6 +69,7 @@ export default function SideNav() {
     const [,setComponentDisplay] = useContext(ComponentDisplayContext)
 
     const handleClick = (e) => {
+        
         setComponentDisplay({componentDisplay: e.target.value})
     }
 
@@ -90,6 +91,7 @@ export default function SideNav() {
                 <ComponentName value={'Taskbar'} onClick={handleClick}>Taskbar</ComponentName>
                 <ComponentName value={'TitlebarItem'} onClick={handleClick}>Titlebar Item</ComponentName>
                 <ComponentName value={'Titlebar'} onClick={handleClick}>Titlebar</ComponentName>
+                <ComponentName value={'Button'} onClick={handleClick}>Button</ComponentName>
 
             </ComponentList>
         </SideNavContainer>

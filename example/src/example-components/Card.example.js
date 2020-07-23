@@ -7,7 +7,6 @@ const CardExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
 
-
 const SectionName = styled.p`
     margin: 0px 0px 24px 0px;
     font-family: 'aktiv-grotesk';
