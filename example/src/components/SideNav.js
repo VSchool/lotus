@@ -1,17 +1,17 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import { ComponentDisplayContext } from '../providers/Store'
-import logo from '../assets/images/VschoolLogo.png'
+import React, { useContext } from "react"
+import styled from "styled-components"
+import { ComponentDisplayContext } from "../providers/Store"
+import logo from "../assets/images/VschoolLogo.png"
 
 const SideNavContainer = styled.div`
     width: 280px;
     padding: 32px 0px 0px 24px;
-    background: #C4C4C4;
+    background: #c4c4c4;
 `
 
 const WelcomeText = styled.p`
     margin: 0px 0px 16px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -22,7 +22,7 @@ const WelcomeText = styled.p`
 
 const IntroductionText = styled.p`
     margin: 0px 0px 0px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -50,7 +50,7 @@ const ComponentName = styled.button`
     padding: 0px;
     width: 100%;
     text-align: left;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -62,11 +62,9 @@ const ComponentName = styled.button`
     /* border: 1px solid red; */
 `
 
-
-
 export default function SideNav() {
+    const [, setComponentDisplay] = useContext(ComponentDisplayContext)
 
-    const [,setComponentDisplay] = useContext(ComponentDisplayContext)
 
     const handleClick = (e) => {
         
@@ -75,7 +73,9 @@ export default function SideNav() {
 
     return (
         <SideNavContainer>
-            <NavLogoContainer><img src={logo} alt={'V School logo'} /></NavLogoContainer>
+            <NavLogoContainer>
+                <img src={logo} alt={"V School logo"} />
+            </NavLogoContainer>
             <WelcomeText>Welcome</WelcomeText>
             <IntroductionText>Introduction</IntroductionText>
             <ComponentList>
@@ -92,7 +92,6 @@ export default function SideNav() {
                 <ComponentName value={'TitlebarItem'} onClick={handleClick}>Titlebar Item</ComponentName>
                 <ComponentName value={'Titlebar'} onClick={handleClick}>Titlebar</ComponentName>
                 <ComponentName value={'Button'} onClick={handleClick}>Button</ComponentName>
-
             </ComponentList>
         </SideNavContainer>
     )

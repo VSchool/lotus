@@ -1,6 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
-
+import React from "react"
+import styled from "styled-components"
 
 const NavItemContainer = styled.div`
     margin: 8px 0px 8px 0px;
@@ -9,7 +8,7 @@ const NavItemContainer = styled.div`
 
 const ComponentName = styled.button`
     margin: 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -51,17 +50,15 @@ const ComponentName = styled.button`
 // `
 
 const handleClick = () => {
-    console.log('Fired')
+    console.log("Fired")
 }
 
 export default function NavItem(props) {
-    
     // console.log(props.name)
-   
 
     return (
         <NavItemContainer onClick={handleClick}>
-            <ComponentName >{props.name}</ComponentName>
+            <ComponentName>{props.name}</ComponentName>
         </NavItemContainer>
     )
 }

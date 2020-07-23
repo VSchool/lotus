@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import headerLogo from '../../assets/vs-header-logo.svg'
-import backArrow from '../../assets/icons/arrow-back.svg'
-import accountCircle from '../../assets/icons/account-circle24px.svg'
-import { gray } from '../../colors/gray'
+import headerLogo from "../../assets/vs-header-logo.svg"
+import backArrow from "../../assets/icons/arrow-back.svg"
+import accountCircle from "../../assets/icons/account-circle24px.svg"
+import { gray } from "../../colors/gray"
 
 const HeaderContainer = styled.div`
     position: relative;
@@ -48,7 +48,7 @@ const ArrowContainer = styled.div`
 const BackText = styled.p`
     display: none;
     margin: 0px 0px 0px 16px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -63,7 +63,7 @@ const BackText = styled.p`
 const LogoContainer = styled.div`
     margin: 0px 0px 0px 0px;
     position: absolute;
-    left: calc(50% - 96.75px/2 + 0.38px);
+    left: calc(50% - 96.75px / 2 + 0.38px);
     height: 24px;
 
     @media (min-width: 768px) {
@@ -92,15 +92,15 @@ function Header() {
         <HeaderContainer>
             <BackContainer>
                 <ArrowContainer>
-                    <img src={backArrow} alt='Go back to vschool.io' />
+                    <img src={backArrow} alt="Go back to vschool.io" />
                 </ArrowContainer>
                 <BackText>vschool.io</BackText>
-            </BackContainer>  
+            </BackContainer>
             <LogoContainer>
-                <img src={headerLogo} alt='V School Logo' />
+                <img src={headerLogo} alt="V School Logo" />
             </LogoContainer>
             <AccountCircleContainer>
-                <img src={accountCircle} alt='account profile image' />
+                <img src={accountCircle} alt="account profile image" />
             </AccountCircleContainer>
         </HeaderContainer>
     )

@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { Button } from '../Button'
-import vSchoolLogo from '../../assets/vs-logo.svg'
-import { black, gray, white } from '../../colors/gray'
+import { Button } from "../Button"
+import vSchoolLogo from "../../assets/vs-logo.svg"
+import { black, gray, white } from "../../colors/gray"
 
 const FooterContainer = styled.div`
     position: relative;
@@ -34,7 +34,7 @@ const LogoContainer = styled.div`
 const HeaderP = styled.p`
     margin: 24px 0px 24px 120px;
     min-width: 72px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -64,7 +64,6 @@ const HeaderSpan = styled.span`
     @media (min-width: 768px) {
         display: inline;
         margin: 0px 0px 0px 0px;
-
     }
 `
 
@@ -72,7 +71,7 @@ const HeaderButton = styled(Button)`
     min-width: 128px;
     height: 32px;
     margin: 16px 18px 16px 16px;
-    background: #21201F;
+    background: #21201f;
     border: 1px solid ${gray.lighter};
     box-sizing: border-box;
     box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
@@ -93,9 +92,11 @@ function Footer() {
     return (
         <FooterContainer>
             <LogoContainer>
-                <img src={vSchoolLogo} alt='V School Logo' />
+                <img src={vSchoolLogo} alt="V School Logo" />
             </LogoContainer>
-            <HeaderP>Questions<HeaderSpan> about applying</HeaderSpan>?</HeaderP>
+            <HeaderP>
+                Questions<HeaderSpan> about applying</HeaderSpan>?
+            </HeaderP>
             <HeaderButton>Let's Talk</HeaderButton>
         </FooterContainer>
     )

@@ -1,14 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { blue } from '../../colors/blue'
-import { gray, black } from '../../colors/gray'
+import { blue } from "../../colors/blue"
+import { gray, black } from "../../colors/gray"
 
 const ProfileContainer = styled.div`
     position: relative;
     max-width: 416px;
     height: 379px;
-    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
+        0px 12px 17px rgba(0, 0, 0, 0.14);
     background: ${gray.lighter};
 `
 const MyInfoContainer = styled.div`
@@ -21,7 +22,7 @@ const MyInfoContainer = styled.div`
 
 const ContentHeader = styled.h5`
     width: 100%;
-    font-family: 'aktiv-grotesk-extended';
+    font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -36,7 +37,7 @@ const ContentHeader = styled.h5`
 const ContentParagraph = styled.p`
     margin: 0px;
     width: 100%;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -48,7 +49,7 @@ const ContentParagraph = styled.p`
 const TextButton = styled.button`
     width: 120px;
     margin: 10px 0px 0px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -59,7 +60,7 @@ const TextButton = styled.button`
     background: none;
 `
 
-function Profile({userName, userEmail, userPhone, userCourse, userTime}) {
+function Profile({ userName, userEmail, userPhone, userCourse, userTime }) {
     return (
         <ProfileContainer>
             <MyInfoContainer>

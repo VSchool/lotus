@@ -1,21 +1,20 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { Button } from '../Button'
+import { Button } from "../Button"
 
-import { white, black, gray } from '../../colors/gray'
-import { blue } from '../../colors/blue'
-
-
+import { white, black, gray } from "../../colors/gray"
+import { blue } from "../../colors/blue"
 
 const ModalContainer = styled.div`
     padding: 64px 88px;
     position: relative;
     max-width: 848px;
-    background: #FBF9F7;
+    background: #fbf9f7;
     border: 2px solid ${gray.base};
     box-sizing: border-box;
-    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
+        0px 12px 17px rgba(0, 0, 0, 0.14);
 
     @media (max-width: 768px) {
         max-width: 376px;
@@ -28,7 +27,7 @@ const ContentContainer = styled.div`
     flex-direction: column;
     max-width: 672px;
     margin: 0px 0px 0px 0px;
-` 
+`
 
 const ModalHeadline = styled.h3`
     max-width: 584px;
@@ -122,7 +121,7 @@ const ApplyButton = styled(Button)`
     }
 `
 
-function Modal({title, subtitle, body}) {
+function Modal({ title, subtitle, body }) {
     return (
         <div>
             <ModalContainer>

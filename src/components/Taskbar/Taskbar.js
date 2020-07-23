@@ -1,9 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { gray, black } from '../../colors/gray'
-import { green } from '../../colors/green'
-
+import { gray, black } from "../../colors/gray"
+import { green } from "../../colors/green"
 
 const TaskbarContainer = styled.div`
     position: relative;
@@ -23,7 +22,7 @@ const TaskbarContainer = styled.div`
 
 const TitleText = styled.p`
     margin: 0px 18px 0px 18px;
-    font-family: 'aktiv-grotesk-extended';
+    font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
@@ -35,13 +34,12 @@ const TitleText = styled.p`
     @media (min-width: 768px) {
         max-width: 300px;
         margin: 0px 18px 0px 88px;
-
     }
 `
 
 const TaskText = styled.p`
     margin: 3px 18px 0px 18px;
-    font-family: 'aktiv-grotesk-extended';
+    font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
@@ -53,12 +51,11 @@ const TaskText = styled.p`
     @media (min-width: 768px) {
         max-width: 300px;
         margin: 0px 18px 0px 88px;
-
     }
 `
 
-function Taskbar({title, task}) {
-    return(
+function Taskbar({ title, task }) {
+    return (
         <TaskbarContainer>
             <TitleText>{title}</TitleText>
             <TaskText>{task}</TaskText>

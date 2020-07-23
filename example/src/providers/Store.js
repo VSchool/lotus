@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 export const ComponentDisplayContext = React.createContext()
 
 export default function Store({ children }) {
-
-    const [componentDisplay, setComponentDisplay] =  useState({
-        componentDisplay: 'Controls'
+    const [componentDisplay, setComponentDisplay] = useState({
+        componentDisplay: "Controls"
     })
 
     return (
