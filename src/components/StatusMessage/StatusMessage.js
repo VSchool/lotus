@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { setStatus } from "./utils"
 // import PropTypes from 'prop-types'
-
-import { blue } from '../../colors/blue'
+import * as colors from '../../colors'
 // import { black, white } from '../../colors/gray'
 
 const StatusMessageContainer = styled.div`
@@ -40,7 +39,7 @@ const Indicator = styled.p`
     font-size: 24px;
     line-height: 29px;
     text-align: center;
-    color: #ffffff;
+    color: ${colors.white};
 `
 
 const MessageWrapper = styled.div`
@@ -69,12 +68,12 @@ const Message = styled.p`
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #21201F;
+    color: ${colors.black};
     border: 1px solid ${props => props.borderColor};
     box-sizing: border-box;
 
     & > span {
-        color: ${blue.base};
+        color: ${colors.blue.base};
         text-decoration: underline;
     }
 
