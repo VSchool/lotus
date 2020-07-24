@@ -15,7 +15,6 @@ const TitlebarContainer = styled.div`
 `
 
 function Titlebar({ stepOne, stepTwo, stepThree }) {
-    // console.log(stepOne)
 
     return (
         <TitlebarContainer>
