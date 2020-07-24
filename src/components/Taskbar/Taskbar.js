@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
-import { gray, black } from "../../colors/gray"
-import { green } from "../../colors/green"
+import * as colors from '../../colors'
 
 const TaskbarContainer = styled.div`
     position: relative;
@@ -11,8 +9,8 @@ const TaskbarContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: ${black};
-    border: 4px solid ${green.lighter};
+    background: ${colors.black};
+    border: 4px solid ${colors.green.lighter};
     box-sizing: border-box;
 
     @media (min-width: 768px) {
@@ -29,7 +27,7 @@ const TitleText = styled.p`
     line-height: 12px;
     letter-spacing: 0.25px;
     text-transform: uppercase;
-    color: ${gray.base};
+    color: ${colors.gray.base};
 
     @media (min-width: 768px) {
         max-width: 300px;
@@ -46,7 +44,7 @@ const TaskText = styled.p`
     line-height: 13px;
     letter-spacing: 1px;
     text-transform: capitalize;
-    color: ${gray.lighter};
+    color: ${colors.gray.lighter};
 
     @media (min-width: 768px) {
         max-width: 300px;
