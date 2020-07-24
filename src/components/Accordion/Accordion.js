@@ -32,7 +32,7 @@ const Body = styled.div`
     transition: max-height 0.3s ease-in-out;
 `
 
-function Accordion({ title, children, ...rest }) => {
+function Accordion({ title, children, ...rest }) {
     const [open, setOpen] = useState(false)
     const [height, setHeight] = useState("0px")
     const accordionContent = useRef(null)
