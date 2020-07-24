@@ -2,16 +2,14 @@ import React from "react"
 import styled from "styled-components"
 
 import { Button } from "../Button"
-
-import { white, black, gray } from "../../colors/gray"
-import { blue } from "../../colors/blue"
+import * as colors from '../../colors'
 
 const ModalContainer = styled.div`
     padding: 64px 88px;
     position: relative;
     max-width: 848px;
-    background: #fbf9f7;
-    border: 2px solid ${gray.base};
+    background: ${colors.gray.lighter};
+    border: 2px solid ${colors.gray.base};
     box-sizing: border-box;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
         0px 12px 17px rgba(0, 0, 0, 0.14);
@@ -36,7 +34,7 @@ const ModalHeadline = styled.h3`
     font-weight: 900;
     font-size: 32px;
     line-height: 40px;
-    color: ${black};
+    color: ${colors.black};
     margin: 0px 0px 0px 0px;
 
     @media (max-width: 768px) {
@@ -56,7 +54,7 @@ const ModalSubtitle = styled.h4`
     line-height: 24px;
     letter-spacing: 0.25px;
     text-transform: uppercase;
-    color: ${blue.base};
+    color: ${colors.blue.base};
     margin: 24px 0px 0px 0px;
 
     @media (max-width: 768px) {
@@ -73,7 +71,7 @@ const ModalBody = styled.p`
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    color: ${gray.darker};
+    color: ${colors.gray.darker};
     margin: 16px 0px 0px 0px;
 
     @media (max-width: 768px) {
@@ -99,8 +97,8 @@ const DeclineButton = styled(Button)`
     width: 184px;
     height: 56px;
     margin: 0px 12px 0px 0px;
-    color: ${black};
-    background: ${white};
+    color: ${colors.black};
+    background: ${colors.white};
 
     @media (max-width: 768px) {
         min-width: 320px;
