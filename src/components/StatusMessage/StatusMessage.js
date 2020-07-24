@@ -84,7 +84,7 @@ const Message = styled.p`
     }
 `
 
-export default function StatusMessage(props) {
+function StatusMessage(props) {
     const { status, message } = props
     const { indicatorText, indicatorColor, indicatorBorder, contentBackground, contentBorder, messageContent } = setStatus(status, message)
     
@@ -99,6 +99,8 @@ export default function StatusMessage(props) {
         </StatusMessageContainer>
     )
 }
+
+export default StatusMessage
 
 // StatusMessage.propTypes = {
 //     status: PropTypes.string.isRequired,
