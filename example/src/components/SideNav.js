@@ -61,7 +61,7 @@ const ComponentName = styled.button`
     /* border: 1px solid red; */
 `
 
-export default function SideNav() {
+function SideNav() {
 
     return (
         <SideNavContainer>
@@ -88,3 +88,5 @@ export default function SideNav() {
         </SideNavContainer>
     )
 }
+
+export default SideNav
