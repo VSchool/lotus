@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
-import { blue } from "../../colors/blue"
-import { gray, black } from "../../colors/gray"
+import * as colors from '../../colors'
 
 const ProfileContainer = styled.div`
     position: relative;
@@ -10,7 +8,7 @@ const ProfileContainer = styled.div`
     height: 379px;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
         0px 12px 17px rgba(0, 0, 0, 0.14);
-    background: ${gray.lighter};
+    background: ${colors.gray.lighter};
 `
 const MyInfoContainer = styled.div`
     max-width: 100%;
@@ -29,7 +27,7 @@ const ContentHeader = styled.h5`
     line-height: 20px;
     letter-spacing: 0.25px;
     text-transform: uppercase;
-    color: ${black};
+    color: ${colors.black};
     margin: 0px 0px 4px 0px;
     box-sizing: border-box;
 `
@@ -42,7 +40,7 @@ const ContentParagraph = styled.p`
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
-    color: ${gray.darker};
+    color: ${colors.gray.darker};
     box-sizing: border-box;
 `
 
@@ -55,7 +53,7 @@ const TextButton = styled.button`
     font-size: 20px;
     line-height: 28px;
     text-align: right;
-    color: ${blue.base};
+    color: ${colors.blue.base};
     border: none;
     background: none;
 `

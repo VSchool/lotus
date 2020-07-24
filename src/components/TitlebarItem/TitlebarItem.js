@@ -1,15 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-
+import * as colors from '../../colors'
 import { itemStatus } from "./utils"
-import { black } from "../../colors/gray"
 import circleCheck from "../../assets/icons/circleCheck.svg"
 
 const ItemContainer = styled.div`
     position: relative;
     width: 138px;
     min-height: 48px;
-    background: ${black};
+    background: ${colors.black};
     opacity: ${props => props.opacity};
     border: ${props => props.border};
     display: flex;
