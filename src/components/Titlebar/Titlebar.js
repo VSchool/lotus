@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { TitlebarItem } from '../TitlebarItem'
+import { TitlebarItem } from "../TitlebarItem"
 
 const TitlebarContainer = styled.div`
     position: relative;
@@ -14,14 +14,13 @@ const TitlebarContainer = styled.div`
     }
 `
 
-function Titlebar({stepOne, stepTwo, stepThree}) {
-    // console.log(stepOne)
-    
+function Titlebar({ stepOne, stepTwo, stepThree }) {
+
     return (
         <TitlebarContainer>
-            <TitlebarItem status={stepOne} title={'Step 1'}  subtitle={'Background'} />
-            <TitlebarItem status={stepTwo} title={'Step 2'}  subtitle={'Application'} />
-            <TitlebarItem status={stepThree} title={'Step 3'}  subtitle={'Enrollment'} />
+            <TitlebarItem status={stepOne} title={"Step 1"} subtitle={"Background"} />
+            <TitlebarItem status={stepTwo} title={"Step 2"} subtitle={"Application"} />
+            <TitlebarItem status={stepThree} title={"Step 3"} subtitle={"Enrollment"} />
         </TitlebarContainer>
     )
 }

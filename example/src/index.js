@@ -1,7 +1,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import Store from "./providers/Store"
+import App from "./App"
 import "./index.css"
 
-import App from "./App"
+function Index() {
+    return (
+        <Store>
+            <App />
+        </Store>
+    )
+}
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(<Index />, document.getElementById("root"))

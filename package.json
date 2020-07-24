@@ -1,8 +1,21 @@
 {
     "name": "@vschool/lotus",
-    "version": "1.1.0",
-    "description": "",
-    "author": "bobziroll",
+    "version": "1.0.1",
+    "description": "Component library and base brand styles for V School projects",
+    "contributors": [
+        {
+            "name": "Bob Ziroll",
+            "url": "https://github.com/bobziroll"
+        },
+        {
+            "name": "Nate Jensen",
+            "url": "https://github.com/njensen58"
+        },
+        {
+            "name": "Michael Stedman",
+            "url": "https://github.com/recondesigns"
+        }
+    ],
     "license": "MIT",
     "repository": "@vschool/lotus",
     "main": "dist/index.js",
@@ -18,9 +31,10 @@
         "build": "rollup -c",
         "start": "rollup -c -w",
         "prepare": "npm run build",
-        "predeploy": "cd example && npm install && npm run build",
+        "predeploy": "cd example && npm install && npm run pretty && npm run build",
         "deploy": "gh-pages -d example/build",
-        "update-patch": "npm version patch && npm publish"
+        "update-patch": "npm version patch && npm publish",
+        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
     },
     "peerDependencies": {
         "prop-types": "^15.5.4",
@@ -54,13 +68,14 @@
         "rollup-plugin-node-resolve": "^3.3.0",
         "rollup-plugin-peer-deps-external": "^2.2.0",
         "rollup-plugin-postcss": "^1.6.2",
-        "rollup-plugin-url": "^1.4.0"
+        "rollup-plugin-url": "^1.4.0",
+        "sass": "^1.26.10"
     },
     "files": [
         "dist"
     ],
     "dependencies": {
         "prop-types": "^15.7.2",
-        "styled-components": "^4.4.1"
+        "styled-components": "^5.1.1"
     }
 }

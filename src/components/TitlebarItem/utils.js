@@ -1,40 +1,39 @@
-import { gray } from '../../colors/gray'
-import { green } from '../../colors/green'
+import * as colors from '../../colors'
 
 export function itemStatus(itemStatus) {
     switch (itemStatus) {
-        case 'active':
+        case "active":
             return {
-                border: `4px solid ${green.lighter}`,
-                opacity: '1.0',
-                titleColor: gray.base,
-                subtitleColor: gray.lighter,
-                checkmarkDisplay: 'none',
+                border: `4px solid ${colors.green.lighter}`,
+                opacity: "1.0",
+                titleColor: colors.gray.base,
+                subtitleColor: colors.gray.lighter,
+                checkmarkDisplay: "none"
             }
-        case 'inactive':
+        case "inactive":
             return {
-                border: 'none',
-                opacity: '1.0',
-                titleColor: gray.base,
-                subtitleColor: gray.lighter,
-                checkmarkDisplay: 'inline-block',
+                border: "none",
+                opacity: "1.0",
+                titleColor: colors.gray.base,
+                subtitleColor: colors.gray.lighter,
+                checkmarkDisplay: "inline-block"
             }
-        case 'locked':
+        case "locked":
             return {
-                border: 'none',
-                opacity: '0.67',
-                titleColor: gray.base,
-                subtitleColor: gray.lighter,
-                checkmarkDisplay: 'none',
+                border: "none",
+                opacity: "0.67",
+                titleColor: colors.gray.base,
+                subtitleColor: colors.gray.lighter,
+                checkmarkDisplay: "none"
             }
 
         default:
             return {
-                border: 'red',
-                opacity: '1.0',
-                titleColor: 'lightcoral',
-                subtitleColor: 'dodgerblue',
-                checkmarkDisplay: 'inline-block',
+                border: "red",
+                opacity: "1.0",
+                titleColor: "lightcoral",
+                subtitleColor: "dodgerblue",
+                checkmarkDisplay: "inline-block"
             }
     }
 }

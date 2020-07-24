@@ -1,16 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { Button } from '../Button'
-import vSchoolLogo from '../../assets/vs-logo.svg'
-import { black, gray, white } from '../../colors/gray'
+import { Button } from "../Button"
+import vSchoolLogo from "../../assets/vs-logo.svg"
+import * as colors from '../../colors'
 
 const FooterContainer = styled.div`
     position: relative;
     width: 416px;
     height: 64px;
     display: flex;
-    background: ${black};
+    background: ${colors.black};
 
     @media (min-width: 768px) {
         min-width: 100%;
@@ -34,13 +34,13 @@ const LogoContainer = styled.div`
 const HeaderP = styled.p`
     margin: 24px 0px 24px 120px;
     min-width: 72px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
     text-align: right;
-    color: ${gray.base};
+    color: ${colors.gray.base};
 
     @media (min-width: 768px) {
         margin: 0px 0px 0px 0px;
@@ -52,7 +52,7 @@ const HeaderP = styled.p`
         font-size: 20px;
         line-height: 28px;
         text-align: right;
-        color: ${white};
+        color: ${colors.white};
     }
 `
 
@@ -64,7 +64,6 @@ const HeaderSpan = styled.span`
     @media (min-width: 768px) {
         display: inline;
         margin: 0px 0px 0px 0px;
-
     }
 `
 
@@ -72,8 +71,8 @@ const HeaderButton = styled(Button)`
     min-width: 128px;
     height: 32px;
     margin: 16px 18px 16px 16px;
-    background: #21201F;
-    border: 1px solid ${gray.lighter};
+    background: #21201f;
+    border: 1px solid ${colors.gray.lighter};
     box-sizing: border-box;
     box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
 
@@ -84,7 +83,7 @@ const HeaderButton = styled(Button)`
         right: 3.42%;
         min-width: 176px;
         height: 56px;
-        border: 2px solid ${gray.lighter};
+        border: 2px solid ${colors.gray.lighter};
         box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.2);
     }
 `
@@ -93,9 +92,11 @@ function Footer() {
     return (
         <FooterContainer>
             <LogoContainer>
-                <img src={vSchoolLogo} alt='V School Logo' />
+                <img src={vSchoolLogo} alt="V School Logo" />
             </LogoContainer>
-            <HeaderP>Questions<HeaderSpan> about applying</HeaderSpan>?</HeaderP>
+            <HeaderP>
+                Questions<HeaderSpan> about applying</HeaderSpan>?
+            </HeaderP>
             <HeaderButton>Let's Talk</HeaderButton>
         </FooterContainer>
     )

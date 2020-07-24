@@ -1,15 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-
-import { blue } from '../../colors/blue'
-import { gray, black } from '../../colors/gray'
+import React from "react"
+import styled from "styled-components"
+import * as colors from '../../colors'
 
 const ProfileContainer = styled.div`
     position: relative;
     max-width: 416px;
     height: 379px;
-    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
-    background: ${gray.lighter};
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
+        0px 12px 17px rgba(0, 0, 0, 0.14);
+    background: ${colors.gray.lighter};
 `
 const MyInfoContainer = styled.div`
     max-width: 100%;
@@ -21,14 +20,14 @@ const MyInfoContainer = styled.div`
 
 const ContentHeader = styled.h5`
     width: 100%;
-    font-family: 'aktiv-grotesk-extended';
+    font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.25px;
     text-transform: uppercase;
-    color: ${black};
+    color: ${colors.black};
     margin: 0px 0px 4px 0px;
     box-sizing: border-box;
 `
@@ -36,30 +35,30 @@ const ContentHeader = styled.h5`
 const ContentParagraph = styled.p`
     margin: 0px;
     width: 100%;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
-    color: ${gray.darker};
+    color: ${colors.gray.darker};
     box-sizing: border-box;
 `
 
 const TextButton = styled.button`
     width: 120px;
     margin: 10px 0px 0px 0px;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 28px;
     text-align: right;
-    color: ${blue.base};
+    color: ${colors.blue.base};
     border: none;
     background: none;
 `
 
-function Profile({userName, userEmail, userPhone, userCourse, userTime}) {
+function Profile({ userName, userEmail, userPhone, userCourse, userTime }) {
     return (
         <ProfileContainer>
             <MyInfoContainer>

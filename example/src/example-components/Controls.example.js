@@ -1,15 +1,40 @@
-import React, { Fragment } from 'react'
-import { Controls } from '@vschool/lotus'
+import React from "react"
+import styled from "styled-components"
+import { Controls } from "@vschool/lotus"
+
+const ControlsExampleContainer = styled.div`
+    /* border: 1px solid lightcoral; */
+`
+
+const SectionName = styled.p`
+    margin: 0px 0px 24px 0px;
+    font-family: "aktiv-grotesk";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+`
+
+const PropDesc = styled.p`
+    margin: 16px 0px 8px 0px;
+    font-family: "aktiv-grotesk";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+`
 
 export default () => {
     return (
-        <Fragment>
-            <br></br>
-            <h1>Controls</h1>
-            <p>Need to style the actual checkbox.</p>
+        <ControlsExampleContainer>
+            <SectionName>Examples</SectionName>
+            <PropDesc>'disabledStatus' = false</PropDesc>
             <Controls disabledStatus={false} />
+            <PropDesc>'disabledStatus' = true</PropDesc>
             <Controls disabledStatus={true} />
-
-        </Fragment>
+        </ControlsExampleContainer>
     )
 }

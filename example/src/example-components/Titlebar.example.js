@@ -1,15 +1,26 @@
-import React, { Fragment } from 'react'
+import React from "react"
+import styled from "styled-components"
+import { Titlebar } from "@vschool/lotus"
 
-import { Titlebar } from '@vschool/lotus'
+const TitlebarExampleContainer = styled.div`
+    /* border: 1px solid lightcoral; */
+`
+
+const SectionName = styled.p`
+    margin: 0px 0px 24px 0px;
+    font-family: "aktiv-grotesk";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+`
 
 export default () => {
     return (
-        <Fragment>
-            <br></br>
-            <h1>Titlebar</h1>
-            <p>Media query currently at 768px. More documentation to come.</p>
-            <Titlebar stepOne={'active'} stepTwo={'inactive'} stepThree={'locked'} />
-            <br></br>
-        </Fragment>
+        <TitlebarExampleContainer>
+            <SectionName>Examples</SectionName>
+            <Titlebar stepOne={"active"} stepTwo={"inactive"} stepThree={"locked"} />
+        </TitlebarExampleContainer>
     )
 }

@@ -1,101 +1,107 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react"
+import styled from "styled-components"
+import { setStatus } from "./utils"
+// import PropTypes from 'prop-types'
+import * as colors from '../../colors'
+// import { black, white } from '../../colors/gray'
 
-import { setStatus } from './utils'
-import { blue } from '../../colors/blue'
-import { black, white } from '../../colors/gray'
-
-const StatusMesssageContainer = styled.div`
+const StatusMessageContainer = styled.div`
     position: relative;
     width: 378px;
-    height: 128px;
+    /* min-height: 128px; */
     display: flex;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+    border: ${props => props.border};
+    /* box-sizing: border-box; */
 
     @media (min-width: 768px) {
-        min-width: 1200px;
-        max-height: 56px;
+        width: 100%;
+        height: 56px;
     }
 `
 
 const IndicatorContainer = styled.div`
     min-width: 56px;
-    height: 100%;
-    padding: 49px 19px 50px 19px;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
     background: ${props => props.background};
     border: ${props => props.border};
     box-sizing: border-box;
-
-    @media (min-width: 768px) {
-        height: 56px;
-        padding: 13px 19px 14px 19px;
-    }
 `
 
-const IndicagtorText = styled.p`
+const Indicator = styled.p`
     margin: 0px;
-    display: flex;
-    justify-content: center;
-    width: 18px;
-    height: 29px;
+    width: 100%;
     font-family: 'benton-sans';
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
     text-align: center;
-    color: ${white};
+    color: ${colors.white};
 `
 
-const ContentContainer = styled.div`
+const MessageWrapper = styled.div`
+    width: 100%;
+    /* min-height: 100%; */
+    padding: 16px 16px 16px 16px;
     background: ${props => props.background};
-    border: ${props => props.border};
+    /* background: none; */
     display: flex;
     align-items: center;
-    /* Used Flex instead of padding for top and bottom */
-    padding: 0px 24px 0px 16px;
-    border-left: none;
-    box-sizing: border-box;
+    /* border: 1px solid lightcoral; */
 
     @media (min-width: 768px) {
-        min-width: 100%;
+        /* background: blue; */
+        
+        /* height: 100%; */
     }
 `
 
-const ContentText = styled.p`
-    margin: 0px 0px 0px 0px;
+const Message = styled.p`
+    margin: 0px;
+    /* height: 100%; */
+    width: 100%;
     font-family: 'aktiv-grotesk';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: ${black};
+    color: ${colors.black};
+    border: 1px solid ${props => props.borderColor};
+    box-sizing: border-box;
+
+    & > span {
+        color: ${colors.blue.base};
+        text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+        /* background: green; */
+        /* height: 56px; */
+    }
 `
 
-function StatusMessage({status, message}) {
+function StatusMessage(props) {
+    const { status, message } = props
+    const { indicatorText, indicatorColor, indicatorBorder, contentBackground, contentBorder, messageContent } = setStatus(status, message)
     
-    const { indicatorColor, 
-            indicatorBorder, 
-            contentBackground, 
-            contentBorder, 
-            indicatorText } = setStatus(status)
-
     return (
-        <StatusMesssageContainer>
+        <StatusMessageContainer border={contentBorder}>
             <IndicatorContainer background={indicatorColor} border={indicatorBorder}>
-                <IndicagtorText>{indicatorText}</IndicagtorText>
+                <Indicator>{indicatorText}</Indicator>
             </IndicatorContainer>
-            <ContentContainer background={contentBackground} border={contentBorder}>
-                <ContentText>{message}</ContentText>
-            </ContentContainer>
-        </StatusMesssageContainer>
+            <MessageWrapper  background={contentBackground}>
+                <Message borderColor={contentBackground}>{messageContent}</Message>
+            </MessageWrapper>
+        </StatusMessageContainer>
     )
 }
 
-StatusMessage.propTypes = {
-    status: PropTypes.string.isRequired,
-    message: PropTypes.string
-  }
-
 export default StatusMessage
+
+// StatusMessage.propTypes = {
+//     status: PropTypes.string.isRequired,
+//     message: PropTypes.string
+//   }

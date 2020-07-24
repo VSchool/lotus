@@ -1,25 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { StatusChip } from '../StatusChip'
-import { findCardStatus } from './utils'
+import { StatusChip } from "../StatusChip"
+import { findCardStatus } from "./utils"
 
-import { black, gray, white } from '../../colors/gray'
-import { blue } from '../../colors/blue'
+import * as colors from "../../colors"
 
 
 const CardContainer = styled.div`
     position: relative;
     width: 352px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
-    
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
+        0px 2px 4px rgba(0, 0, 0, 0.14);
+
     @media (max-width: 768px) {
         max-width: 184px;
     }
 `
 
 const CardWrapper = styled.div`
-    background: ${white};
+    background: ${colors.gray.white};
     width: 100%;
     padding: 24px 24px 24px 24px;
     box-sizing: border-box;
@@ -27,7 +27,7 @@ const CardWrapper = styled.div`
     border-right: ${props => props.borderRight};
     border-bottom: ${props => props.borderBottom};
     border-left: ${props => props.borderLeft};
-    
+
     @media (max-width: 768px) {
         padding: 16px 16px 16px 16px;
     }
@@ -40,8 +40,8 @@ const CardTitle = styled.h5`
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    color: ${black};
-    
+    color: ${colors.gray.black};
+
     @media (max-width: 768px) {
         margin: 0px 0px 8px 0px;
         font-size: 16px;
@@ -57,7 +57,7 @@ const BottomWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
+
     @media (max-width: 768px) {
         margin: 8px 0px 0px 0px;
         flex-direction: column;
@@ -75,7 +75,7 @@ const CardMessage = styled.p`
     font-weight: 500;
     font-size: 10px;
     line-height: 24px;
-    color: ${black};
+    color: ${colors.gray.black};
 
     @media (max-width: 768px) {
         margin: 0px 0px 8px 0px;
@@ -90,10 +90,10 @@ const TextButton = styled.button`
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    color: ${blue.base};
+    color: ${colors.blue.base};
     border: none;
     background: none;
-    
+
     @media (max-width: 768px) {
         margin: 8px 0px 0px 0px;
         line-height: 16px;
@@ -101,16 +101,29 @@ const TextButton = styled.button`
 `
 
 function Card({ status }) {
-    const {  cardStatus, titleText, messageText, topBorder, rightBorder, bottomBorder, leftBorder } = findCardStatus(status)
+    const {
+        cardStatus,
+        titleText,
+        messageText,
+        topBorder,
+        rightBorder,
+        bottomBorder,
+        leftBorder
+    } = findCardStatus(status)
     return (
         <CardContainer>
-            <CardWrapper borderTop={topBorder} borderRight={rightBorder} borderBottom={bottomBorder} borderLeft={leftBorder}>
+            <CardWrapper
+                borderTop={topBorder}
+                borderRight={rightBorder}
+                borderBottom={bottomBorder}
+                borderLeft={leftBorder}
+            >
                 <CardTitle>{titleText}</CardTitle>
                 <StatusChip status={cardStatus} />
-                    <BottomWrapper>
-                        <CardMessage>{messageText}</CardMessage>
-                        <TextButton>Start</TextButton>
-                    </BottomWrapper>
+                <BottomWrapper>
+                    <CardMessage>{messageText}</CardMessage>
+                    <TextButton>Start</TextButton>
+                </BottomWrapper>
             </CardWrapper>
         </CardContainer>
     )

@@ -10,6 +10,7 @@ export function determineButtonColors(props) {
             color = colors.white
             break
         case "primary-light":
+            // SAME AS SECONDARY DARK?
             borderColor = colors.black
             backgroundColor = colors.gray.lighter
             color = colors.black
@@ -33,8 +34,8 @@ export function determineButtonSize(props) {
     let height, fontSize, minWidth, lineHeight, letterSpacing
     switch (props.buttonSize) {
         // ADDED XTRASM SIZE FOR HEADER BUTTON
-        case 'xtrasm':
-            height = '32px'
+        case "xs":
+            height = "32px"
             fontSize = "12px"
             lineHeight = "16px"
             letterSpacing = "0.85px"
