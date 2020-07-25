@@ -96,7 +96,7 @@ const PropTypeText = styled.p`
 const PropDescriptionText = styled.p`
     margin: 0px 0px 0px 0px;
     font-family: Roboto;
-    font-style: normal;
+    font-style: italic;
     font-weight: 300;
     font-size: 18px;
     line-height: 24px;
@@ -130,7 +130,7 @@ const ExampleContainer = styled.div`
 `
 
 const ExampleText = styled.p`
-    margin: 0px 0px 8px 0px;
+    margin: 24px 0px 8px 0px;
 `
 
 export default () => {
@@ -161,8 +161,38 @@ export default () => {
                 <ConfirmCopied id={'confirmCopy'}>Copied to clipboard!</ConfirmCopied>
             </CardPageHeaderContainer>
             <CardPageDescription>A brief description of what the component is used for.</CardPageDescription>
-            <CardPageSubHeader>Card</CardPageSubHeader>
+            
             <DisplayContainer>
+                <PropDemoContainer>
+                    <PropDemoText>{'<Card status={String} />'}</PropDemoText>
+                </PropDemoContainer>
+                <ExampleContainer>
+                    <Card status={'in-progress'} />
+                </ExampleContainer>
+            </DisplayContainer>
+            <CardPageSubHeader>Props</CardPageSubHeader>
+
+            <DisplayContainer>
+                <PropNameText>status</PropNameText>
+                <PropTypeText>type: String</PropTypeText>
+                <PropDescriptionText>'not-started', 'up-next', 'in-progress', 'completed'</PropDescriptionText>
+                <PropDemoContainer>
+                    <PropDemoText>{'<Card status={Boolean} />'}</PropDemoText>
+                </PropDemoContainer>
+                <ExampleContainer>
+                    <ExampleText>{"'status={'not-started'}'"}</ExampleText>
+                    <Card status={'not-started'} />
+                    <ExampleText>{"'status={'up-next'}'"}</ExampleText>
+                    <Card status={'up-next'} />
+                    <ExampleText>{"'status={'in-progress'}'"}</ExampleText>
+                    <Card status={'in-progress'} />
+                    <ExampleText>{"'status={'completed'}'"}</ExampleText>
+                    <Card status={'completed'} />
+                </ExampleContainer>
+            </DisplayContainer>
+
+
+            {/* <DisplayContainer>
                 <PropNameText>status</PropNameText>
                 <PropTypeText>type: String</PropTypeText>
                 <PropDescriptionText>Options: 'not-started', 'up-next', 'in-progress', 'completed'</PropDescriptionText>
@@ -185,7 +215,7 @@ export default () => {
                     <ExampleText>{"'status={'completed'}'"}</ExampleText>
                     <Card status={'completed'} />
                 </ExampleContainer>
-            </DisplayContainer>
+            </DisplayContainer> */}
         </CardExampleContainer>
     )
 }

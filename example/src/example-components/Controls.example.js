@@ -96,7 +96,7 @@ const PropTypeText = styled.p`
 const PropDescriptionText = styled.p`
     margin: 0px 0px 0px 0px;
     font-family: Roboto;
-    font-style: normal;
+    font-style: italic;
     font-weight: 300;
     font-size: 18px;
     line-height: 24px;
@@ -130,7 +130,7 @@ const ExampleContainer = styled.div`
 `
 
 const ExampleText = styled.p`
-    margin: 0px 0px 8px 0px;
+    margin: 24px 0px 8px 0px;
 `
 
 export default () => {
@@ -161,21 +161,29 @@ export default () => {
                 <ConfirmCopied id={'confirmCopy'}>Copied to clipboard!</ConfirmCopied>
             </ControlsPageHeaderContainer>
             <ControlsPageDescription>A brief description of what the component is used for.</ControlsPageDescription>
-            <ControlsPageSubHeader>Props</ControlsPageSubHeader>
+            
             <DisplayContainer>
-                <PropNameText>disabledStatus</PropNameText>
-                <PropTypeText>type: String</PropTypeText>
-                <PropDescriptionText>Options: 'true', 'false'</PropDescriptionText>
                 <PropDemoContainer>
                     <PropDemoText>{'<Controls disabledStatus={Boolean} />'}</PropDemoText>
                 </PropDemoContainer>
                 <ExampleContainer>
-                    <ExampleText>{"'disabledStatues={false}'"}</ExampleText>
                     <Controls disabledStatus={false} />
                 </ExampleContainer>
+            </DisplayContainer>
+            <ControlsPageSubHeader>Props</ControlsPageSubHeader>
+
+            <DisplayContainer>
+                <PropNameText>disabledStatus</PropNameText>
+                <PropTypeText>type: Boolean</PropTypeText>
+                <PropDescriptionText>true, false</PropDescriptionText>
+                <PropDemoContainer>
+                    <PropDemoText>{'<Controls disabledStatus={Boolean} />'}</PropDemoText>
+                </PropDemoContainer>
                 <ExampleContainer>
-                    <ExampleText>{"'disabledStatues={true}'"}</ExampleText>
+                    <ExampleText>{"'disabledStatus={true}'"}</ExampleText>
                     <Controls disabledStatus={true} />
+                    <ExampleText>{"'disabledStatus={false}'"}</ExampleText>
+                    <Controls disabledStatus={false} />
                 </ExampleContainer>
             </DisplayContainer>
         </ControlsExampleContainer>

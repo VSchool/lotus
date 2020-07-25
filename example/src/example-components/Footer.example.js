@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom'
 import { Footer } from "@vschool/lotus"
 import clipboardCopyLink from '../assets/images/link.svg'
 
-
 const FooterExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
@@ -141,10 +140,6 @@ const ExampleContainer = styled.div`
     padding: 8px 0px 8px 0px;
 `
 
-const ExampleText = styled.p`
-    margin: 0px 0px 8px 0px;
-`
-
 export default () => {
 
     let location = useLocation()
@@ -164,7 +159,6 @@ export default () => {
         confirmCopy.style.display = 'flex'
     }
 
-
     return (
         <FooterExampleContainer>
             <FooterPageHeaderContainer>
@@ -175,18 +169,21 @@ export default () => {
                 <ConfirmCopied id={'confirmCopy'}>Copied to clipboard!</ConfirmCopied>
             </FooterPageHeaderContainer>
             <FooterPageDescription>A brief description of what the component is used for.</FooterPageDescription>
-            <FooterPageSubHeader>Props</FooterPageSubHeader>
+
             <DisplayContainer>
-                <PropNameText>none</PropNameText>
-                <PropTypeText>type: </PropTypeText>
-                <PropDescriptionText>Options: </PropDescriptionText>
                 <PropDemoContainer>
                     <PropDemoText>{'<Footer />'}</PropDemoText>
                 </PropDemoContainer>
                 <ExampleContainer>
-                    <ExampleText>{"'<Footer />'"}</ExampleText>
                     <Footer />
                 </ExampleContainer>
+            </DisplayContainer>
+            <FooterPageSubHeader>Props</FooterPageSubHeader>
+
+            <DisplayContainer>
+                <PropNameText>none</PropNameText>
+                <PropTypeText>type: </PropTypeText>
+                <PropDescriptionText>no props needed</PropDescriptionText>
             </DisplayContainer>
         </FooterExampleContainer>
     )
