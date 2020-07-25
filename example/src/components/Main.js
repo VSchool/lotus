@@ -1,6 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import Template from './Template'
+import { Switch, Route } from 'react-router-dom'
+
+import Controls from '../example-components/Controls.example'
+import Card from '../example-components/Card.example'
+
+// import Template from './Template'
 
 
 const MainContainer = styled.div`
@@ -14,8 +19,17 @@ export default function Main() {
 
     return (
         <MainContainer>
-            <Template />
-            <Template />
+            <p>Hello</p>
+            <Switch>
+                <Route path='/controls'>
+                    <Controls />
+                </Route>
+                <Route path='/card'>
+                    <Card />
+                </Route>
+            </Switch>
+            {/* <Template />
+            <Template /> */}
         </MainContainer>
     )
 }

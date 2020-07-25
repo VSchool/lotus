@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from 'react-router-dom'
 import logo from "../assets/images/VschoolLogo.png"
 
 const SideNavContainer = styled.div`
@@ -71,9 +72,10 @@ function SideNav() {
             <WelcomeText>Welcome</WelcomeText>
             <IntroductionText>Introduction</IntroductionText>
             <ComponentList>
+                {/* <Link to='/controls'>Testing</Link> */}
                 <WelcomeText>Reference</WelcomeText>
-                <ComponentName value={'Controls'} >Controls</ComponentName>
-                <ComponentName value={'Card'} >Card</ComponentName>
+                <ComponentName value={'Controls'} ><Link to='/controls'>Controls</Link></ComponentName>
+                <ComponentName value={'Card'} ><Link to='/card'>Card</Link></ComponentName>
                 <ComponentName value={'Modal'} >Modal</ComponentName>
                 <ComponentName value={'Status Message'} >Status Message</ComponentName>
                 <ComponentName value={'Header'} >Header</ComponentName>
