@@ -171,7 +171,6 @@ export default () => {
                 </ExampleContainer>
             </DisplayContainer>
             <CardPageSubHeader>Props</CardPageSubHeader>
-
             <DisplayContainer>
                 <PropNameText>status</PropNameText>
                 <PropTypeText>type: String</PropTypeText>
@@ -182,40 +181,17 @@ export default () => {
                 <ExampleContainer>
                     <ExampleText>{"'status={'not-started'}'"}</ExampleText>
                     <Card status={'not-started'} />
+
                     <ExampleText>{"'status={'up-next'}'"}</ExampleText>
                     <Card status={'up-next'} />
+
                     <ExampleText>{"'status={'in-progress'}'"}</ExampleText>
                     <Card status={'in-progress'} />
+
                     <ExampleText>{"'status={'completed'}'"}</ExampleText>
                     <Card status={'completed'} />
                 </ExampleContainer>
             </DisplayContainer>
-
-
-            {/* <DisplayContainer>
-                <PropNameText>status</PropNameText>
-                <PropTypeText>type: String</PropTypeText>
-                <PropDescriptionText>Options: 'not-started', 'up-next', 'in-progress', 'completed'</PropDescriptionText>
-                <PropDemoContainer>
-                    <PropDemoText>{'<Card status={String} />'}</PropDemoText>
-                </PropDemoContainer>
-                <ExampleContainer>
-                    <ExampleText>{"'status={'not-started'}'"}</ExampleText>
-                    <Card status={'not-started'} />
-                </ExampleContainer>
-                <ExampleContainer>
-                    <ExampleText>{"'status={'up-next'}'"}</ExampleText>
-                    <Card status={'not-started'} />
-                </ExampleContainer>
-                <ExampleContainer>
-                    <ExampleText>{"'status={'in-progress'}'"}</ExampleText>
-                    <Card status={'in-progress'} />
-                </ExampleContainer>
-                <ExampleContainer>
-                    <ExampleText>{"'status={'completed'}'"}</ExampleText>
-                    <Card status={'completed'} />
-                </ExampleContainer>
-            </DisplayContainer> */}
         </CardExampleContainer>
     )
 }
