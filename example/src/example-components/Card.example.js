@@ -164,10 +164,10 @@ export default () => {
             
             <DisplayContainer>
                 <PropDemoContainer>
-                    <PropDemoText>{'<Card status={String} />'}</PropDemoText>
+                    <PropDemoText>{'<Card status={\'completed\'} />'}</PropDemoText>
                 </PropDemoContainer>
                 <ExampleContainer>
-                    <Card status={'in-progress'} />
+                    <Card status={'completed'} />
                 </ExampleContainer>
             </DisplayContainer>
             <CardPageSubHeader>Props</CardPageSubHeader>

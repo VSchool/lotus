@@ -105,7 +105,7 @@ const PropTypeText = styled.p`
 const PropDescriptionText = styled.p`
     margin: 0px 0px 0px 0px;
     font-family: Roboto;
-    font-style: normal;
+    font-style: italic;
     font-weight: 300;
     font-size: 18px;
     line-height: 24px;
@@ -140,6 +140,7 @@ const ExampleContainer = styled.div`
     padding: 8px 0px 8px 0px;
 `
 
+
 export default () => {
 
     let location = useLocation()
@@ -158,6 +159,7 @@ export default () => {
         let confirmCopy = document.getElementById('confirmCopy')
         confirmCopy.style.display = 'flex'
     }
+
 
     return (
         <FooterExampleContainer>
@@ -184,7 +186,12 @@ export default () => {
                 <PropNameText>none</PropNameText>
                 <PropTypeText>type: </PropTypeText>
                 <PropDescriptionText>no props needed</PropDescriptionText>
+                <PropDemoContainer>
+                    <PropDemoText>{'<Footer />'}</PropDemoText>
+                </PropDemoContainer>
             </DisplayContainer>
+
+
         </FooterExampleContainer>
     )
 }

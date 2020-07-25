@@ -164,7 +164,7 @@ export default () => {
             
             <DisplayContainer>
                 <PropDemoContainer>
-                    <PropDemoText>{'<Controls disabledStatus={Boolean} />'}</PropDemoText>
+                    <PropDemoText>{'<Controls disabledStatus={false} />'}</PropDemoText>
                 </PropDemoContainer>
                 <ExampleContainer>
                     <Controls disabledStatus={false} />

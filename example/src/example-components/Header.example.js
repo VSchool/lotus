@@ -96,7 +96,7 @@ const PropTypeText = styled.p`
 const PropDescriptionText = styled.p`
     margin: 0px 0px 0px 0px;
     font-family: Roboto;
-    font-style: normal;
+    font-style: italic;
     font-weight: 300;
     font-size: 18px;
     line-height: 24px;
@@ -129,10 +129,6 @@ const ExampleContainer = styled.div`
     padding: 8px 0px 8px 0px;
 `
 
-const ExampleText = styled.p`
-    margin: 0px 0px 8px 0px;
-`
-
 export default () => {
     let location = useLocation()
 
@@ -161,18 +157,24 @@ export default () => {
                 <ConfirmCopied id={'confirmCopy'}>Copied to clipboard!</ConfirmCopied>
             </HeaderPageHeaderContainer>
             <HeaderPageDescription>A brief description of what the component is used for.</HeaderPageDescription>
-            <HeaderPageSubHeader>Props</HeaderPageSubHeader>
+
             <DisplayContainer>
-                <PropNameText>none</PropNameText>
-                <PropTypeText>type: </PropTypeText>
-                <PropDescriptionText>Options:</PropDescriptionText>
                 <PropDemoContainer>
                     <PropDemoText>{'<Header />'}</PropDemoText>
                 </PropDemoContainer>
                 <ExampleContainer>
-                    <ExampleText>{"'<Header />'"}</ExampleText>
                     <Header />
                 </ExampleContainer>
+            </DisplayContainer>
+            <HeaderPageSubHeader>Props</HeaderPageSubHeader>
+
+            <DisplayContainer>
+                <PropNameText>none</PropNameText>
+                <PropTypeText>type: </PropTypeText>
+                <PropDescriptionText>no props needed</PropDescriptionText>
+                <PropDemoContainer>
+                    <PropDemoText>{'<Header />'}</PropDemoText>
+                </PropDemoContainer>
             </DisplayContainer>
         </HeaderExampleContainer>
     )
