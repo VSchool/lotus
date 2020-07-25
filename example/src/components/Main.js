@@ -10,6 +10,7 @@ import HeaderExample from '../example-components/Header.example'
 import ModalExample from '../example-components/Modal.example'
 import ProfileExample from '../example-components/Profile.example'
 import StatusChipExample from '../example-components/StatusChip.example'
+import StatusMessageExample from '../example-components/StatusMessage.example'
 
 
 
@@ -33,6 +34,7 @@ export default function Main() {
                 <Route path='/modal'><ModalExample /></Route>
                 <Route path='/profile'><ProfileExample /></Route>
                 <Route path='/statusChip'><StatusChipExample /></Route>
+                <Route path='/statusMessage'><StatusMessageExample /></Route>
             </Switch>
         </MainContainer>
     )
