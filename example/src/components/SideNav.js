@@ -70,6 +70,7 @@ function SideNav() {
                 <img src={logo} alt={"V School logo"} />
             </NavLogoContainer>
             <WelcomeText>Welcome</WelcomeText>
+            <Link to='/'>Introduction</Link>
             <IntroductionText>Introduction</IntroductionText>
             <ComponentList>
                 {/* <Link to='/controls'>Testing</Link> */}

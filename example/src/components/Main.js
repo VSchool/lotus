@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { Switch, Route } from 'react-router-dom'
 
+import Introduction from './Introduction'
 import Controls from '../example-components/Controls.example'
 import Card from '../example-components/Card.example'
 
-// import Template from './Template'
 
 
 const MainContainer = styled.div`
@@ -21,15 +21,10 @@ export default function Main() {
         <MainContainer>
             <p>Hello</p>
             <Switch>
-                <Route path='/controls'>
-                    <Controls />
-                </Route>
-                <Route path='/card'>
-                    <Card />
-                </Route>
+                <Route exact path='/'><Introduction /></Route>
+                <Route path='/controls'><Controls /></Route>
+                <Route path='/card'><Card /></Route>
             </Switch>
-            {/* <Template />
-            <Template /> */}
         </MainContainer>
     )
 }
