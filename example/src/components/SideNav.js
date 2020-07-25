@@ -79,6 +79,7 @@ function SideNav() {
                 <LinkArea to='/profile'>Profile</LinkArea>
                 <LinkArea to='/statusChip'>Status Chip</LinkArea>
                 <LinkArea to='/statusMessage'>Status Message</LinkArea>
+                <LinkArea to='/taskbar'>Taskbar</LinkArea>
             </ComponentList>
         </SideNavContainer>
     )

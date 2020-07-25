@@ -11,7 +11,7 @@ import ModalExample from '../example-components/Modal.example'
 import ProfileExample from '../example-components/Profile.example'
 import StatusChipExample from '../example-components/StatusChip.example'
 import StatusMessageExample from '../example-components/StatusMessage.example'
-
+import TaskbarExample from '../example-components/Taskbar.example'
 
 
 const MainContainer = styled.div`
@@ -35,6 +35,7 @@ export default function Main() {
                 <Route path='/profile'><ProfileExample /></Route>
                 <Route path='/statusChip'><StatusChipExample /></Route>
                 <Route path='/statusMessage'><StatusMessageExample /></Route>
+                <Route path='/taskbar'><TaskbarExample /></Route>
             </Switch>
         </MainContainer>
     )
