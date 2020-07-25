@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import Introduction from './Introduction'
 import Controls from '../example-components/Controls.example'
 import Card from '../example-components/Card.example'
+import FooterExample from '../example-components/Footer.example'
 
 
 
@@ -23,6 +24,7 @@ export default function Main() {
                 <Route exact path='/'><Introduction /></Route>
                 <Route path='/controls'><Controls /></Route>
                 <Route path='/card'><Card /></Route>
+                <Route path='/footer'><FooterExample /></Route>
             </Switch>
         </MainContainer>
     )

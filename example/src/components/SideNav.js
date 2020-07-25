@@ -73,6 +73,7 @@ function SideNav() {
                 <WelcomeText>Reference</WelcomeText>
                 <LinkArea to='/controls'>Controls</LinkArea>
                 <LinkArea to='/card'>Card</LinkArea>
+                <LinkArea to='/footer'>Footer</LinkArea>
             </ComponentList>
         </SideNavContainer>
     )

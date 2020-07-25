@@ -92,7 +92,7 @@ const PropNameText = styled.p`
 ` 
 
 const PropTypeText = styled.p`
-    margin: 0px 0px 0px 0px;
+    margin: 8px 0px 8px 0px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
