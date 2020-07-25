@@ -13,6 +13,7 @@ import StatusChipExample from '../example-components/StatusChip.example'
 import StatusMessageExample from '../example-components/StatusMessage.example'
 import TaskbarExample from '../example-components/Taskbar.example'
 import TitlebarItemExample from '../example-components/TitleBarItem.example'
+import TitlebarExample from '../example-components/Titlebar.example'
 
 
 const MainContainer = styled.div`
@@ -38,6 +39,7 @@ export default function Main() {
                 <Route path='/statusMessage'><StatusMessageExample /></Route>
                 <Route path='/taskbar'><TaskbarExample /></Route>
                 <Route path='/titlebarItem'><TitlebarItemExample /></Route>
+                <Route path='/titlebar'><TitlebarExample /></Route>
             </Switch>
         </MainContainer>
     )

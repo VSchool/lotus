@@ -81,6 +81,7 @@ function SideNav() {
                 <LinkArea to='/statusMessage'>Status Message</LinkArea>
                 <LinkArea to='/taskbar'>Taskbar</LinkArea>
                 <LinkArea to='/titlebarItem'>Titlebar Item</LinkArea>
+                <LinkArea to='titlebar'>Titlebar</LinkArea>
             </ComponentList>
         </SideNavContainer>
     )
