@@ -2,9 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useLocation } from 'react-router-dom'
 import { Card } from "@vschool/lotus"
-
 import clipboardCopyLink from '../assets/images/link.svg'
-
 
 const CardExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
@@ -12,7 +10,6 @@ const CardExampleContainer = styled.div`
 
 const CardPageHeaderContainer = styled.div`
     display: flex;
-    /* border: 1px solid blue; */
 `
 
 const CardPageTitle = styled.p`
@@ -23,14 +20,12 @@ const CardPageTitle = styled.p`
     font-size: 64px;
     line-height: 75px;
     color: #000000;
-    /* border: 1px dotted green; */
 `
 
 const ClipboardCopyLinkContainer = styled.div`
     margin: 0px 0px 0px 16px;
     width: 24px;
     height: 24px;
-    /* border: 1px dotted gray; */
 `
 
 const ConfirmCopied = styled.p`
@@ -46,7 +41,6 @@ const ConfirmCopied = styled.p`
     line-height: 24px;
     color: #000000;
     opacity: .5;
-    /* border: 1px solid blue; */
 `
 
 const CardPageDescription = styled.p`
@@ -57,7 +51,6 @@ const CardPageDescription = styled.p`
     font-size: 20px;
     line-height: 24px;
     color: #000000;
-    /* border: 1px dotted black; */
 `
 
 const CardPageSubHeader = styled.p`
@@ -70,12 +63,10 @@ const CardPageSubHeader = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dashed black; */
 `
 
 const DisplayContainer = styled.div`
     margin: 32px 0px 0px 0px;
-    /* border: 1px solid lightcoral; */
 `
 
 const PropNameText = styled.p`
@@ -88,7 +79,6 @@ const PropNameText = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dotted gray; */
 ` 
 
 const PropTypeText = styled.p`
@@ -101,7 +91,6 @@ const PropTypeText = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dotted blue; */
 `
 
 const PropDescriptionText = styled.p`
@@ -114,7 +103,6 @@ const PropDescriptionText = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dotted green; */
 `
 
 const PropDemoContainer = styled.div`
@@ -134,19 +122,16 @@ const PropDemoText = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dashed purple; */
 `
 
 const ExampleContainer = styled.div`
     margin: 16px 0px 0px 0px;
     padding: 8px 0px 8px 0px;
-    /* border: 1px solid lightcoral; */
 `
 
 const ExampleText = styled.p`
     margin: 0px 0px 8px 0px;
 `
-
 
 export default () => {
     let location = useLocation()

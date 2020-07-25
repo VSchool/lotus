@@ -10,7 +10,6 @@ const ControlsExampleContainer = styled.div`
 
 const ControlsPageHeaderContainer = styled.div`
     display: flex;
-    /* border: 1px solid blue; */
 `
 
 const ControlsPageTitle = styled.p`
@@ -21,14 +20,12 @@ const ControlsPageTitle = styled.p`
     font-size: 64px;
     line-height: 75px;
     color: #000000;
-    /* border: 1px dotted green; */
 `
 
 const ClipboardCopyLinkContainer = styled.div`
     margin: 0px 0px 0px 16px;
     width: 24px;
     height: 24px;
-    /* border: 1px dotted gray; */
 `
 
 const ConfirmCopied = styled.p`
@@ -44,7 +41,6 @@ const ConfirmCopied = styled.p`
     line-height: 24px;
     color: #000000;
     opacity: .5;
-    /* border: 1px solid blue; */
 `
 
 const ControlsPageDescription = styled.p`
@@ -55,7 +51,6 @@ const ControlsPageDescription = styled.p`
     font-size: 20px;
     line-height: 24px;
     color: #000000;
-    /* border: 1px dotted black; */
 `
 
 const ControlsPageSubHeader = styled.p`
@@ -68,12 +63,10 @@ const ControlsPageSubHeader = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dashed black; */
 `
 
 const DisplayContainer = styled.div`
     margin: 32px 0px 0px 0px;
-    /* border: 1px solid lightcoral; */
 `
 
 const PropNameText = styled.p`
@@ -86,7 +79,6 @@ const PropNameText = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dotted gray; */
 `   
 
 const PropTypeText = styled.p`
@@ -99,7 +91,6 @@ const PropTypeText = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dotted blue; */
 `
 
 const PropDescriptionText = styled.p`
@@ -112,7 +103,6 @@ const PropDescriptionText = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dotted green; */
 `
 
 const PropDemoContainer = styled.div`
@@ -132,7 +122,6 @@ const PropDemoText = styled.p`
     display: flex;
     align-items: center;
     color: #000000;
-    /* border: 1px dashed purple; */
 `
 
 const ExampleContainer = styled.div`
