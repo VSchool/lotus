@@ -137,20 +137,12 @@ const PropDemoText = styled.p`
 
 const ExampleContainer = styled.div`
     margin: 16px 0px 0px 0px;
-    /* border: 1px solid lightcoral; */
+    padding: 8px 0px 8px 0px;
 `
 
 const ExampleText = styled.p`
     margin: 0px 0px 8px 0px;
 `
-
-// const LineBreak = styled.div`
-//     height: 2px;
-//     background: lightgray;
-//     opacity: .75;
-// `
-
-
 
 export default () => {
     let location = useLocation()
@@ -175,7 +167,7 @@ export default () => {
             <ControlsPageHeaderContainer>
                 <ControlsPageTitle>Controls</ControlsPageTitle>
                 <ClipboardCopyLinkContainer onClick={copyToClipboard}>
-                    <img src={clipboardCopyLink} alt={'Click to copy link'} />
+                    <img src={clipboardCopyLink} alt={'Click to copy url'} />
                 </ClipboardCopyLinkContainer>
                 <ConfirmCopied id={'confirmCopy'}>Copied to clipboard!</ConfirmCopied>
             </ControlsPageHeaderContainer>
