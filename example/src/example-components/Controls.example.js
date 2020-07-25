@@ -3,6 +3,24 @@ import styled from "styled-components"
 import Template from '../components/Template'
 // import { Controls } from "@vschool/lotus"
 
+const componentObject = {
+    componentName: 'Controls',
+    componentDescription: 'A brief description of what the component is used for.',
+    props: [
+        {
+            propName: 'disabledStatus',
+            propType: 'Boolean',
+            propValue: false,
+            propDescription: 'Rather lengthy, yet entertaining, description of how this particular prop affects the comopnent.'
+        },
+        {
+            propName: 'extraONe',
+            propType: 'String',
+            propDescription: 'Rather lengthy, yet entertaining, description of how this particular prop affects the comopnent.'
+        }
+    ]
+}
+
 const ControlsExampleContainer = styled.div`
     border: 1px solid lightcoral;
 `
@@ -31,9 +49,10 @@ const ControlsExampleContainer = styled.div`
 
 
 export default () => {
+    // console.log(componentObject)
     return (
         <ControlsExampleContainer>
-            <Template component={'Controls'} />
+            <Template component={componentObject} />
             {/* <SectionName>Examples</SectionName>
             <PropDesc>'disabledStatus' = false</PropDesc>
             <Controls disabledStatus={false} />
