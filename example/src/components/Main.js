@@ -19,7 +19,6 @@ export default function Main() {
 
     return (
         <MainContainer>
-            <p>Hello</p>
             <Switch>
                 <Route exact path='/'><Introduction /></Route>
                 <Route path='/controls'><Controls /></Route>
