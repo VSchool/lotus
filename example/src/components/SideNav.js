@@ -74,6 +74,7 @@ function SideNav() {
                 <LinkArea to='/controls'>Controls</LinkArea>
                 <LinkArea to='/card'>Card</LinkArea>
                 <LinkArea to='/footer'>Footer</LinkArea>
+                <LinkArea to='/header'>Header</LinkArea>
             </ComponentList>
         </SideNavContainer>
     )
