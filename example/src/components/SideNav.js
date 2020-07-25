@@ -80,6 +80,7 @@ function SideNav() {
                 <LinkArea to='/statusChip'>Status Chip</LinkArea>
                 <LinkArea to='/statusMessage'>Status Message</LinkArea>
                 <LinkArea to='/taskbar'>Taskbar</LinkArea>
+                <LinkArea to='/titlebarItem'>Titlebar Item</LinkArea>
             </ComponentList>
         </SideNavContainer>
     )
