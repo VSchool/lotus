@@ -77,6 +77,7 @@ function SideNav() {
                 <LinkArea to='/header'>Header</LinkArea>
                 <LinkArea to='/modal'>Modal</LinkArea>
                 <LinkArea to='/profile'>Profile</LinkArea>
+                <LinkArea to='/statusChip'>Status Chip</LinkArea>
             </ComponentList>
         </SideNavContainer>
     )

@@ -9,6 +9,7 @@ import FooterExample from '../example-components/Footer.example'
 import HeaderExample from '../example-components/Header.example'
 import ModalExample from '../example-components/Modal.example'
 import ProfileExample from '../example-components/Profile.example'
+import StatusChipExample from '../example-components/StatusChip.example'
 
 
 
@@ -31,6 +32,7 @@ export default function Main() {
                 <Route path='/header'><HeaderExample /></Route>
                 <Route path='/modal'><ModalExample /></Route>
                 <Route path='/profile'><ProfileExample /></Route>
+                <Route path='/statusChip'><StatusChipExample /></Route>
             </Switch>
         </MainContainer>
     )
