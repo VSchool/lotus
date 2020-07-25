@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { ComponentDisplayContext } from '../providers/Store'
 import { Card } from "@vschool/lotus"
 
 const CardExampleContainer = styled.div`
@@ -29,6 +28,7 @@ const PropDesc = styled.p`
 `
 
 export default () => {
+
     return (
         <CardExampleContainer>
             <SectionName>Examples</SectionName>
