@@ -122,7 +122,7 @@ const PropDemoText = styled.p`
     font-family: Source Code Pro;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
     display: flex;
     align-items: center;
