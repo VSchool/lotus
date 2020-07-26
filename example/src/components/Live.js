@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '@vschool/lotus'
+import { Modal } from '@vschool/lotus'
 import {
     LiveProvider,
     LiveEditor,
@@ -21,11 +21,11 @@ const Container = styled.div`
     /* border: 1px solid blue; */
 `
 
-const scope = {Button, Container}
+const scope = {Modal, Container}
 
 const code = `
     <Container>
-        <Button buttonStyle={'primary-dark'} buttonSize={'xl'}>Button</Button>
+        <Modal title={'primary-dark'} subtitle={'xl'} body={'stupid'} />
     </Container>
 `
 
