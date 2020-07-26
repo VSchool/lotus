@@ -11,7 +11,7 @@ const FooterTemplateObj = {
         {
             propName: 'n/a',
             propType: 'n/a',
-            propDescription: 'na/',
+            propDescription: 'This component takes in no props.',
             options: ['n/a']
         }
     ],
