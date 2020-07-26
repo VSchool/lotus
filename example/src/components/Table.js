@@ -54,7 +54,7 @@ const TableData = styled.p`
     /* border: 1px dotted green; */
 `
 
-export default function Table(props) {
+function Table(props) {
     // console.log(props)
     let componentDetails = decideInfo(props.component)
     const { availableProps } = componentDetails
@@ -82,6 +82,8 @@ export default function Table(props) {
         </TableContainer>
     )
 }
+
+export default Table
 
 // :nth-of-type(odd) {
 //     background-color: #efefef;

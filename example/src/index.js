@@ -1,14 +1,15 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import Store from "./providers/Store"
+import { BrowserRouter } from 'react-router-dom'
 import App from "./App"
 import "./index.css"
 
+
 function Index() {
     return (
-        <Store>
+        <BrowserRouter>
             <App />
-        </Store>
+        </BrowserRouter>
     )
 }
 
