@@ -82,7 +82,6 @@ function SideNav() {
                 <LinkArea to='/taskbar'>Taskbar</LinkArea>
                 <LinkArea to='/titlebarItem'>Titlebar Item</LinkArea>
                 <LinkArea to='titlebar'>Titlebar</LinkArea>
-                <LinkArea to='liveDemo'>Live Demo</LinkArea>
             </ComponentList>
         </SideNavContainer>
     )

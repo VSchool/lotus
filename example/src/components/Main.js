@@ -15,7 +15,6 @@ import TaskbarExample from '../example-components/Taskbar.example'
 import TitlebarItemExample from '../example-components/TitleBarItem.example'
 import TitlebarExample from '../example-components/Titlebar.example'
 
-import LiveDemo from '../components/Live'
 
 
 const MainContainer = styled.div`
@@ -42,7 +41,6 @@ export default function Main() {
                 <Route path='/taskbar'><TaskbarExample /></Route>
                 <Route path='/titlebarItem'><TitlebarItemExample /></Route>
                 <Route path='/titlebar'><TitlebarExample /></Route>
-                <Route path='/liveDemo'><LiveDemo /></Route>
             </Switch>
         </MainContainer>
     )
