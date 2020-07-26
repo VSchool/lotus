@@ -15,18 +15,18 @@ const ModalTemplateObj = {
             propName: 'title',
             propType: 'String',
             propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
-            options: ['any String']
+            options: ['accepts any String']
         },
         {
             propName: 'subtitle',
             propType: 'String',
             propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
-            options: ['any String']
+            options: ['accepts any String']
         },{
             propName: 'body',
             propType: 'String',
             propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
-            options: ['any String']
+            options: ['accepts any String']
         }
     ],
     reactCompnent: ''
