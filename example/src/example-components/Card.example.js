@@ -1,177 +1,217 @@
 import React from "react"
 import styled from "styled-components"
-import { useLocation } from 'react-router-dom'
-import { Card } from "@vschool/lotus"
-import clipboardCopyLink from '../assets/images/link.svg'
+// import { useLocation } from 'react-router-dom'
+import ComponentDocTemplate from '../components/ComponentDocTemplate'
+// import { Card } from "@vschool/lotus"
+// import clipboardCopyLink from '../assets/images/link.svg'
+
+
+const CardTemplateObj = {
+    componentName: 'Modal',
+    componentDescription: 'Here is a short description for this component to go into the template.',
+    exampleText: `<Modal title={string} subtitle={string} body={string} />`,
+    templateProps: [
+        {
+            propName: 'title',
+            propType: 'String',
+            propDescription: 'Here is another area for a description that I need to input a placeholder for.',
+            options: ['accepts a String']
+        },
+        {
+            propName: 'subtitle',
+            propType: 'String',
+            propDescription: 'Here is another area for a description that I need to input a placeholder for.',
+            options: ['accepts a String']
+        },
+        {
+            propName: 'body',
+            propType: 'String',
+            propDescription: 'Here is another area for a description that I need to input a placeholder for.',
+            options: ['accepts a String']
+        }
+    ],
+    reactCompnent: ''
+}
 
 const CardExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
 
-const CardPageHeaderContainer = styled.div`
-    display: flex;
-`
 
-const CardPageTitle = styled.p`
-    margin: 0px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 64px;
-    line-height: 75px;
-    color: #000000;
-`
 
-const ClipboardCopyLinkContainer = styled.div`
-    margin: 0px 0px 0px 16px;
-    width: 24px;
-    height: 24px;
-`
 
-const ConfirmCopied = styled.p`
-    margin: 0px 0px 0px 8px;
-    display: none;
-    align-items: center;
-    width: 100%;
-    height: 24px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 24px;
-    color: #000000;
-    opacity: .5;
-`
 
-const CardPageDescription = styled.p`
-    margin: 24px 0px 0px 0px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-`
+// const CardPageHeaderContainer = styled.div`
+//     display: flex;
+// `
 
-const CardPageSubHeader = styled.p`
-    margin: 40px 0px 0px 0px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-`
+// const CardPageTitle = styled.p`
+//     margin: 0px;
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 64px;
+//     line-height: 75px;
+//     color: #000000;
+// `
 
-const DisplayContainer = styled.div`
-    margin: 32px 0px 0px 0px;
-`
+// const ClipboardCopyLinkContainer = styled.div`
+//     margin: 0px 0px 0px 16px;
+//     width: 24px;
+//     height: 24px;
+// `
 
-const PropNameText = styled.p`
-    margin: 0px;
-    font-family: Roboto;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-` 
+// const ConfirmCopied = styled.p`
+//     margin: 0px 0px 0px 8px;
+//     display: none;
+//     align-items: center;
+//     width: 100%;
+//     height: 24px;
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: 300;
+//     font-size: 24px;
+//     line-height: 24px;
+//     color: #000000;
+//     opacity: .5;
+// `
 
-const PropTypeText = styled.p`
-    margin: 8px 0px 8px 0px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-`
+// const CardPageDescription = styled.p`
+//     margin: 24px 0px 0px 0px;
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 20px;
+//     line-height: 24px;
+//     color: #000000;
+// `
 
-const PropDescriptionText = styled.p`
-    margin: 0px 0px 0px 0px;
-    font-family: Roboto;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-`
+// const CardPageSubHeader = styled.p`
+//     margin: 40px 0px 0px 0px;
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 32px;
+//     line-height: 40px;
+//     display: flex;
+//     align-items: center;
+//     color: #000000;
+// `
 
-const PropDemoContainer = styled.div`
-    margin: 16px 0px 0px 0px;
-    padding: 8px 16px 8px 16px;
-    background: rgba(196, 196, 196, 0.25);
-    border-radius: 8px;
-`
+// const DisplayContainer = styled.div`
+//     margin: 32px 0px 0px 0px;
+// `
 
-const PropDemoText = styled.p`
-    margin: 0px;
-    font-family: Source Code Pro;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-`
+// const PropNameText = styled.p`
+//     margin: 0px;
+//     font-family: Roboto;
+//     font-style: italic;
+//     font-weight: 300;
+//     font-size: 18px;
+//     line-height: 24px;
+//     display: flex;
+//     align-items: center;
+//     color: #000000;
+// ` 
 
-const ExampleContainer = styled.div`
-    margin: 16px 0px 0px 0px;
-    padding: 8px 0px 8px 0px;
-`
+// const PropTypeText = styled.p`
+//     margin: 8px 0px 8px 0px;
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: 300;
+//     font-size: 18px;
+//     line-height: 24px;
+//     display: flex;
+//     align-items: center;
+//     color: #000000;
+// `
 
-const ExampleText = styled.p`
-    margin: 24px 0px 8px 0px;
-`
+// const PropDescriptionText = styled.p`
+//     margin: 0px 0px 0px 0px;
+//     font-family: Roboto;
+//     font-style: italic;
+//     font-weight: 300;
+//     font-size: 18px;
+//     line-height: 24px;
+//     display: flex;
+//     align-items: center;
+//     color: #000000;
+// `
+
+// const PropDemoContainer = styled.div`
+//     margin: 16px 0px 0px 0px;
+//     padding: 8px 16px 8px 16px;
+//     background: rgba(196, 196, 196, 0.25);
+//     border-radius: 8px;
+// `
+
+// const PropDemoText = styled.p`
+//     margin: 0px;
+//     font-family: Source Code Pro;
+//     font-style: normal;
+//     font-weight: 300;
+//     font-size: 16px;
+//     line-height: 24px;
+//     display: flex;
+//     align-items: center;
+//     color: #000000;
+// `
+
+// const ExampleContainer = styled.div`
+//     margin: 16px 0px 0px 0px;
+//     padding: 8px 0px 8px 0px;
+// `
+
+// const ExampleText = styled.p`
+//     margin: 24px 0px 8px 0px;
+// `
+
+// console.log(CardTemplateObj)
+
 
 export default () => {
-    let location = useLocation()
+    // let location = useLocation()
 
-    function copyToClipboard() {
-        let dummyElement = document.createElement('input')
-        let tempHostName = 'http://localhost:3000'
-        let text = `${tempHostName}${location.pathname}`
+    // function copyToClipboard() {
+    //     let dummyElement = document.createElement('input')
+    //     let tempHostName = 'http://localhost:3000'
+    //     let text = `${tempHostName}${location.pathname}`
 
-        document.body.appendChild(dummyElement)
-        dummyElement.value = text
-        dummyElement.select()
-        document.execCommand('copy')
-        document.body.removeChild(dummyElement)
+    //     document.body.appendChild(dummyElement)
+    //     dummyElement.value = text
+    //     dummyElement.select()
+    //     document.execCommand('copy')
+    //     document.body.removeChild(dummyElement)
 
-        let confirmCopy = document.getElementById('confirmCopy')
-        confirmCopy.style.display = 'flex'
-    }
+    //     let confirmCopy = document.getElementById('confirmCopy')
+    //     confirmCopy.style.display = 'flex'
+    // }
 
     return (
         <CardExampleContainer>
-            <CardPageHeaderContainer>
+            <ComponentDocTemplate templateInfo={CardTemplateObj} />
+
+            {/* <CardPageHeaderContainer>
                 <CardPageTitle>Card</CardPageTitle>
                 <ClipboardCopyLinkContainer onClick={copyToClipboard}>
                     <img src={clipboardCopyLink} alt={'Click to copy url'} />
                 </ClipboardCopyLinkContainer>
                 <ConfirmCopied id={'confirmCopy'}>Copied to clipboard!</ConfirmCopied>
             </CardPageHeaderContainer>
-            <CardPageDescription>A brief description of what the component is used for.</CardPageDescription>
+            <CardPageDescription>A brief description of what the component is used for.</CardPageDescription> */}
             
-            <DisplayContainer>
+            {/* <DisplayContainer>
                 <PropDemoContainer>
                     <PropDemoText>{'<Card status={\'completed\'} />'}</PropDemoText>
                 </PropDemoContainer>
                 <ExampleContainer>
                     <Card status={'completed'} />
                 </ExampleContainer>
-            </DisplayContainer>
-            <CardPageSubHeader>Props</CardPageSubHeader>
-            <DisplayContainer>
+            </DisplayContainer> */}
+
+            {/* <CardPageSubHeader>Props</CardPageSubHeader> */}
+
+            {/* <DisplayContainer>
                 <PropNameText>status</PropNameText>
                 <PropTypeText>type: String</PropTypeText>
                 <PropDescriptionText>'not-started', 'up-next', 'in-progress', 'completed'</PropDescriptionText>
@@ -191,7 +231,7 @@ export default () => {
                     <ExampleText>{"'status={'completed'}'"}</ExampleText>
                     <Card status={'completed'} />
                 </ExampleContainer>
-            </DisplayContainer>
+            </DisplayContainer> */}
         </CardExampleContainer>
     )
 }
