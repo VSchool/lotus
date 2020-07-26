@@ -145,6 +145,7 @@ const InfoDescription = styled.p`
 
 
 function ComopnentDocTemplate(props) {
+    console.log(props)
     const { componentName, componentDescription, exampleText, templateProps } = props.templateInfo
 
     let newArr = templateProps.map((availableProp, idx) => {
@@ -153,7 +154,7 @@ function ComopnentDocTemplate(props) {
             // console.log(`Hello ${option}`)
             return `${option}, `
         })
-        console.log(optionListString)
+        // console.log(optionListString)
 
 
         return (
