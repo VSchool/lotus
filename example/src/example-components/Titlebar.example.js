@@ -1,29 +1,28 @@
 import React from "react"
 import styled from "styled-components"
-// import { useLocation } from 'react-router-dom'
 import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const TitlebarTemplateObj = {
     componentName: 'Titlebar',
-    componentDescription: 'Here is a short description for this component to go into the template.',
+    componentDescription: 'Let users know where they are in the application.',
     exampleText: `<Titlebar stepOne={string} stepTwo={string} stepThree={string} />`,
     templateProps: [
         {
             propName: 'stepOne',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the first titlebar item.',
             options: ['active', 'inactive', 'locked']
         },
         {
             propName: 'stepTwo',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the second titlebar item.',
             options: ['active', 'inactive', 'locked']
         },
         {
             propName: 'stepThree',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the third titlebar item.',
             options: ['active', 'inactive', 'locked']
         }
     ],
@@ -35,23 +34,6 @@ const TitlebarExampleContainer = styled.div`
 `
 
 export default () => {
-    // let location = useLocation()
-
-    // function copyToClipboard() {
-    //     let dummyElement = document.createElement('input')
-    //     let tempHostName = 'http://localhost:3000'
-    //     let text = `${tempHostName}${location.pathname}`
-
-    //     document.body.appendChild(dummyElement)
-    //     dummyElement.value = text
-    //     dummyElement.select()
-    //     document.execCommand('copy')
-    //     document.body.removeChild(dummyElement)
-
-    //     let confirmCopy = document.getElementById('confirmCopy')
-    //     confirmCopy.style.display = 'flex'
-    // }
-
     return (
         <TitlebarExampleContainer>
             <ComponentDocTemplate templateInfo={TitlebarTemplateObj} />

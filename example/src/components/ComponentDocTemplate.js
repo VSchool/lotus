@@ -36,6 +36,7 @@ const CopyLinkContainer = styled.div`
 
 const TemplateDescriptionContainer = styled.div`
     margin: 16px 0px 0px 0px;
+    height: 72px;
     /* border: 1px dashed green; */
 `
 
@@ -50,7 +51,7 @@ const TemplateDescriptionText = styled.p`
 `
 
 const TemplateExampleContainer = styled.div`
-    margin: 56px 0px 0px 0px;
+    margin: 16px 0px 0px 0px;
     max-width: 768px;
     /* height: 56px; */
     padding: 8px 16px 8px 16px;
@@ -202,6 +203,7 @@ function ComopnentDocTemplate(props) {
                 <PropsHeaderText>Props</PropsHeaderText>
             </TemplatePropsContainer>
             {newArr}
+            {/* {newField} */}
             <LiveDemo codeDisplay={props.templateInfo} />
         </DocTemplateContainer>
     )

@@ -72,7 +72,7 @@ function createCode(name) {
             return (
                 `<StatusChip status={'not-started'} />`
             )
-        case 'StatusMessage':
+        case 'Status Message':
             return (
                 `<StatusMessage status={'neutral'} message={'Welcome to your V School Application. Get started by completing the tasks below!'} />`
             )
