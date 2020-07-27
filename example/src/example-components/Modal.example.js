@@ -8,24 +8,24 @@ import ComponentDocTemplate from '../components/ComponentDocTemplate'
 // const body = "If you are interested in applying for scholarships, make sure to apply. Then we tell them how many people are usually rewarded with something."
 const ModalTemplateObj = {
     componentName: 'Modal',
-    componentDescription: 'Here is a short description for this component to go into the template.',
+    componentDescription: 'Prominently display important information to the user.',
     exampleText: `<Modal title={string} subtitle={string} body={string} />`,
     templateProps: [
         {
             propName: 'title',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Text string that is displayed in the title of the modal.',
             options: ['accepts any String']
         },
         {
             propName: 'subtitle',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Text string that is displayed in the subtitle of the modal.',
             options: ['accepts any String']
         },{
             propName: 'body',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Text string that is displayed in the body of the modal.',
             options: ['accepts any String']
         }
     ],
