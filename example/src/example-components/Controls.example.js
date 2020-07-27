@@ -5,13 +5,13 @@ import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const ControlsTemplateObj = {
     componentName: 'Controls',
-    componentDescription: 'Controls1Here is a short description for this component to go into the template.',
+    componentDescription: 'Have users agree to the Terms & Conditions.',
     exampleText: `<Controls disabledStatus={Boolean} />`,
     templateProps: [
         {
             propName: 'disabledStatus',
             propType: 'Boolean',
-            propDescription: 'Disabled Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Toggles the checkbox\'s disabled state while processing the request.',
             options: ['true', 'false']
         }
     ],
