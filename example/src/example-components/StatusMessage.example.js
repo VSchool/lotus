@@ -15,7 +15,7 @@ const StatusMessageTemplateObj = {
             options: ['neutral', 'success', 'warning', 'fail']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 // const neutralMessage =
 //     "Welcome to your V School Application. Get started by completing the tasks below!"

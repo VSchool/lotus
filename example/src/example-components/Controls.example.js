@@ -15,7 +15,7 @@ const ControlsTemplateObj = {
             options: ['true', 'false']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const ControlsExampleContainer = styled.div`

@@ -27,7 +27,7 @@ const TitlebarTemplateObj = {
             options: ['active', 'inactive', 'locked']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const TitlebarExampleContainer = styled.div`

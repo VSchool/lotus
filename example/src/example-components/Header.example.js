@@ -15,7 +15,7 @@ const HeaderTemplateObj = {
             options: ['n/a']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const HeaderExampleContainer = styled.div`

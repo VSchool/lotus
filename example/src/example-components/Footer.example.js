@@ -15,7 +15,7 @@ const FooterTemplateObj = {
             options: ['n/a']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const FooterExampleContainer = styled.div`

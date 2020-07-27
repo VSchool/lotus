@@ -15,7 +15,7 @@ const CardTemplateObj = {
             options: ['not-started', 'up-next', 'in-progress', 'completed']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const CardExampleContainer = styled.div`

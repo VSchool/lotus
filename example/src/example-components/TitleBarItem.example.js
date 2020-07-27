@@ -27,7 +27,7 @@ const TitlebarItemTemplateObj = {
             options: ['accepts any String']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const TitlebarItemExmpleContainer = styled.div`

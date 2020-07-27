@@ -15,7 +15,7 @@ const StatusChipTemplateObj = {
             options: ['in-progress', 'not-started', 'completed','up-next', 'err']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const StatusChipContainer = styled.div`

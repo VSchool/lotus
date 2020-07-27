@@ -39,7 +39,7 @@ const profileTemplateObj = {
             options: ['accepts any String']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const ProfileExampleContainer = styled.div`

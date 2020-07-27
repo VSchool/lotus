@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import LiveDemo from './LiveDemo'
 
 import copyLink from '../assets/images/link.svg'
 
@@ -145,7 +146,8 @@ const InfoDescription = styled.p`
 
 
 function ComopnentDocTemplate(props) {
-    console.log(props)
+    // console.log(props.templateInfo)
+
     const { componentName, componentDescription, exampleText, templateProps } = props.templateInfo
 
     let newArr = templateProps.map((availableProp, idx) => {
@@ -190,6 +192,7 @@ function ComopnentDocTemplate(props) {
                 <PropsHeaderText>Props</PropsHeaderText>
             </TemplatePropsContainer>
             {newArr}
+            <LiveDemo codeDisplay={props.templateInfo} />
             {/* <PropsInfoContainer>
                 <InfoBold>prop:</InfoBold><InfoRegular>title</InfoRegular>
             </PropsInfoContainer> */}

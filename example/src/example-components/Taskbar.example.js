@@ -21,7 +21,7 @@ const TaskbarTemplateObj = {
             options: ['accepts any String']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 // const newTask = "FSJS - Aptitude Test"
 // const newTitle = "Required"

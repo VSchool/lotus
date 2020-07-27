@@ -29,7 +29,7 @@ const ModalTemplateObj = {
             options: ['accepts any String']
         }
     ],
-    reactCompnent: ''
+    reactComponent: ''
 }
 
 const ModalExampleContainer = styled.div`
