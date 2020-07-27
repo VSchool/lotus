@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { useLocation } from 'react-router-dom'
 import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const ControlsTemplateObj = {
@@ -23,23 +22,6 @@ const ControlsExampleContainer = styled.div`
 `
 
 export default () => {
-    // let location = useLocation()
-
-    // function copyToClipboard() {
-    //     let dummyElement = document.createElement('input')
-    //     let tempHostName = 'http://localhost:3000'
-    //     let text = `${tempHostName}${location.pathname}`
-
-    //     document.body.appendChild(dummyElement)
-    //     dummyElement.value = text
-    //     dummyElement.select()
-    //     document.execCommand('copy')
-    //     document.body.removeChild(dummyElement)
-
-    //     let confirmCopy = document.getElementById('confirmCopy')
-    //     confirmCopy.style.display = 'flex'
-    // }
-
     return (
         <ControlsExampleContainer>
             <ComponentDocTemplate templateInfo={ControlsTemplateObj}/>
