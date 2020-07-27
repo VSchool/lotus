@@ -4,14 +4,14 @@ import styled from "styled-components"
 import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const StatusMessageTemplateObj = {
-    componentName: 'StatusMessage',
-    componentDescription: 'Here is a short description for this component to go into the template.',
+    componentName: 'Status Message',
+    componentDescription: 'Display a message to users.',
     exampleText: `<StatusMessage status={string} />`,
     templateProps: [
         {
             propName: 'status',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the Status Message.',
             options: ['neutral', 'success', 'warning', 'fail']
         }
     ],
