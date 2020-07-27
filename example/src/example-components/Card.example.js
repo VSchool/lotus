@@ -5,13 +5,13 @@ import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const CardTemplateObj = {
     componentName: 'Card',
-    componentDescription: 'Here is a short description for this component to go into the template.',
+    componentDescription: 'Let users know where they are in the application process.',
     exampleText: `<Card status={string} />`,
     templateProps: [
         {
             propName: 'status',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the card.',
             options: ['not-started', 'up-next', 'in-progress', 'completed']
         }
     ],
