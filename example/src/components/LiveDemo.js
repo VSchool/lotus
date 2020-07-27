@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import {
     LiveProvider,
     LiveEditor,
@@ -59,7 +60,7 @@ function createCode(name) {
             )
         case 'Modal':
             return (
-                `<Modal title={'Hello'} subtitle={'World'} body={'body'} />`
+                `<Modal title={'Are you planning on applying for any V School Scholarships? '} subtitle={'Complete the  Scholarship Application'} body={'If you are interested in applying for scholarships, make sure to apply. Then we tell them how many people are usually rewarded with something.'} />`
             )
         case 'Profile':
             return (
@@ -93,11 +94,7 @@ function createCode(name) {
 
 function LiveDemo(props) {
     const { codeDisplay } = props
-    // console.log(codeDisplay)
     let displayComponent = createCode(codeDisplay.componentName)
-    console.log(displayComponent)
-
-    
 
     return (
         <LiveDemoContainer>

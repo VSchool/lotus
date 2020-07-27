@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useLocation } from 'react-router-dom'
 import LiveDemo from './LiveDemo'
 
 import copyLink from '../assets/images/link.svg'
@@ -143,21 +144,31 @@ const InfoDescription = styled.p`
     /* border: 1px dotted black; */
 `
 
-
-
 function ComopnentDocTemplate(props) {
-    // console.log(props.templateInfo)
+    let location = useLocation()
+
+    function copyToClipboard() {
+        let pathName = location.pathname
+        let dummyElement = document.createElement('input')
+        let tempHostName = 'http://localhost:3000'
+        let text = `${tempHostName}${pathName}`
+
+        document.body.appendChild(dummyElement)
+        dummyElement.value = text
+        dummyElement.select()
+        document.execCommand('copy')
+        document.body.removeChild(dummyElement)
+        // let confirmCopy = document.getElementById('confirmCopy')
+        // confirmCopy.style.display = 'flex'
+    }
 
     const { componentName, componentDescription, exampleText, templateProps } = props.templateInfo
 
     let newArr = templateProps.map((availableProp, idx) => {
         const { propName, propType, propDescription, options } = availableProp
         let optionListString = options.map((option) => {
-            // console.log(`Hello ${option}`)
             return `${option}, `
         })
-        // console.log(optionListString)
-
 
         return (
             <PropsInfoContainer key={idx}>
@@ -175,12 +186,11 @@ function ComopnentDocTemplate(props) {
         )
     })
 
-    // console.log(templateProps)
     return (
         <DocTemplateContainer>
             <TemplateHeaderContainer>
                 <TemplateTitle>{componentName}</TemplateTitle>
-                <CopyLinkContainer><img src={copyLink} alt={'Click to copy URL for this component.'} /></CopyLinkContainer>
+                <CopyLinkContainer onClick={copyToClipboard}><img src={copyLink} alt={'Click to copy URL for this component.'} /></CopyLinkContainer>
             </TemplateHeaderContainer>
             <TemplateDescriptionContainer>
                 <TemplateDescriptionText>{componentDescription}</TemplateDescriptionText>
@@ -193,9 +203,6 @@ function ComopnentDocTemplate(props) {
             </TemplatePropsContainer>
             {newArr}
             <LiveDemo codeDisplay={props.templateInfo} />
-            {/* <PropsInfoContainer>
-                <InfoBold>prop:</InfoBold><InfoRegular>title</InfoRegular>
-            </PropsInfoContainer> */}
         </DocTemplateContainer>
     )
 }
