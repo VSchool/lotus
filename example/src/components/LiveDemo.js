@@ -23,7 +23,9 @@ import {
 } from '@vschool/lotus'
 
 const LiveDemoContainer = styled.div`
-    /* background: lightgreen; */
+    margin: 24px 0px 0px 0px;
+    max-width: 800px;
+    background: #F4F2F2;
 `
 
 const scope = {
@@ -98,11 +100,11 @@ function LiveDemo(props) {
 
     return (
         <LiveDemoContainer>
-        <LiveProvider scope={scope} code={displayComponent}>
-            <LiveEditor />
-            <LiveError />
-            <LivePreview />
-        </LiveProvider>
+            <LiveProvider scope={scope} code={displayComponent}>
+                <LiveEditor />
+                <LiveError />
+                <LivePreview />
+            </LiveProvider>
         </LiveDemoContainer>
     )
 }

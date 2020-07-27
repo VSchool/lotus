@@ -51,7 +51,7 @@ const TemplateDescriptionText = styled.p`
 
 const TemplateExampleContainer = styled.div`
     margin: 56px 0px 0px 0px;
-    /* width: 800px; */
+    max-width: 768px;
     /* height: 56px; */
     padding: 8px 16px 8px 16px;
     background: #F4F2F2;
@@ -62,7 +62,7 @@ const TemplateExampleContainer = styled.div`
 
 const TemplateExampleText = styled.p`
     margin: 0px;
-
+    width: 100%;
     font-family: Source Code Pro;
     font-style: normal;
     font-weight: normal;
