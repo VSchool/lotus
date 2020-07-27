@@ -5,19 +5,19 @@ import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const TaskbarTemplateObj = {
     componentName: 'Taskbar',
-    componentDescription: 'Here is a short description for this component to go into the template.',
+    componentDescription: 'Provide users with a way to know what to do.',
     exampleText: `<Taskbar title={string} task={string} />`,
     templateProps: [
         {
             propName: 'title',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Text string that is displayed in the title of the taskbar.',
             options: ['accepts any String']
         },
         {
             propName: 'task',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Text string that is displayed in the task area of the taskbar.',
             options: ['accepts any String']
         }
     ],
