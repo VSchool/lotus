@@ -5,13 +5,13 @@ import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const HeaderTemplateObj = {
     componentName: 'Header',
-    componentDescription: 'Here is a short description for this component to go into the template.',
+    componentDescription: 'Give users an exit, a way back, and a way to know their logged in status.',
     exampleText: `<Header />`,
     templateProps: [
         {
             propName: 'n/a',
             propType: 'n/a',
-            propDescription: 'This component takes in no props.',
+            propDescription: 'This component accepts no props.',
             options: ['n/a']
         }
     ],
