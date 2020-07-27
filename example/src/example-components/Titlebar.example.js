@@ -5,25 +5,25 @@ import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const TitlebarTemplateObj = {
     componentName: 'Titlebar',
-    componentDescription: 'Here is a short description for this component to go into the template.',
+    componentDescription: 'Let users know where they are in the application.',
     exampleText: `<Titlebar stepOne={string} stepTwo={string} stepThree={string} />`,
     templateProps: [
         {
             propName: 'stepOne',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the first titlebar item.',
             options: ['active', 'inactive', 'locked']
         },
         {
             propName: 'stepTwo',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the second titlebar item.',
             options: ['active', 'inactive', 'locked']
         },
         {
             propName: 'stepThree',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the third titlebar item.',
             options: ['active', 'inactive', 'locked']
         }
     ],
