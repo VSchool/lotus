@@ -203,6 +203,7 @@ function ComopnentDocTemplate(props) {
                 <PropsHeaderText>Props</PropsHeaderText>
             </TemplatePropsContainer>
             {newArr}
+            {/* {newField} */}
             <LiveDemo codeDisplay={props.templateInfo} />
         </DocTemplateContainer>
     )
