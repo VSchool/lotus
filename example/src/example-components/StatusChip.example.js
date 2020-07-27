@@ -5,13 +5,13 @@ import ComponentDocTemplate from '../components/ComponentDocTemplate'
 
 const StatusChipTemplateObj = {
     componentName: 'Status Chip',
-    componentDescription: 'Here is a short description for this component to go into the template.',
+    componentDescription: 'Assist in displaying the "state" of the Card component.',
     exampleText: `<StatusChip status={string} />`,
     templateProps: [
         {
             propName: 'status',
             propType: 'String',
-            propDescription: 'Status Here is another area for a description that I need to input a placeholder for.',
+            propDescription: 'Sets the "state" of the status chip.',
             options: ['in-progress', 'not-started', 'completed','up-next', 'err']
         }
     ],
