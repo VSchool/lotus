@@ -7,6 +7,8 @@ import accountCircle from "../../assets/icons/account-circle24px.svg"
 import clearX from '../../assets/icons/clear24px.svg'
 import * as colors from "../../colors"
 
+import Profile from '../Profile/Profile'
+
 const HeaderContainer = styled.div`
     position: relative;
     max-width: 100%;
@@ -17,6 +19,7 @@ const HeaderContainer = styled.div`
     align-items: center;
     background: ${colors.gray.lighter};
     box-shadow: 0px 4px 16px rgba(33, 32, 31, 0.1);
+    /* border: 1px solid lightcoral; */
 
     @media (min-width: 768px) {
         max-width: 100%;
@@ -74,25 +77,39 @@ const EmptyDiv = styled.div`
 
 `
 
+const ProfileElementContainer = styled.div`
+    display: none;
+    position: absolute;
+    top: 88px;
+    right: 24px;
+    /* border: 1px solid blue; */
+`
+
 function Header(props) {
-    // console.log(props.headerState)
 
     function chooseIcon(iconState) {
         switch (iconState) {
             case 'default':
-                return <EmptyDiv></EmptyDiv>
+                return<EmptyDiv></EmptyDiv>
             case 'loggedIn':
-                return <img src={accountCircle} alt='hello' />
+                return<img src={accountCircle} alt='hello' onClick={handleClick} />
             case 'closeProfile':
-                return <img src={clearX} alt='Hello 32' />
+                return<img src={clearX} alt='hello' onClick={handleClick} />
             default:
                 return ''
         }
     }
 
-    let IconToDisplay = chooseIcon(props.headerState)
+    function handleClick() {
+        let profile = document.getElementById('profileElement')
+        if (profile.style.display === '') {
+            profile.style.display = 'block'
+        } else if (profile.style.display === 'block') {
+            profile.style.display = ''
+        }
+    }
 
-    console.log(IconToDisplay)
+    let IconToDisplay = chooseIcon(props.headerState)
 
     return (
         <HeaderContainer>
@@ -102,6 +119,9 @@ function Header(props) {
             </BackContainer>
             <HeaderLogoContainer><img src={headerLogo} alt={'V School logo'} /></HeaderLogoContainer>
             <IconContainer>{IconToDisplay}</IconContainer>
+            <ProfileElementContainer id={'profileElement'}>
+                <Profile userName={'Namey Namerson'} userEmail={'emailaddress@woah.com'} userPhone={'###-###-####'} userCourse={'Fullstack Javascript'} userTime={'Full - Time'} />
+            </ProfileElementContainer>
         </HeaderContainer>
     )
 }

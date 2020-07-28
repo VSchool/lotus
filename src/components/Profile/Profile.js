@@ -4,7 +4,7 @@ import * as colors from "../../colors"
 
 const ProfileContainer = styled.div`
     position: relative;
-    max-width: 416px;
+    width: 416px;
     height: 379px;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
         0px 12px 17px rgba(0, 0, 0, 0.14);
