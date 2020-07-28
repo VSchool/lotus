@@ -1,4 +1,4 @@
-import * as colors from '../../colors'
+import * as colors from "../../colors"
 
 export function setStatus(status, message) {
     switch (status) {
@@ -9,7 +9,7 @@ export function setStatus(status, message) {
                 indicatorBorder: `1px solid ${colors.blue.base}`,
                 contentBackground: colors.blue.lightest,
                 contentBorder: `2px solid ${colors.blue.light}`,
-                messageContent: message,
+                messageContent: message
             }
         case "success":
             return {

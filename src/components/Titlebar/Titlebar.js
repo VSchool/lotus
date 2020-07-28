@@ -15,7 +15,6 @@ const TitlebarContainer = styled.div`
 `
 
 function Titlebar({ stepOne, stepTwo, stepThree }) {
-
     return (
         <TitlebarContainer>
             <TitlebarItem status={stepOne} title={"Step 1"} subtitle={"Background"} />

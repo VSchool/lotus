@@ -225,24 +225,24 @@ export function decideInfo(name) {
                     }
                 ]
             }
-        case 'Button':
+        case "Button":
             return {
-                compName: 'Button',
-                description: 'Long form description for the Button component.',
+                compName: "Button",
+                description: "Long form description for the Button component.",
                 availableProps: [
                     {
                         propName: `'buttonStyle'`,
-                        propType: 'string',
-                        propDescription: 'Selects between primary and secondary buttons.'
+                        propType: "string",
+                        propDescription: "Selects between primary and secondary buttons."
                     },
                     {
                         propName: `'buttonSize'`,
-                        propType: 'string',
-                        propDescription: 'Chooses one for button sizes.'
+                        propType: "string",
+                        propDescription: "Chooses one for button sizes."
                     }
                 ]
             }
-        default: 
+        default:
             return {
                 compName: "Default Case",
                 description: "Nothing to report."

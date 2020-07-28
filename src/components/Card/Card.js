@@ -6,7 +6,6 @@ import { findCardStatus } from "./utils"
 
 import * as colors from "../../colors"
 
-
 const CardContainer = styled.div`
     position: relative;
     width: 352px;

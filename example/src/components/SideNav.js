@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 import logo from "../assets/images/VschoolLogo.png"
 
 const SideNavContainer = styled.div`
@@ -59,29 +59,27 @@ const LinkArea = styled(Link)`
     /* border: 1px solid red; */
 `
 
-
 function SideNav() {
-
     return (
         <SideNavContainer>
             <NavLogoContainer>
                 <img src={logo} alt={"V School logo"} />
             </NavLogoContainer>
             <WelcomeText>Welcome</WelcomeText>
-            <LinkArea to='/'>Introduction</LinkArea>
+            <LinkArea to="/">Introduction</LinkArea>
             <ComponentList>
                 <WelcomeText>Reference</WelcomeText>
-                <LinkArea to='/controls'>Controls</LinkArea>
-                <LinkArea to='/card'>Card</LinkArea>
-                <LinkArea to='/footer'>Footer</LinkArea>
-                <LinkArea to='/header'>Header</LinkArea>
-                <LinkArea to='/modal'>Modal</LinkArea>
-                <LinkArea to='/profile'>Profile</LinkArea>
-                <LinkArea to='/statusChip'>Status Chip</LinkArea>
-                <LinkArea to='/statusMessage'>Status Message</LinkArea>
-                <LinkArea to='/taskbar'>Taskbar</LinkArea>
-                <LinkArea to='/titlebarItem'>Titlebar Item</LinkArea>
-                <LinkArea to='titlebar'>Titlebar</LinkArea>
+                <LinkArea to="/controls">Controls</LinkArea>
+                <LinkArea to="/card">Card</LinkArea>
+                <LinkArea to="/footer">Footer</LinkArea>
+                <LinkArea to="/header">Header</LinkArea>
+                <LinkArea to="/modal">Modal</LinkArea>
+                <LinkArea to="/profile">Profile</LinkArea>
+                <LinkArea to="/statusChip">Status Chip</LinkArea>
+                <LinkArea to="/statusMessage">Status Message</LinkArea>
+                <LinkArea to="/taskbar">Taskbar</LinkArea>
+                <LinkArea to="/titlebarItem">Titlebar Item</LinkArea>
+                <LinkArea to="titlebar">Titlebar</LinkArea>
             </ComponentList>
         </SideNavContainer>
     )

@@ -1,4 +1,4 @@
-import * as colors from '../../colors'
+import * as colors from "../../colors"
 
 export function decideChipStatus(status, err) {
     switch (status) {

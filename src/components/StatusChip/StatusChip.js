@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { decideChipStatus } from "./utils"
-import * as colors from '../../colors'
+import * as colors from "../../colors"
 
 const StatusChipContainer = styled.div`
     margin: 8px 0px 8px 0px;
