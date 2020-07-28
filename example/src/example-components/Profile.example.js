@@ -1,40 +1,54 @@
 import React from "react"
 import styled from "styled-components"
-import { Profile } from "@vschool/lotus"
+import ComponentDocTemplate from '../components/ComponentDocTemplate'
+
+const profileTemplateObj = {
+    componentName: 'Profile',
+    componentDescription: 'Display the user\'s profile information.',
+    exampleText: `<Profile userName={string} userEmail={string} userPhone={string} userCourse={string} userTime={string} />`,
+    templateProps: [
+        {
+            propName: 'userName',
+            propType: 'String',
+            propDescription: 'Text string that displays the user\'s name.',
+            options: ['accepts any String']
+        },
+        {
+            propName: 'userEmail',
+            propType: 'String',
+            propDescription: 'Text string that displays the user\'s email address.',
+            options: ['accepts any String']
+        },
+        {
+            propName: 'userPhone',
+            propType: 'String',
+            propDescription: 'Text string that displays the user\'s phone number.',
+            options: ['accepts any String']
+        },
+        {
+            propName: 'userCourse',
+            propType: 'String',
+            propDescription: 'Text string that displays the user\'s course they are enrolled in.',
+            options: ['accepts any String']
+        },
+        {
+            propName: 'userTime',
+            propType: 'String',
+            propDescription: 'Text string that displays the user\'s time committment level.',
+            options: ['accepts any String']
+        }
+    ],
+    reactComponent: ''
+}
 
 const ProfileExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
 
-const SectionName = styled.p`
-    margin: 0px 0px 24px 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-`
-
-const user = {
-    name: "Namey Namerson",
-    email: "emailaddress@woah.com",
-    phone: "###-###-####",
-    course: "Full-Stack Javascript",
-    time: "Full - Time"
-}
-
 export default () => {
     return (
         <ProfileExampleContainer>
-            <SectionName>Examples</SectionName>
-            <Profile
-                userName={user.name}
-                userEmail={user.email}
-                userPhone={user.phone}
-                userCourse={user.course}
-                userTime={user.time}
-            />
+            <ComponentDocTemplate templateInfo={profileTemplateObj} />
         </ProfileExampleContainer>
     )
 }

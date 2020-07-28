@@ -1,45 +1,30 @@
 import React from "react"
 import styled from "styled-components"
-// import { ComponentDisplayContext } from '../providers/Store'
-import { Card } from "@vschool/lotus"
+import ComponentDocTemplate from '../components/ComponentDocTemplate'
+
+const CardTemplateObj = {
+    componentName: 'Card',
+    componentDescription: 'Let users know where they are in the application process.',
+    exampleText: `<Card status={string} />`,
+    templateProps: [
+        {
+            propName: 'status',
+            propType: 'String',
+            propDescription: 'Sets the "state" of the card.',
+            options: ['not-started', 'up-next', 'in-progress', 'completed']
+        }
+    ],
+    reactComponent: ''
+}
 
 const CardExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
 
-const SectionName = styled.p`
-    margin: 0px 0px 24px 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-`
-
-const PropDesc = styled.p`
-    margin: 16px 0px 8px 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    color: rgba(0, 0, 0, 0.6);
-    box-sizing: border-box;
-`
-
 export default () => {
     return (
         <CardExampleContainer>
-            <SectionName>Examples</SectionName>
-            <PropDesc>'not-started'</PropDesc>
-            <Card status={"not-started"} />
-            <PropDesc>'up-next'</PropDesc>
-            <Card status={"up-next"} />
-            <PropDesc>'in-progress'</PropDesc>
-            <Card status={"in-progress"} />
-            <PropDesc>'completed'</PropDesc>
-            <Card status={"completed"} />
+            <ComponentDocTemplate templateInfo={CardTemplateObj} />
         </CardExampleContainer>
     )
 }

@@ -4,8 +4,8 @@ import styled from "styled-components"
 import { StatusChip } from "../StatusChip"
 import { findCardStatus } from "./utils"
 
-import { black, gray, white } from "../../colors/gray"
-import { blue } from "../../colors/blue"
+import * as colors from "../../colors"
+
 
 const CardContainer = styled.div`
     position: relative;
@@ -19,7 +19,7 @@ const CardContainer = styled.div`
 `
 
 const CardWrapper = styled.div`
-    background: ${white};
+    background: ${colors.gray.white};
     width: 100%;
     padding: 24px 24px 24px 24px;
     box-sizing: border-box;
@@ -40,7 +40,7 @@ const CardTitle = styled.h5`
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    color: ${black};
+    color: ${colors.gray.black};
 
     @media (max-width: 768px) {
         margin: 0px 0px 8px 0px;
@@ -75,7 +75,7 @@ const CardMessage = styled.p`
     font-weight: 500;
     font-size: 10px;
     line-height: 24px;
-    color: ${black};
+    color: ${colors.gray.black};
 
     @media (max-width: 768px) {
         margin: 0px 0px 8px 0px;
@@ -90,7 +90,7 @@ const TextButton = styled.button`
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    color: ${blue.base};
+    color: ${colors.blue.base};
     border: none;
     background: none;
 

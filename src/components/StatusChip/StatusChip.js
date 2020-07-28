@@ -2,21 +2,17 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { decideChipStatus } from "./utils"
-import { black } from "../../colors/gray"
+import * as colors from '../../colors'
 
 const StatusChipContainer = styled.div`
     margin: 8px 0px 8px 0px;
     padding: 4px 12px;
     border-radius: 4px;
-    /* props are given as a callback function whenever needed */
     background-color: ${props => props.backgroundColor};
     border: ${props => props.border};
     display: inline-block;
     @media (max-width: 768px) {
         margin: 8px 0px 8px 0px;
-
-        /* padding: 16px 16px 16px 16px; */
-        /* border: 2px solid blue; */
     }
 `
 
@@ -27,7 +23,7 @@ const ChipText = styled.h6`
     font-family: "aktiv-grotesk-extended";
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: ${black};
+    color: ${colors.black};
     margin: 0;
 `
 

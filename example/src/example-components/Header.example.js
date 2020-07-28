@@ -1,26 +1,30 @@
 import React from "react"
 import styled from "styled-components"
-import { Header } from "@vschool/lotus"
+import ComponentDocTemplate from '../components/ComponentDocTemplate'
+
+const HeaderTemplateObj = {
+    componentName: 'Header',
+    componentDescription: 'Give users an exit, a way back, and a way to know their logged in status.',
+    exampleText: `<Header />`,
+    templateProps: [
+        {
+            propName: 'n/a',
+            propType: 'n/a',
+            propDescription: 'This component accepts no props.',
+            options: ['n/a']
+        }
+    ],
+    reactComponent: ''
+}
 
 const HeaderExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
 
-const SectionName = styled.p`
-    margin: 0px 0px 24px 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-`
-
 export default () => {
     return (
         <HeaderExampleContainer>
-            <SectionName>Examples</SectionName>
-            <Header />
+            <ComponentDocTemplate templateInfo={HeaderTemplateObj} />
         </HeaderExampleContainer>
     )
 }

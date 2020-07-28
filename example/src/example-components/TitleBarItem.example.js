@@ -1,41 +1,42 @@
 import React from "react"
 import styled from "styled-components"
-import { TitlebarItem } from "@vschool/lotus"
+import ComponentDocTemplate from '../components/ComponentDocTemplate'
+
+const TitlebarItemTemplateObj = {
+    componentName: 'Titlebar Item',
+    componentDescription: 'Assist the titlebar component by displaying each application process step.',
+    exampleText: `<TitlebarItem status={string} title={string} subtitle={string} />`,
+    templateProps: [
+        {
+            propName: 'status',
+            propType: 'String',
+            propDescription: 'Sets the "state" of the titlebar item.',
+            options: ['active', 'inactive', 'locked']
+        },
+        {
+            propName: 'title',
+            propType: 'String',
+            propDescription: 'Text string that is displayed in the title of the titlebar item.',
+            options: ['accepts any String']
+        },
+        {
+            propName: 'subtitle',
+            propType: 'String',
+            propDescription: 'Text string that is displayed in the subtitle of the titlebar item.',
+            options: ['accepts any String']
+        }
+    ],
+    reactComponent: ''
+}
 
 const TitlebarItemExmpleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
 
-const SectionName = styled.p`
-    margin: 0px 0px 24px 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-`
-
-const PropDesc = styled.p`
-    margin: 16px 0px 8px 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    color: rgba(0, 0, 0, 0.6);
-`
-
 export default () => {
     return (
         <TitlebarItemExmpleContainer>
-            <SectionName>Examples</SectionName>
-            <PropDesc>'status' = active</PropDesc>
-            <TitlebarItem status={"active"} title={"Step 1"} subtitle={"Background"} />
-            <PropDesc>'status' = inactive</PropDesc>
-            <TitlebarItem status={"inactive"} title={"Step 2"} subtitle={"Application"} />
-            <PropDesc>'status' = locked</PropDesc>
-            <TitlebarItem status={"locked"} title={"Step 3"} subtitle={"Enrollment"} />
+        <ComponentDocTemplate templateInfo={TitlebarItemTemplateObj} />
         </TitlebarItemExmpleContainer>
     )
 }

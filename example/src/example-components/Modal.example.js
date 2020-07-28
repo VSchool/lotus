@@ -1,31 +1,42 @@
 import React from "react"
 import styled from "styled-components"
-import { Modal } from "@vschool/lotus"
+// import { useLocation } from 'react-router-dom'
+import ComponentDocTemplate from '../components/ComponentDocTemplate'
+
+const ModalTemplateObj = {
+    componentName: 'Modal',
+    componentDescription: 'Prominently display important information to the user.',
+    exampleText: `<Modal title={string} subtitle={string} body={string} />`,
+    templateProps: [
+        {
+            propName: 'title',
+            propType: 'String',
+            propDescription: 'Text string that is displayed in the title of the modal.',
+            options: ['accepts any String']
+        },
+        {
+            propName: 'subtitle',
+            propType: 'String',
+            propDescription: 'Text string that is displayed in the subtitle of the modal.',
+            options: ['accepts any String']
+        },{
+            propName: 'body',
+            propType: 'String',
+            propDescription: 'Text string that is displayed in the body of the modal.',
+            options: ['accepts any String']
+        }
+    ],
+    reactComponent: ''
+}
 
 const ModalExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
 
-const SectionName = styled.p`
-    margin: 0px 0px 24px 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-`
-
-const title = "Are you planning on applying for any V School Scholarships?"
-const subtitle = "Complete the  Scholarship Application"
-const body =
-    "If you are interested in applying for scholarships, make sure to apply. Then we tell them how many people are usually rewarded with something."
-
 export default () => {
     return (
         <ModalExampleContainer>
-            <SectionName>Examples</SectionName>
-            <Modal title={title} subtitle={subtitle} body={body} />
+            <ComponentDocTemplate templateInfo={ModalTemplateObj} />
         </ModalExampleContainer>
     )
 }

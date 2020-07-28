@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
-import { blue } from "../../colors/blue"
-import { gray } from "../../colors/gray"
+import * as colors from '../../colors'
 
 const ControlsContainer = styled.div`
     position: relative;
@@ -22,18 +20,18 @@ const CheckboxLabel = styled.p`
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: ${gray.darker};
+    color: ${colors.gray.darker};
     box-sizing: border-box;
 `
 
 const TermsLink = styled.a`
     margin: 0px 0px 0px 0px;
-    color: ${blue.base};
+    color: ${colors.blue.base};
     text-decoration: underline;
 `
 
 function Controls({ disabledStatus }) {
-    // console.log(props)
+    // console.log(disabledStatus)
     return (
         <ControlsContainer>
             <input type="checkbox" disabled={disabledStatus} />

@@ -1,26 +1,42 @@
 import React from "react"
 import styled from "styled-components"
-import { Titlebar } from "@vschool/lotus"
+import ComponentDocTemplate from '../components/ComponentDocTemplate'
+
+const TitlebarTemplateObj = {
+    componentName: 'Titlebar',
+    componentDescription: 'Let users know where they are in the application.',
+    exampleText: `<Titlebar stepOne={string} stepTwo={string} stepThree={string} />`,
+    templateProps: [
+        {
+            propName: 'stepOne',
+            propType: 'String',
+            propDescription: 'Sets the "state" of the first titlebar item.',
+            options: ['active', 'inactive', 'locked']
+        },
+        {
+            propName: 'stepTwo',
+            propType: 'String',
+            propDescription: 'Sets the "state" of the second titlebar item.',
+            options: ['active', 'inactive', 'locked']
+        },
+        {
+            propName: 'stepThree',
+            propType: 'String',
+            propDescription: 'Sets the "state" of the third titlebar item.',
+            options: ['active', 'inactive', 'locked']
+        }
+    ],
+    reactComponent: ''
+}
 
 const TitlebarExampleContainer = styled.div`
     /* border: 1px solid lightcoral; */
 `
 
-const SectionName = styled.p`
-    margin: 0px 0px 24px 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-`
-
 export default () => {
     return (
         <TitlebarExampleContainer>
-            <SectionName>Examples</SectionName>
-            <Titlebar stepOne={"active"} stepTwo={"inactive"} stepThree={"locked"} />
+            <ComponentDocTemplate templateInfo={TitlebarTemplateObj} />
         </TitlebarExampleContainer>
     )
 }
