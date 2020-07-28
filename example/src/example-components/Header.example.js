@@ -9,10 +9,10 @@ const HeaderTemplateObj = {
     exampleText: `<Header />`,
     templateProps: [
         {
-            propName: "n/a",
-            propType: "n/a",
-            propDescription: "This component accepts no props.",
-            options: ["n/a"]
+            propName: "headerState",
+            propType: "String",
+            propDescription: "Sets the state of the Header component to display the proper icon.",
+            options: ['default', 'loggedIn', 'closeProfile']
         }
     ],
     reactComponent: ""
