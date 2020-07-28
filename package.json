@@ -1,6 +1,6 @@
 {
     "name": "@vschool/lotus",
-    "version": "1.0.1",
+    "version": "1.1.1",
     "description": "Component library and base brand styles for V School projects",
     "contributors": [
         {
@@ -26,14 +26,14 @@
         "npm": ">=5"
     },
     "scripts": {
-        "test": "cross-env CI=1 react-scripts test --env=jsdom",
-        "test:watch": "react-scripts test --env=jsdom",
         "build": "rollup -c",
         "start": "rollup -c -w",
-        "prepare": "npm run build",
+        "sass": "node-sass src/lotus.scss dist/lotus.css",
+        "prepare": "npm run pretty && npm run sass && npm run build",
         "predeploy": "cd example && npm install && npm run pretty && npm run build",
         "deploy": "gh-pages -d example/build",
-        "update-patch": "npm version patch && npm publish",
+        "publish-patch": "npm prepare && npm version patch && npm publish",
+        "publish-minor": "npm prepare && npm version minor && npm publish",
         "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
     },
     "peerDependencies": {
