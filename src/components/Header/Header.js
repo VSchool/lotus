@@ -9,7 +9,7 @@ import * as colors from "../../colors"
 
 const HeaderContainer = styled.div`
     position: relative;
-    max-width: 416px;
+    max-width: 100%;
     /* height: 80px; */
     padding: 28px 24px 28px 24px;
     display: flex;
@@ -18,9 +18,9 @@ const HeaderContainer = styled.div`
     background: ${colors.gray.lighter};
     box-shadow: 0px 4px 16px rgba(33, 32, 31, 0.1);
 
-    /* @media (min-width: 768px) {
-        min-width: 100%;
-    } */
+    @media (min-width: 768px) {
+        max-width: 100%;
+    }
 `
 
 const BackContainer = styled.div`
@@ -46,9 +46,13 @@ const BackText = styled.p`
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 24px;
     color: #514F4B;
     /* border: 1px dotted blue; */
+
+    @media (min-width: 768px) {
+        display: block;
+    }
 `
 
 const HeaderLogoContainer = styled.div`
@@ -69,7 +73,6 @@ const IconContainer = styled.div`
 const EmptyDiv = styled.div`
 
 `
-
 
 function Header(props) {
     // console.log(props.headerState)

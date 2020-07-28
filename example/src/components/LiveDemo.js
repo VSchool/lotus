@@ -19,7 +19,7 @@ import {
 
 const LiveDemoContainer = styled.div`
     margin: 24px 0px 0px 0px;
-    max-width: 800px;
+    max-width: 100%;
     background: #f4f2f2;
 `
 
