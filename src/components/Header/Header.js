@@ -92,15 +92,19 @@ function Header(props) {
             case 'default':
                 return<EmptyDiv></EmptyDiv>
             case 'loggedIn':
-                return<img src={accountCircle} alt='hello' onClick={handleClick} />
+                return<img src={accountCircle} alt='hello' onClick={handleLoggedInClick} />
             case 'closeProfile':
-                return<img src={clearX} alt='hello' onClick={handleClick} />
+                return<img src={clearX} alt='hello' onClick={handleClearClick} />
             default:
                 return ''
         }
     }
 
-    function handleClick() {
+    function handleClearClick() {
+        console.log('ClearClick Fired')
+    }
+
+    function handleLoggedInClick() {
         let profile = document.getElementById('profileElement')
         if (profile.style.display === '') {
             profile.style.display = 'block'
