@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import * as colors from '../../colors'
+import * as colors from "../../colors"
 
 const TaskbarContainer = styled.div`
     position: relative;

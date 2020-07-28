@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Button } from "../Button"
-import * as colors from '../../colors'
+import * as colors from "../../colors"
 
 const ModalContainer = styled.div`
     padding: 64px 88px;

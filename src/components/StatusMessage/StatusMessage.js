@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { setStatus } from "./utils"
 // import PropTypes from 'prop-types'
-import * as colors from '../../colors'
+import * as colors from "../../colors"
 // import { black, white } from '../../colors/gray'
 
 const StatusMessageContainer = styled.div`
@@ -10,7 +10,8 @@ const StatusMessageContainer = styled.div`
     width: 378px;
     /* min-height: 128px; */
     display: flex;
-    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 12px 17px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
+        0px 12px 17px rgba(0, 0, 0, 0.14);
     border: ${props => props.border};
     /* box-sizing: border-box; */
 
@@ -33,7 +34,7 @@ const IndicatorContainer = styled.div`
 const Indicator = styled.p`
     margin: 0px;
     width: 100%;
-    font-family: 'benton-sans';
+    font-family: "benton-sans";
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -54,7 +55,7 @@ const MessageWrapper = styled.div`
 
     @media (min-width: 768px) {
         /* background: blue; */
-        
+
         /* height: 100%; */
     }
 `
@@ -63,7 +64,7 @@ const Message = styled.p`
     margin: 0px;
     /* height: 100%; */
     width: 100%;
-    font-family: 'aktiv-grotesk';
+    font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -85,14 +86,21 @@ const Message = styled.p`
 
 function StatusMessage(props) {
     const { status, message } = props
-    const { indicatorText, indicatorColor, indicatorBorder, contentBackground, contentBorder, messageContent } = setStatus(status, message)
-    
+    const {
+        indicatorText,
+        indicatorColor,
+        indicatorBorder,
+        contentBackground,
+        contentBorder,
+        messageContent
+    } = setStatus(status, message)
+
     return (
         <StatusMessageContainer border={contentBorder}>
             <IndicatorContainer background={indicatorColor} border={indicatorBorder}>
                 <Indicator>{indicatorText}</Indicator>
             </IndicatorContainer>
-            <MessageWrapper  background={contentBackground}>
+            <MessageWrapper background={contentBackground}>
                 <Message borderColor={contentBackground}>{messageContent}</Message>
             </MessageWrapper>
         </StatusMessageContainer>

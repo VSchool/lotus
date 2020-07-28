@@ -1,20 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import ComponentDocTemplate from '../components/ComponentDocTemplate'
+import ComponentDocTemplate from "../components/ComponentDocTemplate"
 
 const StatusMessageTemplateObj = {
-    componentName: 'Status Message',
-    componentDescription: 'Display a message to users.',
+    componentName: "Status Message",
+    componentDescription: "Display a message to users.",
     exampleText: `<StatusMessage status={string} />`,
     templateProps: [
         {
-            propName: 'status',
-            propType: 'String',
+            propName: "status",
+            propType: "String",
             propDescription: 'Sets the "state" of the Status Message.',
-            options: ['neutral', 'success', 'warning', 'fail']
+            options: ["neutral", "success", "warning", "fail"]
         }
     ],
-    reactComponent: ''
+    reactComponent: ""
 }
 
 const StatusMessageContainer = styled.div`

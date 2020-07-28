@@ -1,20 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import ComponentDocTemplate from '../components/ComponentDocTemplate'
+import ComponentDocTemplate from "../components/ComponentDocTemplate"
 
 const FooterTemplateObj = {
-    componentName: 'Footer',
-    componentDescription: 'Give users constant access to help.',
+    componentName: "Footer",
+    componentDescription: "Give users constant access to help.",
     exampleText: `<Footer />`,
     templateProps: [
         {
-            propName: 'n/a',
-            propType: 'n/a',
-            propDescription: 'This component accepts no props.',
-            options: ['n/a']
+            propName: "n/a",
+            propType: "n/a",
+            propDescription: "This component accepts no props.",
+            options: ["n/a"]
         }
     ],
-    reactComponent: ''
+    reactComponent: ""
 }
 
 const FooterExampleContainer = styled.div`

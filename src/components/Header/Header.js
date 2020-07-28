@@ -4,7 +4,7 @@ import styled from "styled-components"
 import headerLogo from "../../assets/vs-header-logo.svg"
 import backArrow from "../../assets/icons/arrow-back.svg"
 import accountCircle from "../../assets/icons/account-circle24px.svg"
-import * as colors from '../../colors'
+import * as colors from "../../colors"
 
 const HeaderContainer = styled.div`
     position: relative;

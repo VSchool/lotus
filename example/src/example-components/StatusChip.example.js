@@ -1,20 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import ComponentDocTemplate from '../components/ComponentDocTemplate'
+import ComponentDocTemplate from "../components/ComponentDocTemplate"
 
 const StatusChipTemplateObj = {
-    componentName: 'Status Chip',
+    componentName: "Status Chip",
     componentDescription: 'Assist in displaying the "state" of the Card component.',
     exampleText: `<StatusChip status={string} />`,
     templateProps: [
         {
-            propName: 'status',
-            propType: 'String',
+            propName: "status",
+            propType: "String",
             propDescription: 'Sets the "state" of the status chip.',
-            options: ['in-progress', 'not-started', 'completed','up-next', 'err']
+            options: ["in-progress", "not-started", "completed", "up-next", "err"]
         }
     ],
-    reactComponent: ''
+    reactComponent: ""
 }
 
 const StatusChipContainer = styled.div`

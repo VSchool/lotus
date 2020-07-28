@@ -1,20 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import ComponentDocTemplate from '../components/ComponentDocTemplate'
+import ComponentDocTemplate from "../components/ComponentDocTemplate"
 
 const CardTemplateObj = {
-    componentName: 'Card',
-    componentDescription: 'Let users know where they are in the application process.',
+    componentName: "Card",
+    componentDescription: "Let users know where they are in the application process.",
     exampleText: `<Card status={string} />`,
     templateProps: [
         {
-            propName: 'status',
-            propType: 'String',
+            propName: "status",
+            propType: "String",
             propDescription: 'Sets the "state" of the card.',
-            options: ['not-started', 'up-next', 'in-progress', 'completed']
+            options: ["not-started", "up-next", "in-progress", "completed"]
         }
     ],
-    reactComponent: ''
+    reactComponent: ""
 }
 
 const CardExampleContainer = styled.div`

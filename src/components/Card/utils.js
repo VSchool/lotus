@@ -1,4 +1,4 @@
-import * as colors from '../../colors'
+import * as colors from "../../colors"
 
 export function findCardStatus(status) {
     switch (status) {
