@@ -9,16 +9,10 @@ const StatusChipContainer = styled.div`
     width: 112px;
     height: 24px;
     padding: 2px 6px 2px 6px;
-    /* background: #F0EEEB; */
     background: ${props => props.background};
     border: ${props => props.border};
-    /* border: 1px solid #A09C96; */
     box-sizing: border-box;
     border-radius: 4px;
-
-    /* @media (max-width: 768px) {
-        margin: 8px 0px 8px 0px;
-    } */
 `
 
 const ChipText = styled.p`
@@ -33,13 +27,11 @@ const ChipText = styled.p`
     align-items: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: #21201F;
-    /* border: 1px solid lightcoral; */
+    color: ${colors.black};
 `
 
-function StatusChip(props) {
-    console.log(props.status)
-    const { border, backgroundColor, text } = decideChipStatus(props.status)
+function StatusChip({status}) {
+    const { border, backgroundColor, text } = decideChipStatus(status)
 
     return (
         <StatusChipContainer background={backgroundColor} border={border}>
@@ -49,8 +41,7 @@ function StatusChip(props) {
 }
 
 // StatusChip.propTypes = {
-//     status: PropTypes.string.isRequired,
-//     err: PropTypes.string
+//     status: PropTypes.string.isRequired
 // }
 
 export default StatusChip

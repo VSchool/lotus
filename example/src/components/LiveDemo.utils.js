@@ -1,6 +1,3 @@
-
-// import type { PrismTheme } from "../types";
-
 export const LiveDemoTheme = {
     plain: {
         color: "#393A34",

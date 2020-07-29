@@ -1,23 +1,30 @@
 import React from "react"
 import styled from "styled-components"
-
 import { StatusChip } from "../StatusChip"
 import { findCardStatus } from "./utils"
-
 import * as colors from "../../colors"
 
 const CardContainer = styled.div`
     position: relative;
     width: 184px;
-    height: 194px;
-    background: #FFFFFF;
-    border: 1px solid #D8D4CF;
+    max-height: 194px;
+    padding: 16px 16px 16px 16px;
+    background: ${colors.white};
+    border-top: ${props => props.borderTop};
+    border-right: ${props => props.borderRight};
+    border-bottom: ${props => props.borderBottom};
+    border-left: ${props => props.borderLeft};
     box-sizing: border-box;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14), inset 0px 4px 0px #D8D4CF;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 0px 0px #D8D4CF;
 
-    /* @media (max-width: 768px) {
-        max-width: 184px;
-    } */
+    &:hover {
+        filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2)) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14));
+    }
+
+    @media (min-width: 768px) {
+        width: 354px;
+        padding: 24px 24px 24px 24px;
+    }
 `
 
 const TitleText = styled.p`
@@ -29,15 +36,60 @@ const TitleText = styled.p`
     line-height: 24px;
     display: flex;
     align-items: center;
-    color: #21201F;
-    border: 1px dotted gray;
+    color: ${colors.black};
 `
 
 const StatusChipWrapper = styled.div`
-    border: 1px dotted red;
+    margin: 16px 0px 16px 0px;
+
+    @media (min-width: 768px) {
+        margin: 8px 0px 8px 0px;
+    }
+`
+
+const BottomWrapper = styled.div`
+    display: block;
+
+    @media (min-width: 768px) {
+        display: flex;
+        margin: 0px 0px 0px 0px;
+    }
+`
+
+const MessageText = styled.p`
+    margin: 0px 0px 0px 0px;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: ${colors.black};
+`
+
+const TextButton = styled.button`
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    display: block;
+    background: none;
+    font-family: 'aktiv-grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: ${colors.blue.base};
+    border: none;
+
+    @media (min-width: 768px) {
+        text-align: right;
+        margin: 0px 0px 0px 48px;
+    }
 `
 
 function Card(props) {
+    
     const {
         cardStatus,
         titleText,
@@ -47,11 +99,15 @@ function Card(props) {
         bottomBorder,
         leftBorder
     } = findCardStatus(props.status)
-    console.log(props)
+
     return (
-        <CardContainer>
-            <TitleText>{'Initial Application'}</TitleText>
-            <StatusChipWrapper><StatusChip status={'not-started'} /></StatusChipWrapper>
+        <CardContainer borderTop={topBorder} borderRight={rightBorder} borderBottom={bottomBorder} borderLeft={leftBorder}>
+            <TitleText>{props.title}</TitleText>
+            <StatusChipWrapper><StatusChip status={props.status} /></StatusChipWrapper>
+            <BottomWrapper>
+                <MessageText>{props.message}</MessageText>
+                <TextButton>Start</TextButton>
+            </BottomWrapper>
         </CardContainer>
     )
 }
