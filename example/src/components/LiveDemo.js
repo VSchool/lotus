@@ -58,7 +58,7 @@ function createCode(name) {
         case "Taskbar":
             return `<Taskbar firstLineMessage={'Required'} secondLineMessage={'FSJS - Aptitude Test'}/>`
         case "Titlebar Item":
-            return `<TitlebarItem />`
+            return `<TitlebarItem itemState={'active'} firstLineMessage={'first'} secondLineMessage={'last'} />`
         case "Titlebar":
             return `<Titlebar />`
         default:
