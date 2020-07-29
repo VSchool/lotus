@@ -12,15 +12,15 @@ export function displayItemState(status) {
             }
         case "inactive":
             return {
-                border: "none",
+                border: `4px solid ${colors.black}`,
                 opacity: "1.0",
                 lineOneColor: colors.gray.base,
                 lineTwoColor: colors.gray.lighter,
-                checkmarkDisplay: "inline-block"
+                checkmarkDisplay: "flex"
             }
         case "locked":
             return {
-                border: "none",
+                border: `4px solid ${colors.black}`,
                 opacity: "0.67",
                 lineOneColor: colors.gray.base,
                 lineTwoColor: colors.gray.lighter,

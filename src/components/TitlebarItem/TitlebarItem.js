@@ -7,9 +7,9 @@ import circleCheck from "../../assets/icons/circleCheck.svg"
 const ItemContainer = styled.div`
     position: relative;
     max-width: 144px;
-    min-height: 48px;
-    padding: 10px 20px 10px 18px;
-    background: #21201F;
+    max-height: 48px;
+    padding: 4px 20px 4px 16px;
+    background: ${colors.black};
     box-sizing: border-box;
     /* green/lighter */
     border: ${props => props.border};
@@ -23,7 +23,9 @@ const ItemContainer = styled.div`
 `
 
 const TextLineOne = styled.p`
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 4px 0px;
+    display: flex;
+    align-items: center;
     font-family: 'aktiv-grotesk-extended';
     font-style: normal;
     font-weight: bold;
@@ -43,14 +45,19 @@ const SecondLineContainer = styled.div`
 `
 
 const CheckMarkContainer = styled.div`
-    margin: 0px 8px 0px 0px;
+    margin: 0px 4px 0px 0px;
     width: 13px;
     height: 13px;
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* border: 1px dotted lightcoral; */
+
+    & > img {
+        width: 100%;
+        height: 100%;
+    }
 `
 
 const TextLineTwo = styled.p`
@@ -68,6 +75,7 @@ const TextLineTwo = styled.p`
 `
 
 function TitlebarItem(props) {
+    console.log(props)
     const {
         border,
         opacity,
@@ -79,10 +87,10 @@ function TitlebarItem(props) {
 
     return (
         <ItemContainer border={border} opacity={opacity}>
-            <TextLineOne color={lineOneColor}>{'Step 1'}</TextLineOne>
+            <TextLineOne color={lineOneColor}>{props.lineOneText}</TextLineOne>
             <SecondLineContainer>
                 <CheckMarkContainer display={checkmarkDisplay}><img src={circleCheck} alt={'Task compeleted.'} /></CheckMarkContainer>
-                <TextLineTwo color={lineTwoColor}>{'Apply'}</TextLineTwo>
+                <TextLineTwo color={lineTwoColor}>{props.lineTwoText}</TextLineTwo>
             </SecondLineContainer>
         </ItemContainer>
     )
