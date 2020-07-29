@@ -73,7 +73,6 @@ const TextLineTwo = styled.p`
 `
 
 function TitlebarItem(props) {
-    console.log(props)
     const {
         border,
         opacity,

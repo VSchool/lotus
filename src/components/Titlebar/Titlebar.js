@@ -14,12 +14,16 @@ const TitlebarContainer = styled.div`
     }
 `
 
-function Titlebar({ stepOne, stepTwo, stepThree }) {
+function Titlebar(props) {
+    let blockOneProps = props.blockOneState
+    let blockTwoProps = props.blockTwoState
+    let blockThreeProps = props.blockThreeState
+    console.log(blockOneProps)
     return (
         <TitlebarContainer>
-            <TitlebarItem status={stepOne} title={"Step 1"} subtitle={"Background"} />
-            <TitlebarItem status={stepTwo} title={"Step 2"} subtitle={"Application"} />
-            <TitlebarItem status={stepThree} title={"Step 3"} subtitle={"Enrollment"} />
+            <TitlebarItem titlebarItemState={blockOneProps.state} lineOneText={blockOneProps.firstLineMessage} lineTwoText={blockOneProps.secondLineMessage} />
+            <TitlebarItem titlebarItemState={blockTwoProps.state} lineOneText={blockTwoProps.firstLineMessage} lineTwoText={blockTwoProps.secondLineMessage} />
+            <TitlebarItem titlebarItemState={blockThreeProps.state} lineOneText={blockThreeProps.firstLineMessage} lineTwoText={blockThreeProps.secondLineMessage} />
         </TitlebarContainer>
     )
 }
