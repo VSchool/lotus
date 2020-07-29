@@ -56,11 +56,11 @@ function createCode(name) {
         case "Status Message":
             return `<StatusMessage status={'neutral'} message={'Welcome to your V School Application. Get started by completing the tasks below!'} />`
         case "Taskbar":
-            return `<Taskbar firstLineMessage={'Required'} secondLineMessage={'FSJS - Aptitude Test'} />`
+            return `<Taskbar />`
         case "Titlebar Item":
-            return `<TitlebarItem status={'active'} title={'Step 1'} subtitle={'Apply'} />`
+            return `<TitlebarItem />`
         case "Titlebar":
-            return `<Titlebar blockOne={{status: 'active', firstLineMessage: 'hello', secondLineMessage: 'world'}} blockTwo={{status: 'inactive', firstLineMessage: 'hello', secondLineMessage: 'world'}} blockThree={{status: 'locked', firstLineMessage: 'hello', secondLineMessage: 'world'}} />`
+            return `<Titlebar />`
         default:
             return `There is no spoon.`
     }
