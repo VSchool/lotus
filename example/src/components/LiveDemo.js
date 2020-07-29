@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+// import { duotoneDark } from 'prism-react-renderer'
 
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 
@@ -20,7 +21,10 @@ import {
 const LiveDemoContainer = styled.div`
     margin: 24px 0px 0px 0px;
     max-width: 800px;
+    /* display: flex;
+    flex-direction: column-reverse; */
     background: #f4f2f2;
+    border: 1px solid lightcoral;
 `
 
 const scope = {
