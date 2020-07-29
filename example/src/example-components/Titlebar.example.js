@@ -11,19 +11,19 @@ const TitlebarTemplateObj = {
             propName: "blockOneState",
             propType: 'Object',
             propDescription: 'Sets the "state" of the first titlebar block.',
-            options: ['Object containing state and messages for the first block']
+            options: ['Object containing state and text']
         },
         {
             propName: "blockTwoState",
             propType: "Object",
             propDescription: 'Sets the "state" of the second titlebar block.',
-            options: ['Object containing state and messages for the second block']
+            options: ['Object containing state and text']
         },
         {
             propName: "blockThreeState",
             propType: "Object",
             propDescription: 'Sets the "state" of the third titlebar block.',
-            options: ['Object containing state and messages for the third block']
+            options: ['Object containing state and text']
         }
     ],
     reactComponent: ""

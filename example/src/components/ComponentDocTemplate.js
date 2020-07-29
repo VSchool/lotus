@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useLocation } from "react-router-dom"
 import LiveDemo from "./LiveDemo"
+import Table from './Table'
 import copyLink from "../assets/images/link.svg"
 
 const DocTemplateContainer = styled.div`
@@ -217,6 +218,7 @@ function ComopnentDocTemplate(props) {
             <TemplateDescriptionContainer>
                 <TemplateDescriptionText>{componentDescription}</TemplateDescriptionText>
             </TemplateDescriptionContainer>
+            <Table data={props.templateInfo} />
             {/* <TemplateExampleContainer>
                 <TemplateExampleText>{exampleText}</TemplateExampleText>
             </TemplateExampleContainer> */}
