@@ -58,7 +58,7 @@ function createCode(name) {
         case "Taskbar":
             return `<Taskbar title={'Required'} task={'FSJS - Aptitude Test'} />`
         case "Titlebar Item":
-            return `<TitlebarItem status={'active'} title={'Step 1'} subtitle={'Apply'} />`
+            return `<TitlebarItem titlebarItemState={'active'} />`
         case "Titlebar":
             return `<Titlebar stepOne={'active'} stepTwo={'inactive'} stepThree={'locked'} />`
         default:

@@ -1,33 +1,30 @@
 import React from "react"
 import styled from "styled-components"
 import * as colors from "../../colors"
-import { itemStatus } from "./utils"
+import { displayItemState } from "./utils"
 import circleCheck from "../../assets/icons/circleCheck.svg"
 
 const ItemContainer = styled.div`
     position: relative;
-    width: 138px;
+    max-width: 144px;
     min-height: 48px;
-    background: ${colors.black};
-    opacity: ${props => props.opacity};
-    border: ${props => props.border};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 20px 0px 18px;
+    padding: 10px 20px 10px 18px;
+    background: #21201F;
     box-sizing: border-box;
+    /* green/lighter */
+    border: ${props => props.border};
+    /* border: 4px solid #99CEC1; */
+    opacity: ${props => props.opacity};
 
-    @media (min-width: 768px) {
+    /* @media (min-width: 768px) {
         width: 400px;
         padding: 0px 128px 0px 88px;
-    }
+    } */
 `
 
-const ItemTitle = styled.p`
-    margin: 0px 0px 2px 0px;
-    max-width: 181px;
-    height: 12px;
-    font-family: "aktiv-grotesk-extended";
+const TextLineOne = styled.p`
+    margin: 0px 0px 0px 0px;
+    font-family: 'aktiv-grotesk-extended';
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
@@ -35,38 +32,30 @@ const ItemTitle = styled.p`
     letter-spacing: 0.25px;
     text-transform: uppercase;
     color: ${props => props.color};
-    opacity: ${props => props.opacity};
-    box-sizing: border-box;
-
-    @media (max-width: 768px) {
-        max-width: 184px;
-    }
+    /* color: #D8D4CF; */
+    /* border: 1px dotted white; */
 `
 
-const BottomWrapper = styled.div`
-    max-width: 100%;
-    display: flexbox;
+const SecondLineContainer = styled.div`
+    display: flex;
+    align-items: center;
+    /* border: 1px solid white; */
+`
+
+const CheckMarkContainer = styled.div`
+    margin: 0px 8px 0px 0px;
+    width: 13px;
+    height: 13px;
+    display: ${props => props.display};
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
-    @media (min-width: 768px) {
-        max-width: 184px;
-    }
+    /* border: 1px dotted lightcoral; */
 `
 
-const CircleCheckContainer = styled.div`
-    width: 16px;
-    height: 16px;
-    display: ${props => props.display};
-    margin-right: 4px;
-    box-sizing: border-box;
-`
-
-const ItemSubtitle = styled.p`
+const TextLineTwo = styled.p`
     margin: 0px 0px 0px 0px;
-    max-width: 100%;
-    height: 16px;
-    font-family: "aktiv-grotesk-extended";
+    font-family: 'aktiv-grotesk-extended';
     font-style: normal;
     font-weight: bold;
     font-size: 10px;
@@ -74,34 +63,27 @@ const ItemSubtitle = styled.p`
     letter-spacing: 1px;
     text-transform: capitalize;
     color: ${props => props.color};
-    opacity: ${props => props.opacity};
-    box-sizing: border-box;
-
-    @media (min-width: 768px) {
-        font-size: 14px;
-        line-height: 16px;
-    }
+    /* color: #FBF9F7; */
+    /* border: 1px dotted white; */
 `
 
-function TitlebarItem({ status, title, subtitle }) {
-    const { background, border, opacity, checkmarkDisplay, subtitleColor, titleColor } = itemStatus(
-        status
-    )
+function TitlebarItem(props) {
+    const {
+        border,
+        opacity,
+        lineOneColor,
+        lineTwoColor,
+        checkmarkDisplay
+    } = displayItemState(props.titlebarItemState)
+    // console.log(checkmarkDisplay)
 
     return (
         <ItemContainer border={border} opacity={opacity}>
-            {/* Add in another div to add in the Divider divs */}
-            <ItemTitle color={titleColor} opacity={opacity}>
-                {title}
-            </ItemTitle>
-            <BottomWrapper>
-                <CircleCheckContainer display={checkmarkDisplay}>
-                    <img src={circleCheck} alt="step completed." />
-                </CircleCheckContainer>
-                <ItemSubtitle color={subtitleColor} opacity={opacity}>
-                    {subtitle}
-                </ItemSubtitle>
-            </BottomWrapper>
+            <TextLineOne color={lineOneColor}>{'Step 1'}</TextLineOne>
+            <SecondLineContainer>
+                <CheckMarkContainer display={checkmarkDisplay}><img src={circleCheck} alt={'Task compeleted.'} /></CheckMarkContainer>
+                <TextLineTwo color={lineTwoColor}>{'Apply'}</TextLineTwo>
+            </SecondLineContainer>
         </ItemContainer>
     )
 }
