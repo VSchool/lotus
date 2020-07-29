@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import * as colors from "../../colors"
 import { displayItemState } from "./utils"
+import * as colors from "../../colors"
 import circleCheck from "../../assets/icons/circleCheck.svg"
 
 const ItemContainer = styled.div`
@@ -14,11 +14,9 @@ const ItemContainer = styled.div`
     border: ${props => props.border};
     opacity: ${props => props.opacity};
 
-    @media (min-width: 768px) {
-        
+    @media (min-width: 768px) {    
         max-width: 400px;
         padding: 4px 16px 4px 88px;
-        /* background: lightcoral; */
     }
 `
 
@@ -35,22 +33,11 @@ const TextLineOne = styled.p`
     text-transform: uppercase;
     color: ${props => props.color};
     opacity: ${props => props.opacity};
-    /* color: #D8D4CF; */
-    /* border: 1px dotted white; */
-
-    /* @media (min-width: 768px) {
-        font-size: 10px;
-        line-height: 12px;
-        letter-spacing: 0.25px;
-        text-transform: uppercase;
-        color: #D8D4CF;
-    } */
 `
 
 const SecondLineContainer = styled.div`
     display: flex;
     align-items: center;
-    /* border: 1px solid white; */
 `
 
 const CheckMarkContainer = styled.div`
@@ -60,8 +47,6 @@ const CheckMarkContainer = styled.div`
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
-    /* box-sizing: border-box; */
-    /* border: 1px dotted lightcoral; */
 
     & > img {
         width: 100%;
@@ -79,13 +64,11 @@ const TextLineTwo = styled.p`
     letter-spacing: 1px;
     text-transform: capitalize;
     color: ${props => props.color};
-    /* color: #FBF9F7; */
-    /* border: 1px dotted white; */
 
     @media (min-width: 768px) {
         font-size: 14px;
         line-height: 16px;
-        color: #FBF9F7;
+        color: ${colors.gray.lighter};
     }
 `
 
@@ -99,7 +82,6 @@ function TitlebarItem(props) {
         checkmarkDisplay,
         textOpacity
     } = displayItemState(props.titlebarItemState)
-    // console.log(checkmarkDisplay)
 
     return (
         <ItemContainer border={border} opacity={opacity}>

@@ -57,7 +57,6 @@ const TemplateExampleContainer = styled.div`
     padding: 8px 16px 8px 16px;
     background: #f4f2f2;
     border-left: 4px solid #59af9b;
-
     /* border: 1px solid gold; */
 `
 
@@ -93,8 +92,6 @@ const PropsHeaderText = styled.h3`
 
 const PropsInfoContainer = styled.div`
     margin: 40px 0px 0px 0px;
-    /* display: flex; */
-    /* flex-direction: column; */
     /* border: 1px solid lightblue; */
 `
 
@@ -159,8 +156,6 @@ function ComopnentDocTemplate(props) {
         dummyElement.select()
         document.execCommand("copy")
         document.body.removeChild(dummyElement)
-        // let confirmCopy = document.getElementById('confirmCopy')
-        // confirmCopy.style.display = 'flex'
     }
 
     const { componentName, componentDescription, exampleText, templateProps } = props.templateInfo
@@ -208,7 +203,6 @@ function ComopnentDocTemplate(props) {
                 <PropsHeaderText>Props</PropsHeaderText>
             </TemplatePropsContainer>
             {newArr}
-            {/* {newField} */}
             <LiveDemo codeDisplay={props.templateInfo} />
         </DocTemplateContainer>
     )

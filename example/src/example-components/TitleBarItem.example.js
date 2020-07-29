@@ -4,8 +4,7 @@ import ComponentDocTemplate from "../components/ComponentDocTemplate"
 
 const TitlebarItemTemplateObj = {
     componentName: "Titlebar Item",
-    componentDescription:
-        "Assist the titlebar component by displaying each application process step.",
+    componentDescription: "Assist the titlebar component by displaying each application process step.",
     exampleText: `<TitlebarItem titlebarItemState={string} lineOneText={string} lineTwoText={string} />`,
     templateProps: [
         {
