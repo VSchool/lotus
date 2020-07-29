@@ -1,7 +1,7 @@
 
 // import type { PrismTheme } from "../types";
 
-export const myTheme = {
+export const LiveDemoTheme = {
     plain: {
         color: "#393A34",
         backgroundColor: "#f6f8fa"
@@ -76,4 +76,4 @@ export const myTheme = {
       ]
     };
     
-export default myTheme;
+export default LiveDemoTheme;

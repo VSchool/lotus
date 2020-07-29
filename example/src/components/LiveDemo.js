@@ -16,8 +16,7 @@ import {
     Titlebar
 } from "@vschool/lotus"
 
-import { myTheme } from './LiveDemo.utils'
-console.log(myTheme)
+import { LiveDemoTheme } from './LiveDemo.utils'
 
 const LiveDemoContainer = styled.div`
     margin: 24px 0px 0px 0px;
@@ -47,7 +46,7 @@ function createCode(name) {
         case "Controls":
             return `<Controls disabledStatus={false} />`
         case "Card":
-            return `<Card status={'up-next'} />`
+            return `<Card status={'up-next'} message={'odd message'} />`
         case "Footer":
             return `<Footer />`
         case "Header":
@@ -77,7 +76,7 @@ function LiveDemo(props) {
 
     return (
         <LiveDemoContainer>
-            <LiveProvider scope={scope} code={displayComponent} theme={myTheme}>
+            <LiveProvider scope={scope} code={displayComponent} theme={LiveDemoTheme}>
                 <LiveEditor />
                 <LiveError />
                 <LivePreview />
