@@ -8,15 +8,15 @@ const TaskbarTemplateObj = {
     exampleText: `<Taskbar title={string} task={string} />`,
     templateProps: [
         {
-            propName: "title",
+            propName: "firstLineMessage",
             propType: "String",
-            propDescription: "Text string that is displayed in the title of the taskbar.",
+            propDescription: "Text string that is displayed in the first line of the taskbar.",
             options: ["accepts any String"]
         },
         {
-            propName: "task",
+            propName: "secondLineMessage",
             propType: "String",
-            propDescription: "Text string that is displayed in the task area of the taskbar.",
+            propDescription: "Text string that is displayed in the second line of the taskbar.",
             options: ["accepts any String"]
         }
     ],

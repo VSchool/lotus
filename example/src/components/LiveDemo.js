@@ -56,7 +56,7 @@ function createCode(name) {
         case "Status Message":
             return `<StatusMessage status={'neutral'} message={'Welcome to your V School Application. Get started by completing the tasks below!'} />`
         case "Taskbar":
-            return `<Taskbar />`
+            return `<Taskbar firstLineMessage={'Required'} secondLineMessage={'FSJS - Aptitude Test'}/>`
         case "Titlebar Item":
             return `<TitlebarItem />`
         case "Titlebar":
