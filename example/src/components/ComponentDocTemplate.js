@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { useLocation } from "react-router-dom"
 import LiveDemo from "./LiveDemo"
-
 import copyLink from "../assets/images/link.svg"
 
 const DocTemplateContainer = styled.div`
@@ -31,6 +30,7 @@ const CopyLinkContainer = styled.div`
     margin: 0px 0px 0px 16px;
     width: 24px;
     height: 24px;
+    display: flex;
     /* border: 1px dotted green; */
 `
 
@@ -144,10 +144,25 @@ const TemplateDescriptionText = styled.p`
 //     /* border: 1px dotted black; */
 // `
 
+const HiddenParagraph = styled.p`
+    margin: 0px 0px 0px 8px;
+    height: 24px;
+    display: none;
+    justify-content:center;
+    align-items: center;
+    font-family: "aktiv-grotesk";
+    font-style: light;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+`
+
 function ComopnentDocTemplate(props) {
     let location = useLocation()
 
     function copyToClipboard() {
+        let copiedConfirmation = document.getElementById('chuckles')
         let pathName = location.pathname
         let dummyElement = document.createElement("input")
         let tempHostName = "http://localhost:3000"
@@ -158,6 +173,8 @@ function ComopnentDocTemplate(props) {
         dummyElement.select()
         document.execCommand("copy")
         document.body.removeChild(dummyElement)
+
+        copiedConfirmation.style.display = 'flex'
     }
 
     const { componentName, componentDescription } = props.templateInfo
@@ -194,6 +211,8 @@ function ComopnentDocTemplate(props) {
                 <CopyLinkContainer onClick={copyToClipboard}>
                     <img src={copyLink} alt={"Click to copy URL for this component."} />
                 </CopyLinkContainer>
+                <HiddenParagraph id={'chuckles'}>Copied to clipboard!</HiddenParagraph>
+
             </TemplateHeaderContainer>
             <TemplateDescriptionContainer>
                 <TemplateDescriptionText>{componentDescription}</TemplateDescriptionText>
