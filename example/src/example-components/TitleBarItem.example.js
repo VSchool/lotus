@@ -5,22 +5,22 @@ import ComponentDocTemplate from "../components/ComponentDocTemplate"
 const TitlebarItemTemplateObj = {
     componentName: "Titlebar Item",
     componentDescription: "Assist the titlebar component by displaying each application process step.",
-    exampleText: `<TitlebarItem titlebarItemState={string} lineOneText={string} lineTwoText={string} />`,
+    exampleText: `<TitlebarItem itemState={string} firstLineMessage={string} secondLineMessage={string} />`,
     templateProps: [
         {
-            propName: "titlebarItemState",
+            propName: "itemState",
             propType: "String",
             propDescription: 'Sets the "state" of the titlebar item.',
             options: ["active", "inactive", "locked"]
         },
         {
-            propName: "lineOneText",
+            propName: "firstLineMessage",
             propType: "String",
             propDescription: "Text string that is displayed in the first line of the comopnent.",
             options: ["accepts any String"]
         },
         {
-            propName: "lineTwoText",
+            propName: "secondLineMessage",
             propType: "String",
             propDescription: "Text string that is displayed in the second line of the comopnent.",
             options: ["accepts any String"]
