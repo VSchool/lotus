@@ -128,8 +128,8 @@ function Modal({ title, subtitle, body }) {
                     <ModalSubtitle>{subtitle}</ModalSubtitle>
                     <ModalBody>{body}</ModalBody>
                     <ButtonRow>
-                        <DeclineButton>No, Thanks</DeclineButton>
-                        <ApplyButton>Apply for Scholarships</ApplyButton>
+                        <DeclineButton>Button</DeclineButton>
+                        <ApplyButton>Button</ApplyButton>
                     </ButtonRow>
                 </ContentContainer>
             </ModalContainer>

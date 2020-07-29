@@ -7,7 +7,7 @@ const TitlebarContainer = styled.div`
     width: 100%;
     height: 48px;
     display: flex;
-    border: 1px solid dodgerblue;
+    /* border: 1px solid dodgerblue; */
 `
 
 function Titlebar(props) {
