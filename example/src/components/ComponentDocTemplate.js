@@ -36,7 +36,7 @@ const CopyLinkContainer = styled.div`
 
 const TemplateDescriptionContainer = styled.div`
     margin: 16px 0px 0px 0px;
-    height: 72px;
+    height: 48px;
     /* border: 1px dashed green; */
 `
 
@@ -50,99 +50,99 @@ const TemplateDescriptionText = styled.p`
     /* border: 1px solid gray; */
 `
 
-const TemplateExampleContainer = styled.div`
-    margin: 16px 0px 0px 0px;
-    max-width: 768px;
-    /* height: 56px; */
-    padding: 8px 16px 8px 16px;
-    background: #f4f2f2;
-    border-left: 4px solid #59af9b;
-    /* border: 1px solid gold; */
-`
+// const TemplateExampleContainer = styled.div`
+//     margin: 16px 0px 0px 0px;
+//     max-width: 768px;
+//     /* height: 56px; */
+//     padding: 8px 16px 8px 16px;
+//     background: #f4f2f2;
+//     border-left: 4px solid #59af9b;
+//     /* border: 1px solid gold; */
+// `
 
-const TemplateExampleText = styled.p`
-    margin: 0px;
-    width: 100%;
-    font-family: Source Code Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-    /* border: 1px solid orange; */
-`
+// const TemplateExampleText = styled.p`
+//     margin: 0px;
+//     width: 100%;
+//     font-family: Source Code Pro;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 16px;
+//     line-height: 24px;
+//     color: #000000;
+//     /* border: 1px solid orange; */
+// `
 
-const TemplatePropsContainer = styled.div`
-    margin: 56px 0px 0px 0px;
-    /* border: 1px solid lightcoral; */
-`
+// const TemplatePropsContainer = styled.div`
+//     margin: 56px 0px 0px 0px;
+//     /* border: 1px solid lightcoral; */
+// `
 
-const PropsHeaderText = styled.h3`
-    margin: 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    /* border: 1px dotted gray; */
-`
+// const PropsHeaderText = styled.h3`
+//     margin: 0px;
+//     font-family: "aktiv-grotesk";
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 32px;
+//     line-height: 40px;
+//     display: flex;
+//     align-items: center;
+//     color: #000000;
+//     /* border: 1px dotted gray; */
+// `
 
-const PropsInfoContainer = styled.div`
-    margin: 40px 0px 0px 0px;
-    /* border: 1px solid lightblue; */
-`
+// const PropsInfoContainer = styled.div`
+//     margin: 40px 0px 0px 0px;
+//     /* border: 1px solid lightblue; */
+// `
 
-const InfoWrapper = styled.div`
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    /* border: 1px solid purple; */
-`
+// const InfoWrapper = styled.div`
+//     margin: 0px 0px 0px 0px;
+//     display: flex;
+//     /* border: 1px solid purple; */
+// `
 
-const InfoBold = styled.p`
-    margin: 0px 0px 0px 0px;
-    width: 96px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: medium;
-    font-size: 20px;
-    line-height: 24px;
-    /* display: flex; */
-    /* align-items: center; */
-    color: #000000;
-    /* border: 1px dashed gray; */
-`
+// const InfoBold = styled.p`
+//     margin: 0px 0px 0px 0px;
+//     width: 96px;
+//     font-family: "aktiv-grotesk";
+//     font-style: normal;
+//     font-weight: medium;
+//     font-size: 20px;
+//     line-height: 24px;
+//     /* display: flex; */
+//     /* align-items: center; */
+//     color: #000000;
+//     /* border: 1px dashed gray; */
+// `
 
-const InfoRegular = styled.p`
-    margin: 0px 0px 0px 0px;
-    width: 100%;
-    max-height: 56px;
-    /* width: 150px; */
-    font-family: "aktiv-grotesk";
-    font-style: italic;
-    font-weight: lighter;
-    font-size: 20px;
-    line-height: 24px;
-    /* display: flex; */
-    /* align-items: center; */
-    color: #000000;
-    /* border: 1px dashed red; */
-`
+// const InfoRegular = styled.p`
+//     margin: 0px 0px 0px 0px;
+//     width: 100%;
+//     max-height: 56px;
+//     /* width: 150px; */
+//     font-family: "aktiv-grotesk";
+//     font-style: italic;
+//     font-weight: lighter;
+//     font-size: 20px;
+//     line-height: 24px;
+//     /* display: flex; */
+//     /* align-items: center; */
+//     color: #000000;
+//     /* border: 1px dashed red; */
+// `
 
-const InfoDescription = styled.p`
-    margin: 0px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    /* border: 1px dotted black; */
-`
+// const InfoDescription = styled.p`
+//     margin: 0px;
+//     font-family: "aktiv-grotesk";
+//     font-style: normal;
+//     font-weight: 300;
+//     font-size: 20px;
+//     line-height: 24px;
+//     display: flex;
+//     align-items: center;
+//     color: #000000;
+//     /* border: 1px dotted black; */
+// `
 
 function ComopnentDocTemplate(props) {
     let location = useLocation()
@@ -160,32 +160,32 @@ function ComopnentDocTemplate(props) {
         document.body.removeChild(dummyElement)
     }
 
-    const { componentName, componentDescription, exampleText, templateProps } = props.templateInfo
+    const { componentName, componentDescription } = props.templateInfo
+    // templateProps & exampleText
 
-    let newArr = templateProps.map((availableProp, idx) => {
-        const { propName, propType, propDescription, options } = availableProp
-        let optionListString = options.map(option => {
-            return `${option}, `
-        })
-
-        return (
-            <PropsInfoContainer key={idx}>
-                <InfoWrapper>
-                    <InfoBold>prop:</InfoBold>
-                    <InfoRegular>{propName}</InfoRegular>
-                </InfoWrapper>
-                <InfoWrapper>
-                    <InfoBold>type:</InfoBold>
-                    <InfoRegular>{propType}</InfoRegular>
-                </InfoWrapper>
-                <InfoWrapper>
-                    <InfoBold>options:</InfoBold>
-                    <InfoRegular>{optionListString}</InfoRegular>
-                </InfoWrapper>
-                <InfoDescription>{propDescription}</InfoDescription>
-            </PropsInfoContainer>
-        )
-    })
+    // let newArr = templateProps.map((availableProp, idx) => {
+    //     const { propName, propType, propDescription, options } = availableProp
+    //     let optionListString = options.map(option => {
+    //         return `${option}, `
+    //     })
+    //     return (
+    //         <PropsInfoContainer key={idx}>
+    //             <InfoWrapper>
+    //                 <InfoBold>prop:</InfoBold>
+    //                 <InfoRegular>{propName}</InfoRegular>
+    //             </InfoWrapper>
+    //             <InfoWrapper>
+    //                 <InfoBold>type:</InfoBold>
+    //                 <InfoRegular>{propType}</InfoRegular>
+    //             </InfoWrapper>
+    //             <InfoWrapper>
+    //                 <InfoBold>options:</InfoBold>
+    //                 <InfoRegular>{optionListString}</InfoRegular>
+    //             </InfoWrapper>
+    //             <InfoDescription>{propDescription}</InfoDescription>
+    //         </PropsInfoContainer>
+    //     )
+    // })
 
     return (
         <DocTemplateContainer>
@@ -198,13 +198,13 @@ function ComopnentDocTemplate(props) {
             <TemplateDescriptionContainer>
                 <TemplateDescriptionText>{componentDescription}</TemplateDescriptionText>
             </TemplateDescriptionContainer>
-            <TemplateExampleContainer>
+            {/* <TemplateExampleContainer>
                 <TemplateExampleText>{exampleText}</TemplateExampleText>
-            </TemplateExampleContainer>
-            <TemplatePropsContainer>
+            </TemplateExampleContainer> */}
+            {/* <TemplatePropsContainer>
                 <PropsHeaderText>Props</PropsHeaderText>
-            </TemplatePropsContainer>
-            {newArr}
+            </TemplatePropsContainer> */}
+            {/* {newArr} */}
             <LiveDemo codeDisplay={props.templateInfo} />
         </DocTemplateContainer>
     )

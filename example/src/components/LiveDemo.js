@@ -20,7 +20,7 @@ import { LiveDemoTheme } from './LiveDemo.utils'
 
 const LiveDemoContainer = styled.div`
     margin: 24px 0px 0px 0px;
-    max-width: 800px;
+    max-width: 100%;
     /* display: flex; */
     /* flex-direction: column-reverse; */
     /* background: #f4f2f2; */

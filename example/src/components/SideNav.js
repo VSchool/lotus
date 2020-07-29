@@ -20,16 +20,6 @@ const WelcomeText = styled.p`
     box-sizing: border-box;
 `
 
-// const IntroductionText = styled.p`
-//     margin: 0px 0px 0px 0px;
-//     font-family: "aktiv-grotesk";
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 20px;
-//     line-height: 24px;
-//     color: #000000;
-// `
-
 const NavLogoContainer = styled.div`
     margin: 0px 0px 32px 0px;
     height: 24px;
@@ -49,14 +39,18 @@ const ComponentList = styled.div`
 
 const LinkArea = styled(Link)`
     margin: 0px 0px 8px 0px;
-    font-family: Roboto;
+    font-family: 'aktiv-grotesk';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 23px;
-    color: #000000;
+    line-height: 24px;
+    color: #21201F;
     text-decoration: none;
-    /* border: 1px solid red; */
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: #D9ECE8;
+    }
 `
 
 function SideNav() {
