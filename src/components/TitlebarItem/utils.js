@@ -8,6 +8,7 @@ export function displayItemState(status) {
                 opacity: "1.0",
                 lineOneColor: colors.gray.base,
                 lineTwoColor: colors.gray.lighter,
+                textOpacity: '1.0',
                 checkmarkDisplay: "none"
             }
         case "inactive":
@@ -16,6 +17,7 @@ export function displayItemState(status) {
                 opacity: "1.0",
                 lineOneColor: colors.gray.base,
                 lineTwoColor: colors.gray.lighter,
+                textOpacity: '0.8',
                 checkmarkDisplay: "flex"
             }
         case "locked":
@@ -24,6 +26,7 @@ export function displayItemState(status) {
                 opacity: "0.67",
                 lineOneColor: colors.gray.base,
                 lineTwoColor: colors.gray.lighter,
+                textOpacity: '0.67',
                 checkmarkDisplay: "none"
             }
 

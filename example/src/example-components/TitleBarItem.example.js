@@ -6,24 +6,24 @@ const TitlebarItemTemplateObj = {
     componentName: "Titlebar Item",
     componentDescription:
         "Assist the titlebar component by displaying each application process step.",
-    exampleText: `<TitlebarItem status={string} title={string} subtitle={string} />`,
+    exampleText: `<TitlebarItem titlebarItemState={string} lineOneText={string} lineTwoText={string} />`,
     templateProps: [
         {
-            propName: "status",
+            propName: "titlebarItemState",
             propType: "String",
             propDescription: 'Sets the "state" of the titlebar item.',
             options: ["active", "inactive", "locked"]
         },
         {
-            propName: "title",
+            propName: "lineOneText",
             propType: "String",
-            propDescription: "Text string that is displayed in the title of the titlebar item.",
+            propDescription: "Text string that is displayed in the first line of the comopnent.",
             options: ["accepts any String"]
         },
         {
-            propName: "subtitle",
+            propName: "lineTwoText",
             propType: "String",
-            propDescription: "Text string that is displayed in the subtitle of the titlebar item.",
+            propDescription: "Text string that is displayed in the second line of the comopnent.",
             options: ["accepts any String"]
         }
     ],

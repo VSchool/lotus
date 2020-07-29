@@ -11,19 +11,19 @@ const ItemContainer = styled.div`
     padding: 4px 20px 4px 16px;
     background: ${colors.black};
     box-sizing: border-box;
-    /* green/lighter */
     border: ${props => props.border};
-    /* border: 4px solid #99CEC1; */
     opacity: ${props => props.opacity};
 
-    /* @media (min-width: 768px) {
-        width: 400px;
-        padding: 0px 128px 0px 88px;
-    } */
+    @media (min-width: 768px) {
+        
+        max-width: 400px;
+        padding: 4px 16px 4px 88px;
+        /* background: lightcoral; */
+    }
 `
 
 const TextLineOne = styled.p`
-    margin: 0px 0px 4px 0px;
+    margin: 0px 0px 2px 0px;
     display: flex;
     align-items: center;
     font-family: 'aktiv-grotesk-extended';
@@ -34,8 +34,17 @@ const TextLineOne = styled.p`
     letter-spacing: 0.25px;
     text-transform: uppercase;
     color: ${props => props.color};
+    opacity: ${props => props.opacity};
     /* color: #D8D4CF; */
     /* border: 1px dotted white; */
+
+    /* @media (min-width: 768px) {
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+        color: #D8D4CF;
+    } */
 `
 
 const SecondLineContainer = styled.div`
@@ -46,8 +55,8 @@ const SecondLineContainer = styled.div`
 
 const CheckMarkContainer = styled.div`
     margin: 0px 4px 0px 0px;
-    width: 13px;
-    height: 13px;
+    width: 16px;
+    height: 16px;
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
@@ -72,6 +81,12 @@ const TextLineTwo = styled.p`
     color: ${props => props.color};
     /* color: #FBF9F7; */
     /* border: 1px dotted white; */
+
+    @media (min-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+        color: #FBF9F7;
+    }
 `
 
 function TitlebarItem(props) {
@@ -81,13 +96,14 @@ function TitlebarItem(props) {
         opacity,
         lineOneColor,
         lineTwoColor,
-        checkmarkDisplay
+        checkmarkDisplay,
+        textOpacity
     } = displayItemState(props.titlebarItemState)
     // console.log(checkmarkDisplay)
 
     return (
         <ItemContainer border={border} opacity={opacity}>
-            <TextLineOne color={lineOneColor}>{props.lineOneText}</TextLineOne>
+            <TextLineOne color={lineOneColor} opacity={textOpacity}>{props.lineOneText}</TextLineOne>
             <SecondLineContainer>
                 <CheckMarkContainer display={checkmarkDisplay}><img src={circleCheck} alt={'Task compeleted.'} /></CheckMarkContainer>
                 <TextLineTwo color={lineTwoColor}>{props.lineTwoText}</TextLineTwo>
