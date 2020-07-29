@@ -96,35 +96,37 @@ const PropsInfoContainer = styled.div`
 `
 
 const InfoWrapper = styled.div`
-    margin: 0px 0px 8px 0px;
+    margin: 0px 0px 0px 0px;
     display: flex;
     /* border: 1px solid purple; */
 `
 
 const InfoBold = styled.p`
     margin: 0px 0px 0px 0px;
-    width: 80px;
+    width: 96px;
     font-family: "aktiv-grotesk";
     font-style: normal;
-    font-weight: normal;
+    font-weight: medium;
     font-size: 20px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     color: #000000;
     /* border: 1px dashed gray; */
 `
 
 const InfoRegular = styled.p`
     margin: 0px 0px 0px 0px;
+    width: 100%;
+    max-height: 56px;
     /* width: 150px; */
     font-family: "aktiv-grotesk";
     font-style: italic;
-    font-weight: 300;
+    font-weight: lighter;
     font-size: 20px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     color: #000000;
     /* border: 1px dashed red; */
 `

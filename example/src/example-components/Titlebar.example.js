@@ -8,22 +8,22 @@ const TitlebarTemplateObj = {
     exampleText: `<Titlebar stepOne={string} stepTwo={string} stepThree={string} />`,
     templateProps: [
         {
-            propName: "stepOne",
-            propType: "String",
-            propDescription: 'Sets the "state" of the first titlebar item.',
-            options: ["active", "inactive", "locked"]
+            propName: "blockOneState",
+            propType: "Object",
+            propDescription: 'Sets the "state" of the first titlebar block.',
+            options: ['Object containing state and messages for the first block']
         },
         {
-            propName: "stepTwo",
-            propType: "String",
-            propDescription: 'Sets the "state" of the second titlebar item.',
-            options: ["active", "inactive", "locked"]
+            propName: "blockTwoState",
+            propType: "Object",
+            propDescription: 'Sets the "state" of the second titlebar block.',
+            options: ['Object containing state and messages for the second block']
         },
         {
-            propName: "stepThree",
-            propType: "String",
-            propDescription: 'Sets the "state" of the third titlebar item.',
-            options: ["active", "inactive", "locked"]
+            propName: "blockThreeState",
+            propType: "Object",
+            propDescription: 'Sets the "state" of the third titlebar block.',
+            options: ['Object containing state and messages for the third block']
         }
     ],
     reactComponent: ""

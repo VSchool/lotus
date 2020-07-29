@@ -6,7 +6,7 @@ import circleCheck from "../../assets/icons/circleCheck.svg"
 
 const ItemContainer = styled.div`
     position: relative;
-    max-width: 144px;
+    min-width: 144px;
     max-height: 48px;
     padding: 4px 20px 4px 16px;
     background: ${colors.black};
@@ -14,8 +14,8 @@ const ItemContainer = styled.div`
     border: ${props => props.border};
     opacity: ${props => props.opacity};
 
-    @media (min-width: 768px) {    
-        max-width: 400px;
+    @media (min-width: 768px) {   
+        width: 100%; 
         padding: 4px 16px 4px 88px;
     }
 `

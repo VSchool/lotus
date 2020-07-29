@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-
 import { TitlebarItem } from "../TitlebarItem"
 
 const TitlebarContainer = styled.div`
     position: relative;
-    width: 414px;
+    min-width: 416px;
     height: 48px;
     display: flex;
 
@@ -18,7 +17,6 @@ function Titlebar(props) {
     let blockOneProps = props.blockOneState
     let blockTwoProps = props.blockTwoState
     let blockThreeProps = props.blockThreeState
-    console.log(blockOneProps)
     return (
         <TitlebarContainer>
             <TitlebarItem titlebarItemState={blockOneProps.state} lineOneText={blockOneProps.firstLineMessage} lineTwoText={blockOneProps.secondLineMessage} />
