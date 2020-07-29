@@ -19,7 +19,7 @@ import {
 
 const LiveDemoContainer = styled.div`
     margin: 24px 0px 0px 0px;
-    max-width: 100%;
+    max-width: 800px;
     background: #f4f2f2;
 `
 
@@ -46,7 +46,7 @@ function createCode(name) {
         case "Footer":
             return `<Footer />`
         case "Header":
-            return `<Header userLoggedIn={false} />`
+            return `<Header />`
         case "Modal":
             return `<Modal title={'Are you planning on applying for any V School Scholarships? '} subtitle={'Complete the  Scholarship Application'} body={'If you are interested in applying for scholarships, make sure to apply. Then we tell them how many people are usually rewarded with something.'} />`
         case "Profile":
@@ -56,11 +56,11 @@ function createCode(name) {
         case "Status Message":
             return `<StatusMessage status={'neutral'} message={'Welcome to your V School Application. Get started by completing the tasks below!'} />`
         case "Taskbar":
-            return `<Taskbar title={'Required'} task={'FSJS - Aptitude Test'} />`
+            return `<Taskbar firstLineMessage={'Required'} secondLineMessage={'FSJS - Aptitude Test'} />`
         case "Titlebar Item":
-            return `<TitlebarItem titlebarItemState={'active'} lineOneText={'Step 1'} lineTwoText={'Apply'} />`
+            return `<TitlebarItem status={'active'} title={'Step 1'} subtitle={'Apply'} />`
         case "Titlebar":
-            return `<Titlebar blockOneState={{state: 'active', firstLineMessage: 'Step 1', secondLineMessage: 'Background'}} blockTwoState={{state: 'inactive', firstLineMessage: 'Step 2', secondLineMessage: 'Apply'}} blockThreeState={{state: 'locked', firstLineMessage: 'Step 3', secondLineMessage: 'Enrollment'}} />`       
+            return `<Titlebar blockOne={{status: 'active', firstLineMessage: 'hello', secondLineMessage: 'world'}} blockTwo={{status: 'inactive', firstLineMessage: 'hello', secondLineMessage: 'world'}} blockThree={{status: 'locked', firstLineMessage: 'hello', secondLineMessage: 'world'}} />`
         default:
             return `There is no spoon.`
     }

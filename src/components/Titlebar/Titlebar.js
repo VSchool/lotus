@@ -14,14 +14,20 @@ const TitlebarContainer = styled.div`
 `
 
 function Titlebar(props) {
-    let blockOneProps = props.blockOneState
+    let blockOneObj = props.blockOne
+    let blockTwoObj = props.blockTwo
+    let blockThreeObj = props.blockThree
+    console.log(props)
     let blockTwoProps = props.blockTwoState
     let blockThreeProps = props.blockThreeState
     return (
         <TitlebarContainer>
-            <TitlebarItem titlebarItemState={blockOneProps.state} lineOneText={blockOneProps.firstLineMessage} lineTwoText={blockOneProps.secondLineMessage} />
+            <TitlebarItem titlebarItemState={blockOneObj.status}  lineOneText={blockOneObj.firstLineMessage}  lineTwoText={blockOneObj.secondLineMessage}/>
+            <TitlebarItem titlebarItemState={blockTwoObj.status}  lineOneText={blockTwoObj.firstLineMessage}  lineTwoText={blockTwoObj.secondLineMessage}/>
+            <TitlebarItem titlebarItemState={blockThreeObj.status}  lineOneText={blockThreeObj.firstLineMessage}  lineTwoText={blockThreeObj.secondLineMessage}/>
+            {/* <TitlebarItem titlebarItemState={blockOneProps.state} lineOneText={blockOneProps.firstLineMessage} lineTwoText={blockOneProps.secondLineMessage} />
             <TitlebarItem titlebarItemState={blockTwoProps.state} lineOneText={blockTwoProps.firstLineMessage} lineTwoText={blockTwoProps.secondLineMessage} />
-            <TitlebarItem titlebarItemState={blockThreeProps.state} lineOneText={blockThreeProps.firstLineMessage} lineTwoText={blockThreeProps.secondLineMessage} />
+            <TitlebarItem titlebarItemState={blockThreeProps.state} lineOneText={blockThreeProps.firstLineMessage} lineTwoText={blockThreeProps.secondLineMessage} /> */}
         </TitlebarContainer>
     )
 }

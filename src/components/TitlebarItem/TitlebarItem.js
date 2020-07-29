@@ -42,8 +42,8 @@ const SecondLineContainer = styled.div`
 
 const CheckMarkContainer = styled.div`
     margin: 0px 4px 0px 0px;
-    width: 16px;
-    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
@@ -73,6 +73,7 @@ const TextLineTwo = styled.p`
 `
 
 function TitlebarItem(props) {
+    // console.log(props)
     const {
         border,
         opacity,
