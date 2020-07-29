@@ -60,7 +60,7 @@ function createCode(name) {
         case "Titlebar Item":
             return `<TitlebarItem itemState={'active'} firstLineMessage={'first'} secondLineMessage={'last'} />`
         case "Titlebar":
-            return `<Titlebar />`
+            return `<Titlebar blockOne={{blockState: 'active', firstLine: 'Step 1', secondLine: 'Background'}} blockTwo={{blockState: 'inactive', firstLine: 'Step 2', secondLine: 'Application'}} blockThree={{blockState: 'locked', firstLine: 'Step 3', secondLine: 'Enrollment'}} />`
         default:
             return `There is no spoon.`
     }

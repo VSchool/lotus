@@ -5,11 +5,11 @@ import ComponentDocTemplate from "../components/ComponentDocTemplate"
 const TitlebarTemplateObj = {
     componentName: "Titlebar",
     componentDescription: "Let users know where they are in the application.",
-    exampleText: `<Titlebar stepOne={string} stepTwo={string} stepThree={string} />`,
+    exampleText: `<Titlebar blockOneState={string} blockTwoState={string} blockThreeState={string} />`,
     templateProps: [
         {
             propName: "blockOneState",
-            propType: "Object",
+            propType: 'Object',
             propDescription: 'Sets the "state" of the first titlebar block.',
             options: ['Object containing state and messages for the first block']
         },

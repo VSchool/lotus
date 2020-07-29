@@ -6,7 +6,7 @@ import circleCheck from "../../assets/icons/circleCheck.svg"
 
 const ItemContainer = styled.div`
     position: relative;
-    min-width: 144px;
+    width: 100%;
     max-height: 48px;
     padding: 6px 16px 6px 16px;
     background: ${colors.black};
@@ -14,7 +14,6 @@ const ItemContainer = styled.div`
     border: ${props => props.border};
 
     @media (min-width: 768px) {   
-        max-width: 100%; 
         padding: 4px 16px 4px 88px;
     }
 `
@@ -30,13 +29,11 @@ const FirstLineText = styled.p`
     text-transform: uppercase;
     color: ${props => props.color};
     opacity: ${props => props.opacity};
-    /* border: 1px dotted white; */
 `
 
 const Wrapper = styled.div`
     margin: 0px 0px 0px 0px;
     display: flex;
-    /* border: 1px solid lightblue; */
 `
 
 const CheckMarkContainer = styled.div`
@@ -46,12 +43,10 @@ const CheckMarkContainer = styled.div`
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
-    /* border: 1px dotted red; */
 
     & > img {
         width: 100%;
         height: 100%;
-        /* border: 1px solid orange; */
     }
 `
 
@@ -69,7 +64,6 @@ const SecondLineText = styled.p`
     text-transform: capitalize;
     color: ${props => props.color};
     opacity: ${props => props.opacity};
-    /* border: 1px dotted white; */
 
     @media (min-width: 768px) {   
         max-width: 100%; 
@@ -80,6 +74,7 @@ const SecondLineText = styled.p`
 
 function TitlebarItem(props) {
     let itemDetails = displayItemState(props.itemState)
+    
     const {
         border,
         checkmarkDisplay,
@@ -88,7 +83,6 @@ function TitlebarItem(props) {
         opacity,
         textOpacity
     } = itemDetails
-    console.log(itemDetails)
     
     return (
         <ItemContainer border={border} opacity={opacity}>
