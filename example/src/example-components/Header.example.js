@@ -6,13 +6,13 @@ const HeaderTemplateObj = {
     componentName: "Header",
     componentDescription:
         "Give users an exit, a way back, and a way to know their logged in status.",
-    exampleText: `<Header />`,
+    exampleText: `<Header userLoggedIn={false} />`,
     templateProps: [
         {
-            propName: "headerState",
-            propType: "String",
-            propDescription: "Sets the state of the Header component to display the proper icon.",
-            options: ['default', 'loggedIn', 'closeProfile']
+            propName: "userLoggedIn",
+            propType: "Boolean",
+            propDescription: "Header state is set by user logged in status.",
+            options: [false, true]
         }
     ],
     reactComponent: ""

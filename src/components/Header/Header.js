@@ -1,7 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Profile from '../Profile/Profile'
-import { handleClearClick, handleLoggedInClick } from './utils'
 import * as colors from "../../colors"
 import headerLogo from "../../assets/vs-header-logo.svg"
 import backArrow from "../../assets/icons/arrow-back.svg"
@@ -58,11 +57,13 @@ const HeaderLogoContainer = styled.div`
 `
 
 const IconContainer = styled.div`
+    display: 'block';
     width: 24px;
     height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid lightcoral; */
 `
 
 const EmptyDiv = styled.div`
@@ -76,31 +77,41 @@ const ProfileElementContainer = styled.div`
     right: 24px;
 `
 
-function chooseIcon(iconState) {
-    switch (iconState) {
-        case 'default':
-            return <EmptyDiv></EmptyDiv>
-        case 'loggedIn':
-            return <img src={accountCircle} alt='hello' onClick={handleLoggedInClick} />
-        case 'closeProfile':
-            return <img src={clearX} alt='hello' onClick={handleClearClick} />
-        default:
-            return ''
-    }
-}
-
 function Header(props) {
-    let IconToDisplay = chooseIcon(props.headerState)
+    const [iconImage, setIconImage] = useState(accountCircle)
+    const [profileOpen, setProfileOpen] = useState(false)
+    const [userLoggedIn, setUserLoggedIn] = useState(props.userLoggedIn)
+
+    function handleClick() {
+        let elemContainer = document.getElementById('elemContainer')
+        if (elemContainer.style.display === '') {
+            setIconImage(clearX)
+            elemContainer.style.display = 'block'
+        } else if (elemContainer.style.display === 'block') {
+            setIconImage(accountCircle)
+            elemContainer.style.display = ''
+        }
+    }
+        
+    function createIcon() {
+        if (userLoggedIn === false) {
+            return <EmptyDiv />
+        } else if (userLoggedIn === true) {
+            return <img src={iconImage} alt={'User profile'} onClick={handleClick} />
+        }
+    }
+
+    let headerIcon = createIcon()
 
     return (
         <HeaderContainer>
             <BackContainer>
-                <BackArrowContainer><img src={backArrow} alt={'Back to V School.io'} /></BackArrowContainer>
+                <BackArrowContainer><img src={backArrow} alt={'Back to V School.io'} id={'classyId'} /></BackArrowContainer>
                 <BackText>vschool.io</BackText>
             </BackContainer>
             <HeaderLogoContainer><img src={headerLogo} alt={'V School logo'} /></HeaderLogoContainer>
-            <IconContainer>{IconToDisplay}</IconContainer>
-            <ProfileElementContainer id={'profileElement'}>
+            <IconContainer>{headerIcon}</IconContainer>
+            <ProfileElementContainer id={'elemContainer'}>
                 <Profile userName={'Namey Namerson'} userEmail={'emailaddress@woah.com'} userPhone={'###-###-####'} userCourse={'Fullstack Javascript'} userTime={'Full - Time'} />
             </ProfileElementContainer>
         </HeaderContainer>
