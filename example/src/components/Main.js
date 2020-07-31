@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Switch, Route } from "react-router-dom"
 
 import Introduction from "./Introduction"
+import Button from '../example-components/Button.example'
 import Controls from "../example-components/Controls.example"
 import Card from "../example-components/Card.example"
 import FooterExample from "../example-components/Footer.example"
@@ -27,6 +28,9 @@ export default function Main() {
             <Switch>
                 <Route exact path="/">
                     <Introduction />
+                </Route>
+                <Route path="/button">
+                    <Button />
                 </Route>
                 <Route path="/controls">
                     <Controls />
