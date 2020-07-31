@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 
 import {
+    Button,
     Controls,
     Card,
     Footer,
@@ -28,6 +29,7 @@ const LiveDemoContainer = styled.div`
 `
 
 const scope = {
+    Button,
     Controls,
     Card,
     Footer,
@@ -42,7 +44,10 @@ const scope = {
 }
 
 function createCode(name) {
+
     switch (name) {
+        case "Button":
+            return `<Button\n  buttonStyle={'primary-light'}\n  buttonSize={'lg'}>Button\n</ Button>`
         case "Controls":
             return `<Controls disabledStatus={false} />`
         case "Card":
