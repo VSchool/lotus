@@ -1,139 +1,94 @@
 import React from "react"
 import styled from "styled-components"
-
 import { Button } from "../Button"
 import * as colors from "../../colors"
 
 const ModalContainer = styled.div`
-    padding: 64px 88px;
     position: relative;
-    max-width: 848px;
-    background: ${colors.gray.lighter};
-    border: 2px solid ${colors.gray.base};
+    padding: 32px 24px 8px 24px;
+    max-width: 384px;
+    /* height: 536px; */
+    background: #FBF9F7;
+    border: 2px solid #D8D4CF;
     box-sizing: border-box;
-    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
-        0px 12px 17px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         max-width: 376px;
         padding: 32px 24px 32px 24px;
-    }
+    } */
 `
 
-const ContentContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    max-width: 672px;
-    margin: 0px 0px 0px 0px;
+const ContentWrapper = styled.div`
+    /* border: 1px solid lightcoral; */
 `
 
-const ModalHeadline = styled.h3`
-    max-width: 584px;
-    font-family: "aktiv-grotesk";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 40px;
-    color: ${colors.black};
-    margin: 0px 0px 0px 0px;
-
-    @media (max-width: 768px) {
-        margin: 0px 0px 12px 0px;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 32px;
-    }
-`
-
-const ModalSubtitle = styled.h4`
-    max-width: 584px;
-    font-family: "aktiv-grotesk-extended";
+const FirstLineText = styled.h4`
+    margin: 0px 0px 24px 0px;
+    font-family: 'aktiv-grotesk';
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.25px;
-    text-transform: uppercase;
-    color: ${colors.blue.base};
-    margin: 24px 0px 0px 0px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #21201F;
+    box-sizing: border-box;
 
-    @media (max-width: 768px) {
-        font-size: 14px;
-        line-height: 20px;
-        margin: 12px 0px 8px 0px;
-    }
+    /* border: 1px dotted gray; */
 `
 
-const ModalBody = styled.p`
-    max-width: 672px;
-    font-family: "aktiv-grotesk";
+
+const SecondLineText = styled.p`
+    margin: 0px 0px 16px 0px;
+    font-family: aktiv-grotesk-extended;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    color: #456AE2;
+    /* border: 1px dotted gray; */
+`
+
+const ThirdLineText = styled.p`
+    margin: 0px 0px 40px 0px;
+    font-family: aktiv-grotesk;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    line-height: 24px;
-    color: ${colors.gray.darker};
-    margin: 16px 0px 0px 0px;
-
-    @media (max-width: 768px) {
-        margin: 8px 0px 20px 0px;
-    }
+    line-height: 28px;
+    color: #514F4B;
+    /* border: 1px dotted gray; */
 `
 
-const ButtonRow = styled.div`
+const ButtonWrapper = styled.div`
     display: flex;
-    flex-direction: row;
-    padding: 0px;
-    max-width: 510px;
-    align-self: flex-end;
-    margin: 40px 0px 0px 0px;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        margin: 20px 0px 0px 0px;
-    }
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid dodgerblue; */
 `
 
-const DeclineButton = styled(Button)`
-    width: 184px;
-    height: 56px;
-    margin: 0px 12px 0px 0px;
-    color: ${colors.black};
-    background: ${colors.white};
-
-    @media (max-width: 768px) {
-        min-width: 320px;
-        height: 48px;
-        margin: 0px 0px 12px 0px;
-    }
+const StyledVSButton = styled(Button)`
+    margin: 0px 0px 24px 0px;
+    width: 323px;
 `
 
-const ApplyButton = styled(Button)`
-    width: 296px;
-    height: 56px;
-    margin: 0px 0px 0px 12px;
 
-    @media (max-width: 768px) {
-        min-width: 320px;
-        height: 48px;
-        margin: 24px 0px 0px 0px;
-    }
-`
-
-function Modal({ title, subtitle, body }) {
+function Modal(props) {
+    const { firstLine, secondLine, thirdLine } = props
+    console.log(firstLine, secondLine, thirdLine)
     return (
-        <div>
-            <ModalContainer>
-                <ContentContainer>
-                    <ModalHeadline>{title}</ModalHeadline>
-                    <ModalSubtitle>{subtitle}</ModalSubtitle>
-                    <ModalBody>{body}</ModalBody>
-                    <ButtonRow>
-                        <DeclineButton>Button</DeclineButton>
-                        <ApplyButton>Button</ApplyButton>
-                    </ButtonRow>
-                </ContentContainer>
-            </ModalContainer>
-        </div>
+        <ModalContainer>
+            <ContentWrapper>
+                <FirstLineText>{firstLine}</FirstLineText>
+                <SecondLineText>{secondLine}</SecondLineText>
+                <ThirdLineText>{thirdLine}</ThirdLineText>
+                <ButtonWrapper>
+                    <StyledVSButton buttonStyle={'primary-light'} buttonSize={'lg'}>Button</StyledVSButton>
+                    <StyledVSButton buttonStyle={'primary-dark'} buttonSize={'lg'}>Button</StyledVSButton>
+                </ButtonWrapper>
+            </ContentWrapper>
+        </ModalContainer>
     )
 }
 

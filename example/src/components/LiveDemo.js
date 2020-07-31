@@ -52,7 +52,7 @@ function createCode(name) {
         case "Header":
             return `<Header userLoggedIn={false} />`
         case "Modal":
-            return `<Modal \n  title={'Title text'} \n  subtitle={'Subtitle text'} \n  body={'Body text area.'} \n/>`
+            return `<Modal \n  firstLine={'First line text'} \n  secondLine={'Second line text'} \n  thirdLine={'Third line text'} \n/>`
         case "Profile":
             return `<Profile \n  userName={'Namey Namerson'} \n  userEmail={'nameynamerson@coolemail.com'} \n  userPhone={'999-999-9999'} \n  userCourse={'Fullstack Javascript'} \n  userTime={'Full - Time'} \n/>`
         case "Status Chip":
