@@ -32,6 +32,7 @@ const CopyLinkContainer = styled.div`
     width: 24px;
     height: 24px;
     display: flex;
+    cursor: pointer;
     /* border: 1px dotted green; */
 `
 
