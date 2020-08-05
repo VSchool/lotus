@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from 'prop-types'
 import { displayItemState } from "./utils"
 import * as colors from "../../colors"
 import circleCheck from "../../assets/icons/circleCheck.svg"
@@ -93,6 +94,18 @@ function TitlebarItem(props) {
             </Wrapper>
         </ItemContainer>
     )
+}
+
+TitlebarItem.propTypes = {
+    itemState: PropTypes.string.isRequired,
+    firstLineMessage: PropTypes.string.isRequired,
+    secondLineMessage: PropTypes.string.isRequired
+}
+
+TitlebarItem.defaultProps = {
+    itemState: 'active',
+    firstLineMessage: 'First line',
+    secondLineMessage: 'Second line'
 }
 
 export default TitlebarItem
