@@ -79,7 +79,7 @@ const ProfileElementContainer = styled.div`
 `
 
 function Header(props) {
-    // console.log(props)
+    console.log(props)
     const [iconImage, setIconImage] = useState(accountCircle)
     const [profileOpen, setProfileOpen] = useState(false)
     const [userLoggedIn, setUserLoggedIn] = useState(props.userLoggedIn)
