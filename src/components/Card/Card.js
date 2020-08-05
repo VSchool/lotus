@@ -119,4 +119,10 @@ Card.propTypes = {
     message: PropTypes.string.isRequired
 }
 
+Card.defaultProps = {
+    status: 'in-progress',
+    title: 'Hello',
+    messsage: 'World'
+}
+
 export default Card
