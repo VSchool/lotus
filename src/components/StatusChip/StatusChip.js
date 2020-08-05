@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-// import PropTypes from "prop-types"
+import PropTypes from "prop-types"
 import { decideChipStatus } from "./utils"
 import * as colors from "../../colors"
 
@@ -30,7 +30,7 @@ const ChipText = styled.p`
     color: ${colors.black};
 `
 
-function StatusChip({status}) {
+function StatusChip(props) {
     const { border, backgroundColor, text } = decideChipStatus(status)
 
     return (
@@ -40,8 +40,12 @@ function StatusChip({status}) {
     )
 }
 
-// StatusChip.propTypes = {
-//     status: PropTypes.string.isRequired
-// }
+StatusChip.propTypes = {
+    status: PropTypes.string.isRequired
+}
+
+StatusChip.defaultProps = {
+    status: 'not-started'
+}
 
 export default StatusChip
