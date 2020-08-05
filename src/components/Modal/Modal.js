@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from 'prop-types'
 import { Button } from "../Button"
 import * as colors from "../../colors"
 
@@ -127,5 +128,18 @@ function Modal(props) {
         </ModalContainer>
     )
 }
+
+Modal.propTypes = {
+    firstLine: PropTypes.string.isRequired,
+    secondLine: PropTypes.string.isRequired,
+    thirdLine: PropTypes.string.isRequired
+}
+
+Modal.deafultProps = {
+    firstLine: 'Are you planning on applying for any V School Scholarships?',
+    secondLine: 'Complete the  Scholarship Application',
+    thirdLine: 'If you are interested in applying for scholarships, make sure to apply. Then we tell them how many people are usually rewarded with something.'
+}
+
 
 export default Modal

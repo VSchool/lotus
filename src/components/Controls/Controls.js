@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import * as colors from "../../colors"
 
 const ControlsContainer = styled.div`
@@ -30,8 +31,8 @@ const TermsLink = styled.a`
     text-decoration: underline;
 `
 
-function Controls({ disabledStatus }) {
-    // console.log({disabledStatus})
+function Controls( disabledStatus ) {
+    // console.log(disabledStatus)
     return (
         <ControlsContainer>
             <input type="checkbox" disabled={disabledStatus} />
@@ -41,5 +42,9 @@ function Controls({ disabledStatus }) {
         </ControlsContainer>
     )
 }
+
+// Controls.propTypes = {
+//     disabledStatus: PropTypes.boolean
+// }
 
 export default Controls

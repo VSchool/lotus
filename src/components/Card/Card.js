@@ -90,7 +90,6 @@ const TextButton = styled.button`
 `
 
 function Card(props) {
-    console.log(props)
     const {
         cardStatus,
         titleText,
