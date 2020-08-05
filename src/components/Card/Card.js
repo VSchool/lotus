@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import { StatusChip } from "../StatusChip"
 import { findCardStatus } from "./utils"
 import * as colors from "../../colors"
@@ -89,7 +90,7 @@ const TextButton = styled.button`
 `
 
 function Card(props) {
-    
+    console.log(props)
     const {
         cardStatus,
         titleText,
@@ -110,6 +111,12 @@ function Card(props) {
             </BottomWrapper>
         </CardContainer>
     )
+}
+
+Card.propTypes = {
+    status: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
 }
 
 export default Card

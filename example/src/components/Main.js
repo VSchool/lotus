@@ -33,7 +33,7 @@ export default function Main() {
                     <Button />
                 </Route>
                 <Route path="/controls">
-                    <Controls />
+                    <Controls disabledStatus={'hello'} />
                 </Route>
                 <Route path="/card">
                     <Card />

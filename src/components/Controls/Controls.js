@@ -31,7 +31,7 @@ const TermsLink = styled.a`
 `
 
 function Controls({ disabledStatus }) {
-    // console.log(disabledStatus)
+    // console.log({disabledStatus})
     return (
         <ControlsContainer>
             <input type="checkbox" disabled={disabledStatus} />
