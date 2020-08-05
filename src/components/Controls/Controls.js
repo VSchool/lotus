@@ -31,11 +31,10 @@ const TermsLink = styled.a`
     text-decoration: underline;
 `
 
-function Controls( disabledStatus ) {
-    // console.log(disabledStatus)
+function Controls(props) {
     return (
         <ControlsContainer>
-            <input type="checkbox" disabled={disabledStatus} />
+            <input type="checkbox" disabled={props.disabledStatus} />
             <CheckboxLabel>
                 I agree <TermsLink>Terms & Conditions</TermsLink>
             </CheckboxLabel>
