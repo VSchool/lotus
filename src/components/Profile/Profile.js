@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from 'prop-types'
 import * as colors from "../../colors"
 
 const ProfileContainer = styled.div`
@@ -58,26 +59,42 @@ const TextButton = styled.button`
     background: none;
 `
 
-function Profile({ userName, userEmail, userPhone, userCourse, userTime }) {
+function Profile(props) {
     return (
         <ProfileContainer>
             <MyInfoContainer>
                 <ContentHeader>My Info</ContentHeader>
-                <ContentParagraph>{userName}</ContentParagraph>
-                <ContentParagraph>{userEmail}</ContentParagraph>
-                <ContentParagraph>{userPhone}</ContentParagraph>
+                <ContentParagraph>{props.userName}</ContentParagraph>
+                <ContentParagraph>{props.userEmail}</ContentParagraph>
+                <ContentParagraph>{props.userPhone}</ContentParagraph>
             </MyInfoContainer>
             <MyInfoContainer>
                 <ContentHeader>Selected Course</ContentHeader>
-                <ContentParagraph>{userCourse}</ContentParagraph>
+                <ContentParagraph>{props.userCourse}</ContentParagraph>
             </MyInfoContainer>
             <MyInfoContainer>
                 <ContentHeader>Time Commitment</ContentHeader>
-                <ContentParagraph>{userTime}</ContentParagraph>
+                <ContentParagraph>{props.userTime}</ContentParagraph>
                 <TextButton>Log Out</TextButton>
             </MyInfoContainer>
         </ProfileContainer>
     )
+}
+
+Profile.propTypes = {
+    userName: PropTypes.string.isRequired,
+    userEmail: PropTypes.string.isRequired,
+    userPhone: PropTypes.string.isRequired,
+    userCourse: PropTypes.string.isRequired,
+    userTime: PropTypes.string.isRequired
+}
+
+Profile.defaultProps = {
+    userName: 'Namey Namerson',
+    userEmail: 'nameynamerson@coolemail.com',
+    userPhone: '999-999-9999',
+    userCourse: 'Fullstack Javascript',
+    userTime: 'Full - Time'
 }
 
 export default Profile
