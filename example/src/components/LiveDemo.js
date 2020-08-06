@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 
 import {
+    Button,
     Controls,
     Card,
     Footer,
@@ -28,6 +29,7 @@ const LiveDemoContainer = styled.div`
 `
 
 const scope = {
+    Button,
     Controls,
     Card,
     Footer,
@@ -42,7 +44,10 @@ const scope = {
 }
 
 function createCode(name) {
+
     switch (name) {
+        case "Button":
+            return `<Button\n  buttonStyle={'primary-light'}\n  buttonSize={'lg'}>Button\n</ Button>`
         case "Controls":
             return `<Controls disabledStatus={false} />`
         case "Card":
@@ -52,7 +57,7 @@ function createCode(name) {
         case "Header":
             return `<Header userLoggedIn={false} />`
         case "Modal":
-            return `<Modal \n  title={'Title text'} \n  subtitle={'Subtitle text'} \n  body={'Body text area.'} \n/>`
+            return `<Modal \n  firstLine={'Text for first line'} \n  secondLine={'Text for second line'} \n  thirdLine={'Text for third line'} \n/>`
         case "Profile":
             return `<Profile \n  userName={'Namey Namerson'} \n  userEmail={'nameynamerson@coolemail.com'} \n  userPhone={'999-999-9999'} \n  userCourse={'Fullstack Javascript'} \n  userTime={'Full - Time'} \n/>`
         case "Status Chip":

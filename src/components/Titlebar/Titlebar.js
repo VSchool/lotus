@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from 'prop-types'
 import { TitlebarItem } from "../TitlebarItem"
 
 const TitlebarContainer = styled.div`
@@ -21,6 +22,19 @@ function Titlebar(props) {
             <TitlebarItem itemState={blockThree.blockState} firstLineMessage={blockThree.firstLine} secondLineMessage={blockThree.secondLine} />
         </TitlebarContainer>
     )
+}
+
+Titlebar.propTypes = {
+    blockOne: PropTypes.objectOf(PropTypes.string.isRequired),
+    blockTwo: PropTypes.objectOf(PropTypes.string.isRequired),
+    blockThree: PropTypes.objectOf(PropTypes.string.isRequired)
+}
+
+Titlebar.defaultProps = {
+    blockOne: {blockState: 'active', firstLine: 'Step 1', secondLine: 'Background'},
+    blockTwo: {blockState: 'inactive', firstLine: 'Step 2', secondLine: 'Application'},
+    blockThree: {blockState: 'locked', firstLine: 'Step 3', secondLine: 'Enrollment'}
+
 }
 
 export default Titlebar

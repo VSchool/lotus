@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { setStatus } from "./utils"
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import * as colors from "../../colors"
 // import { black, white } from '../../colors/gray'
 
@@ -107,9 +107,16 @@ function StatusMessage(props) {
     )
 }
 
+StatusMessage.propTypes = {
+    status: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired
+}
+
+StatusMessage.defaultProps = {
+    status: 'neutral',
+    message: 'Welcome to your V School Application. Get started!'
+}
+
 export default StatusMessage
 
-// StatusMessage.propTypes = {
-//     status: PropTypes.string.isRequired,
-//     message: PropTypes.string
-//   }
+

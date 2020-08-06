@@ -9,21 +9,21 @@ const ModalTemplateObj = {
     exampleText: `<Modal title={string} subtitle={string} body={string} />`,
     templateProps: [
         {
-            propName: "title",
+            propName: "firstLine",
             propType: "String",
-            propDescription: "Text string that is displayed in the title of the modal.",
+            propDescription: "Text string that is displayed in the first line of the modal.",
             options: ["accepts any String"]
         },
         {
-            propName: "subtitle",
+            propName: "secondLine",
             propType: "String",
-            propDescription: "Text string that is displayed in the subtitle of the modal.",
+            propDescription: "Text string that is displayed in the second line of the modal.",
             options: ["accepts any String"]
         },
         {
-            propName: "body",
+            propName: "thirdLine",
             propType: "String",
-            propDescription: "Text string that is displayed in the body of the modal.",
+            propDescription: "Text string that is displayed in the third line of the modal.",
             options: ["accepts any String"]
         }
     ],

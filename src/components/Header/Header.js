@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import Profile from '../Profile/Profile'
 import * as colors from "../../colors"
 import headerLogo from "../../assets/vs-header-logo.svg"
@@ -78,6 +79,7 @@ const ProfileElementContainer = styled.div`
 `
 
 function Header(props) {
+    console.log(props)
     const [iconImage, setIconImage] = useState(accountCircle)
     const [profileOpen, setProfileOpen] = useState(false)
     const [userLoggedIn, setUserLoggedIn] = useState(props.userLoggedIn)
@@ -117,5 +119,9 @@ function Header(props) {
         </HeaderContainer>
     )
 }
+
+// Header.propTypes = {
+//     userLoggedIn: PropTypes.boolean
+// }
 
 export default Header

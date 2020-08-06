@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from 'prop-types'
 import * as colors from "../../colors"
 
 const TaskbarContainer = styled.div`
@@ -46,13 +47,22 @@ const SecondLineText = styled.p`
 `
 
 function Taskbar(props) {
-    console.log(props)
     return (
         <TaskbarContainer>
             <FirstLineText>{props.firstLineMessage}</FirstLineText>
             <SecondLineText>{props.secondLineMessage}</SecondLineText>
         </TaskbarContainer>
     )
+}
+
+Taskbar.propTypes = {
+    firstLineMessage: PropTypes.string.isRequired,
+    secondLineMessage: PropTypes.string.isRequired
+}
+
+Taskbar.defaultProps = {
+    firstLineMessage:'Required',
+    secondLineMessage: 'FSJS - Aptitude test'
 }
 
 export default Taskbar
