@@ -15,8 +15,6 @@ const StyledButton = styled.button`
     margin: 0;
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    
-    /* See if Logan wants the transition or not */
     transition: transform .05s ease-in-out ,box-shadow .05s ease-in-out;
 
     /* Color styles */

@@ -26,11 +26,21 @@
         "npm": ">=5"
     },
     "scripts": {
-        "build": "rollup -c",
+        "build": "npm run predeploy && rollup -c",
         "start": "rollup -c -w",
         "sass": "node-sass src/lotus.scss dist/lotus.css",
         "prepare": "npm run pretty && npm run sass && npm run build",
         "predeploy": "cd example && npm install && npm run pretty && npm run build",
+        "deploy": "gh-pages -d example/build",
+        "publish-patch": "npm prepare && npm version patch && npm publish",
+        "publish-minor": "npm prepare && npm version minor && npm publish",
+        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+    },
+    "scripts": {
+        "build": "npm run predeploy && rollup -c",
+        "sass": "node-sass src/lotus.scss dist/lotus.css",
+        "prepare": "npm install && npm run pretty && npm run sass && npm run build",
+        "predeploy": "cd example && npm run prepare",
         "deploy": "gh-pages -d example/build",
         "publish-patch": "npm prepare && npm version patch && npm publish",
         "publish-minor": "npm prepare && npm version minor && npm publish",
