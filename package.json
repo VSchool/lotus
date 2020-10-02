@@ -1,6 +1,6 @@
 {
     "name": "lotus",
-    "version": "2.0.0",
+    "version": "1.1.1",
     "description": "Component library and base brand styles for V School projects",
     "contributors": [
         {
@@ -64,6 +64,9 @@
             "last 1 safari version"
         ]
     },
+    "files": [
+        "build"
+    ],
     "devDependencies": {
         "@babel/core": "^7.11.6",
         "@storybook/addon-actions": "^6.0.22",
@@ -73,7 +76,6 @@
         "@storybook/preset-create-react-app": "^3.1.4",
         "@storybook/react": "^6.0.22",
         "babel-loader": "^8.1.0",
-        "formik": "^2.1.7",
         "react-is": "^16.13.1"
     }
 }
