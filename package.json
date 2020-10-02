@@ -1,7 +1,30 @@
 {
-    "name": "lotus-storybook",
-    "version": "0.1.0",
-    "private": true,
+    "name": "lotus",
+    "version": "2.0.0",
+    "description": "Component library and base brand styles for V School projects",
+    "contributors": [
+        {
+            "name": "Bob Ziroll",
+            "url": "https://github.com/bobziroll"
+        },
+        {
+            "name": "Nate Jensen",
+            "url": "https://github.com/njensen58"
+        },
+        {
+            "name": "Michael Stedman",
+            "url": "https://github.com/recondesigns"
+        }
+    ],
+    "license": "MIT",
+    "repository": "https://github.com/VSchool/lotus",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "jsnext:main": "dist/index.es.js",
+    "engines": {
+        "node": ">=8",
+        "npm": ">=5"
+    },
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
