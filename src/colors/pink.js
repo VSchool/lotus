@@ -5,5 +5,5 @@ export const pink = {
     base: "#FA6682",
     dark: "#BB4C61",
     darker: "#7C2637",
-    darkest: "#3E121A"
+    darkest: "#3E121A",
 }

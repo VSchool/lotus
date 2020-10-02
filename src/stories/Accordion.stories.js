@@ -32,9 +32,9 @@ export default {
 
 export const PlainText = (args) => (
     <Accordion title="Item 1" {...args}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi ducimus
-        dicta vel error animi sit unde quisquam, possimus veritatis voluptatum
-        hic beatae ab iusto quasi ex laborum placeat magni minima.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi ducimus dicta vel error
+        animi sit unde quisquam, possimus veritatis voluptatum hic beatae ab iusto quasi ex laborum
+        placeat magni minima.
     </Accordion>
 )
 

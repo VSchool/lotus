@@ -5,5 +5,5 @@ export const orange = {
     base: "#FF8F26",
     dark: "#BF6B1C",
     darker: "#834306",
-    darkest: "#432103"
+    darkest: "#432103",
 }

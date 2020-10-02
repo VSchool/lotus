@@ -45,7 +45,7 @@
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
         "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
-        "prepare": "npm install && npm run pretty && npm run build",
+        "prepare": "npm run pretty",
         "publish-patch": "npm prepare && npm version patch && npm publish",
         "publish-minor": "npm prepare && npm version minor && npm publish"
     },

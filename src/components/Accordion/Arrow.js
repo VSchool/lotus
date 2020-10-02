@@ -5,7 +5,7 @@ const Svg = styled.svg`
     height: 20px;
     width: 20px;
     transition: transform 0.3s ease-in-out;
-    transform: ${props => (props.open ? "rotate(0)" : "rotate(-90deg)")};
+    transform: ${(props) => (props.open ? "rotate(0)" : "rotate(-90deg)")};
 `
 
 export default ({ open }) => {

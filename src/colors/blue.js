@@ -5,5 +5,5 @@ export const blue = {
     base: "#456AE2",
     dark: "#334FA9",
     darker: "#192E73",
-    darkest: "#0B163B"
+    darkest: "#0B163B",
 }

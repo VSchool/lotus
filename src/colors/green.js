@@ -5,5 +5,5 @@ export const green = {
     base: "#008566",
     dark: "#00634C",
     darker: "#004232",
-    darkest: "#002119"
+    darkest: "#002119",
 }

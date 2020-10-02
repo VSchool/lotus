@@ -7,7 +7,7 @@ A component for displaying an on/off switch.
 
 This `Switch` component holds no state of its own. You'll need to maintain state separately and pass in the `on`, `onChange`, `name`, `disabled`, etc. props you need in order to maintain its state externally. It only exists for styling purposes. Because of this, clicking the checkbox/label in the examples below won't change their `:checked` state.
  */
-function Switch({on, ...props}) {
+function Switch({ on, ...props }) {
     return (
         <BaseSelectionBox
             className="switch"

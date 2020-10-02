@@ -5,5 +5,5 @@ export const yellow = {
     base: "#FFCB26",
     dark: "#BF981C",
     darker: "#866807",
-    darkest: "#4B3801"
+    darkest: "#4B3801",
 }

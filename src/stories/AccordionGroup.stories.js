@@ -30,22 +30,19 @@ export default {
 export const GeneralUse = (args) => (
     <AccordionGroup {...args}>
         <Accordion title="Item 1">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-            ducimus dicta vel error animi sit unde quisquam, possimus veritatis
-            voluptatum hic beatae ab iusto quasi ex laborum placeat magni
-            minima.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi ducimus dicta vel error
+            animi sit unde quisquam, possimus veritatis voluptatum hic beatae ab iusto quasi ex
+            laborum placeat magni minima.
         </Accordion>
         <Accordion title="Item 2">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-            ducimus dicta vel error animi sit unde quisquam, possimus veritatis
-            voluptatum hic beatae ab iusto quasi ex laborum placeat magni
-            minima.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi ducimus dicta vel error
+            animi sit unde quisquam, possimus veritatis voluptatum hic beatae ab iusto quasi ex
+            laborum placeat magni minima.
         </Accordion>
         <Accordion title="Item 3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-            ducimus dicta vel error animi sit unde quisquam, possimus veritatis
-            voluptatum hic beatae ab iusto quasi ex laborum placeat magni
-            minima.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi ducimus dicta vel error
+            animi sit unde quisquam, possimus veritatis voluptatum hic beatae ab iusto quasi ex
+            laborum placeat magni minima.
         </Accordion>
     </AccordionGroup>
 )

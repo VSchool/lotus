@@ -5,5 +5,5 @@ export const purple = {
     base: "#C767D9",
     dark: "#954DA2",
     darker: "#6C2E78",
-    darkest: "#38153F"
+    darkest: "#38153F",
 }

@@ -6,37 +6,37 @@ export function decideChipStatus(status, err) {
             return {
                 border: `1px solid ${colors.yellow.base}`,
                 backgroundColor: colors.yellow.lightest,
-                text: "in progress"
+                text: "in progress",
             }
         case "not-started":
             return {
                 border: `1px solid ${colors.gray.dark}`,
                 backgroundColor: colors.gray.light,
-                text: "not started"
+                text: "not started",
             }
         case "completed":
             return {
                 border: `1px solid ${colors.green.base}`,
                 backgroundColor: colors.green.lightest,
-                text: "completed"
+                text: "completed",
             }
         case "up-next":
             return {
                 border: `1px solid ${colors.pink.base}`,
                 backgroundColor: colors.pink.lightest,
-                text: "up next"
+                text: "up next",
             }
         case "err":
             return {
                 border: `1px solid ${colors.pink.base}`,
                 backgroundColor: colors.pink.lightest,
-                text: err
+                text: err,
             }
         default:
             return {
                 border: `1px solid ${colors.gray.dark}`,
                 backgroundColor: colors.gray.light,
-                text: "default"
+                text: "default",
             }
     }
 }
