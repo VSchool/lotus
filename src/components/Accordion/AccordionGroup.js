@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import PropTypes from "prop-types"
 import { gray } from "../../colors"
-import Accordion from "./Accordion"
+import "../../lotus.scss"
 
 const Group = styled.section`
     & > div {
@@ -15,24 +14,26 @@ const Group = styled.section`
     }
 `
 
+/**
+A Wrapper for `<Accordion />` components. `<Accordion />` components must be inside an `<AccordionGroup />`, and an `<AccordionGroup />` must only contain `<Accordion />` items
+ */
 function AccordionGroup({ children, ...rest }) {
     return <Group {...rest}>{children}</Group>
 }
 
 AccordionGroup.propTypes = {
-    children: function(props) {
-        try {
-            React.Children.forEach(props.children, child => {
-                if (child.type.name !== "Accordion") {
-                    throw new Error(
-                        "AccordionGroup can only contain Accordion components as direct children"
-                    )
-                }
-            })
-        } catch (e) {
-            return e
-        }
-    }
+    /**
+    AccordionGroup can only accept `<Accordion>` components as children.
+     */
+    children: function (props) {
+        React.Children.forEach(props.children, (child) => {
+            if (child.type.name !== "Accordion") {
+                return new Error(
+                    "AccordionGroup can only contain Accordion components as direct children"
+                )
+            }
+        })
+    },
 }
 
 export default AccordionGroup

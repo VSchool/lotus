@@ -32,8 +32,7 @@ export function determineButtonColors(props) {
 
 export function determineButtonSize(props) {
     let height, fontSize, minWidth, lineHeight, letterSpacing
-    switch (props.buttonSize) {
-        // ADDED XTRASM SIZE FOR HEADER BUTTON
+    switch (props.size) {
         case "xs":
             height = "32px"
             fontSize = "12px"

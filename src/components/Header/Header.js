@@ -1,53 +1,46 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-
+import PropTypes from "prop-types"
+import Profile from "../Profile/Profile"
+import * as colors from "../../colors"
 import headerLogo from "../../assets/vs-header-logo.svg"
 import backArrow from "../../assets/icons/arrow-back.svg"
 import accountCircle from "../../assets/icons/account-circle24px.svg"
-import * as colors from "../../colors"
+import clearX from "../../assets/icons/clear24px.svg"
+import "../../lotus.scss"
 
 const HeaderContainer = styled.div`
     position: relative;
-    max-width: 416px;
-    height: 80px;
+    max-width: 100%;
+    padding: 28px 24px 28px 24px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background: ${colors.gray.lighter};
     box-shadow: 0px 4px 16px rgba(33, 32, 31, 0.1);
 
     @media (min-width: 768px) {
-        min-width: 100%;
+        max-width: 100%;
     }
 `
 
 const BackContainer = styled.div`
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    left: 18px;
-    width: 24px;
-    height: 24px;
     display: flex;
     align-items: center;
-
-    @media (min-width: 768px) {
-        width: 132px;
-        left: 88px;
-    }
 `
 
-const ArrowContainer = styled.div`
+const BackArrowContainer = styled.div`
     width: 24px;
     height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Fill color should be ${colors.gray.darker}; */
     box-sizing: border-box;
 `
 
 const BackText = styled.p`
-    display: none;
     margin: 0px 0px 0px 16px;
+    display: none;
     font-family: "aktiv-grotesk";
     font-style: normal;
     font-weight: 500;
@@ -56,53 +49,88 @@ const BackText = styled.p`
     color: ${colors.gray.darker};
 
     @media (min-width: 768px) {
-        display: inline;
+        display: block;
     }
 `
 
-const LogoContainer = styled.div`
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    left: calc(50% - 96.75px / 2 + 0.38px);
-    height: 24px;
-
-    @media (min-width: 768px) {
-        position: absolute;
-        margin: 0px 0px 0px 0px;
-    }
+const HeaderLogoContainer = styled.div`
+    display: flex;
+    align-items: center;
 `
 
-const AccountCircleContainer = styled.div`
+const IconContainer = styled.div`
+    display: "block";
     width: 24px;
     height: 24px;
-    position: absolute;
-    right: 18px;
-    margin: 0px 0px 0px 52px;
-    /* Fill color should be #{colors.gray.darker}; */
-
-    @media (min-width: 768px) {
-        right: 88px;
-        margin: 0px 0px 0px 0px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid lightcoral; */
 `
 
-function Header() {
+const EmptyDiv = styled.div``
+
+const ProfileElementContainer = styled.div`
+    display: none;
+    position: absolute;
+    top: 88px;
+    right: 24px;
+`
+
+function Header(props) {
+    console.log(props)
+    const [iconImage, setIconImage] = useState(accountCircle)
+    const [profileOpen, setProfileOpen] = useState(false)
+    const [userLoggedIn, setUserLoggedIn] = useState(props.userLoggedIn)
+
+    function handleClick() {
+        let elemContainer = document.getElementById("elemContainer")
+        if (elemContainer.style.display === "") {
+            setIconImage(clearX)
+            elemContainer.style.display = "block"
+        } else if (elemContainer.style.display === "block") {
+            setIconImage(accountCircle)
+            elemContainer.style.display = ""
+        }
+    }
+
+    function createIcon() {
+        if (userLoggedIn === false) {
+            return <EmptyDiv />
+        } else if (userLoggedIn === true) {
+            return <img src={iconImage} alt={"User profile"} onClick={handleClick} />
+        }
+    }
+
+    let headerIcon = createIcon()
+
     return (
         <HeaderContainer>
             <BackContainer>
-                <ArrowContainer>
-                    <img src={backArrow} alt="Go back to vschool.io" />
-                </ArrowContainer>
+                <BackArrowContainer>
+                    <img src={backArrow} alt={"Back to V School.io"} id={"classyId"} />
+                </BackArrowContainer>
                 <BackText>vschool.io</BackText>
             </BackContainer>
-            <LogoContainer>
-                <img src={headerLogo} alt="V School Logo" />
-            </LogoContainer>
-            <AccountCircleContainer>
-                <img src={accountCircle} alt="account profile image" />
-            </AccountCircleContainer>
+            <HeaderLogoContainer>
+                <img src={headerLogo} alt={"V School logo"} />
+            </HeaderLogoContainer>
+            <IconContainer>{headerIcon}</IconContainer>
+            <ProfileElementContainer id={"elemContainer"}>
+                <Profile
+                    userName={"Namey Namerson"}
+                    userEmail={"emailaddress@woah.com"}
+                    userPhone={"###-###-####"}
+                    userCourse={"Fullstack Javascript"}
+                    userTime={"Full - Time"}
+                />
+            </ProfileElementContainer>
         </HeaderContainer>
     )
 }
+
+// Header.propTypes = {
+//     userLoggedIn: PropTypes.boolean
+// }
 
 export default Header

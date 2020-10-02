@@ -1,25 +1,25 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import * as colors from "../../colors"
+import "../../lotus.scss"
 
 const TaskbarContainer = styled.div`
     position: relative;
-    max-width: 414px;
-    height: 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    min-width: 416px;
+    max-height: 48px;
+    padding: 4px 16px 4px 16px;
     background: ${colors.black};
     border: 4px solid ${colors.green.lighter};
     box-sizing: border-box;
-
     @media (min-width: 768px) {
-        max-width: 1200px;
+        max-width: 100%;
+        padding: 4px 16px 4px 88px;
     }
 `
 
-const TitleText = styled.p`
-    margin: 0px 18px 0px 18px;
+const FirstLineText = styled.p`
+    margin: 0px 0px 3px 0px;
     font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
@@ -28,15 +28,10 @@ const TitleText = styled.p`
     letter-spacing: 0.25px;
     text-transform: uppercase;
     color: ${colors.gray.base};
-
-    @media (min-width: 768px) {
-        max-width: 300px;
-        margin: 0px 18px 0px 88px;
-    }
 `
 
-const TaskText = styled.p`
-    margin: 3px 18px 0px 18px;
+const SecondLineText = styled.p`
+    margin: 0px 0px 0px 0px;
     font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
@@ -47,18 +42,28 @@ const TaskText = styled.p`
     color: ${colors.gray.lighter};
 
     @media (min-width: 768px) {
-        max-width: 300px;
-        margin: 0px 18px 0px 88px;
+        font-size: 14px;
+        line-height: 16px;
     }
 `
 
-function Taskbar({ title, task }) {
+function Taskbar(props) {
     return (
         <TaskbarContainer>
-            <TitleText>{title}</TitleText>
-            <TaskText>{task}</TaskText>
+            <FirstLineText>{props.firstLineMessage}</FirstLineText>
+            <SecondLineText>{props.secondLineMessage}</SecondLineText>
         </TaskbarContainer>
     )
+}
+
+Taskbar.propTypes = {
+    firstLineMessage: PropTypes.string.isRequired,
+    secondLineMessage: PropTypes.string.isRequired,
+}
+
+Taskbar.defaultProps = {
+    firstLineMessage: "Required",
+    secondLineMessage: "FSJS - Aptitude test",
 }
 
 export default Taskbar

@@ -1,126 +1,115 @@
-@import url("https://use.typekit.net/rfo4ebp.css");
-
-/* Scss Variables */
-$media-md: 600px;
-$media-lg: 840px;
-$media-xl: 1200px;
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-family: "aktiv-grotesk";
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-
-/* Sections should be used universally to represent a 
-logical separation in the content of any given page, 
-and additional tweaks should be added to a separate CSS file */
-section {
-    padding-left: 24px;
-    padding-right: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media only screen and (min-width: $media-md) {
-        section {
-            padding-left: 32px;
-            padding-right: 32px;
-        }
-    }
-
-    @media only screen and (min-width: $media-lg) {
-        section {
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-    }
-
-    @media only screen and (min-width: $media-xl) {
-        section {
-            padding-left: 96px;
-            padding-right: 96px;
-        }
-    }
-}
-
-
 h1,
 h2,
 h3,
-p,
-span {
-    font-family: "aktiv-grotesk";
-}
-
-// Smaller headers use the extended font
 h4,
 h5,
 h6 {
+    margin: 0;
+}
+
+h1 {
+    font-family: "aktiv-grotesk";
+    font-size: 44px;
+    line-height: 48px;
+    font-weight: 900;
+
+    @media only screen and (min-width: 800px) {
+        font-size: 56px;
+        line-height: 56px;
+    }
+}
+
+h2 {
+    font-family: "aktiv-grotesk";
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 900;
+
+    @media only screen and (min-width: 800px) {
+        font-size: 44px;
+        line-height: 48px;
+    }
+}
+
+h3 {
+    font-family: "aktiv-grotesk";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+
+    @media only screen and (min-width: 800px) {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 900;
+    }
+}
+
+h4 {
+    font-family: "aktiv-grotesk";
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+
+    @media only screen and (min-width: 800px) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+h5 {
+    font-family: "aktiv-grotesk";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+
+    @media only screen and (min-width: 800px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+h6 {
     font-family: "aktiv-grotesk-extended";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
     text-transform: uppercase;
+
+    @media only screen and (min-width: 800px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
+p {
+    font-family: "aktiv-grotesk";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
 
-
-/* ------------------------------------------------- */
-/* Styles added by gastby that we can choose to keep */
-
-[hidden],
-template {
-    display: none;
+    @media only screen and (min-width: 800px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
-a {
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
+p.lg {
+    font-size: 16px;
+    line-height: 24px;
+
+    @media only screen and (min-width: 800px) {
+        font-size: 20px;
+        line-height: 32px;
+    }
 }
 
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-    -webkit-appearance: button;
-}
+p.sm {
+    font-size: 12px;
+    line-height: 16px;
 
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-}
-
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-    outline: 1px dotted ButtonText;
-}
-
-[type="checkbox"],
-[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
-
-[type="search"] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+    @media only screen and (min-width: 800px) {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }

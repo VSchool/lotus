@@ -2,44 +2,50 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { decideChipStatus } from "./utils"
-import * as colors from "../../colors"
+import { black } from "../../colors"
+import "../../lotus.scss"
 
 const StatusChipContainer = styled.div`
-    margin: 8px 0px 8px 0px;
-    padding: 4px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 112px;
+    height: 24px;
+    background: ${(props) => props.background};
+    border: ${(props) => props.border};
+    box-sizing: border-box;
     border-radius: 4px;
-    background-color: ${props => props.backgroundColor};
-    border: ${props => props.border};
-    display: inline-block;
-    @media (max-width: 768px) {
-        margin: 8px 0px 8px 0px;
-    }
 `
 
-const ChipText = styled.h6`
-    line-height: 16px;
-    font-size: 10px;
-    font-weight: bold;
+const ChipText = styled.p`
+    margin: 0px;
     font-family: "aktiv-grotesk-extended";
-    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
     letter-spacing: 0.5px;
-    color: ${colors.black};
-    margin: 0;
+    text-transform: uppercase;
+    color: ${black};
 `
 
-function StatusChip({ status, err }) {
-    const { border, backgroundColor, text } = decideChipStatus(status, err)
-
+function StatusChip({ status, children, ...rest }) {
+    const { border, backgroundColor, text } = decideChipStatus(status)
     return (
-        <StatusChipContainer backgroundColor={backgroundColor} border={border}>
-            <ChipText>{text}</ChipText>
+        <StatusChipContainer background={backgroundColor} border={border} {...rest}>
+            <ChipText>{children || text}</ChipText>
         </StatusChipContainer>
     )
 }
 
 StatusChip.propTypes = {
-    status: PropTypes.string.isRequired,
-    err: PropTypes.string
+    /**
+    These statuses also come with associated default text if no children are provided as custom text
+     */
+    status: PropTypes.oneOf(["in-progress", "not-started", "completed", "up-next"]).isRequired,
+}
+
+StatusChip.defaultProps = {
+    status: "not-started",
 }
 
 export default StatusChip
