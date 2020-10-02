@@ -1,1 +1,3 @@
-export { default as Controls } from "./Controls"
+export { default as Checkbox } from "./Checkbox"
+export { default as Radio } from "./Radio"
+export { default as Switch } from "./Switch"

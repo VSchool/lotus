@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 import Arrow from "./Arrow"
 import { gray } from "../../colors"
+import "../../lotus.scss"
 
 const Container = styled.div`
     /* border-bottom: 1px solid ${gray.base};
@@ -32,6 +34,11 @@ const Body = styled.div`
     transition: max-height 0.3s ease-in-out;
 `
 
+/**
+The `Accordion` stores the content of an `AccordionGroup`. Therefore, it must have the `AccordionGroup` component as a direct parent.
+
+You can pass any children to `Accordion`.
+ */
 function Accordion({ title, children, ...rest }) {
     const [open, setOpen] = useState(false)
     const [height, setHeight] = useState("0px")
@@ -53,6 +60,18 @@ function Accordion({ title, children, ...rest }) {
             </Body>
         </Container>
     )
+}
+
+Accordion.propTypes = {
+    /**
+    The part that will always show, collapsed or not
+     */
+    title: PropTypes.string.isRequired,
+
+    /**
+    The part hidden by the collapse of the accordion item
+     */
+    children: PropTypes.node.isRequired,
 }
 
 export default Accordion

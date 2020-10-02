@@ -1,32 +1,27 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
+import { displayItemState } from "./utils"
 import * as colors from "../../colors"
-import { itemStatus } from "./utils"
 import circleCheck from "../../assets/icons/circleCheck.svg"
+import "../../lotus.scss"
 
 const ItemContainer = styled.div`
     position: relative;
-    width: 138px;
-    min-height: 48px;
+    width: 100%;
+    max-height: 48px;
+    padding: 6px 16px 6px 16px;
     background: ${colors.black};
-    opacity: ${props => props.opacity};
-    border: ${props => props.border};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 20px 0px 18px;
-    box-sizing: border-box;
+    opacity: ${(props) => props.opacity};
+    border: ${(props) => props.border};
 
     @media (min-width: 768px) {
-        width: 400px;
-        padding: 0px 128px 0px 88px;
+        padding: 4px 16px 4px 88px;
     }
 `
 
-const ItemTitle = styled.p`
-    margin: 0px 0px 2px 0px;
-    max-width: 181px;
-    height: 12px;
+const FirstLineText = styled.p`
+    margin: 0px;
     font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
@@ -34,38 +29,34 @@ const ItemTitle = styled.p`
     line-height: 12px;
     letter-spacing: 0.25px;
     text-transform: uppercase;
-    color: ${props => props.color};
-    opacity: ${props => props.opacity};
-    box-sizing: border-box;
-
-    @media (max-width: 768px) {
-        max-width: 184px;
-    }
+    color: ${(props) => props.color};
+    opacity: ${(props) => props.opacity};
 `
 
-const BottomWrapper = styled.div`
-    max-width: 100%;
-    display: flexbox;
-    align-items: center;
-    box-sizing: border-box;
-
-    @media (min-width: 768px) {
-        max-width: 184px;
-    }
-`
-
-const CircleCheckContainer = styled.div`
-    width: 16px;
-    height: 16px;
-    display: ${props => props.display};
-    margin-right: 4px;
-    box-sizing: border-box;
-`
-
-const ItemSubtitle = styled.p`
+const Wrapper = styled.div`
     margin: 0px 0px 0px 0px;
-    max-width: 100%;
+    display: flex;
+`
+
+const CheckMarkContainer = styled.div`
+    margin: 0px 8px 0px 0px;
+    min-width: 16px;
     height: 16px;
+    display: ${(props) => props.display};
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+        width: 100%;
+        height: 100%;
+    }
+`
+
+const SecondLineText = styled.p`
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "aktiv-grotesk-extended";
     font-style: normal;
     font-weight: bold;
@@ -73,37 +64,55 @@ const ItemSubtitle = styled.p`
     line-height: 13px;
     letter-spacing: 1px;
     text-transform: capitalize;
-    color: ${props => props.color};
-    opacity: ${props => props.opacity};
-    box-sizing: border-box;
+    color: ${(props) => props.color};
+    opacity: ${(props) => props.opacity};
 
     @media (min-width: 768px) {
+        max-width: 100%;
         font-size: 14px;
         line-height: 16px;
     }
 `
 
-function TitlebarItem({ status, title, subtitle }) {
-    const { background, border, opacity, checkmarkDisplay, subtitleColor, titleColor } = itemStatus(
-        status
-    )
+function TitlebarItem(props) {
+    const { stepNum, stepName, text, status } = props
+    const itemDetails = displayItemState(status)
+
+    const {
+        border,
+        checkmarkDisplay,
+        lineOneColor,
+        lineTwoColor,
+        opacity,
+        textOpacity,
+    } = itemDetails
 
     return (
         <ItemContainer border={border} opacity={opacity}>
-            {/* Add in another div to add in the Divider divs */}
-            <ItemTitle color={titleColor} opacity={opacity}>
-                {title}
-            </ItemTitle>
-            <BottomWrapper>
-                <CircleCheckContainer display={checkmarkDisplay}>
-                    <img src={circleCheck} alt="step completed." />
-                </CircleCheckContainer>
-                <ItemSubtitle color={subtitleColor} opacity={opacity}>
-                    {subtitle}
-                </ItemSubtitle>
-            </BottomWrapper>
+            <FirstLineText color={lineOneColor}>
+                {props.stepName} {props.stepNum}
+            </FirstLineText>
+            <Wrapper>
+                <CheckMarkContainer display={checkmarkDisplay}>
+                    <img src={circleCheck} alt={"Completed"} />
+                </CheckMarkContainer>
+                <SecondLineText color={lineTwoColor} opacity={textOpacity}>
+                    {text}
+                </SecondLineText>
+            </Wrapper>
         </ItemContainer>
     )
+}
+
+TitlebarItem.propTypes = {
+    status: PropTypes.string.isRequired,
+    stepName: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+}
+
+TitlebarItem.defaultProps = {
+    status: "inactive",
+    stepName: "Step",
 }
 
 export default TitlebarItem

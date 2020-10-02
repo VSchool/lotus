@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import { determineButtonColors, determineButtonSize } from "./utils"
 import * as colors from "../../colors"
+import "../../lotus.scss"
 
 const StyledButton = styled.button`
     /* Generic Styles */
@@ -15,12 +16,10 @@ const StyledButton = styled.button`
     margin: 0;
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    
-    /* See if Logan wants the transition or not */
-    transition: transform .05s ease-in-out ,box-shadow .05s ease-in-out;
+    transition: transform .05s ease-in-out, box-shadow .05s ease-in-out;
 
     /* Color styles */
-    ${props => {
+    ${(props) => {
         const { color, backgroundColor, borderColor } = determineButtonColors(props)
         return css`
             color: ${color};
@@ -30,7 +29,7 @@ const StyledButton = styled.button`
     }}
 
     /* Sizes */
-    ${props => {
+    ${(props) => {
         const { height, fontSize, minWidth, lineHeight, letterSpacing } = determineButtonSize(props)
         return css`
             height: ${height};
@@ -42,13 +41,13 @@ const StyledButton = styled.button`
     }}
 
     /* Uppercase */
-    text-transform: ${props => props.uppercase && "uppercase"};
+    text-transform: ${(props) => props.uppercase && "uppercase"};
 
     :hover:enabled {
         transform: translate(2px, 2px);
         box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
 
-        ${props =>
+        ${(props) =>
             props.buttonStyle.startsWith("secondary") &&
             css`
                 background-color: transparent;
@@ -68,7 +67,7 @@ const StyledButton = styled.button`
         cursor: not-allowed;
         opacity: 40%;
         box-shadow: none;
-        ${props =>
+        ${(props) =>
             props.buttonStyle === "primary-dark" &&
             css`
                 background-color: ${colors.black};
@@ -76,24 +75,34 @@ const StyledButton = styled.button`
     }
 `
 
-StyledButton.propTypes = {
+/**
+Global button component. Can accept events, but won't redirect to anywhere else on the site.
+
+If you need to switch routes or link externally, you'll need to wrap the Button in an `<a>` or `<Link>` of some sort.
+*/
+
+// This Button component simply wraps the StyledButton from above.
+// It's like this solely so StoryBook auto-generated docs can work correctly
+// (They don't seem to be able to work directly on Styled Components)
+function Button({ children, ...rest }) {
+    return <StyledButton {...rest}>{children}</StyledButton>
+}
+
+Button.propTypes = {
     buttonStyle: PropTypes.oneOf([
         "primary-dark",
         "primary-light",
         "secondary-dark",
-        "secondary-light"
+        "secondary-light",
     ]),
-    // ADDED XTRASM SIZE FOR HEADER BUTTON
-    size: PropTypes.oneOf(["xtrasm", "sm", "md", "lg", "xl"]),
+    size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
     uppercase: PropTypes.bool,
-    inverse: PropTypes.bool
 }
 
-StyledButton.defaultProps = {
+Button.defaultProps = {
     buttonStyle: "primary-dark",
     size: "md",
     uppercase: false,
-    inverse: false
 }
 
-export default StyledButton
+export default Button

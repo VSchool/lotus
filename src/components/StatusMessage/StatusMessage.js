@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { setStatus } from "./utils"
-// import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 import * as colors from "../../colors"
-// import { black, white } from '../../colors/gray'
+import "../../lotus.scss"
 
 const StatusMessageContainer = styled.div`
     position: relative;
@@ -12,7 +12,7 @@ const StatusMessageContainer = styled.div`
     display: flex;
     box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 5px 22px rgba(0, 0, 0, 0.12),
         0px 12px 17px rgba(0, 0, 0, 0.14);
-    border: ${props => props.border};
+    border: ${(props) => props.border};
     /* box-sizing: border-box; */
 
     @media (min-width: 768px) {
@@ -26,8 +26,8 @@ const IndicatorContainer = styled.div`
     min-height: 100%;
     display: flex;
     align-items: center;
-    background: ${props => props.background};
-    border: ${props => props.border};
+    background: ${(props) => props.background};
+    border: ${(props) => props.border};
     box-sizing: border-box;
 `
 
@@ -47,7 +47,7 @@ const MessageWrapper = styled.div`
     width: 100%;
     /* min-height: 100%; */
     padding: 16px 16px 16px 16px;
-    background: ${props => props.background};
+    background: ${(props) => props.background};
     /* background: none; */
     display: flex;
     align-items: center;
@@ -70,7 +70,7 @@ const Message = styled.p`
     font-size: 16px;
     line-height: 24px;
     color: ${colors.black};
-    border: 1px solid ${props => props.borderColor};
+    border: 1px solid ${(props) => props.borderColor};
     box-sizing: border-box;
 
     & > span {
@@ -92,7 +92,7 @@ function StatusMessage(props) {
         indicatorBorder,
         contentBackground,
         contentBorder,
-        messageContent
+        messageContent,
     } = setStatus(status, message)
 
     return (
@@ -107,9 +107,14 @@ function StatusMessage(props) {
     )
 }
 
-export default StatusMessage
+StatusMessage.propTypes = {
+    status: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+}
 
-// StatusMessage.propTypes = {
-//     status: PropTypes.string.isRequired,
-//     message: PropTypes.string
-//   }
+StatusMessage.defaultProps = {
+    status: "neutral",
+    message: "Welcome to your V School Application. Get started!",
+}
+
+export default StatusMessage
