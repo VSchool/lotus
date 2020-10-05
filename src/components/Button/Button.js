@@ -16,7 +16,7 @@ const StyledButton = styled.button`
     margin: 0;
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    transition: transform .05s ease-in-out, box-shadow .05s ease-in-out;
+    transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
 
     /* Color styles */
     ${(props) => {
@@ -60,7 +60,7 @@ const StyledButton = styled.button`
     }
 
     :focus {
-        outline: 1px solid ${colors.blue.base}
+        outline: 1px solid ${colors.blue.base};
     }
 
     :disabled {
