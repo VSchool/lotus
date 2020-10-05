@@ -1,5 +1,5 @@
 {
-    "name": "lotus",
+    "name": "@vschool/lotus",
     "version": "2.0.0",
     "description": "Component library and base brand styles for V School projects",
     "contributors": [
@@ -18,8 +18,8 @@
     ],
     "license": "MIT",
     "repository": "https://github.com/VSchool/lotus",
-    "main": "dist/index.js",
-    "module": "dist/index.es.js",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
     "jsnext:main": "dist/index.es.js",
     "engines": {
         "node": ">=8",
@@ -37,17 +37,24 @@
         "react-scripts": "3.4.3",
         "styled-components": "^5.2.0"
     },
+    "peerDependencies": {
+        "prop-types": "^15.5.4",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
+    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
+        "rollup": "rollup -cw",
+        "build-rollup": "rollup -c",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
         "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
         "prepare": "npm run pretty",
-        "publish-patch": "npm prepare && npm version patch && npm publish",
-        "publish-minor": "npm prepare && npm version minor && npm publish"
+        "publish-patch": "npm run prepare && npm version patch && npm publish",
+        "publish-minor": "npm run prepare && npm version minor && npm publish"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -65,10 +72,16 @@
         ]
     },
     "files": [
-        "build"
+        "dist"
     ],
     "devDependencies": {
+        "@babel/cli": "^7.11.6",
         "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/preset-react": "^7.10.4",
+        "@rollup/plugin-commonjs": "^15.1.0",
+        "@rollup/plugin-image": "^2.0.5",
+        "@rollup/plugin-node-resolve": "^9.0.0",
         "@storybook/addon-actions": "^6.0.22",
         "@storybook/addon-essentials": "^6.0.22",
         "@storybook/addon-links": "^6.0.22",
@@ -76,6 +89,11 @@
         "@storybook/preset-create-react-app": "^3.1.4",
         "@storybook/react": "^6.0.22",
         "babel-loader": "^8.1.0",
-        "react-is": "^16.13.1"
+        "react-is": "^16.13.1",
+        "rollup": "^2.28.2",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-peer-deps-external": "^2.2.3",
+        "rollup-plugin-postcss": "^3.1.8",
+        "rollup-plugin-visualizer": "^4.1.1"
     }
 }
