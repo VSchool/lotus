@@ -1,7 +1,8 @@
-import './index.css'
+import React from "react"
+import ReactDOM from "react-dom"
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+function App() {
+    return <h1>hi</h1>
+}
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById("root"))
