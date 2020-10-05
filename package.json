@@ -1,99 +1,78 @@
 {
-    "name": "@vschool/lotus",
-    "version": "2.0.1",
-    "description": "Component library and base brand styles for V School projects",
-    "contributors": [
-        {
-            "name": "Bob Ziroll",
-            "url": "https://github.com/bobziroll"
-        },
-        {
-            "name": "Nate Jensen",
-            "url": "https://github.com/njensen58"
-        },
-        {
-            "name": "Michael Stedman",
-            "url": "https://github.com/recondesigns"
-        }
-    ],
-    "license": "MIT",
-    "repository": "https://github.com/VSchool/lotus",
-    "main": "dist/index.cjs.js",
-    "module": "dist/index.esm.js",
-    "jsnext:main": "dist/index.es.js",
-    "engines": {
-        "node": ">=8",
-        "npm": ">=5"
+  "name": "@vschool/lotus",
+  "version": "2.0.1",
+  "description": "Component library and base brand styles for V School projects",
+  "contributors": [
+    {
+      "name": "Bob Ziroll",
+      "url": "https://github.com/bobziroll"
     },
-    "dependencies": {
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.5.0",
-        "@testing-library/user-event": "^7.2.1",
-        "node-sass": "^4.14.1",
-        "prop-types": "^15.7.2",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-id-generator": "^3.0.1",
-        "react-scripts": "3.4.3",
-        "styled-components": "^5.2.0"
+    {
+      "name": "Nate Jensen",
+      "url": "https://github.com/njensen58"
     },
-    "peerDependencies": {
-        "prop-types": "^15.5.4",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "rollup": "rollup -cw",
-        "build-rollup": "rollup -c",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "storybook": "start-storybook -p 6006 -s public",
-        "build-storybook": "build-storybook -s public",
-        "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
-        "prepare": "npm run pretty",
-        "publish-patch": "npm run prepare && npm version patch && npm publish",
-        "publish-minor": "npm run prepare && npm version minor && npm publish"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "files": [
-        "dist"
-    ],
-    "devDependencies": {
-        "@babel/cli": "^7.11.6",
-        "@babel/core": "^7.11.6",
-        "@babel/preset-env": "^7.11.5",
-        "@babel/preset-react": "^7.10.4",
-        "@rollup/plugin-commonjs": "^15.1.0",
-        "@rollup/plugin-image": "^2.0.5",
-        "@rollup/plugin-node-resolve": "^9.0.0",
-        "@storybook/addon-actions": "^6.0.26",
-        "@storybook/addon-essentials": "^6.0.26",
-        "@storybook/addon-links": "^6.0.26",
-        "@storybook/node-logger": "^6.0.26",
-        "@storybook/preset-create-react-app": "^3.1.4",
-        "@storybook/react": "^6.0.26",
-        "babel-loader": "^8.1.0",
-        "react-is": "^16.13.1",
-        "rollup": "^2.28.2",
-        "rollup-plugin-babel": "^4.4.0",
-        "rollup-plugin-peer-deps-external": "^2.2.3",
-        "rollup-plugin-postcss": "^3.1.8",
-        "rollup-plugin-visualizer": "^4.1.1"
+    {
+      "name": "Michael Stedman",
+      "url": "https://github.com/recondesigns"
     }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/VSchool/lotus",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "prepare": "run-s build",
+    "publish-patch": "npm version patch && npm publish",
+    "publish-minor": "npm version minor && npm publish",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.26",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.2.0",
+    "microbundle-crl": "^0.13.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "react-scripts": "^3.4.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react-id-generator": "^3.0.1",
+    "styled-components": "^5.2.0"
+  }
 }
