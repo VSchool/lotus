@@ -1,3 +1,1 @@
-# Todo
-
-Write this file 😅
+![Lotus Logo](assets/lotus-logo/png)
