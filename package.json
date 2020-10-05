@@ -28,7 +28,7 @@
         "build": "microbundle-crl --no-compress --format modern,cjs",
         "start": "microbundle-crl watch --no-compress --format modern,cjs",
         "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
-        "prepare": "npm run pretty && run-s build && mv dist/index.css dist/lotus.css",
+        "prepare": "npm run pretty && run-s build",
         "publish-patch": "npm version patch && npm publish",
         "publish-minor": "npm version minor && npm publish",
         "storybook": "start-storybook -p 6006",
