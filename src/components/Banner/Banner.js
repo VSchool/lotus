@@ -29,7 +29,6 @@ const Icon = styled.span`
     width: 56px;
     min-height: 56px;
     color: ${colors.white};
-    font-family: "aktiv-grotesk";
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
