@@ -5,6 +5,7 @@ export default {
     title: "Components/Accordion/AccordionGroup",
     component: AccordionGroup,
     decorators: [
+        
         (Story) => (
             <div
                 style={{
