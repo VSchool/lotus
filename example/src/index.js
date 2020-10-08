@@ -1,24 +1,32 @@
-import React from "react"
+import React, { useState } from "react"
 import ReactDOM from "react-dom"
-import { Banner } from "@vschool/lotus"
+import { TextInput } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 
 function App() {
+    const [name, setName] = useState("")
+
+    function handleChange(e) {
+        setName(e.target.value)
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+    }
     return (
-        <>
-            <Banner status="neutral">Message here</Banner>
-            <br />
-            <Banner status="success">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit voluptate dignissimos
-                vero totam magni inventore explicabo iure laboriosam? Dicta vitae sequi repellat ex
-                qui commodi corporis et excepturi ut expedita.
-            </Banner>
-            <br />
-            <Banner status="warning">Message here</Banner>
-            <br />
-            <Banner status="error">Message here</Banner>
-            <br />
-        </>
+        <form onSubmit={handleSubmit}>
+            <TextInput
+                onChange={handleChange}
+                label="First Name"
+                type="text"
+                value={name}
+                minLength={3}
+                required={true}
+                hasError={false}
+                name="firstName"
+                // helpText="Must be at least 3 characters"
+            />
+        </form>
     )
 }
 
