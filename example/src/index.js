@@ -1,10 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import ReactDOM from "react-dom"
-import { Banner } from "@vschool/lotus"
+import { Titlebar, TitlebarItem } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
-
+import "./styles.css"
 function TitlebarExample() {
-    return <h1>Hi</h1>
+    return (
+        <Titlebar activeIndex={1}>
+            <TitlebarItem>Background</TitlebarItem>
+            <TitlebarItem>Application</TitlebarItem>
+            <TitlebarItem>Enrollment</TitlebarItem>
+        </Titlebar>
+    )
 }
 
 // function InputExample() {
