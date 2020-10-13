@@ -59,8 +59,6 @@ const Title = styled.p`
 `
 
 function TitlebarItem({ children, index, stepName, activeIndex }) {
-    console.log("index:", index)
-    console.log("activeIndex:", activeIndex)
     const isCurrent = index === activeIndex
     const isCompleted = index < activeIndex
     const isDisabled = index > activeIndex
