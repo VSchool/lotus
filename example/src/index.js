@@ -18,7 +18,7 @@ function InputExample() {
     }
 
     function handleSubmit(e) {
-        e.preventDefault()
+        // e.preventDefault()
     }
 
     return (
@@ -28,10 +28,10 @@ function InputExample() {
                 label="Name"
                 type="text"
                 value={formData.name}
-                // minLength={7}
+                minLength={3}
                 // required={false}
                 name="name"
-                // validationText="Required, must contain at least 7 characters"
+                validationText="Must contain at least 3 characters"
             />
             <br />
             <br />
@@ -42,9 +42,9 @@ function InputExample() {
                 placeholder="name@example.com"
                 value={formData.email}
                 minLength={5}
-                required={false}
+                required={true}
                 name="email"
-                validationText="Must contain at least 5 characters."
+                validationText="Must be a valid email address"
             />
             <br />
             <br />
@@ -56,9 +56,9 @@ function InputExample() {
                 minLength={5}
                 required={true}
                 name="password"
-                // hasError={true}
                 validationText="Required, must contain at least 5 characters"
             />
+            <button>Submit</button>
         </form>
     )
 }
