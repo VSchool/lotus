@@ -25,8 +25,8 @@
         "node": ">=10"
     },
     "scripts": {
-        "build": "rollup -c",
-        "start": "rollup -c -w",
+        "build": "microbundle-crl --no-compress --format modern,cjs",
+        "start": "microbundle-crl watch --no-compress --format modern,cjs",
         "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
         "prepare": "npm run pretty && run-s build",
         "publish-patch": "npm version patch && npm publish",

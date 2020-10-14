@@ -3,7 +3,7 @@ import styled, { css } from "styled-components"
 import PropTypes from "prop-types"
 import { black, gray, green } from "../../colors"
 // import Checkmark from "./Checkmark"
-import { ReactComponent as Checkmark } from "../../assets/icons/circleCheck.svg"
+import { ReactComponent as Checkmark } from "../../assets/icons/circle_check.svg"
 import "../../lotus.scss"
 import { TitlebarContext } from "./Titlebar"
 

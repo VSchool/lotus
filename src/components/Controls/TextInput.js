@@ -3,8 +3,9 @@ import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import { useId } from "react-id-generator"
 import { gray, black, blue, white, red, green } from "../../colors"
-import checkmark from "../../assets/icons/circle_check.png"
-console.log(checkmark)
+import { ReactComponent as CheckmarkIcon } from "../../assets/icons/circle_check.svg"
+import { ReactComponent as InfoIcon } from "../../assets/icons/circle_info.svg"
+
 const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -28,7 +29,12 @@ const Label = styled.label`
             }
         `}
 `
+/**
+TODO:
+* When field is filled (props.value.length > 1) and invalid - make it red
+* Remove the green and the checkmark from fields without requirements (should stay darker blue while they're typing)
 
+ */
 const Input = styled.input`
     /* Determine border color */
     ${(props) => {
@@ -56,7 +62,7 @@ const Input = styled.input`
     transition: border-color 0.2s ease-in-out;
 
     &::placeholder {
-        color: ${gray.darker};
+        color: ${gray.dark};
     }
 
     &:hover {
@@ -67,57 +73,99 @@ const Input = styled.input`
         border: 2px solid ${blue.dark};
     }
 
-    &:focus:invalid {
+    /* &:focus:invalid {
         border: 2px solid ${red.base};
 
-        & + span {
+        & + div {
             color: ${red.base};
+            & > svg.info-icon {
+                display: inherit;
+                opacity: 1;
+                transform: translateX(0);
+                margin-right: 2px;
+
+                & > path {
+                    fill: ${red.base};
+                }
+            }
         }
-    }
+    } */
 
     ${(props) =>
         props.value?.length > 0 &&
+        props.hasRequirements &&
         css`
             &:valid {
-                & + span {
-                    padding-left: 15px;
-                    &::before {
-                        content: "✔︎ ";
+                & + div {
+                    & > svg.checkmark-icon {
                         opacity: 1;
                         transform: translateX(0);
+                        margin-right: 2px;
+                    }
+                    & > span {
+                        transform: translateX(14px);
                     }
                 }
             }
             &:focus:valid {
                 border: 2px solid ${green.base};
-
-                & + span {
-                    color: ${green.base};
-                    padding-left: 15px;
-                    &::before {
-                        content: "✔︎ ";
+                & + div {
+                    & > span {
+                        color: ${green.base};
+                    }
+                    & > svg.checkmark-icon > path {
+                        fill: ${green.base};
+                    }
+                }
+            }
+            &:not(:focus):valid {
+                & + div {
+                    opacity: 0;
+                }
+            }
+            &:invalid {
+                border: 2px solid ${red.base} !important;
+                & + div {
+                    & > svg.info-icon {
                         opacity: 1;
                         transform: translateX(0);
+                        margin-right: 2px;
+
+                        & > path {
+                            fill: ${red.base};
+                        }
+                    }
+                    & > span {
+                        transform: translateX(14px);
+                        color: ${red.base};
                     }
                 }
             }
         `}
 `
 
-const ValidationText = styled.span`
+const ValidationText = styled.div`
+    display: flex;
+    align-items: center;
     font-size: 12px;
-    color: ${gray.dark};
+    color: ${gray.darker};
     margin-top: 4px;
     position: relative;
     transition: all 0.2s ease-in-out;
 
-    &::before {
-        content: "";
+    & > * {
+        transition: all 0.2s ease-in-out;
+    }
+
+    & svg {
+        opacity: 0;
         position: absolute;
         left: 0;
-        opacity: 0;
         transform: translateX(-5px);
-        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+        & > path {
+            fill: ${gray.darker};
+        }
     }
 `
 
@@ -170,9 +218,13 @@ const TextInput = forwardRef((props, ref) => {
                 id={id}
                 onFocus={defaultHandleFocus}
                 onBlur={defaultHandleBlur}
+                hasRequirements={requiredOnly || hasAadditionalValidations}
             />
-            <ValidationText>{props.validationText}</ValidationText>
-            <img src="" alt="check mark" />
+            <ValidationText>
+                <CheckmarkIcon className="checkmark-icon" />
+                <InfoIcon className="info-icon" />
+                <span>{props.validationText}</span>
+            </ValidationText>
         </InputContainer>
     )
 })

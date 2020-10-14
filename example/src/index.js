@@ -39,6 +39,7 @@ function InputExample() {
                 onChange={handleChange}
                 label="Email"
                 type="email"
+                placeholder="name@example.com"
                 value={formData.email}
                 minLength={5}
                 required={false}
@@ -52,11 +53,11 @@ function InputExample() {
                 label="Password"
                 type="password"
                 value={formData.password}
-                minLength={7}
+                minLength={5}
                 required={true}
                 name="password"
                 // hasError={true}
-                validationText="Required, must contain at least 7 characters"
+                validationText="Required, must contain at least 5 characters"
             />
         </form>
     )
