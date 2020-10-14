@@ -213,20 +213,20 @@ const TextInput = forwardRef((props, ref) => {
     function defaultHandleFocus(e) {
         // _setRequiredAndEmpty(false)
         setHasBeenFocused(true)
-        props.onFocus?.(e)
+        props.onFocus && props.onFocus(e)
     }
 
     function defaultHandleChange(e) {
         if (required && e.target.value?.length > 0) {
             _setRequiredAndEmpty(false)
         }
-        props.onChange?.(e)
+        props.onChange && props.onChange(e)
     }
 
     function defaultHandleBlur(e) {
         setBlurred(true)
         _setRequiredAndEmpty(required && e.target.value?.length === 0)
-        props.onBlur?.(e)
+        props.onBlur && props.onBlur(e)
     }
 
     return (
