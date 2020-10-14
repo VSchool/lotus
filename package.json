@@ -36,10 +36,15 @@
     },
     "peerDependencies": {
         "react": "^16.8.0",
-        "react-dom": "^16.8.0"
+        "react-dom": "^16.8.0",
+        "styled-components": "^5.2.0"
     },
     "devDependencies": {
         "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/preset-react": "^7.10.4",
+        "@rollup/plugin-commonjs": "^15.1.0",
+        "@rollup/plugin-image": "^2.0.5",
         "@storybook/addon-actions": "^6.0.26",
         "@storybook/addon-essentials": "^6.0.26",
         "@storybook/addon-links": "^6.0.26",
@@ -66,7 +71,10 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-is": "^16.13.1",
-        "react-scripts": "^3.4.1"
+        "react-scripts": "^3.4.1",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-peer-deps-external": "^2.2.3",
+        "rollup-plugin-postcss": "^3.1.8"
     },
     "files": [
         "dist"
