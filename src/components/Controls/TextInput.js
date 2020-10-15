@@ -2,14 +2,14 @@ import React, { forwardRef, useState } from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import { useId } from "react-id-generator"
-import { gray, black, blue, white, red, green } from "../../colors"
+import { gray, black, blue, red, green } from "../../colors"
 import { ReactComponent as CheckmarkIcon } from "../../assets/icons/circle_check.svg"
 import { ReactComponent as InfoIcon } from "../../assets/icons/circle_info.svg"
 
 const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 318px;
+    width: 100%;
 `
 
 const Label = styled.label`
@@ -33,6 +33,7 @@ const Label = styled.label`
 const Input = styled.input`
     /* Determine border color */
     ${(props) => {
+        console.log(props)
         if (props.hasError || props._requiredAndEmpty) {
             return css`
                 /* These styles copied from the :invalid section below
@@ -52,6 +53,7 @@ const Input = styled.input`
                     }
                     & > span {
                         transform: translateX(14px);
+                        width: calc(100% - 14px);
                         color: ${red.base};
                     }
                 }
@@ -117,6 +119,7 @@ const Input = styled.input`
                     }
                     & > span {
                         transform: translateX(14px);
+                        width: calc(100% - 14px);
                     }
                 }
             }
@@ -150,6 +153,7 @@ const Input = styled.input`
                     }
                     & > span {
                         transform: translateX(14px);
+                        width: calc(100% - 14px);
                         color: ${red.base};
                     }
                 }
@@ -165,7 +169,7 @@ const Input = styled.input`
 
 const ValidationText = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     font-size: 12px;
     color: ${gray.darker};
     margin-top: 4px;
@@ -180,6 +184,7 @@ const ValidationText = styled.div`
         opacity: 0;
         position: absolute;
         left: 0;
+        top: 2px;
         transform: translateX(-5px);
 
         & > path {
@@ -190,30 +195,37 @@ const ValidationText = styled.div`
 
 const TextInput = forwardRef((props, ref) => {
     const [id] = useId(1, "input-")
-    const [hasBeenFocused, setHasBeenFocused] = useState(false)
-    const [blurred, setBlurred] = useState(false)
-    const [hasError, setHasError] = useState(props.hasError)
     const [_requiredAndEmpty, _setRequiredAndEmpty] = useState(false)
 
     const { minLength, maxLength, min, max, pattern, required } = props
     const hasAdditionalValidations = !!(minLength || maxLength || min || max || pattern)
     const hasRequirements = required || hasAdditionalValidations
-    const requiredOnly = !!(props.required && !hasAdditionalValidations)
-    /**
-    If a field has additional validation requirements (minlength)
-        turn red immediately upon focus while the validation isn't yet met
-        turn green when the validation is met
-        filled state upon blur
-    if a field is ONLY required,
-        normal state workflow
-        upon blur the field is empty, then turn red and stay red, and has helper text saying it's required
 
-     */
-
-    function defaultHandleFocus(e) {
-        // _setRequiredAndEmpty(false)
-        setHasBeenFocused(true)
-        props.onFocus && props.onFocus(e)
+    let defaultValidationText
+    if (props.validationText === "auto-generate") {
+        defaultValidationText = ""
+        if (required) {
+            defaultValidationText += "Required. "
+        }
+        if (props.type === "email") {
+            defaultValidationText += "Must be a valid email address. "
+        }
+        if (minLength) {
+            defaultValidationText += `Must be at least ${minLength} characters. `
+        }
+        if (maxLength) {
+            defaultValidationText += `Must be at most ${maxLength} characters. `
+        }
+        if (min) {
+            defaultValidationText += `Must be greater than ${min - 1}. `
+        }
+        if (max) {
+            defaultValidationText += `Must be less than ${max + 1}. `
+        }
+    } else if (props.validationText?.length > 0) {
+        defaultValidationText = props.validationText
+    } else {
+        defaultValidationText = ""
     }
 
     function defaultHandleChange(e) {
@@ -224,7 +236,6 @@ const TextInput = forwardRef((props, ref) => {
     }
 
     function defaultHandleBlur(e) {
-        setBlurred(true)
         _setRequiredAndEmpty(required && e.target.value?.length === 0)
         props.onBlur && props.onBlur(e)
     }
@@ -239,7 +250,7 @@ const TextInput = forwardRef((props, ref) => {
                 ref={ref}
                 id={id}
                 _requiredAndEmpty={_requiredAndEmpty}
-                onFocus={defaultHandleFocus}
+                onFocus={props.onFocus}
                 onBlur={defaultHandleBlur}
                 hasRequirements={hasRequirements}
                 onChange={defaultHandleChange}
@@ -247,7 +258,7 @@ const TextInput = forwardRef((props, ref) => {
             <ValidationText>
                 <CheckmarkIcon className="checkmark-icon" />
                 <InfoIcon className="info-icon" />
-                {hasRequirements && <span>{props.validationText}</span>}
+                {hasRequirements && <span>{defaultValidationText}</span>}
             </ValidationText>
         </InputContainer>
     )
@@ -270,6 +281,8 @@ TextInput.propTypes = {
     /**
     Should contain any information that might help the user fill out the field. E.g. if the field is required, should add `validationText` of "Required."
     This text will only display if there are HTML form validations added to the input. (E.g. `required`, `minLength`, `maxLength`, `min`, `max`, or `pattern`)
+
+    If you use the value `"auto-generate"`, it will automatically populate the validation text based on the requirements added. (Except for `pattern` validation).
      */
     validationText: PropTypes.string,
     placeholder: PropTypes.string,

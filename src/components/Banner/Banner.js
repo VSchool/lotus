@@ -57,6 +57,9 @@ function Banner({ children, status, ...rest }) {
 }
 
 Banner.propTypes = {
+    /**
+    Determines the color of the banner and the icon on the side. Options:
+     */
     status: PropTypes.oneOf(["neutral", "success", "warning", "error"]).isRequired,
     children: PropTypes.string.isRequired,
 }

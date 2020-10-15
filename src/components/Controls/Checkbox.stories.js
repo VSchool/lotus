@@ -1,5 +1,5 @@
 import React from "react"
-import Checkbox from "../../components/Controls/Checkbox"
+import { Checkbox } from "./index"
 
 export default {
     title: "Components/Controls/Checkbox",

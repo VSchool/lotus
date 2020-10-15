@@ -26,12 +26,12 @@ function InputExample() {
             <TextInput
                 onChange={handleChange}
                 label="Name"
-                type="text"
+                type="email"
                 value={formData.name}
                 minLength={3}
-                // required={false}
+                required={true}
                 name="name"
-                validationText="Must contain at least 3 characters"
+                validationText="auto-generate"
             />
             <br />
             <br />
@@ -44,7 +44,7 @@ function InputExample() {
                 minLength={5}
                 required={true}
                 name="email"
-                validationText="Must be a valid email address"
+                validationText="auto-generate"
             />
             <br />
             <br />

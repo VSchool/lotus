@@ -1,5 +1,5 @@
 import React from "react"
-import TextInput from "../../components/Controls/TextInput"
+import { TextInput } from "./index"
 
 export default {
     title: "Components/Controls/TextInput",
@@ -17,18 +17,17 @@ Default.args = {
     name: "firstName",
     type: "text",
     label: "First Name",
-    hasError: false,
     placeholder: "Enter name here",
 }
 
 Default.parameters = {
     docs: {
-        storyDescription: "Also, hover and focus to see different states",
+        storyDescription: "Hover and focus to see different states",
     },
 }
 
-export const Filled = Template.bind({})
-Filled.args = {
+export const FilledValid = Template.bind({})
+FilledValid.args = {
     name: "firstName",
     type: "text",
     label: "First Name",
@@ -36,22 +35,26 @@ Filled.args = {
     value: "Bob Ziroll",
 }
 
-Filled.parameters = {
+FilledValid.parameters = {
     docs: {
         storyDescription: "Darker border when filled and blurred",
     },
 }
 
-export const Invalid = Template.bind({})
-Invalid.args = {
+export const HasErrorOverride = Template.bind({})
+HasErrorOverride.args = {
     name: "firstName",
     type: "text",
     label: "First Name",
     hasError: true,
 }
 
-Invalid.parameters = {
+HasErrorOverride.parameters = {
     docs: {
-        storyDescription: "When `hasError` is `true`",
+        storyDescription: `
+When the developer sets \`hasError\` to \`true\`. This takes priority over any internal validations being handled by the \`TextInput\`, and is useful for applying errors from the outside, in.
+
+It's best to include some \`validationText\` to help indicate what the error is all about.
+`,
     },
 }

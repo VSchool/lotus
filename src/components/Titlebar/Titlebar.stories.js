@@ -1,8 +1,8 @@
 import React from "react"
-import { Titlebar, TitlebarItem } from "../components/Titlebar"
+import { Titlebar, TitlebarItem } from "./index"
 
 export default {
-    title: "Components/Titlebar/Titlebar",
+    title: "Components/Titlebar",
     component: Titlebar,
     parameters: {
         componentSubtitle: "A multi-step progress indicator",

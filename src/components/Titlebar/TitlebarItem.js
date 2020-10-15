@@ -1,11 +1,9 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled, { css } from "styled-components"
 import PropTypes from "prop-types"
 import { black, gray, green } from "../../colors"
-// import Checkmark from "./Checkmark"
 import { ReactComponent as Checkmark } from "../../assets/icons/circle_check.svg"
 import "../../lotus.scss"
-import { TitlebarContext } from "./Titlebar"
 
 const ItemContainer = styled.div`
     box-sizing: border-box;
@@ -58,6 +56,14 @@ const Title = styled.p`
     }
 `
 
+const StyledCheckmark = styled(Checkmark)`
+    height: 14px;
+    width: 14px;
+    & > path {
+        fill: ${green.base};
+    }
+`
+
 function TitlebarItem({ children, index, stepName, activeIndex }) {
     const isCurrent = index === activeIndex
     const isCompleted = index < activeIndex
@@ -70,7 +76,7 @@ function TitlebarItem({ children, index, stepName, activeIndex }) {
             <Title>
                 {isCompleted && (
                     <span>
-                        <Checkmark />
+                        <StyledCheckmark />
                     </span>
                 )}
                 {children}

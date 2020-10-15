@@ -1,11 +1,10 @@
 import React from "react"
-import { Accordion, AccordionGroup } from "../components/Accordion"
+import { Accordion, AccordionGroup } from "./index"
 
 export default {
     title: "Components/Accordion/AccordionGroup",
     component: AccordionGroup,
     decorators: [
-        
         (Story) => (
             <div
                 style={{

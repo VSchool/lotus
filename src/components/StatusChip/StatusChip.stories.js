@@ -1,5 +1,5 @@
 import React from "react"
-import { StatusChip } from "../components/StatusChip"
+import { StatusChip } from "./index"
 export default {
     title: "Atomic/StatusChip",
     component: StatusChip,
