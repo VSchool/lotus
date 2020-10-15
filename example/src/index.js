@@ -26,7 +26,7 @@ function InputExample() {
             <TextInput
                 onChange={handleChange}
                 label="Name"
-                type="email"
+                type="text"
                 value={formData.name}
                 minLength={3}
                 required={true}
@@ -35,7 +35,7 @@ function InputExample() {
             />
             <br />
             <br />
-            <TextInput
+            {/* <TextInput
                 onChange={handleChange}
                 label="Email"
                 type="email"
@@ -57,7 +57,7 @@ function InputExample() {
                 required={true}
                 name="password"
                 validationText="Required, must contain at least 5 characters"
-            />
+            /> */}
             <button>Submit</button>
         </form>
     )

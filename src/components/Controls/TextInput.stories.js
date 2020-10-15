@@ -41,6 +41,23 @@ FilledValid.parameters = {
     },
 }
 
+export const FilledInvalid = Template.bind({})
+FilledInvalid.args = {
+    name: "firstName",
+    type: "text",
+    label: "First Name",
+    hasError: true,
+    value: "B",
+    minLength: 2,
+    required: true,
+}
+
+FilledInvalid.parameters = {
+    docs: {
+        storyDescription: "Darker border when filled and blurred",
+    },
+}
+
 export const HasErrorOverride = Template.bind({})
 HasErrorOverride.args = {
     name: "firstName",

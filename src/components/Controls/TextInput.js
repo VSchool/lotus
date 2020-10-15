@@ -33,7 +33,6 @@ const Label = styled.label`
 const Input = styled.input`
     /* Determine border color */
     ${(props) => {
-        console.log(props)
         if (props.hasError || props._requiredAndEmpty) {
             return css`
                 /* These styles copied from the :invalid section below
@@ -57,14 +56,6 @@ const Input = styled.input`
                         color: ${red.base};
                     }
                 }
-                /* &:hover,
-                &:focus {
-                    border: 2px solid ${red.base};
-                } */
-
-                /* &:focus {
-                    border: 2px solid ${blue.dark};
-                } */
             `
         } else if (!props.value || props.value.length === 0) {
             return css`
