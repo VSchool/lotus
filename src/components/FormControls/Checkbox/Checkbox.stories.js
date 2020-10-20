@@ -2,7 +2,7 @@ import React from "react"
 import { Checkbox } from "./index"
 
 export default {
-    title: "Components/Controls/Checkbox",
+    title: "Components/FormControls/Checkbox",
     component: Checkbox,
     argTypes: { onChange: { action: "changed" } },
     parameters: {

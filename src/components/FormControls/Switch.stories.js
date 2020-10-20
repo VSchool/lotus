@@ -2,7 +2,7 @@ import React from "react"
 import { Switch } from "./index"
 
 export default {
-    title: "Components/Controls/Switch",
+    title: "Components/FormControls/Switch",
     component: Switch,
     argTypes: { onChange: { action: "changed" } },
     parameters: {

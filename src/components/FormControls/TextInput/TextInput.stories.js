@@ -2,7 +2,7 @@ import React from "react"
 import { TextInput } from "./index"
 
 export default {
-    title: "Components/Controls/TextInput",
+    title: "Components/FormControls/TextInput",
     component: TextInput,
     argTypes: { onChange: { action: "changed" } },
     parameters: {

@@ -2,7 +2,7 @@ import React from "react"
 import { Radio } from "./index"
 
 export default {
-    title: "Components/Controls/Radio",
+    title: "Components/FormControls/Radio",
     component: Radio,
     argTypes: { onChange: { action: "changed" } },
     parameters: {

@@ -88,12 +88,5 @@ function TitlebarItem({ children, index, stepName, activeIndex }) {
 export default TitlebarItem
 
 TitlebarItem.propTypes = {
-    /**
-    If you don't want to use "Step" as the indicator, you can specify an alternative.
-     */
-    stepName: PropTypes.string,
-}
-
-TitlebarItem.defaultProps = {
-    stepName: "Step",
+    children: PropTypes.string.isRequired,
 }

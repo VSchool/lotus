@@ -1,7 +1,7 @@
 export { Accordion, AccordionGroup } from "./components/Accordion"
 export { Button } from "./components/Button"
 export { Card } from "./components/Card"
-export { Checkbox, Radio, Switch, TextInput } from "./components/Controls"
+export { Checkbox, Radio, Switch, TextInput, Textarea } from "./components/FormControls"
 export { StatusChip } from "./components/StatusChip"
 export { Banner } from "./components/Banner"
 export { Profile } from "./components/Profile"
