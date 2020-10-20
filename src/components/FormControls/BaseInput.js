@@ -247,8 +247,8 @@ const TextInput = forwardRef((props, ref) => {
             <Label htmlFor={id} required={required}>
                 {props.label}
             </Label>
-            {props.type !== "textarea" && (
-                <Input
+            {props.type === "textarea" ? (
+                <StyledTextarea
                     {...props}
                     ref={ref}
                     id={id}
@@ -258,9 +258,8 @@ const TextInput = forwardRef((props, ref) => {
                     hasRequirements={hasRequirements}
                     onChange={defaultHandleChange}
                 />
-            )}
-            {props.type === "textarea" && (
-                <StyledTextarea
+            ) : (
+                <Input
                     {...props}
                     ref={ref}
                     id={id}
