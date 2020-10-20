@@ -158,15 +158,15 @@ const sharedInputStyles = css`
         `}
 `
 
+const Input = styled.input`
+    ${sharedInputStyles};
+`
+
 const StyledTextarea = styled.textarea`
     ${sharedInputStyles};
     height: 200px;
     overflow-y: scroll;
     padding: 16px;
-`
-
-const Input = styled.input`
-    ${sharedInputStyles};
 `
 
 const ValidationText = styled.div`
