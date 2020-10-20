@@ -160,7 +160,7 @@ const sharedInputStyles = css`
 
 const StyledTextarea = styled.textarea`
     ${sharedInputStyles};
-    height: 250px;
+    height: 200px;
     overflow-y: scroll;
     padding: 16px;
 `
