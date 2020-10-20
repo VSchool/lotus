@@ -2,12 +2,12 @@ import React, { useState } from "react"
 import ReactDOM from "react-dom"
 // import styled from "styled-components"
 // import { Titlebar, TitlebarItem } from "@vschool/lotus"
-import { TextInput } from "@vschool/lotus"
+import { TextInput, Textarea } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
 
 function InputExample() {
-    const [formData, setFormData] = useState({ name: "", email: "", password: "" })
+    const [formData, setFormData] = useState({ name: "", email: "", password: "", whyJoin: "" })
 
     function handleChange(e) {
         const { name, value } = e.target
@@ -35,6 +35,16 @@ function InputExample() {
             />
             <br />
             <br />
+            <Textarea
+                onChange={handleChange}
+                label="Why do you want to join V School?"
+                type="textarea"
+                value={formData.whyJoin}
+                minLength={3}
+                required={true}
+                name="whyJoin"
+                validationText="auto-generate"
+            />
             {/* <TextInput
                 onChange={handleChange}
                 label="Email"

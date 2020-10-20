@@ -30,7 +30,7 @@ const Label = styled.label`
         `}
 `
 
-const Input = styled.input`
+const sharedInputStyles = css`
     /* Determine border color */
     ${(props) => {
         if (props.hasError || props._requiredAndEmpty) {
@@ -158,6 +158,17 @@ const Input = styled.input`
         `}
 `
 
+const StyledTextarea = styled.textarea`
+    ${sharedInputStyles};
+    height: 250px;
+    overflow-y: scroll;
+    padding: 16px;
+`
+
+const Input = styled.input`
+    ${sharedInputStyles};
+`
+
 const ValidationText = styled.div`
     display: flex;
     align-items: flex-start;
@@ -236,16 +247,29 @@ const TextInput = forwardRef((props, ref) => {
             <Label htmlFor={id} required={required}>
                 {props.label}
             </Label>
-            <Input
-                {...props}
-                ref={ref}
-                id={id}
-                _requiredAndEmpty={_requiredAndEmpty}
-                onFocus={props.onFocus}
-                onBlur={defaultHandleBlur}
-                hasRequirements={hasRequirements}
-                onChange={defaultHandleChange}
-            />
+            {props.type === "textarea" ? (
+                <StyledTextarea
+                    {...props}
+                    ref={ref}
+                    id={id}
+                    _requiredAndEmpty={_requiredAndEmpty}
+                    onFocus={props.onFocus}
+                    onBlur={defaultHandleBlur}
+                    hasRequirements={hasRequirements}
+                    onChange={defaultHandleChange}
+                />
+            ) : (
+                <Input
+                    {...props}
+                    ref={ref}
+                    id={id}
+                    _requiredAndEmpty={_requiredAndEmpty}
+                    onFocus={props.onFocus}
+                    onBlur={defaultHandleBlur}
+                    hasRequirements={hasRequirements}
+                    onChange={defaultHandleChange}
+                />
+            )}
             <ValidationText>
                 <CheckmarkIcon className="checkmark-icon" />
                 <InfoIcon className="info-icon" />

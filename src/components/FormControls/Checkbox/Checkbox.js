@@ -1,15 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-import BaseSelectionBox from "./BaseSelectionBox"
+import BaseCheckbox from "../BaseCheckbox"
+import "../../../lotus.scss"
 
 /**
-This `Radio` component holds no state of its own. You'll need to maintain state separately and pass in the `checked`, `onChange`, `name`, `disabled`, etc. props you need in order to maintain its state externally. So really, it only exists for styling purposes. Because of this, clicking the checkbox/label in the examples below won't change their `:checked` state.
+A component for displaying checkboxes.
+
+This `Checkbox` component holds no state of its own. You'll need to maintain state separately and pass in the `checked`, `onChange`, `name`, `disabled`, etc. props you need in order to maintain its state externally. It only exists for styling purposes. Because of this, clicking the checkbox/label in the examples below won't change their `:checked` state.
  */
-function Radio(props) {
-    return <BaseSelectionBox className="radio" type="radio" {...props} />
+function Checkbox(props) {
+    return <BaseCheckbox className="checkbox" type="checkbox" {...props} />
 }
 
-Radio.propTypes = {
+Checkbox.propTypes = {
     /**
     Whether or not the controls should be filled in
      */
@@ -32,4 +35,4 @@ Radio.propTypes = {
     children: PropTypes.node.isRequired,
 }
 
-export default Radio
+export default Checkbox
