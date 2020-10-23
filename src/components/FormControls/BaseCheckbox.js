@@ -63,6 +63,7 @@ export const ControlsContainer = styled.div`
 
 export const ControlsInput = styled.input`
     appearance: none;
+    margin: 0;
 
     &:not(:checked) + label:before {
         border: 2px solid ${gray.base};

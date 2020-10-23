@@ -1,5 +1,6 @@
 export { default as Checkbox } from "./Checkbox"
 export { default as Radio } from "./Radio"
+export { default as CheckboxRadioGroup } from "./CheckboxRadioGroup"
 export { default as Switch } from "./Switch"
 export { default as TextInput } from "./TextInput"
 export { default as Textarea } from "./Textarea"

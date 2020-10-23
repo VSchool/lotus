@@ -1,10 +1,20 @@
 import React, { useState } from "react"
 import ReactDOM from "react-dom"
-// import styled from "styled-components"
+import styled from "styled-components"
 // import { Titlebar, TitlebarItem } from "@vschool/lotus"
-import { TextInput, Textarea, Checkbox, Button } from "@vschool/lotus"
+import { TextInput, Textarea, Checkbox, Radio, CheckboxRadioGroup, Button } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
+
+const Container = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+
+    & > div {
+        flex-basis: 50%;
+        min-width: 200px;
+    }
+`
 
 function InputExample() {
     const [formData, setFormData] = useState({ name: "", email: "", password: "", whyJoin: "" })
@@ -64,9 +74,19 @@ function InputExample() {
                 name="password"
                 validationText="Required, must contain at least 5 characters"
             /> */}
-            <Checkbox>Hire our students</Checkbox>
-            <Checkbox>Hire our students</Checkbox>
-            <Checkbox>Hire our students</Checkbox>
+            <CheckboxRadioGroup
+                label="Choose an option"
+                hasError={true}
+                errorMessage="Hey there! You gotta do this..."
+                required={true}
+            >
+                <Container>
+                    <Checkbox>Hire our students 1</Checkbox>
+                    <Checkbox>Hire our students 2</Checkbox>
+                    <Checkbox>Hire our students 3</Checkbox>
+                    <Radio>Hire our students 3</Radio>
+                </Container>
+            </CheckboxRadioGroup>
             <Button>Submit</Button>
         </form>
     )
