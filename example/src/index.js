@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import ReactDOM from "react-dom"
 // import styled from "styled-components"
 // import { Titlebar, TitlebarItem } from "@vschool/lotus"
-import { TextInput, Textarea } from "@vschool/lotus"
+import { TextInput, Textarea, Checkbox, Button } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
 
@@ -33,8 +33,6 @@ function InputExample() {
                 name="name"
                 validationText="auto-generate"
             />
-            <br />
-            <br />
             <Textarea
                 onChange={handleChange}
                 label="Why do you want to join V School?"
@@ -56,8 +54,6 @@ function InputExample() {
                 name="email"
                 validationText="auto-generate"
             />
-            <br />
-            <br />
             <TextInput
                 onChange={handleChange}
                 label="Password"
@@ -68,7 +64,10 @@ function InputExample() {
                 name="password"
                 validationText="Required, must contain at least 5 characters"
             /> */}
-            <button>Submit</button>
+            <Checkbox>Hire our students</Checkbox>
+            <Checkbox>Hire our students</Checkbox>
+            <Checkbox>Hire our students</Checkbox>
+            <Button>Submit</Button>
         </form>
     )
 }
