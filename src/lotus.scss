@@ -1,3 +1,5 @@
+$black: #21201F;
+
 html,
 body {
     box-sizing: border-box;
@@ -7,6 +9,10 @@ body {
 textarea, input, button, select { 
     font-family: inherit; 
     font-size: inherit; 
+}
+
+label {
+    color: $black;
 }
 
 h1,

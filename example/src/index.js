@@ -46,7 +46,6 @@ function InputExample() {
             <Textarea
                 onChange={handleChange}
                 label="Why do you want to join V School?"
-                type="textarea"
                 value={formData.whyJoin}
                 minLength={3}
                 required={true}
