@@ -283,7 +283,8 @@ const TextInput = forwardRef((props, ref) => {
 TextInput.propTypes = {
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(["text", "password", "number", "tel", "email", "url"]).isRequired,
+    type: PropTypes.oneOf(["text", "textarea", "password", "number", "tel", "email", "url"])
+        .isRequired,
     hasError: PropTypes.bool,
     /**
     You must pass a value into the field as a controlled component. Otherwise the styling effects will be thrown off.

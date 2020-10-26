@@ -79,13 +79,17 @@ function InputExample() {
                 hasError={true}
                 errorMessage="Hey there! You gotta do this..."
                 required={true}
+                columns={2}
             >
-                <Container>
-                    <Checkbox>Hire our students 1</Checkbox>
-                    <Checkbox>Hire our students 2</Checkbox>
-                    <Checkbox>Hire our students 3</Checkbox>
-                    <Radio>Hire our students 3</Radio>
-                </Container>
+                {/* <Container> */}
+                <Checkbox>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus aliquid,
+                    consequuntur ex possimus beatae iste harum architecto voluptatibus nihil?
+                </Checkbox>
+                <Checkbox>Hire our students 2</Checkbox>
+                <Checkbox>Hire our students 3</Checkbox>
+                <Radio>Hire our students 3</Radio>
+                {/* </Container> */}
             </CheckboxRadioGroup>
             <Button>Submit</Button>
         </form>

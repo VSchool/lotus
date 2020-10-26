@@ -9,6 +9,9 @@ export const ControlsContainer = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    align-items: flex-start;
 
     &.checkbox {
         & > input:checked + label:before {
@@ -76,7 +79,7 @@ export const ControlsInput = styled.input`
 `
 
 export const ControlsLabel = styled.label`
-    height: 24px;
+    min-height: 24px;
     position: relative;
     font-family: "aktiv-grotesk";
     font-weight: 500;
