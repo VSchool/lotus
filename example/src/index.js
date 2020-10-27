@@ -1,8 +1,16 @@
 import React, { useState } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
-// import { Titlebar, TitlebarItem } from "@vschool/lotus"
-import { TextInput, Textarea, Checkbox, Radio, CheckboxRadioGroup, Button } from "@vschool/lotus"
+import { Titlebar, TitlebarItem, StatusChip } from "@vschool/lotus"
+import {
+    Card,
+    TextInput,
+    Textarea,
+    Checkbox,
+    Radio,
+    CheckboxRadioGroup,
+    Button,
+} from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
 
@@ -14,6 +22,10 @@ const Container = styled.section`
         flex-basis: 50%;
         min-width: 200px;
     }
+`
+
+const StyledCard = styled(Card)`
+    display: flex;
 `
 
 function InputExample() {
@@ -32,27 +44,30 @@ function InputExample() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <TextInput
-                onChange={handleChange}
-                label="Name"
-                type="text"
-                value={formData.name}
-                minLength={3}
-                required={true}
-                name="name"
-                validationText="auto-generate"
-            />
-            <Textarea
-                onChange={handleChange}
-                label="Why do you want to join V School?"
-                value={formData.whyJoin}
-                minLength={3}
-                required={true}
-                name="whyJoin"
-                validationText="auto-generate"
-            />
-            {/* <TextInput
+        <>
+            <Card></Card>
+            <br />
+            {/* <form onSubmit={handleSubmit}>
+                <TextInput
+                    onChange={handleChange}
+                    label="Name"
+                    type="text"
+                    value={formData.name}
+                    minLength={3}
+                    required={true}
+                    name="name"
+                    validationText="auto-generate"
+                />
+                <Textarea
+                    onChange={handleChange}
+                    label="Why do you want to join V School?"
+                    value={formData.whyJoin}
+                    minLength={3}
+                    required={true}
+                    name="whyJoin"
+                    validationText="auto-generate"
+                />
+                <TextInput
                 onChange={handleChange}
                 label="Email"
                 type="email"
@@ -72,26 +87,25 @@ function InputExample() {
                 required={true}
                 name="password"
                 validationText="Required, must contain at least 5 characters"
-            /> */}
-            <CheckboxRadioGroup
-                label="Choose an option"
-                hasError={true}
-                errorMessage="Hey there! You gotta do this..."
-                required={true}
-                columns={2}
-            >
-                {/* <Container> */}
-                <Checkbox>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus aliquid,
-                    consequuntur ex possimus beatae iste harum architecto voluptatibus nihil?
-                </Checkbox>
-                <Checkbox>Hire our students 2</Checkbox>
-                <Checkbox>Hire our students 3</Checkbox>
-                <Radio>Hire our students 3</Radio>
-                {/* </Container> */}
-            </CheckboxRadioGroup>
-            <Button>Submit</Button>
-        </form>
+            />
+                <CheckboxRadioGroup
+                    label="Choose an option"
+                    hasError={true}
+                    errorMessage="Hey there! You gotta do this..."
+                    required={true}
+                    columns={2}
+                >
+                    <Checkbox>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus aliquid,
+                        consequuntur ex possimus beatae iste harum architecto voluptatibus nihil?
+                    </Checkbox>
+                    <Checkbox>Hire our students 2</Checkbox>
+                    <Checkbox>Hire our students 3</Checkbox>
+                    <Radio>Hire our students 3</Radio>
+                </CheckboxRadioGroup>
+                <Button>Submit</Button>
+            </form> */}
+        </>
     )
 }
 
