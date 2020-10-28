@@ -9,6 +9,12 @@ const CardsContainer = styled.div`
     grid-template-rows: 296px;
     grid-auto-flow: column;
     grid-auto-columns: 325px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     @media (max-width: 450px) {
         grid-auto-columns: 75%;

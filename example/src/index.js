@@ -9,6 +9,12 @@ const StyledCard = styled(Card)`
     width: 412px;
 `
 
+const Container = styled.section`
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+`
+
 const Logo = styled.div`
     width: 64px;
     height: 64px;
@@ -33,35 +39,37 @@ function InputExample() {
             <h1>This is a header</h1>
             <br />
             <br />
-            <CardGroup>
-                <Card>
-                    <Logo />
-                    <Title>Web Development 1</Title>
-                    <p>
-                        Learn JavaScript and build a career in code with our accelerated Full Stack
-                        JavaScript course.
-                    </p>
-                    <Button>Learn More</Button>
-                </Card>
-                <Card>
-                    <Logo />
-                    <Title>Web Development 2</Title>
-                    <p>
-                        Learn JavaScript and build a career in code with our accelerated Full Stack
-                        JavaScript course.
-                    </p>
-                    <Button>Learn More</Button>
-                </Card>
-                <Card>
-                    <Logo />
-                    <Title>Web Development 3</Title>
-                    <p>
-                        Learn JavaScript and build a career in code with our accelerated Full Stack
-                        JavaScript course.
-                    </p>
-                    <Button>Learn More</Button>
-                </Card>
-            </CardGroup>
+            <Container>
+                <CardGroup>
+                    <Card>
+                        <Logo />
+                        <Title>Web Development 1</Title>
+                        <p>
+                            Learn JavaScript and build a career in code with our accelerated Full
+                            Stack JavaScript course.
+                        </p>
+                        <Button>Learn More</Button>
+                    </Card>
+                    <Card>
+                        <Logo />
+                        <Title>Web Development 2</Title>
+                        <p>
+                            Learn JavaScript and build a career in code with our accelerated Full
+                            Stack JavaScript course.
+                        </p>
+                        <Button>Learn More</Button>
+                    </Card>
+                    <Card>
+                        <Logo />
+                        <Title>Web Development 3</Title>
+                        <p>
+                            Learn JavaScript and build a career in code with our accelerated Full
+                            Stack JavaScript course.
+                        </p>
+                        <Button>Learn More</Button>
+                    </Card>
+                </CardGroup>
+            </Container>
             <br />
             <br />
             <p>
