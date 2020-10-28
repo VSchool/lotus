@@ -5,9 +5,6 @@ import { black, white, blue, gray, yellow, green, pink } from "../../colors"
 import "../../lotus.scss"
 
 const CardContainer = styled.div`
-    position: relative;
-    width: 325px;
-    height: 296px;
     padding: 24px;
     background: ${white};
     box-sizing: border-box;
@@ -21,11 +18,6 @@ const CardContainer = styled.div`
         filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2))
             drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12))
             drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14));
-    }
-
-    @media (min-width: 768px) {
-        width: 412px;
-        padding: 24px;
     }
 `
 

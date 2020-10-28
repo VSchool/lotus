@@ -2,44 +2,26 @@ import React from "react"
 import styled from "styled-components"
 import "../../lotus.scss"
 
-const MainContainer = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-`
 const CardsContainer = styled.div`
-    display: flex;
+    display: grid;
+    grid-gap: 24px;
     overflow: scroll hidden;
+    grid-template-rows: 296px;
+    grid-auto-flow: column;
+    grid-auto-columns: 325px;
 
-    & > div {
-        flex-basis: 100%;
-        min-width: 325px;
-        max-width: 412px;
-        margin: 8px;
-
-        &:first-child {
-            margin-left: 0;
-        }
+    @media (max-width: 450px) {
+        grid-auto-columns: 75%;
     }
 
-    @media (min-width: 738px) {
-        width: 100%;
+    @media (min-width: 700px) {
+        grid-template-columns: repeat(2, minmax(235px, 412px));
+        grid-auto-flow: row;
         flex-wrap: wrap;
-
-        & > div {
-            margin: 12px;
-            flex-basis: calc(50% - 24px);
-
-            &:first-child {
-                margin-left: 12px;
-            }
-        }
+        overflow: initial;
+        grid-auto-rows: 296px;
     }
 `
 export default function CardGroup({ children, ...rest }) {
-    return (
-        <MainContainer>
-            <CardsContainer {...rest}>{children}</CardsContainer>
-        </MainContainer>
-    )
+    return <CardsContainer {...rest}>{children}</CardsContainer>
 }
