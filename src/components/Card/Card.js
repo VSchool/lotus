@@ -5,8 +5,9 @@ import { black, white, blue, gray, yellow, green, pink } from "../../colors"
 import "../../lotus.scss"
 
 const CardContainer = styled.div`
-    position: relative;
-    width: 325px;
+    min-width: 235px;
+    max-width: 412px;
+    margin: 8px;
     height: 296px;
     padding: 24px;
     background: ${white};
@@ -17,15 +18,26 @@ const CardContainer = styled.div`
     background: ${gray.lighter};
     border: 2px solid ${gray.base};
 
+    &:first-child {
+        margin-left: 0;
+    }
+
     &:hover {
         filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2))
             drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12))
             drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14));
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
+        max-width: 412px;
         width: 412px;
         padding: 24px;
+        margin: 12px;
+        flex-basis: calc(50% - 24px);
+
+        &:first-child {
+            margin-left: 12px;
+        }
     }
 `
 
