@@ -8,7 +8,7 @@ const CardContainer = styled.div`
     position: relative;
     width: 325px;
     height: 296px;
-    padding: 16px;
+    padding: 24px;
     background: ${white};
     box-sizing: border-box;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
