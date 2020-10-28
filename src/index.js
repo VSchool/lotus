@@ -1,6 +1,6 @@
 export { Accordion, AccordionGroup } from "./components/Accordion"
 export { Button } from "./components/Button"
-export { Card } from "./components/Card"
+export { Card, CardGroup } from "./components/Card"
 export {
     Checkbox,
     Radio,

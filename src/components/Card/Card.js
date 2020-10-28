@@ -7,7 +7,7 @@ import "../../lotus.scss"
 const CardContainer = styled.div`
     position: relative;
     width: 325px;
-    height: 288px;
+    height: 296px;
     padding: 16px;
     background: ${white};
     box-sizing: border-box;
