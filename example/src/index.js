@@ -5,41 +5,65 @@ import { Card, CardGroup } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
 
-const Container = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
+const StyledCard = styled(Card)`
+    width: 412px;
+`
+
+const Logo = styled.div`
+    width: 64px;
+    height: 64px;
+    background-color: red;
+    margin-bottom: 8px;
+`
+
+const Title = styled.h5`
+    margin-bottom: 8px;
+`
+
+const Button = styled.p`
+    font-size: 14px;
+    line-height: 18px;
+    color: blue;
+    letter-spacing: 0.25px;
 `
 
 function InputExample() {
     return (
         <>
             <h1>This is a header</h1>
-            <Container>
-                <CardGroup>
-                    <Card>
-                        <h5>Web Development</h5>
-                        <p>
-                            Learn JavaScript and build a career in code with our accelerated Full
-                            Stack JavaScript course.
-                        </p>
-                    </Card>
-                    <Card>
-                        <h5>Web Development</h5>
-                        <p>
-                            Learn JavaScript and build a career in code with our accelerated Full
-                            Stack JavaScript course.
-                        </p>
-                    </Card>
-                    <Card>
-                        <h5>Web Development</h5>
-                        <p>
-                            Learn JavaScript and build a career in code with our accelerated Full
-                            Stack JavaScript course.
-                        </p>
-                    </Card>
-                </CardGroup>
-            </Container>
+            <br />
+            <br />
+            <CardGroup>
+                <Card>
+                    <Logo />
+                    <Title>Web Development 1</Title>
+                    <p>
+                        Learn JavaScript and build a career in code with our accelerated Full Stack
+                        JavaScript course.
+                    </p>
+                    <Button>Learn More</Button>
+                </Card>
+                <Card>
+                    <Logo />
+                    <Title>Web Development 2</Title>
+                    <p>
+                        Learn JavaScript and build a career in code with our accelerated Full Stack
+                        JavaScript course.
+                    </p>
+                    <Button>Learn More</Button>
+                </Card>
+                <Card>
+                    <Logo />
+                    <Title>Web Development 3</Title>
+                    <p>
+                        Learn JavaScript and build a career in code with our accelerated Full Stack
+                        JavaScript course.
+                    </p>
+                    <Button>Learn More</Button>
+                </Card>
+            </CardGroup>
+            <br />
+            <br />
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum consectetur quibusdam
                 atque. Illum, laborum! Minima illum eaque, nostrum blanditiis vitae laboriosam saepe
