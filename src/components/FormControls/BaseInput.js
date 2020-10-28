@@ -90,7 +90,6 @@ const sharedInputStyles = css`
     }
 
     &:focus {
-        background-color: unset;
         ${(props) =>
             !props._requiredAndEmpty &&
             css`
@@ -152,9 +151,6 @@ const sharedInputStyles = css`
             }
             &:not(:focus):invalid {
                 background-color: ${red.lightest};
-            }
-            &:focus:invalid {
-                background-color: unset;
             }
         `}
 `

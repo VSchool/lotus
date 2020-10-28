@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
-import { Card, CardGroup, Checkbox, Radio } from "@vschool/lotus"
+import { Card, CardGroup, Checkbox, Radio, TextInput, Textarea, blue } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
 
@@ -13,6 +13,7 @@ const Container = styled.section`
     padding: 25px;
     display: flex;
     flex-direction: column;
+    background-color: ${blue.lightest};
 `
 
 const Logo = styled.div`
@@ -35,14 +36,10 @@ const Button = styled.p`
 
 function InputExample() {
     return (
-        <>
-            <Checkbox>I'm an option</Checkbox>
-            <Checkbox>I'm an option</Checkbox>
-            <Checkbox>I'm an option</Checkbox>
-            <Radio>I'm an option</Radio>
-            <Radio>I'm an option</Radio>
-            <Radio>I'm an option</Radio>
-        </>
+        <Container>
+            <TextInput label="Name" required />
+            <Textarea label="Name" required />
+        </Container>
     )
 }
 
