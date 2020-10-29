@@ -81,11 +81,11 @@ h5 {
     }
 }
 
-h6 {
+h6, p.callout {
     font-family: "aktiv-grotesk-extended";
     font-size: 14px;
     line-height: 20px;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 0.25px;
     text-transform: uppercase;
 
@@ -106,7 +106,7 @@ p {
     }
 }
 
-p.lg {
+p.large {
     font-size: 16px;
     line-height: 24px;
 
@@ -116,7 +116,7 @@ p.lg {
     }
 }
 
-p.sm {
+p.small {
     font-size: 12px;
     line-height: 16px;
 

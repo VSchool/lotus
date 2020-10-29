@@ -72,7 +72,6 @@ const Label = styled.label`
         `}
 `
 function CheckboxRadioGroup(props) {
-    console.log(props.columns)
     const errorMessage = props.validationText || "This field is required."
     return (
         <Container columns={props.columns}>
