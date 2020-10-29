@@ -71,18 +71,26 @@ const Label = styled.label`
             }
         `}
 `
-function CheckboxRadioGroup(props) {
-    const errorMessage = props.validationText || "This field is required."
+function CheckboxRadioGroup({
+    validationText,
+    columns,
+    required,
+    label,
+    hasError,
+    children,
+    ...rest
+}) {
+    const errorMessage = validationText || "This field is required."
     return (
-        <Container columns={props.columns}>
-            <Label required={props.required}>{props.label}</Label>
-            {props.hasError && (
+        <Container columns={columns} {...rest}>
+            <Label required={required}>{label}</Label>
+            {hasError && (
                 <ErrorMessage>
                     <InfoIcon className="info-icon" />
                     {errorMessage}
                 </ErrorMessage>
             )}
-            <div className="box-group">{props.children}</div>
+            <div className="box-group">{children}</div>
         </Container>
     )
 }

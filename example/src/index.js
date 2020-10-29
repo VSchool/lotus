@@ -1,7 +1,16 @@
 import React, { useState } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
-import { Card, CardGroup, Checkbox, Radio, TextInput, Textarea, blue } from "@vschool/lotus"
+import {
+    Card,
+    CardGroup,
+    CheckboxRadioGroup,
+    Checkbox,
+    Radio,
+    TextInput,
+    Textarea,
+    blue,
+} from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
 
@@ -34,11 +43,19 @@ const Button = styled.p`
     letter-spacing: 0.25px;
 `
 
+const BoxGroup = styled(CheckboxRadioGroup)`
+    margin-bottom: 100px;
+`
+
 function InputExample() {
     return (
         <Container>
             <TextInput label="Name" required />
             <Textarea label="Name" required />
+            <BoxGroup>
+                <Checkbox>Thing 1</Checkbox>
+                <Checkbox>Thing 2</Checkbox>
+            </BoxGroup>
         </Container>
     )
 }
