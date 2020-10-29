@@ -100,6 +100,7 @@ export const ControlsLabel = styled.label`
         width: 24px;
         transition: all 0.1s ease-in-out;
         box-sizing: border-box;
+        background-color: ${white};
     }
 `
 function Controls({ disabled, checked, children, onChange, name, value, type, ...rest }) {

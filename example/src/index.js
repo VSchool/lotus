@@ -22,6 +22,7 @@ const Container = styled.section`
     padding: 25px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: ${blue.lightest};
 `
 
@@ -50,12 +51,7 @@ const BoxGroup = styled(CheckboxRadioGroup)`
 function InputExample() {
     return (
         <Container>
-            <TextInput label="Name" required />
-            <Textarea label="Name" required />
-            <BoxGroup>
-                <Checkbox>Thing 1</Checkbox>
-                <Checkbox>Thing 2</Checkbox>
-            </BoxGroup>
+            <Checkbox>Thing 1</Checkbox>
         </Container>
     )
 }
