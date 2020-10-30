@@ -6,12 +6,14 @@ const CardsContainer = styled.div`
     display: grid;
     grid-gap: 24px;
     width: 100%;
+    max-width: 848px;
     overflow: scroll hidden;
     grid-template-rows: 296px;
     grid-auto-flow: column;
     grid-auto-columns: 325px;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    border: 1px dashed red;
 
     &::-webkit-scrollbar {
         display: none;
@@ -22,7 +24,7 @@ const CardsContainer = styled.div`
     }
 
     @media (min-width: 700px) {
-        grid-template-columns: repeat(2, minmax(235px, 412px));
+        grid-template-columns: repeat(2, minmax(235px, 1fr));
         grid-auto-flow: row;
         flex-wrap: wrap;
         overflow: initial;

@@ -51,7 +51,20 @@ const BoxGroup = styled(CheckboxRadioGroup)`
 function InputExample() {
     return (
         <Container>
-            <Checkbox>Thing 1</Checkbox>
+            <CardGroup>
+                <Card>
+                    <h4>Card 1</h4>
+                </Card>
+                <Card>
+                    <h4>Card 2</h4>
+                </Card>
+                <Card>
+                    <h4>Card 3</h4>
+                </Card>
+                <Card>
+                    <h4>Card 4</h4>
+                </Card>
+            </CardGroup>
         </Container>
     )
 }
