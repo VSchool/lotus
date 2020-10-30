@@ -8,7 +8,7 @@ const CardsContainer = styled.div`
     width: 100%;
     max-width: 848px;
     overflow: scroll hidden;
-    grid-template-rows: 296px;
+    grid-template-rows: minmax(325px, max-content);
     grid-auto-flow: column;
     grid-auto-columns: 325px;
     scrollbar-width: none;
@@ -19,7 +19,7 @@ const CardsContainer = styled.div`
     }
 
     @media (max-width: 450px) {
-        grid-auto-columns: 75%;
+        grid-auto-columns: 85%;
     }
 
     @media (min-width: 700px) {
@@ -27,7 +27,7 @@ const CardsContainer = styled.div`
         grid-auto-flow: row;
         flex-wrap: wrap;
         overflow: initial;
-        grid-auto-rows: 296px;
+        grid-auto-rows: minmax(325px, max-content);
     }
 `
 export default function CardGroup({ children, ...rest }) {

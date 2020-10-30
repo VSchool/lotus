@@ -19,11 +19,9 @@ const StyledCard = styled(Card)`
 `
 
 const Container = styled.section`
-    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: ${blue.lightest};
 `
 
 const Logo = styled.div`
@@ -54,6 +52,16 @@ function InputExample() {
             <CardGroup>
                 <Card>
                     <h4>Card 1</h4>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae eaque at est
+                        vel fugiat tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Rem, hic. Rerum dignissimos deserunt reprehenderit maiores quo minima, omnis
+                        at earum tenetur natus cum debitis, aspernatur voluptatibus unde odit itaque
+                        expedita?
+                    </p>
+                    <br />
+                    <br />
+                    <button>Learn More</button>
                 </Card>
                 <Card>
                     <h4>Card 2</h4>
