@@ -13,7 +13,6 @@ const CardsContainer = styled.div`
     grid-auto-columns: 325px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    border: 1px dashed red;
 
     &::-webkit-scrollbar {
         display: none;
