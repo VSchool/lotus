@@ -5,6 +5,7 @@ import "../../lotus.scss"
 const CardsContainer = styled.div`
     display: grid;
     grid-gap: 24px;
+    width: 100%;
     overflow: scroll hidden;
     grid-template-rows: 296px;
     grid-auto-flow: column;
