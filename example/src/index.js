@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
 import {
+    blue,
     Card,
     CardGroup,
     CheckboxRadioGroup,
@@ -9,7 +10,7 @@ import {
     Radio,
     TextInput,
     Textarea,
-    blue,
+    TextButton,
 } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
@@ -17,6 +18,7 @@ import "./styles.css"
 const StyledCard = styled(Card)`
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 `
 
 const Container = styled.section`
@@ -36,11 +38,7 @@ const Title = styled.h5`
     margin-bottom: 8px;
 `
 
-const Button = styled.p`
-    font-size: 14px;
-    line-height: 18px;
-    color: blue;
-    letter-spacing: 0.25px;
+const Button = styled(TextButton)`
     margin-top: auto;
 `
 
