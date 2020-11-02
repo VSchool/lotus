@@ -8,7 +8,7 @@ const CardsContainer = styled.div`
     width: 100%;
     max-width: 848px;
     overflow: scroll hidden;
-    grid-template-rows: minmax(325px, max-content);
+    grid-template-rows: repeat(auto-fit, minmax(325px, max-content));
     grid-auto-flow: column;
     grid-auto-columns: 325px;
     scrollbar-width: none;
@@ -27,7 +27,6 @@ const CardsContainer = styled.div`
         grid-auto-flow: row;
         flex-wrap: wrap;
         overflow: initial;
-        grid-auto-rows: minmax(325px, max-content);
     }
 `
 export default function CardGroup({ children, ...rest }) {

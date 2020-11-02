@@ -15,7 +15,8 @@ import "@vschool/lotus/dist/index.css"
 import "./styles.css"
 
 const StyledCard = styled(Card)`
-    width: 412px;
+    display: flex;
+    flex-direction: column;
 `
 
 const Container = styled.section`
@@ -40,6 +41,11 @@ const Button = styled.p`
     line-height: 18px;
     color: blue;
     letter-spacing: 0.25px;
+    margin-top: auto;
+`
+
+const Text = styled.p`
+    margin-bottom: 16px;
 `
 
 const BoxGroup = styled(CheckboxRadioGroup)`
@@ -50,28 +56,49 @@ function InputExample() {
     return (
         <Container>
             <CardGroup>
-                <Card>
-                    <h4>Card 1</h4>
-                    <p>
+                <StyledCard>
+                    <Logo />
+                    <Title>Card 1</Title>
+                    <Text>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae eaque at est
                         vel fugiat tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Rem, hic. Rerum dignissimos deserunt reprehenderit maiores quo minima, omnis
                         at earum tenetur natus cum debitis, aspernatur voluptatibus unde odit itaque
                         expedita?
-                    </p>
-                    <br />
-                    <br />
-                    <button>Learn More</button>
-                </Card>
-                <Card>
-                    <h4>Card 2</h4>
-                </Card>
-                <Card>
-                    <h4>Card 3</h4>
-                </Card>
-                <Card>
-                    <h4>Card 4</h4>
-                </Card>
+                    </Text>
+                    <Button>Learn More</Button>
+                </StyledCard>
+                <StyledCard>
+                    <Logo />
+                    <Title>Card 1</Title>
+                    <Text>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolores
+                        explicabo earum magnam libero illo corrupti. Iste distinctio, ab est
+                        nesciunt, earum amet sed cupiditate accusantium nihil explicabo voluptatum
+                        enim? Dolor dicta fugit laboriosam consectetur nobis quaerat facere
+                        aspernatur distinctio?
+                    </Text>
+                    <Button>Learn More</Button>
+                </StyledCard>
+                <StyledCard>
+                    <Logo />
+                    <Title>Card 1</Title>
+                    <Text>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+                        perspiciatis ducimus vitae nemo tenetur nobis at modi sed aut cum
+                        necessitatibus soluta, earum hic libero!
+                    </Text>
+                    <Button>Learn More</Button>
+                </StyledCard>
+                <StyledCard>
+                    <Logo />
+                    <Title>Card 1</Title>
+                    <Text>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque
+                        quasi, commodi illo quibusdam ut vel placeat a accusamus alias.
+                    </Text>
+                    <Button>Learn More</Button>
+                </StyledCard>
             </CardGroup>
         </Container>
     )

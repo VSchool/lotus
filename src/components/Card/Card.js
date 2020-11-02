@@ -12,7 +12,7 @@ const CardContainer = styled.div`
     transition: filter 0.2s ease-in-out;
     background: ${gray.lighter};
     border: 2px solid ${gray.base};
-    max-height: 350px;
+    max-height: 400px;
 
     &:hover {
         filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2))
