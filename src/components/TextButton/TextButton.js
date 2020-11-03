@@ -2,12 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { blue } from "../../colors"
+import "../../lotus.scss"
 
 const Button = styled.button`
     color: ${blue.base};
     box-sizing: border-box;
     padding: 0;
     padding-bottom: 3px;
+    font-family: "aktiv-grotesk-extended";
     font-size: 12px;
     line-height: 16px;
     font-weight: bold;
