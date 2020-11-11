@@ -103,11 +103,11 @@ export const ControlsLabel = styled.label`
         background-color: ${white};
     }
 `
-function Controls({ className, style, children, value, ...rest }) {
+function Controls({ className, style, children, ...rest }) {
     const [id] = useId(1, "controls-")
     return (
         <ControlsContainer className={className} style={style}>
-            <ControlsInput id={id} checked={value} value={value} {...rest} />
+            <ControlsInput id={id} {...rest} />
             <ControlsLabel htmlFor={id}>{children}</ControlsLabel>
         </ControlsContainer>
     )
@@ -115,9 +115,13 @@ function Controls({ className, style, children, value, ...rest }) {
 
 Controls.propTypes = {
     /**
-    Whether or not the controls should be filled in
+    The value the option will be if it is checked
      */
     value: PropTypes.bool,
+    /**
+    Whether or not the controls should be filled in
+     */
+    checked: PropTypes.bool,
     /**
     Whether or not the controls and label should be disabled/grayed-out
      */
