@@ -61,6 +61,7 @@ function InputExample() {
             <form>
                 <TextInput
                     name="name"
+                    type="text"
                     value={name}
                     onChange={handleNameChange}
                     label="Name"
