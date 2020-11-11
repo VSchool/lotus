@@ -103,19 +103,11 @@ export const ControlsLabel = styled.label`
         background-color: ${white};
     }
 `
-function Controls({ disabled, checked, children, onChange, name, value, type, ...rest }) {
+function Controls({ className, style, children, value, ...rest }) {
     const [id] = useId(1, "controls-")
     return (
-        <ControlsContainer {...rest}>
-            <ControlsInput
-                type={type}
-                checked={checked}
-                disabled={disabled}
-                onChange={onChange}
-                name={name}
-                id={id}
-                value={value}
-            />
+        <ControlsContainer className={className} style={style}>
+            <ControlsInput id={id} checked={value} value={value} {...rest} />
             <ControlsLabel htmlFor={id}>{children}</ControlsLabel>
         </ControlsContainer>
     )
@@ -125,7 +117,7 @@ Controls.propTypes = {
     /**
     Whether or not the controls should be filled in
      */
-    checked: PropTypes.bool.isRequired,
+    value: PropTypes.bool,
     /**
     Whether or not the controls and label should be disabled/grayed-out
      */

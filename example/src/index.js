@@ -1,26 +1,18 @@
 import React, { useState } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
+import { Formik, Field, Form } from "formik"
 import {
     blue,
     Button,
-    Card,
-    CardGroup,
     CheckboxRadioGroup,
     Checkbox,
     Radio,
     TextInput,
     Textarea,
-    TextButton,
 } from "@vschool/lotus"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
-
-const StyledCard = styled(Card)`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-`
 
 const Container = styled.section`
     display: flex;
@@ -51,23 +43,31 @@ const BoxGroup = styled(CheckboxRadioGroup)`
 `
 
 function InputExample() {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+
+    function handleNameChange(e) {
+        const { value } = e.target
+        setName(value)
+    }
+
+    function handleEmailChange(e) {
+        const { value } = e.target
+        setEmail(value)
+    }
+
     return (
         <Container>
-            <TextInput
-                type="text"
-                label="Name"
-                name="name"
-                required
-                validationText="auto-generate"
-            />
-            <TextInput
-                type="email"
-                label="Email"
-                name="email"
-                required
-                validationText="auto-generate"
-            />
-            <Button>Start Application</Button>
+            <form>
+                <TextInput
+                    name="name"
+                    value={name}
+                    onChange={handleNameChange}
+                    label="Name"
+                    required
+                    validationText="auto-generate"
+                />
+            </form>
         </Container>
     )
 }
