@@ -31,6 +31,33 @@ const Label = styled.label`
         `}
 `
 
+const ValidationText = styled.div`
+    opacity: 0;
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+    color: ${gray.darker};
+    margin-top: 4px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+
+    & > * {
+        transition: all 0.2s ease-in-out;
+    }
+
+    & svg {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        transform: translateX(-5px);
+
+        & > path {
+            fill: ${gray.darker};
+        }
+    }
+`
+
 const sharedInputStyles = css`
     /* Determine border color */
     ${(props) => {
@@ -41,7 +68,8 @@ const sharedInputStyles = css`
                 validation by providing the hasError boolean in the input */
                 border: 2px solid ${red.light};
                 background-color: ${red.lightest};
-                & + div {
+                & + ${ValidationText} {
+                    opacity: 1;
                     & > svg.info-icon {
                         opacity: 1;
                         transform: translateX(0);
@@ -102,7 +130,7 @@ const sharedInputStyles = css`
         props.hasRequirements &&
         css`
             &:valid {
-                & + div {
+                & + ${ValidationText} {
                     & > svg.checkmark-icon {
                         opacity: 1;
                         transform: translateX(0);
@@ -116,7 +144,8 @@ const sharedInputStyles = css`
             }
             &:focus:valid {
                 border: 2px solid ${green.base};
-                & + div {
+                & + ${ValidationText} {
+                    opacity: 1;
                     & > span {
                         color: ${green.base};
                     }
@@ -125,14 +154,9 @@ const sharedInputStyles = css`
                     }
                 }
             }
-            &:not(:focus):valid {
-                & + div {
-                    opacity: 0;
-                }
-            }
             &:invalid {
                 border: 2px solid ${red.base};
-                & + div {
+                & + ${ValidationText} {
                     & > svg.info-icon {
                         opacity: 1;
                         transform: translateX(0);
@@ -147,6 +171,11 @@ const sharedInputStyles = css`
                         width: calc(100% - 14px);
                         color: ${red.base};
                     }
+                }
+            }
+            &:not(:focus):valid {
+                & + ${ValidationText} {
+                    opacity: 0;
                 }
             }
             &:not(:focus):invalid {
@@ -164,32 +193,6 @@ const StyledTextarea = styled.textarea`
     height: 200px;
     overflow-y: scroll;
     padding: 16px;
-`
-
-const ValidationText = styled.div`
-    display: flex;
-    align-items: flex-start;
-    font-size: 12px;
-    color: ${gray.darker};
-    margin-top: 4px;
-    position: relative;
-    transition: all 0.2s ease-in-out;
-
-    & > * {
-        transition: all 0.2s ease-in-out;
-    }
-
-    & svg {
-        opacity: 0;
-        position: absolute;
-        left: 0;
-        top: 2px;
-        transform: translateX(-5px);
-
-        & > path {
-            fill: ${gray.darker};
-        }
-    }
 `
 
 const TextInput = forwardRef((props, ref) => {
