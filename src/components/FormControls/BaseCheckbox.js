@@ -117,11 +117,11 @@ Controls.propTypes = {
     /**
     The value the option will be if it is checked
      */
-    value: PropTypes.bool,
+    value: PropTypes.string.isRequired,
     /**
     Whether or not the controls should be filled in
      */
-    checked: PropTypes.bool,
+    checked: PropTypes.bool.isRequired,
     /**
     Whether or not the controls and label should be disabled/grayed-out
      */
