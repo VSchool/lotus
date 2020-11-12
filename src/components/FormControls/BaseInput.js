@@ -157,6 +157,7 @@ const sharedInputStyles = css`
             &:invalid {
                 border: 2px solid ${red.base};
                 & + ${ValidationText} {
+                    opacity: 1;
                     & > svg.info-icon {
                         opacity: 1;
                         transform: translateX(0);

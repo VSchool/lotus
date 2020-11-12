@@ -68,6 +68,15 @@ function InputExample() {
                     required
                     validationText="auto-generate"
                 />
+                <TextInput
+                    name="email"
+                    type="email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    label="Email"
+                    required
+                    validationText="auto-generate"
+                />
             </form>
         </Container>
     )
