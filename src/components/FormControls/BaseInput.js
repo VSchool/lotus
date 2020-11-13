@@ -10,7 +10,7 @@ const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 64px;
 `
 
 const Label = styled.label`
@@ -203,7 +203,6 @@ const TextInput = forwardRef((props, ref) => {
     const { minLength, maxLength, min, max, pattern, required } = props
     const hasAdditionalValidations = !!(minLength || maxLength || min || max || pattern)
     const hasRequirements = required || hasAdditionalValidations
-
     let defaultValidationText
     if (props.validationText === "auto-generate") {
         defaultValidationText = ""
@@ -243,14 +242,16 @@ const TextInput = forwardRef((props, ref) => {
         props.onBlur && props.onBlur(e)
     }
 
+    const { className, style, ...rest } = props
+
     return (
-        <InputContainer>
+        <InputContainer className={className} style={style}>
             <Label htmlFor={id} required={required}>
                 {props.label}
             </Label>
             {props.type === "textarea" ? (
                 <StyledTextarea
-                    {...props}
+                    {...rest}
                     ref={ref}
                     id={id}
                     _requiredAndEmpty={_requiredAndEmpty}
@@ -261,7 +262,7 @@ const TextInput = forwardRef((props, ref) => {
                 />
             ) : (
                 <Input
-                    {...props}
+                    {...rest}
                     ref={ref}
                     id={id}
                     _requiredAndEmpty={_requiredAndEmpty}
