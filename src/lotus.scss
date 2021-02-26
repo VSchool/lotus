@@ -138,15 +138,15 @@ a {
     color: $blue-base;
     text-decoration: none;
 
-    :hover {
+    &:hover {
         text-decoration: underline;
     }
 
-    :active {
+    &:active {
         color: $blue-dark;
     }
 
-    :visited {
+    &:visited {
         color: $purple-base;
     }
 }
