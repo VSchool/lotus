@@ -1,4 +1,7 @@
-$black: #21201F;
+$black: #21201f;
+$blue-base: #456ae2;
+$blue-dark: #334fa9;
+$purple-base: #c767d9;
 
 html,
 body {
@@ -6,9 +9,12 @@ body {
     font-family: "aktiv-grotesk";
 }
 
-textarea, input, button, select { 
-    font-family: inherit; 
-    font-size: inherit; 
+textarea,
+input,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 label {
@@ -82,7 +88,8 @@ h5 {
     }
 }
 
-h6, p.callout {
+h6,
+p.callout {
     font-family: "aktiv-grotesk-extended";
     font-size: 14px;
     line-height: 20px;
@@ -124,5 +131,22 @@ p.small {
     @media only screen and (min-width: 800px) {
         font-size: 14px;
         line-height: 18px;
+    }
+}
+
+a {
+    color: $blue-base;
+    text-decoration: none;
+
+    :hover {
+        text-decoration: underline;
+    }
+
+    :active {
+        color: $blue-dark;
+    }
+
+    :visited {
+        color: $purple-base;
     }
 }
