@@ -16,9 +16,6 @@
         "styled-components": "file:../node_modules/styled-components",
         "@vschool/lotus": "file:.."
     },
-    "devDependencies": {
-        "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
-    },
     "eslintConfig": {
         "extends": "react-app"
     },
