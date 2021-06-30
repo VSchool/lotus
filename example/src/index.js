@@ -42,6 +42,12 @@ const BoxGroup = styled(CheckboxRadioGroup)`
     margin-bottom: 100px;
 `
 
+const StyledCheckbox = styled(Checkbox)`
+    & label {
+        font-size: 10px;
+    }
+`
+
 function InputExample() {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -59,24 +65,14 @@ function InputExample() {
     return (
         <Container>
             <form>
-                <TextInput
-                    name="name"
-                    type="text"
-                    value={name}
-                    onChange={handleNameChange}
-                    label="Name"
-                    required
-                    validationText="auto-generate"
-                />
-                <TextInput
-                    name="email"
-                    type="email"
-                    value={email}
-                    onChange={handleEmailChange}
-                    label="Email"
-                    required
-                    validationText="auto-generate"
-                />
+                <CheckboxRadioGroup>
+                    <StyledCheckbox value={"test"} name="goals">
+                        Label Here
+                    </StyledCheckbox>
+                    <Checkbox>Label Here</Checkbox>
+                    <Checkbox>Label Here</Checkbox>
+                    <Checkbox>Label Here</Checkbox>
+                </CheckboxRadioGroup>
             </form>
         </Container>
     )
