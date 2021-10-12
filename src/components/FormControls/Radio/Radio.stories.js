@@ -1,5 +1,5 @@
 import React from "react"
-import { Radio } from "./index"
+import Radio from "./index"
 
 export default {
     title: "Components/FormControls/Radio",
