@@ -1,5 +1,5 @@
 import React from "react"
-import { TextInput } from "./index"
+import TextInput from "./index"
 
 export default {
     title: "Components/FormControls/TextInput",

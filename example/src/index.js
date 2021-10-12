@@ -14,7 +14,6 @@ const Container = styled.section`
 `
 
 function InputExample() {
-
     return (
         <Container>
             <h1>Example page</h1>
