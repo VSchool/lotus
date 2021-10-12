@@ -6,7 +6,7 @@ import "../../../lotus.scss"
 /**
 This `Radio` component holds no state of its own. You'll need to maintain state separately and pass in the `checked`, `onChange`, `name`, `disabled`, etc. props you need in order to maintain its state externally. So really, it only exists for styling purposes. Because of this, clicking the checkbox/label in the examples below won't change their `:checked` state.
  */
-function Radio({className, ...rest}) {
+function Radio({ className, ...rest }) {
     return <BaseCheckbox className={`checkbox ${className}`} type="radio" {...rest} />
 }
 
