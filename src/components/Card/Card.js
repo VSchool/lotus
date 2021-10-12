@@ -1,7 +1,6 @@
 import React from "react"
-import styled, { css } from "styled-components"
-import PropTypes from "prop-types"
-import { black, white, blue, gray, yellow, green, pink } from "../../colors"
+import styled from "styled-components"
+import { gray } from "../../colors"
 import "../../lotus.scss"
 
 const CardContainer = styled.div`

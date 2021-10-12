@@ -6,7 +6,7 @@ export default {
     component: Banner,
 }
 
-const Template = (args) => <Banner {...args}></Banner>
+const Template = (args) => <Banner {...args} />
 
 export const Neutral = Template.bind({})
 Neutral.args = {

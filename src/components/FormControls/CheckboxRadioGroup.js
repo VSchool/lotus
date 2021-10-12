@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import { ReactComponent as InfoIcon } from "../../assets/icons/circle_info.svg"
-import { black, red } from "../../colors"
+import { red } from "../../colors"
 import "../../lotus.scss"
 
 const Container = styled.div`
