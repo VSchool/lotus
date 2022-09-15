@@ -3,6 +3,7 @@ import ReactDOM from "react-dom"
 import styled from "styled-components"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
+import { CheckboxRadioGroup, Radio, Checkbox } from "@vschool/lotus"
 
 const Container = styled.section`
     display: flex;
@@ -17,6 +18,10 @@ function InputExample() {
     return (
         <Container>
             <h1>Example page</h1>
+            <CheckboxRadioGroup>
+                <Radio />
+                <Checkbox />
+            </CheckboxRadioGroup>
         </Container>
     )
 }

@@ -8,7 +8,7 @@ A component for displaying checkboxes.
 
 This `Checkbox` component holds no state of its own. You'll need to maintain state separately and pass in the `checked`, `onChange`, `name`, `disabled`, etc. props you need in order to maintain its state externally. It only exists for styling purposes. Because of this, clicking the checkbox/label in the examples below won't change their `:checked` state.
  */
-function Checkbox({ className, ...rest }) {
+function Checkbox({ className = "", ...rest }) {
     return <BaseCheckbox className={`checkbox ${className}`} type="checkbox" {...rest} />
 }
 
