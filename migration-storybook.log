@@ -1,0 +1,85 @@
+🔎 checking possible migrations..
+Unable to find .eslintrc config file, skipping
+
+⚠️  failed to check fix mdx1to2
+
+Error: ENAMETOOLONG: name too long, scandir '/Users/bob/dev/vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/node_modules/babel-plugin-transform-react-remove-prop-types'
+
+🔎 found a 'autodocsTrue' migration:
+╭ Automigration detected ───────────────────────────────────────────────────────╮
+│                                                                               │
+│   We've changed the configuration of autodocs (previous docsPage), so now     │
+│   the value:                                                                  │
+│   - docs.autodocs: true -- means automatically create docs for every CSF      │
+│   file                                                                        │
+│   - docs.autodocs: 'tag' -- means only create autodocs for CSF files with     │
+│   the 'autodocs' tag                                                          │
+│   - docs.autodocs: false -- means never create autodocs                       │
+│                                                                               │
+│   Based on your prior configuration,  we can set the `docs.autodocs` to       │
+│   keep your old behaviour:                                                    │
+│                                                                               │
+│   docs: { autodocs: true }                                                    │
+│                                                                               │
+│   More info: https://github.com/storybookjs/storybook/blob/next/MIGRATION.m   │
+│   d#autodocs-changes                                                          │
+│                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'autodocsTrue' migration on your project? › (Y/n)✔ Do you want to run the 'autodocsTrue' migration on your project? … yes
+✅ Setting 'docs.autodocs' to true in main.js
+✅ ran autodocsTrue migration
+
+╭ Migration check ran with failures ────────────────────────────────────────────╮
+│                                                                               │
+│   Successful migrations:                                                      │
+│                                                                               │
+│   autodocsTrue                                                                │
+│                                                                               │
+│   Failed migrations:                                                          │
+│                                                                               │
+│   mdx1to2:                                                                    │
+│   ENAMETOOLONG: name too long, scandir '/Users/bob/dev/vschool/lotus/exampl   │
+│   e/node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example   │
+│   /node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/   │
+│   node_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/n   │
+│   ode_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/no   │
+│   de_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/nod   │
+│   e_modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node   │
+│   _modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_   │
+│   modules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_m   │
+│   odules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_mo   │
+│   dules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_mod   │
+│   ules/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modu   │
+│   les/@vschool/lotus/example/node_modules/@vschool/lotus/example/node_modul   │
+│   es/@vschool/lotus/example/node_modules/@vschool/lotus/node_modules/babel-   │
+│   plugin-transform-react-remove-prop-types'                                   │
+│                                                                               │
+│   You can find the full logs in                                               │
+│   /Users/bob/dev/vschool/lotus/migration-storybook.log                        │
+│                                                                               │
+│   ─────────────────────────────────────────────────                           │
+│                                                                               │
+│   If you'd like to run the migrations again, you can do so by running 'npx    │
+│   storybook@next automigrate'                                                 │
+│                                                                               │
+│   The automigrations try to migrate common patterns in your project, but      │
+│   might not contain everything needed to migrate to the latest version of     │
+│   Storybook.                                                                  │
+│                                                                               │
+│   Please check the changelog and migration guide for manual migrations and    │
+│   more information: https://storybook.js.org/migration-guides/7.0             │
+│   And reach out on Discord if you need help: https://discord.gg/storybook     │
+│                                                                               │
+│   ─────────────────────────────────────────────────                           │
+│                                                                               │
+│   Attention: The following dependencies are duplicated which might cause      │
+│   unexpected behavior:                                                        │
+│                                                                               │
+│   @storybook/node-logger:                                                     │
+│   6.5.16, 7.3.1                                                               │
+│                                                                               │
+│   You can find more information for a given dependency by running npm ls      │
+│   --depth=1 <package-name>                                                    │
+│                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────╯
+

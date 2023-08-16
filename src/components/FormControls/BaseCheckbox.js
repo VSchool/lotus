@@ -91,7 +91,7 @@ export const ControlsLabel = styled.label`
     cursor: pointer;
     /* user-select: none; */
 
-    :before {
+    ::before {
         content: "";
         position: absolute;
         top: 0;
@@ -103,7 +103,7 @@ export const ControlsLabel = styled.label`
         background-color: ${white};
     }
 `
-function Controls({ className, style, children, ...rest }) {
+function BaseCheckbox({ className, style, children, ...rest }) {
     const [id] = useId(1, "controls-")
     return (
         <ControlsContainer className={className} style={style}>
@@ -113,7 +113,7 @@ function Controls({ className, style, children, ...rest }) {
     )
 }
 
-Controls.propTypes = {
+BaseCheckbox.propTypes = {
     /**
     The value the option will be if it is checked
      */
@@ -121,7 +121,7 @@ Controls.propTypes = {
     /**
     Whether or not the controls should be filled in
      */
-    checked: PropTypes.bool.isRequired,
+    checked: PropTypes.bool,
     /**
     Whether or not the controls and label should be disabled/grayed-out
      */
@@ -139,7 +139,7 @@ Controls.propTypes = {
      */
     children: PropTypes.node.isRequired,
     type: PropTypes.oneOf(["checkbox", "radio"]).isRequired,
-    className: PropTypes.oneOf(["checkbox", "radio", "switch"]).isRequired,
+    className: PropTypes.string.isRequired,
 }
 
-export default Controls
+export default BaseCheckbox

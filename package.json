@@ -1,6 +1,6 @@
 {
     "name": "@vschool/lotus",
-    "version": "2.3.2",
+    "version": "3.0.0",
     "description": "Component library and base brand styles for V School projects",
     "contributors": [
         {
@@ -22,7 +22,7 @@
     "module": "dist/index.modern.js",
     "source": "src/index.js",
     "engines": {
-        "node": ">=10"
+        "node": ">=16"
     },
     "scripts": {
         "build": "microbundle-crl --no-compress --format modern,cjs",
@@ -31,16 +31,17 @@
         "prepare": "npm run pretty && run-s build",
         "publish-patch": "npm version patch && npm publish",
         "publish-minor": "npm version minor && npm publish",
+        "publish-major": "npm version major && npm publish",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook"
     },
     "peerDependencies": {
-        "react": "^16.8.0",
-        "react-dom": "^16.8.0",
-        "styled-components": "^5.2.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
         "@babel/core": "^7.14.6",
+        "@babel/plugin-proposal-unicode-property-regex": "^7.18.6",
         "@babel/preset-env": "^7.14.7",
         "@babel/preset-react": "^7.14.5",
         "@rollup/plugin-commonjs": "^15.1.0",
@@ -65,25 +66,24 @@
         "eslint-plugin-standard": "^4.1.0",
         "gh-pages": "^2.2.0",
         "microbundle-crl": "^0.13.10",
-        "node-sass": "^6.0.1",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.3.2",
-        "react": "^16.14.0",
-        "react-dom": "^16.14.0",
-        "react-is": "^16.13.1",
-        "react-scripts": "^4.0.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-is": "^18.2.0",
+        "react-scripts": "^5.0.1",
         "rollup-plugin-babel": "^4.4.0",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-postcss": "^3.1.8",
-        "sass": "^1.54.9",
-        "styled-components": "^5.3.0"
+        "sass": "^1.65.1"
     },
     "files": [
         "dist"
     ],
     "dependencies": {
-        "formik": "^2.2.9",
-        "prop-types": "^15.7.2",
-        "react-id-generator": "^3.0.1"
+        "formik": "^2.4.3",
+        "prop-types": "^15.8.1",
+        "react-id-generator": "^3.0.2",
+        "styled-components": "^5.3.11"
     }
 }
