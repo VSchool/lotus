@@ -1,29 +1,32 @@
 import React from "react"
-import ReactDOM from "react-dom"
+import ReactDOM from "react-dom/client"
 import styled from "styled-components"
 import "@vschool/lotus/dist/index.css"
 import "./styles.css"
-import { CheckboxRadioGroup, Radio, Checkbox } from "@vschool/lotus"
+import { CheckboxRadioGroup, Checkbox } from "@vschool/lotus"
 
 const Container = styled.section`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    background-color: papayawhip;
+    /* background-color: papayawhip; */
     padding: 24px;
-    width: 1024px;
 `
 
 function InputExample() {
     return (
         <Container>
-            <h1>Example page</h1>
-            <CheckboxRadioGroup>
-                <Radio />
-                <Checkbox />
+            {/* <h1>Example page</h1> */}
+            <CheckboxRadioGroup label="Test label">
+                <Checkbox onChange={() => {}} value="yes">
+                    Checkbox Label here
+                </Checkbox>
+                <Checkbox onChange={() => {}} value="no">
+                    Checkbox Label here
+                </Checkbox>
             </CheckboxRadioGroup>
         </Container>
     )
 }
 
-ReactDOM.render(<InputExample />, document.getElementById("root"))
+ReactDOM.createRoot(document.getElementById("root")).render(<InputExample />)

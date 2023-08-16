@@ -10,14 +10,11 @@
         "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
     },
     "dependencies": {
+        "@vschool/lotus": "file:..",
         "react": "file:../node_modules/react",
         "react-dom": "file:../node_modules/react-dom",
         "react-scripts": "file:../node_modules/react-scripts",
-        "styled-components": "file:../node_modules/styled-components",
-        "@vschool/lotus": "file:.."
-    },
-    "eslintConfig": {
-        "extends": "react-app"
+        "styled-components": "file:../node_modules/styled-components"
     },
     "browserslist": [
         ">0.2%",
