@@ -31,6 +31,7 @@
         "prepare": "npm run pretty && run-s build",
         "publish-patch": "npm version patch && npm publish",
         "publish-minor": "npm version minor && npm publish",
+        "publish-major": "npm version major && npm publish",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook"
     },
